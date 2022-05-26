@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sepehr Assadi </title>
+<link rel="shortcut icon" href="favicon.ico" />
+<!-- Load CSS -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<!-- Load Fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" type="text/css" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" type="text/css" />
+<!-- Load jQuery library -->
+<script type="text/javascript" src="../scripts/jquery-1.6.2.min.js"></script>
+<!-- Load custom js -->
+<script type="text/javascript" src="../scripts/panelslide.js"></script>
+<script type="text/javascript" src="../scripts/custom.js"></script>
+<!-- Load topcontrol js -->
+<script type="text/javascript" src="../scripts/scrolltopcontrol.js"></script>
+<!-- Load NIVO Slider -->
+<link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/nivo-theme.css" type="text/css" media="screen" />
+<script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+<script src="scripts/nivo-options.js" type="text/javascript"></script>
+<!-- Load fancybox -->
+<script type="text/javascript" src="../scripts/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="../scripts/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="../scripts/jquery.mousewheel-3.0.4.pack.js"></script>
+<link rel="stylesheet" href="../css/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+</head>
+<body>
+    <div id="nav">
+        <div id="menus">
+            <div class="menu">
+                <ul>
+                    <li class="page_item page-item-1"><a href="../index.html#2019">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+<div id="content">
+
+<div class="spacer"></div>
+<h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> Sublinear Algorithms for (∆ + 1) Vertex Coloring </h2> 
+<div class="pages">
+	<div style="padding-bottom:10px">
+	<span style="font-weight:bold"> Authors: </span>
+	<span id="pub" style="font-size:16px">
+ <span class="paper-author"> Sepehr Assadi, Yu Chen, <a href="https://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>. </span>	
+ </span>
+	</div>
+	
+	<div style="padding-bottom:30px;">
+	<span style="font-weight:bold;"> Conference: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	<a href="https://archive.siam.org/meetings/da19/">The 30th ACM-SIAM Symposium on Discrete Algorithms (SODA'19)</a>
+	</span>
+	<div style="padding-top:10px;color:green;font-weight:bold"> Recipient of the <a href="https://www.siam.org/Conferences/CM/P/SE/soda19-special-events" style="font-weight:bold;color:green">Best Paper Award</a> at SODA 2019.</div>   
+	</span>
+	</div>
+	
+	<div style="padding-bottom:50px;">
+	<span style="font-weight:bold;"> Abstract: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+
+Any graph with maximum degree ∆ admits a proper vertex coloring with ∆+1 colors that can be found via a simple sequential greedy algorithm in linear time and space. But can one find such a coloring via a sublinear algorithm?
+
+</br></br>
+
+We answer this fundamental question in the affirmative for several canonical classes of sublinear al- gorithms including graph streaming, sublinear time, and massively parallel computation (MPC) algorithms. 
+In particular, we design:
+
+</br></br>
+
+
+• A single-pass semi-streaming algorithm in dynamic streams using tilde{O}(n) space. The only known semi-streaming algorithm prior to our work was a folklore O(log n)-pass algorithm obtained by simulating classical
+distributed algorithms in the streaming model.
+</br></br>
+• A sublinear-time algorithm in the standard query model that allows neighbor queries and pair queries using tilde{O}(n√n) time. We further show that any algorithm that outputs a valid coloring with
+sufficiently large constant probability requires Ω(n√n) time. No non-trivial sublinear time algorithms were known prior to our work.
+<br/><br/>
+• A parallel algorithm in the massively parallel computation (MPC) model using tilde{O}(n) memory per machine and O(1) MPC rounds. Our number of rounds significantly improves upon
+the recent O(log log ∆ · log∗(n))-round algorithm of Parter [ICALP 2018].
+<br/><br/>
+
+At the core of our results is a remarkably simple meta-algorithm for the (∆ + 1) coloring problem: Sample O(log n) colors for each vertex independently and uniformly at random from the ∆ + 1 colors; find a proper coloring of the
+graph using only the sampled colors of each vertex. As our main result, we prove that the sampled set of colors with high probability contains a proper coloring of the input graph. The sublinear algorithms are then obtained by designing efficient algorithms for finding a proper coloring of the graph from the sampled colors in each model.
+<br/><br/>
+
+We note that all our upper bound results for (∆ + 1) coloring are either optimal or close to best possible in each model studied. We also establish new lower bounds that rule out the possibility of achieving similar
+results in these models for the closely related problems of maximal independent set and maximal matching. Collectively, our results highlight a sharp contrast between the complexity of (∆+1) coloring vs
+maximal independent set and maximal matching in various models of sublinear computation even though all three problems are solvable by a simple greedy algorithm in the classical setting.
+
+</span>
+</span>
+</div>
+
+	
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Conference version: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="../stuff/papers/sublinear_vertex-coloring_2019.pdf">[PDF]</a>
+	</span>
+	</span>
+	</div>
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Full version: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="https://arxiv.org/abs/1807.08886">[arXiv]</a> 
+	</span>
+	</span>
+	</div>
+
+		
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Streaming video: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	<a href="https://youtu.be/VU7Y_8ZcNu0">[YouTube1]</a> (<a href="https://simons.berkeley.edu/data-science-2018-3">Simons workshop on sublinear algorithms</a>)
+	-- <a href="https://www.youtube.com/watch?v=CyXKINjcKik">[YouTube2]</a> (<a href="https://highlightsofalgorithms.org/">Highlights of Algorithms (HALG 2020)</a>)
+	</span>
+	</span>
+	</div>
+
+
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Presentation slides: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="../stuff/presentations/sublinear_vertex-coloring-slides.pdf">[PDF]</a>
+	</span>
+	</span>
+	</div>
+
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Lecture notes: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="https://people.cs.rutgers.edu/~sa1497/courses/cs671-f20/lec3.pdf">[PDF]</a> (containing a streamlined proof of the meta-algorithm) 
+	</span>
+	</span>
+	</div>
+
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Blog post: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="https://ptreview.sublinear.info/?p=1016">[Property Testing Review]</a>
+	</span>
+	</span>
+	</div>
+
+
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> BibTex: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	<a href="https://dblp.org/rec/bibtex/conf/soda/AssadiCK19">[DBLP]</a>
+	</span>
+	</span>
+	</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="spacer"></div>
+</div>
+
+<!--END of content-->
+</div>	
+
+</body>
+</html>

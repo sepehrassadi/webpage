@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sepehr Assadi </title>
+<link rel="shortcut icon" href="favicon.ico" />
+<!-- Load CSS -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<!-- Load Fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" type="text/css" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" type="text/css" />
+<!-- Load jQuery library -->
+<script type="text/javascript" src="../scripts/jquery-1.6.2.min.js"></script>
+<!-- Load custom js -->
+<script type="text/javascript" src="../scripts/panelslide.js"></script>
+<script type="text/javascript" src="../scripts/custom.js"></script>
+<!-- Load topcontrol js -->
+<script type="text/javascript" src="../scripts/scrolltopcontrol.js"></script>
+<!-- Load NIVO Slider -->
+<link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/nivo-theme.css" type="text/css" media="screen" />
+<script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+<script src="scripts/nivo-options.js" type="text/javascript"></script>
+<!-- Load fancybox -->
+<script type="text/javascript" src="../scripts/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="../scripts/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="../scripts/jquery.mousewheel-3.0.4.pack.js"></script>
+<link rel="stylesheet" href="../css/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+</head>
+<body>
+    <div id="nav">
+        <div id="menus">
+            <div class="menu">
+                <ul>
+                    <li class="page_item page-item-1"><a href="../index.html#2017">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+<div id="content">
+
+<div class="spacer"></div>
+<h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> Randomized Composable Coreset for Matching and Vertex Cover </h2> 
+<div class="pages">
+	<div style="padding-bottom:10px">
+	<span style="font-weight:bold"> Authors: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> Sepehr Assadi, Sanjeev Khanna. </span>
+	</span>
+	</div>
+	
+	<div style="padding-bottom:30px;">
+	<span style="font-weight:bold;"> Conference: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	<a href="https://spaa.acm.org">The 29th ACM Symposium on Parallelism in Algorithms and Architectures (SPAA'17).</a>
+   <div style="padding-top:10px;color:green;font-weight:bold"> Recipient of the <a href="https://spaa.acm.org/awards.html" style="font-weight:bold;color:green"> Best Paper Award </a> at SPAA 2017. </div>
+	
+	<!--	</span>
+	<div style="padding-top:10px;color:green;font-weight:bold"> This paper resolves an open question raised
+	by Indyk et al in <a href="http://arxiv.org/abs/1509.00118" style="font-weight:bold;color:green">[IMV'15]</a>.</div>   
+	</span>
+-->	</div>
+	
+	<div style="padding-bottom:50px;">
+	<span style="font-weight:bold;"> Abstract: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	A common approach for designing scalable algorithms for massive data sets is to distribute the computation across, say k, machines and process the data using limited communication
+	between them. A particularly appealing framework here is the simultaneous communication model whereby each machine constructs a small representative summary of its own data and one
+	obtains an approximate/exact solution from the union of the representative summaries. If the representative summaries needed for a problem are small, then this results
+	in a communication-efficient and round-optimal (requiring essentially no interaction between the machines) protocol. 
+	Some well-known examples of techniques for creating summaries include sampling, linear sketching, and composable coresets. These techniques have been
+	successfully used to design communication efficient solutions for many fundamental graph problems. However, two prominent problems are notably absent from the list of
+	successes, namely, the maximum matching problem and the minimum vertex cover problem. Indeed, it was shown recently that for both these problems, even achieving a modest approximation
+	factor of polylog(n) requires using representative summaries of size Ω(n^2) i.e. essentially no better summary exists than each machine simply sending its entire input graph.
+
+	<br/>
+	<br/>
+
+	The main insight of our work is that the intractability of matching and vertex cover in the simultaneous communication model is inherently
+	connected to an adversarial partitioning of the underlying graph across machines. We show that when the underlying graph is randomly partitioned across machines, both
+	these problems admit randomized composable coresets of size O(n) that yield an tilde{O}(1)- approximate solution. 
+	In other words, a small subgraph of the input graph at each machine can be identified as its representative summary and the final answer then is obtained 
+	by simply running any maximum matching or minimum vertex cover algorithm on these combined subgraphs. This results in an tilde{O}(1)-approximation simultaneous protocol
+	for these problems with O(nk) total communication when the input is randomly partitioned across k machines. We also prove our results are optimal in a very strong sense: we not only
+	rule out existence of smaller randomized composable coresets for these problems but in fact show that our O(nk) bound for total communication is optimal for any simultaneous communication
+	protocol (i.e. not only for randomized coresets) for these two problems. 
+	Finally, by a standard application of composable coresets, our results also imply MapReduce algorithms with the same approximation guarantee
+	in one or two rounds of communication, improving the previous best known round complexity for these problems.
+
+
+	</span>
+	</span>
+	</div>
+
+	
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Conference version: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="../stuff/papers/randomized-coreset_matching-vc.pdf">[PDF]</a>
+	</span>
+	</span>
+	</div>
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Full version: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="https://arxiv.org/abs/1705.08242">[arXiv]</a> 
+	</span>
+	</span>
+	</div>
+
+
+	
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Presentation slides: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="../stuff/presentations/randomized-coreset_matching-vc-slides.pdf">[PDF]</a>
+	</span>
+	</span>
+	</div>
+
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> BibTex: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	<a href="https://dblp.org/rec/bibtex/conf/spaa/AssadiK17">[DBLP]</a>
+	</span>
+	</span>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="spacer"></div>
+</div>
+
+<!--END of content-->
+</div>	
+
+</body>
+</html>

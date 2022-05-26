@@ -1,0 +1,210 @@
+\documentclass{article}
+
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+%=====================================================
+% Add PACKAGES Here (You typically would not need to):
+%=====================================================
+\usepackage[compact]{titlesec}
+\usepackage{nicefrac}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{subfigure}
+\usepackage{mdframed}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\tcbset{enhanced jigsaw}
+
+\newenvironment{tbox}{\begin{tcolorbox}[
+		enlarge top by=5pt,
+		enlarge bottom by=5pt,
+		 breakable,
+		 boxsep=0pt,
+                  left=4pt,
+                  right=4pt,
+                  top=10pt,
+                  arc=0pt,
+                  boxrule=1pt,toprule=1pt,
+                  colback=white
+                  ]%%
+	}
+{\end{tcolorbox}}
+
+\definecolor{DarkRed}{rgb}{0.5,0.1,0.1}
+
+
+\usepackage{nameref}
+\definecolor{ForestGreen}{rgb}{0.1333,0.5451,0.1333}
+\usepackage[linktocpage=true,
+	pagebackref=true,colorlinks,
+	linkcolor=DarkRed,citecolor=ForestGreen,
+	bookmarks,bookmarksopen,bookmarksnumbered]
+	{hyperref}
+\usepackage[noabbrev,nameinlink]{cleveref}
+\crefname{property}{property}{Property}
+\creflabelformat{property}{(#1)#2#3}
+\crefname{equation}{eq}{Eq}
+\creflabelformat{equation}{(#1)#2#3}
+%=====================================================
+% Ignore This Part (But Do NOT Delete It:)
+%=====================================================
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{fact}[lemma]{Fact}
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{claim}[lemma]{Claim}
+
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem*{mdremark}{Remark}
+\newenvironment{remark}{\begin{mdframed}[backgroundcolor=lightgray!40,topline=false,bottomline=false, innerbottommargin=12pt,innertopmargin=12pt]\begin{mdremark}}{\end{mdremark}\end{mdframed}}
+
+
+
+
+
+\def\fline{\rule{0.75\linewidth}{0.5pt}}
+\newcommand{\finishline}{\vspace{-15pt}\begin{center}\fline\end{center}}
+\newtheorem*{solution*}{Solution}
+\newenvironment{solution}{\begin{solution*}}{{\finishline} \end{solution*}}
+\newcommand{\grade}[1]{\hfill{\textbf{($\mathbf{#1}$ points)}}}
+\newcommand{\thisdate}{\today}
+\newcommand{\thissemester}{\textbf{Rutgers: Spring 2020}}
+\newcommand{\thiscourse}{CS 514: Advanced Algorithms II -- Sublinear Algorithms} 
+\newcommand{\thislecture}{Number} 
+\newcommand{\thisname}{Sepehr Assadi} 
+\newcommand{\thisscribe}{Scribe} 
+
+%%\headheight 40pt              
+%%\headsep 10pt
+%%\renewcommand{\headrulewidth}{0pt}
+%%\lhead{\small \textbf{Only for the personal use of students registered in CS 344, Fall 2019 at Rutgers University. Redistribution out of this class is strictly prohibited.}}
+%%\pagestyle{fancy}
+
+\newcommand{\thisheading}{
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { \textbf{\thiscourse \hfill \thissemester} }
+       \vspace{4mm}
+       \hbox to 6.28in { {\Large \hfill Lecture \thislecture \hfill} }
+       \vspace{2mm}
+         \hbox to 6.28in { { \hfill \thisdate \hfill} }
+       \vspace{2mm}
+       \hbox to 6.28in { \emph{Instructor: \thisname \hfill Scribe: \thisscribe}}
+      \vspace{2mm}}
+      }
+   \end{center}
+      {\bf Disclaimer}: {\it These notes have not been subjected to the
+   usual scrutiny reserved for formal publications.  They may be distributed
+   outside this class only with the permission of the Instructor.}
+
+\medskip
+}
+
+
+%=====================================================
+% Some useful MACROS (you can define your own in the same exact way also)
+%=====================================================
+
+\DeclareMathOperator*{\Exp}{\ensuremath{{\mathbb{E}}}}
+\DeclareMathOperator*{\Prob}{\ensuremath{\textnormal{Pr}}}
+\renewcommand{\Pr}{\Prob}
+
+\newcommand{\ceil}[1]{{\left\lceil{#1}\right\rceil}}
+\newcommand{\floor}[1]{{\left\lfloor{#1}\right\rfloor}}
+\newcommand{\prob}[1]{\Pr\paren{#1}}
+\newcommand{\card}[1]{|#1|}
+\newcommand{\paren}[1]{\left ( #1 \right )}
+\newcommand{\bracket}[1]{\left [ #1 \right ]}
+\newcommand{\expect}[1]{\Exp\bracket{#1}}
+\newcommand{\var}[1]{\textnormal{Var}\bracket{#1}}
+\newcommand{\set}[1]{\ensuremath{\left\{ #1 \right\}}}
+\newcommand{\poly}{\mbox{\rm poly}}
+\newcommand{\eps}{\varepsilon}
+
+%=====================================================
+% Fill Out This Part With Your Own Information:
+%=====================================================
+
+
+
+
+\renewcommand{\thislecture}{Number} %Lecture number
+\renewcommand{\thisscribe}{Scribes?} % 
+\renewcommand{\thisdate}{Month Day, 2020} 
+\begin{document}
+
+\thisheading
+
+\section{Important Things to Remember} 
+
+\begin{itemize}
+	\item The goal should be to improve upon the lectures by explaining things in a way that feels most natural to you even if it means explaining things differently from what was presented in the class (as long as you cover all the topics covered in the class accurately and concisely). 
+	\item Make sure to also include the motivation, illustrative examples and intuitions related to the presented concepts/algorithms/proofs -- either the ones presented in the lecture or (even better!) the ones you came up on your own. 
+	\item  Start the notes by briefly summarizing the main topics discussed in the lecture. Moreover, include any issues that came up in the class, but not necessarily at length (feel free to discuss with me in order to decide how much to go into these).
+	\item Try to use full sentences and definitely avoid bullet points.
+	\item Include a list of topics that were covered in the lecture. Note that sometimes a small part of the argument may be postponed to the next class; in those cases, still try to finalize every argument  in the current lecture note. This 
+	way, we will have more coherent lecture notes. 
+	\item Include a list of papers and references that were used in the lecture -- they are typically cited in more details in the course webpage. 
+	\item Make sure that all the formal arguments are correct and do not have any gaps in reasoning -- if something in the argument is unclear to you, just email the lecturer for clarification.
+	\item Run spellcheck! 
+\end{itemize}
+
+\subsection{Useful LaTeX Environments}
+
+\begin{problem}
+	Use problems to define the problem we like to work with in the lecture. Be specific on what are the inputs to the problem and what we expect as the output. 
+\end{problem}
+\begin{theorem}
+	Use theorems for main results of the lecture. Each lecture may have zero, one or two theorems typically. 
+\end{theorem}
+
+\begin{lemma}
+	Use lemma for main \textbf{technical} results in proving a theorem. 
+\end{lemma}
+
+\begin{claim}
+	Use claim for basic statements used in the proof of other lemmas and theorems. 
+\end{claim}
+
+\begin{proposition}
+	Use proposition for \textbf{standalone} results. 
+\end{proposition}
+
+\begin{remark}
+	Add this environment to give some further remarks about an algorithm or a result.
+\end{remark}
+
+
+\textbf{Figure:}	
+If there is a simple figure that you feel would be helpful in understanding something, try to include it too. Use figure environment for this purpose (uncomment accordingly): 
+	
+%%	\begin{figure}[h!]
+%%\centering
+%%\includegraphics[width=0.45\textwidth]{name of the file in the same folder}
+%%\caption{caption}\label{fig:label}
+%%\end{figure}
+
+\begin{tbox}
+	\textbf{Algorithm:} Use this text box for algorithms. 
+\end{tbox}
+
+\end{document}
+
+
+
+
+

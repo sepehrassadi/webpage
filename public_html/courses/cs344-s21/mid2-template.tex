@@ -1,0 +1,302 @@
+\documentclass{article}
+
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+%=====================================================
+% Add PACKAGES Here (You typically would not need to):
+%=====================================================
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+%=====================================================
+% Ignore This Part (But Do NOT Delete It:)
+%=====================================================
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{fun}{Fun with Algorithms}
+\newtheorem*{challenge}{Challenge Yourself}
+\def\fline{\rule{0.75\linewidth}{0.5pt}}
+\newcommand{\finishline}{\vspace{-15pt}\begin{center}\fline\end{center}}
+\newtheorem*{solution*}{Solution}
+\newenvironment{solution}{\begin{solution*}}{{} \end{solution*}}
+\newcommand{\grade}[1]{\hfill{\textbf{($\mathbf{#1}$ points)}}}
+\newcommand{\thisdate}{\today}
+\newcommand{\thissemester}{\textbf{Rutgers: Spring 2021}}
+\newcommand{\thiscourse}{CS 344: Design and Analysis of Computer Algorithms} 
+\newcommand{\thishomework}{Number} 
+\newcommand{\thisname}{Name} 
+\newcommand{\thisextension}{Yes/No} 
+
+\headheight 40pt              
+\headsep 20pt
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\small \textbf{Only for the personal use of students registered in CS 344, Spring 2021 at Rutgers University. Redistribution out of this class is strictly prohibited.}}
+\pagestyle{fancy}
+
+\newcommand{\thisheading}{
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { \textbf{\thiscourse \hfill \thissemester} }
+       \vspace{8mm}
+       \hbox to 6.28in { {\Large \hfill Midterm Exam \#\thishomework \hfill} }
+       \vspace{2mm}
+         \hbox to 6.28in { { \hfill Due: Tuesday, April 13, 9:00am EST  \hfill} }
+       \vspace{4mm}
+       \hbox to 6.28in { \emph{Name: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} \thisname \hfill NetID: \underline{~~~~~~~~~~~~~~~~~~~~} \thisextension}}
+      \vspace{2mm}}
+      }
+   \end{center}
+   \bigskip
+}
+
+%=====================================================
+% Some useful MACROS (you can define your own in the same exact way also)
+%=====================================================
+
+
+\newcommand{\ceil}[1]{{\left\lceil{#1}\right\rceil}}
+\newcommand{\floor}[1]{{\left\lfloor{#1}\right\rfloor}}
+\newcommand{\prob}[1]{\Pr\paren{#1}}
+\newcommand{\expect}[1]{\Exp\bracket{#1}}
+\newcommand{\var}[1]{\textnormal{Var}\bracket{#1}}
+\newcommand{\set}[1]{\ensuremath{\left\{ #1 \right\}}}
+\newcommand{\poly}{\mbox{\rm poly}}
+
+
+%=====================================================
+% Fill Out This Part With Your Own Information:
+%=====================================================
+
+
+\renewcommand{\thishomework}{2} %Homework number
+\renewcommand{\thisname}{} % Your name
+\renewcommand{\thisextension}{} % Pick only one of the two options accordingly
+
+\begin{document}
+
+\thisheading
+
+\vspace{-0.5cm}
+\subsection*{Instructions}
+
+\begin{enumerate}
+	\item Do not forget to write your name and NetID above, and to sign Rutgers honor pledge below. 
+	\item The exam contains $4$ problems worth $100$ points in total \emph{plus} one {extra} credit problem worth $10$ points. 
+	\item This is a take-home exam. You have exactly 24 hours to finish the exam. 
+	\item The exam should be done \textbf{individually} and you are not allowed to discuss these questions with anyone else. This includes asking any questions or clarifications
+	regarding the exam from other students or posting them publicly on Piazza (any inquiry should be posted privately on Piazza). You may however consult all
+	the materials used in this course (video lectures, notes, textbook, etc.) while writing your solution, but \textbf{no other resources are allowed}.
+
+	\item Remember that you can leave a problem (or parts of it) entirely blank and receive $25\%$ of the grade for that problem (or part). However, this should not  discourage you from attempting a problem if you think 
+	you know how to approach it as you will receive partial credit more than $25\%$ if you are on the right track. But keep in mind that if you simply do not know the answer, writing a very wrong answer may lead to $0\%$ credit.
+	
+	The only \textbf{exception} to this rule is the extra credit problem: you do {not get any credit for leaving the extra credit problem blank}, and it is harder to get partial credit on that problem.
+	
+	\item \textbf{You should always prove the correctness of your algorithm and analyze its runtime.} Also, as a general rule, avoid using complicated pseudo-code and instead explain your algorithm in English. 
+	\item You may use any algorithm presented in the class or homeworks as a building block for your solutions. 
+\end{enumerate}
+
+\finishline
+
+\paragraph{Rutgers honor pledge:} 
+
+\begin{quote}
+\emph{On my honor, I have neither received nor given any unauthorized assistance on this
+examination.} 
+\end{quote}
+\hfill{Signature:\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}
+
+\bigskip
+
+\begin{center}
+\begin{tabular}{|c|r|c|}
+\hline
+Problem. \# & Points & Score \\ \hline\hline
+$1$ & 25 & ~~~~~~~~~~~\\  \hline
+$2$ & 25 & \\ \hline
+$3$ & 25 & \\ \hline
+$4$ & 25 & \\ \hline
+$5$ & +10 & \\ \hline
+Total & $100 + 10$ & \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\begin{problem}\label{basics}~
+\begin{enumerate}[label=(\alph*)]
+	\item Suppose $G=(V,E)$ is any undirected graph and $(S,V-S)$ is a cut with zero cut edges in $G$. Prove that if we pick two arbitrary vertices $u \in S$ and $v \in V \setminus S$, and add a new edge $(u,v)$, in the resulting graph, there is no cycle that contains the edge $(u,v)$. 
+	\grade{12.5}
+
+\begin{solution}
+	Solution to Problem 1 part (a) goes here. 
+\end{solution}
+
+	\newpage
+	\item Suppose $G = (V,E)$ is an undirected graph with weight $w_e$ on each edge $e$. Prove that if the weight of some edge $f$ is \emph{strictly larger} than weight of  all other edges in \emph{some cycle} in $G$, then \emph{no} minimum spanning tree (MST) of $G$ contains the edge $f$. 
+	
+	(Note that to prove this statement, it is \emph{not} enough
+	to say that some specific algorithm for MST never picks this edge $f$; you have to prove \emph{no} MST of $G$ can contain this edge). 
+	 \grade{12.5}
+	
+	
+\begin{solution}
+	Solution to Problem 1 part (b) goes here. 
+\end{solution}
+ 
+	
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+
+\begin{problem}\label{search}
+	
+	We are given a directed acyclic graph $G=(V,E)$ with a unique source $s$ and a unique sink $t$. We say that an edge $e$ in $G$ is a \emph{bottleneck edge} if \emph{every} path from $s$ to $t$ passes through this edge $e$. Design and analyze an algorithm 
+	for finding \emph{all} bottleneck edges in $G$ in $O(n+m)$ time. 
+
+\begin{enumerate}
+	\item[(a)] \emph{Algorithm (or graph reduction)}: \grade{10} 
+	
+	
+\begin{solution}
+	Solution to Problem 2 part (a) goes here. 
+\end{solution}
+
+	\newpage
+	\item[(b)] \emph{Proof of Correctness}: \grade{10} 
+	
+	
+\begin{solution}
+	Solution to Problem 2 part (b) goes here. 
+\end{solution}
+
+\bigskip
+
+	\item[(c)] \emph{Runtime Analysis}: \grade{5} 
+	
+	
+\begin{solution}
+	Solution to Problem 2 part (c) goes here. 
+\end{solution}
+
+\end{enumerate}
+	
+\end{problem} 
+
+\newpage
+
+\begin{problem}\label{mst}
+	Crazy City consists of $n$ houses and $m$ bidirectional streets connecting these houses together, and there is always at least one way to go from any house to another one following these streets. 
+	For every street $e$ in this city, the cost of maintaining this street is some positive integer $c_e$. 
+	The mayor of Crazy City has come up with a brilliant cost saving plan: destroy(!) as many as the streets possible to maximize the cost of destroyed streets (so we no longer have to pay for their maintenance) while only ensuring that there is still a way for every house to reach mayor's house following the remaining streets. 
+	
+	Design an $O(m\log{m})$ time algorithm that outputs the set of streets with \emph{maximum total cost} that should be destroyed by the mayor. 
+
+\begin{enumerate}
+	\item[(a)] \emph{Algorithm (or graph reduction)}: \grade{10} 
+	
+	
+\begin{solution}
+	Solution to Problem 3 part (a) goes here. 
+\end{solution}
+
+	\newpage
+	\item[(b)] \emph{Proof of Correctness}: \grade{10} 
+	
+\begin{solution}
+	Solution to Problem 3 part (b) goes here. 
+\end{solution}
+
+
+\bigskip
+
+
+	\item[(c)] \emph{Runtime Analysis}: \grade{5} 
+	
+	
+\begin{solution}
+	Solution to Problem 3 part (c) goes here. 
+\end{solution}
+
+\end{enumerate}
+	
+	
+\end{problem}
+\newpage
+
+\begin{problem}\label{sp}
+
+We are given a weighted undirected graph $G=(V,E)$ with positive weight $w_e$ over each edge $e$, and two vertices $s,t \in V$. Additionally, we are given a list $L$ of $k$ \emph{new} edges (not in $G$), where each edge $f \in L$ has some weight $w_f$. 
+Our goal is to pick \emph{exactly one} edge $f$ from $L$ to add to $G$ such that we minimize the weight of the shortest path from $s$ to $t$ in the resulting graph $G+f$. 
+
+Design an $O(k+n+m\log{m})$ time algorithm that determines which edge from $L$ should be added to $G$. 
+
+\begin{enumerate}
+	\item[(a)] \emph{Algorithm (or graph reduction)}: \grade{10} 
+	
+	
+\begin{solution}
+	Solution to Problem 4 part (a) goes here. 
+\end{solution}
+
+	\newpage
+	\item[(b)] \emph{Proof of Correctness}: \grade{10} 
+
+
+\begin{solution}
+	Solution to Problem 4 part (b) goes here. 
+\end{solution}
+
+
+\bigskip
+
+
+	\item[(c)] \emph{Runtime Analysis}: \grade{5} 
+	
+	
+\begin{solution}
+	Solution to Problem 4 part (c) goes here. 
+\end{solution}
+
+\end{enumerate}
+
+\end{problem}
+
+\newpage
+
+\newpage
+
+\begin{problem}\label{extra}[\textbf{Extra credit}]
+	You are given an undirected graph $G=(V,E)$ and two vertices $s$ and $t$ in $G$. Design and analyze an algorithm that in $O(n+m)$ time, decides if the number of \emph{different shortest paths} from $s$ to $t$ is an \emph{odd} number or an \emph{even} one. 
+	\grade{+10}
+	
+	\emph{Hint:} This problem is both related to Problem 3 of your homework 3 and also very different: here, you are looking for the number of \emph{shortest} paths (not arbitrary paths) and in an undirected graph (not in a DAG). You should however still feel free to use a graph reduction to that problem 
+	if you see a proper way. 
+	
+\end{problem}
+
+
+\begin{solution}
+	Solution to Problem 5, the extra credit problem, goes here. 
+\end{solution}
+
+\newpage
+\subsection*{Extra Workspace}
+
+
+\end{document}
+
+
+
+
+

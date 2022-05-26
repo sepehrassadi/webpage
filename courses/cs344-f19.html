@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS344: Design and Analysis of Computer Algorithms (Fall 2019) </title>
+
+<style>
+
+
+.header{
+	height: 30px;	
+	background-color:#9fdfbf;
+	padding-top:10px;
+}
+
+
+.top{
+	color:green;
+	font-weight:bold;
+}
+
+.event{
+	color:green;
+	font-weight:bold;
+}
+
+a:link {
+  text-decoration: none;
+	color:blue;
+}
+
+a:visited {
+  text-decoration: none;
+	color:blue;
+}
+
+a:hover {
+  text-decoration: underline;
+	color:blue;
+}
+
+a:active {
+  text-decoration: underline;
+	color:blue;
+}
+
+.cal table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+.cal td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+.cal tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+    </head>
+    <body>
+
+<h1 style="color:#FF4136">CS 344: Design and Analysis of Computer Algorithms -- Fall 2019</h1>
+<hr>
+<div style="padding-left:20px;width:1200px">
+<table class="w3-table" style="padding:5px">
+  <tr>
+    <td style="width:100px"></td>
+    <td></td>
+  </tr>
+<tr>
+  <td><span class="top">Instructor</span></td>
+  <td><a href="https://www.cs.rutgers.edu/~sa1497/">Sepehr Assadi</a></td>
+</tr>
+
+<tr>
+  <td><span class="top">Credits</span></td>
+  <td>4 units</td>
+</tr>
+
+<tr>
+  <td><span class="top">Schedule</span></td>
+  <td>Mondays and Thursdays 12:00 PM - 1:20 PM in 
+<a href="https://maps.rutgers.edu/#/?click=true&lat=40.52168462818824&lng=-74.43567759779887&selected=4146&sidebar=true&zoom=17">TIL-232</a> (Livingston campus)</td>
+</tr>
+
+<tr>
+  <td><span class="top">Prerequisites</span></td>
+  <td>CS 112 Data Structures, CS 206 Introduction to Discrete Structures II</td>
+</tr>
+
+
+<tr>
+  <td><span class="top">Syllabus</span></td>
+  <td>The full course syllabus is available on <a href="https://canvas.rutgers.edu">Canvas</a>. This webpage contains the highlights of course syllabus that are potentially updated as the semester progresses. </td>
+</tr>
+
+
+
+</table>
+
+<h3 class="header"><span style="padding-left:10px"/> Overview</h3>
+<p>
+The goal of this course is to familiarize students with basic concepts and techniques
+in algorithm design. The course covers mathematical induction, techniques for analyzing algorithms, sorting and searching, 
+divide and conquer, greedy algorithms, dynamic programming, graph algorithms, and elements of the theory of NP-completeness.
+</p>
+<h3 class="header"> <span style="padding-left:10px"/>  Logistics</h3>
+
+<b>Lecture:</b>
+<ul>
+<li> Instructor: <a href="http://www.cs.rutgers.edu/~sa1497/">Sepehr Assadi</a></li>
+<li> Instructor Email: sepehr.assadi@rutgers.edu</li>
+<li> Lecture Schedule: Mondays and Thursdays 12:00 PM - 1:20 PM (<a href="https://maps.rutgers.edu/#/?click=true&lat=40.52168462818824&lng=-74.43567759779887&selected=4146&sidebar=true&zoom=17">TIL-232</a>)  
+<li> Office hours: Mondays and Thursdays 2:00 PM to 3:00 PM (Hill 411)</li>
+</ul>
+
+This course  has three recitation sections.
+
+<br/><br/>
+<b>Section 1:</b>
+<ul>
+<li> Recitation Instructor: Vishvajeet "Goje" Nagargoje  </li>
+<li> Recitation Instructor Email: vishva.jeet@rutgers.edu </li>
+<li> Recitation Class Schedule: Wednesdays 8:55 AM to 9:50 AM (<a href="https://maps.rutgers.edu/#/?click=true&lat=40.522676741491665&lng=-74.46251154932338&selected=3854&sidebar=true&zoom=17">SEC-202</a>) </li>
+<li> Office Hours: Tuesdays 3:45 PM to 4:45 PM (Hill 419)</li>
+</ul>
+
+
+<b>Section 2:</b>
+<ul>
+<li> Recitation Instructor:  Harsha Srimath Tirumala  </li>
+<li> Recitation Instructor Email:  harsha.tirumala@rutgers.edu </li>
+<li> Recitation Class Schedule: Wednesdays 5:15 PM to 6:10 PM (<a href="https://maps.rutgers.edu/#/?click=true&lat=40.523868667954666&lng=-74.46505825549872&selected=3878&sidebar=true&zoom=17">ARC-105</a>) </li>
+<li> Office Hours: Tuesdays 4:00 PM to 5:00 PM (RUTCOR 111) and Fridays 12:00 PM to 1:00 PM (CORE 246) </li>
+</ul>
+
+<b>Section 3:</b>
+<ul>
+<li> Recitation Instructor: Zach Langley </li>
+<li> Recitation Instructor Email: zach.langley@rutgers.edu </li>
+<li> Recitation Class Schedule: Mondays 8:55 AM to 9:50 AM (<a href="https://maps.rutgers.edu/#/?click=true&lat=40.52278946165586&lng=-74.43937818983227&selected=4145&sidebar=true&zoom=17">BE-250</a>) </li>
+<li> Office Hours: Wednesdays 5:15 PM to 6:15 PM (CORE 246)</li>
+</ul>
+
+
+
+<h3 class="header"> <span style="padding-left:10px"/>  Important Dates</h3>
+<ul>
+<li> Mid-term exam 1: Thursday 10/10 -- 12:00 PM to 1:20 PM (lecture time) </li>
+<li> Mid-term exam 2: Thursday 11/14 -- 12:00 PM to 1:20 PM (lecture time) </li>
+<li> Final exam: Tuesday 12/17 -- 8:00 AM to 11:00 AM (according to the University schedule)  </li>
+</ul>
+
+
+<h3 class="header"> <span style="padding-left:10px"/>  Reading</h3>
+The official textbook for the course is: 
+<ul>
+<li> Thomas Cormen, Charles Leiserson, Ronald Rivest, Clifford Stein: <span style="font-weight:bold">Introduction to Algorithms</span>, Third Edition, MIT Press, 2009. </li>
+</ul>
+For further reading: 
+<ul>
+<li> Jeff Erickson: <span style="font-weight:bold">Algorithms</span>, © Copyright 2019 Jeff Erickson. The electronic version is freely available on <a href="http://jeffe.cs.illinois.edu/teaching/algorithms">this webpage</a>. </li>
+</ul>
+
+<span style="font-weight:bold">Homeworks and exams will be solely based on the materials presented in the class -- this includes the parts that may not necessarily be  covered in the textbook. </span>
+<h3 class="header"><span style="padding-left:10px"/> Grading</h3>
+The final grade for the course will be based on the following weights:
+<ul>
+<li> 20% Homeworks (5 for 4% each)</li>
+<li> 40% Mid-term exams (2 for 20% each) </li>
+<li> 40% Final exam </li>
+<li> +5% participation  (at the discretion of the Instructor/TAs) </li>
+</ul>	
+
+The students are expected to follow <a href="http://academicintegrity.rutgers.edu/academic-integrity-at-rutgers/">Rutgers academic integrity policy</a> for all their work in this course. See the course syllabus on <a href="https://canvas.rutgers.edu">Canvas</a> for more information. <br/><br/>
+
+<span style="font-weight:bold">Homeworks:</span> There will be five homeworks in the course and a tentative schedule of release and due dates are available on the <a href="#course-calendar">course calendar</a>. 
+Homeworks should be done individually and students have one week to work on each homework unless stated otherwise.
+
+ <span style="font-weight:bold"> Homeworks must be typeset in LaTeX and submitted via <a href="https://canvas.rutgers.edu/">Canvas</a> by 11:59pm EST on the due date</span>. A LaTeX template will be released with each homework (for introduction to LaTeX, see the <a href="#latex">Resources on LaTeX</a> section). The students are allowed to submit up to two homeworks late, each with a delay of at most two days. A zero credit will be given to any homework submitted after two days past the deadline or homeworks that are submitted late even after the two allowed extensions. More information on homeworks is available in the course syllabus on <a href="https://canvas.rutgers.edu">Canvas</a>.
+	
+
+
+
+<br/><br/>
+<span style="font-weight:bold">Mid-term exams: </span> There will be two mid-term exams during this course. The first mid-term will cover lectures 1 to 10 and 
+the second mid-term will cover lectures 11 to 19. The mid-term exams will be will be held during scheduled class hours. 
+The two mid-term exams will be closed-book: no textbooks, electronic devices, or cheat sheets are allowed. <span style="font-weight:bold">A missed exam draws zero credit</span>. 
+However, emergencies will be considered upon submitting a University-issued written verification to the Instructor.
+
+<br/><br/>
+
+<span style="font-weight:bold">Final exam: </span> The final exam will be from the material covered in the entire course. 
+This exam will be 3 hours long and will be held at the end of the semester according to the Rutgers undergraduate schedule of classes.
+The final exam will also be closed-book: no textbooks, electronic devices, or cheat sheets are allowed.
+<br/><br/>
+
+
+<span style="font-weight:bold">Participation: </span> There is up to 5% <span style="font-weight:bold">extra credit</span> for participation. By default your participation grade is zero. If you typically come to the lectures/recitations but you
+never answer questions during the lectures or the recitations, your participation grade will remain zero. Positive participation grades will be given to students that actively
+participate in lectures and recitations. There is however no such thing as “negative participation” which can hurt your grade — participation can only help (by giving you a small bump to your final grade). There is no formula for participation bumps and this grade will be at the discretion of the Instructor and TAs. More information is available in the course syllabus on <a href="https://canvas.rutgers.edu">Canvas</a>.   
+<br/><br/>
+
+<h3 class="header" id="course-calendar"><span style="padding-left:10px"/> Course Calendar</h3>
+The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change. The references are all to the CLRS book unless stated otherwise.  
+<br/>
+<br/>
+<table class="cal">
+  <tr>
+    <th>#</th>
+    <th style="width:100px">Date</th>
+    <th style="width:600px">Topics</th>
+    <th style="width:500px">Readings and Remarks</th>
+  </tr>
+  <tr>
+    <td> 1 </td>
+    <td> Thu 09/05</td>
+    <td> Introduction, Course Policy, Intro to Algorithm Design </td>
+    <td> Chapter 1 </td>
+  </tr>
+
+  <tr>
+    <td> 2 </td>
+    <td> Mon 09/09</td>
+    <td> Intro to Algorithm Design and Asymptotic Analysis </td>
+    <td> Chapters 2.1, 2.2, 3</td>
+  </tr>
+
+
+  <tr>
+    <td> 3 </td>
+    <td> Thu 09/12</td>
+    <td> Proof by Induction, Intro to Sorting, Binary Search </td>
+    <td> Chapters 2.1, 4.3, intro of part II  -- <span class="event">HW1 release</span> </td>
+  </tr>
+
+  
+<tr>
+    <td> 4 </td>
+    <td> Mon 09/16</td>
+    <td> Sorting via Divide and Conquer: Merge Sort </td>
+    <td> Chapters 2.3, 4.4 </td>
+ </tr>
+
+
+  <tr>
+    <td> 5 </td>
+    <td> Thu 09/19</td>
+    <td> Solving Recurrences, Quick Sort </td>
+    <td> Chapters 4.5, 7.1, 7.2 --  <span class="event"> HW1 due </span> </td>
+  </tr>
+
+
+  <tr>
+    <td> 6 </td>
+    <td> Mon 09/23</td>
+    <td> Randomized Quick Sort, Basics of Probabilistic Analysis  </td>
+    <td> Chapters 5, 7.3 -- <span class="event"> HW2 release </span></td>
+  </tr>
+
+
+  <tr>
+    <td> 7 </td>
+    <td> Thu 09/26</td>
+    <td> More on Randomized Quick Sort, Counting Sort, Concluding Remarks on Sorting </td>
+    <td> Chapters 8.2 </td>
+  </tr>
+
+
+
+  <tr>
+    <td> 8 </td>
+    <td> Mon 09/30</td>
+    <td> Dynamic Programming: Fibonacci Numbers, Knapsack Problem</td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap3]</a> of Erickson's book, Chapter 15.1 </td>
+  </tr>
+
+  <tr>
+    <td> 9 </td>
+    <td> Thu 10/03</td>
+    <td> Dynamic Programming: Longest Increasing Subsequence</td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap3]</a> of Erickson's book, Chapters 15.2, 15.4 -- <span style="color:green; font-weight:bold"> HW2 due</span>  </td>
+  </tr>
+
+
+
+  <tr>
+    <td> 10 </td>
+    <td> Mon 10/07</td>
+    <td> Dynamic Programming: Review </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap3]</a> of Erickson's book, Chapter 15.3 </td>
+  </tr>
+
+
+
+
+
+  <tr>
+    <td>  </td>
+    <td> Thu 10/10</td>
+    <td> <span style="color:green; font-weight:bold"> Mid-term Exam 1</span>  </td>
+    <td> -- </td>
+  </tr>
+
+
+
+
+
+  <tr>
+    <td> 11 </td>
+    <td> Mon 10/14</td>
+    <td> Greedy Algorithms vs Dynamic Programming </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/04-greedy.pdf">[Chap4]</a> of Erickson's book, Chapters 16.1, 16.2 -- <span class="event"> HW3 release </span></td>
+  </tr>
+
+
+
+  <tr>
+    <td> 12 </td>
+    <td> Thu 10/17</td>
+    <td> Greedy Algorithms: Job Scheduling, Maximum Disjoint Intervals </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/04-greedy.pdf">[Chap4]</a> of Erickson's book, Chapter 16.3  </td>
+  </tr>
+
+
+
+  <tr>
+    <td> 13 </td>
+    <td> Mon 10/21</td>
+    <td> Intro to Graph Algorithms: Graph Reductions, Graph Search </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf">[Chap5]</a> of Erickson's book, Part VI intro, Chapter 22.1 </td>
+  </tr>
+
+  <tr>
+    <td> 14 </td>
+    <td> Thu 10/24</td>
+    <td> Graph Representation, Algorithms for Graph Search: DFS </td>
+    <td> Chapter 22.3 -- <span class="event"> HW3 due </span> </td>
+  </tr>
+
+  <tr>
+    <td> 15 </td>
+    <td> Thu 10/28</td>
+    <td> Algorithms for Graph Search: BFS, Topological Sort </td>
+    <td> Chapters 22.2 and intro of 24  </span> </td>
+  </tr>
+
+
+<!--
+
+  <tr>
+    <td> 15 </td>
+    <td> Mon 10/28</td>
+    <td> Minimum Spanning Tree: Basic Elements, Kruskal's Algorithm </td>
+    <td> Chapters 23.1, 23.2  <span class="event"> HW4 release </span> </td>
+  </tr>
+-->
+
+  <tr>
+    <td> 16 </td>
+    <td> Thu 10/31</td>
+    <td> Algorithms for Topological Sorting and Longest Path in DAGs </td>
+    <td> Chapter 22.4 </td>
+  </tr>
+
+
+  <tr>
+    <td> 17 </td>
+    <td> Mon 11/04</td>
+    <td> Minimum Spanning Tree: The Generic Algorithm </td> 
+
+<!-- Kruskal's and Prim's Algorithm</td> -->
+    <td> Chapters 23.intro, 23.1, 21 (for union-find data structure) </td>
+  </tr>
+
+
+
+   <tr>
+    <td> 18 </td>
+    <td> Thu 11/07</td>
+    <td> Minimum Spanning Tree: Kruskal's Algorithm</td>
+    <td> Chapters 23.2 -- <span class="event"> HW4 due </span> </td>
+  </tr>
+
+
+   <tr>
+    <td> 19 </td>
+    <td> Thu 11/11</td>
+    <td> Minimum Spanning Tree: Prim's Algorithm</td>
+    <td> Chapters 23.2 </td>
+  </tr>
+
+
+ <!--
+   <tr>
+    <td> 18 </td>
+    <td> Thu 11/07</td>
+    <td> Single-Source Shortest Path: Bellman-Ford Algorithm</td>
+    <td> Chapters 24.1, 24.2, 24.3, 24.5 <span class="event"> HW4 due </span> </td>
+  </tr>
+ -->
+<!--
+  <tr>
+    <td> 19 </td>
+    <td> Mon 11/11</td>
+    <td> Single-Source Shortest Path: Dijkstra's Algorithm </td> All-Pairs Shortest Path: Matrix Multiplication, Floyd-Warshal Algorithm </td> 
+    <td> Chapters 25.1, 25.2 </td>
+ </tr>
+-->
+ <tr>
+    <td>  </td>
+    <td> Thu 11/14</td>
+    <td> <span class="event">Mid-term Exam 2</span> </td>
+    <td> -- </td>
+  </tr>
+
+ <tr>
+    <td> 20 </td>
+    <td> Mon 11/18</td>
+    <td> Practice Session </td> 
+    <td> -- </td>
+  </tr>
+
+
+ <tr>
+    <td> 21 </td>
+    <td> Thu 11/21</td>
+    <td> Single-Source Shortest Path: Bellman-Ford Algorithm </td> 
+    <td> Chapters 24.intro, 24.1 -- <span class="event">HW5 release</span> </td>
+  </tr>
+
+  <tr>
+    <td> 22 </td>
+    <td> Mon 11/25</td>
+    <td> Single-Source Shortest Path: Dijkstra's Algorithm, Network Flow: Introduction </td> 
+    <td> Chapter 24.3, 26.1 </td>
+  </tr>
+ 
+  <tr>
+    <td> 23 </td>
+    <td> Tue 11/26</td>
+    <td> Network Flow: Applications to Bipartite Matching and Exam Scheduling Problem </td>
+    <td> Chapters 26.3, and <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/11-maxflowapps.pdf">[Chap 11]</a> of Erickson's book  -- <span style="color:red">unusual time</span></td>
+  </tr>
+
+<!--
+  <tr>
+    <td> 21 </td>
+    <td> Thu 11/21</td>
+    <td> Network Flow: Flows and Cuts, Max-Flow Min-Cut Duality </td>
+    <td> Chapter 26.2, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/11-maxflowapps.pdf">[Chap 11]</a> of Erickson's book -  <span class="event">HW5 release</span> </td>
+  </tr>
+  <tr>
+    <td> 22 </td>
+    <td> Mon 11/25</td>
+    <td> Network Flow: Ford-Fulkerson Algorithm </td>
+    <td> Chapter 26.2 </td>
+  </tr> 
+-->
+ <tr>
+    <td>  </td>
+    <td> Thu 11/28</td>
+    <td> <span style="color:red">No Class: Thanksgiving Recess</span> </td>
+    <td> -- </td>
+  </tr>
+
+
+  <tr>
+    <td> 24 </td>
+    <td> Mon 12/02</td>
+    <td> Intro to P vs NP: NP-Completeness and Reductions </td>
+    <td> Chapters 34.3, 34.4 </td>
+  </tr>
+  <tr>
+    <td> 25 </td>
+    <td> Thu 12/05</td>
+    <td> Intro to P vs NP: NP-Hard Problems </td>
+    <td> Chapter 34.5, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf">[Chap 12]</a> of Erickson's book -- <span class="event"> HW5 due </span> </td>
+  </tr>
+
+  <tr>
+    <td> 26 </td>
+    <td> Mon 12/09</td>
+    <td> Intro tto P vs NP: NP-Hardness Reductions </td>
+    <td> Chapter 34.3 </td>	
+ </tr>
+ 
+
+
+  <tr>
+    <td>  </td>
+    <td> Tue 12/17</td>
+    <td> <span class="event">Final Exam</span> </td>
+    <td> According to the University Schedule. </td>
+  </tr>
+ 
+<tr>
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+</tr>
+ 
+
+</table>
+
+
+<h3 class="header"> <span style="padding-left:10px"/> Questions?</h3>
+The course has a <a href="https://piazza.com/rutgers/fall2019/011983440103/home">Piazza page</a> accessible through <a href="https://canvas.rutgers.edu/">Canvas</a>.
+
+<h3 class="header" id="latex"> <span style="padding-left:10px"/> Resources on LaTeX</h3>
+
+
+You can download LaTeX for free <a href="https://www.latex-project.org/get/">here</a>. For the purpose of this course, you do not even need to install LaTeX and 
+can instead use an online LaTeX editor such as <a href="https://www.overleaf.com">Overleaf</a>. <br/><br/>
+
+Two great introductory resources for  LaTeX are <a href="http://ricardo.ecn.wfu.edu/~cottrell/ecn297/latex_tut.pdf">A Short Introduction to LaTeX</a> by <a href="http://users.wfu.edu/cottrell/">Allin Cottrell</a>
+ (for general purpose LaTeX)
+and <a href="http://joshua.smcvt.edu/proofs/tutorial.pdf">LaTeX for Undergraduates</a> by <a href="http://joshua.smcvt.edu/math/hefferon.html">Jim Hefferson</a> (for undergraduates mathematics) 
+accompanied by the following <a href="http://joshua.smcvt.edu/undergradmath/">cheatsheet</a> (note that this document use "\( MATH \)" notation compared to the perhaps more
+ widely used "$ MATH $" -- both are completely fine in LaTeX). 
+You can also use this wonderful tool <a href="http://detexify.kirelabs.org/classify.html">Detexify</a> by <a href="http://kirelabs.org">Daniel Kirsch</a> for finding the
+ LaTeX commands of a symbol (just draw the symbol!).  
+<br/><br/>
+If you are interested in learning more about LaTeX (beyond what is needed for this course), check the <a href="https://en.wikibooks.org/wiki/LaTeX">Wikibook on LaTeX</a> and
+the <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#List_of_Mathematical_Symbols">Wikibook on LaTeX for Mathematics</a>. 
+</div>
+
+<hr>
+<br/>
+   </body>
+</html>
+

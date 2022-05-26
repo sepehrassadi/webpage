@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sepehr Assadi </title>
+<link rel="shortcut icon" href="favicon.ico" />
+<!-- Load CSS -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<!-- Load Fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" type="text/css" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" type="text/css" />
+<!-- Load jQuery library -->
+<script type="text/javascript" src="../scripts/jquery-1.6.2.min.js"></script>
+<!-- Load custom js -->
+<script type="text/javascript" src="../scripts/panelslide.js"></script>
+<script type="text/javascript" src="../scripts/custom.js"></script>
+<!-- Load topcontrol js -->
+<script type="text/javascript" src="../scripts/scrolltopcontrol.js"></script>
+<!-- Load NIVO Slider -->
+<link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/nivo-theme.css" type="text/css" media="screen" />
+<script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+<script src="scripts/nivo-options.js" type="text/javascript"></script>
+<!-- Load fancybox -->
+<script type="text/javascript" src="../scripts/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="../scripts/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="../scripts/jquery.mousewheel-3.0.4.pack.js"></script>
+<link rel="stylesheet" href="../css/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+</head>
+<body>
+    <div id="nav">
+        <div id="menus">
+            <div class="menu">
+                <ul>
+                    <li class="page_item page-item-1"><a href="../index.html#2017">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+<div id="content">
+
+<div class="spacer"></div>
+<h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> On Estimating Maximum Matching Size in Graph Streams </h2> 
+<div class="pages">
+	<div style="padding-bottom:10px">
+	<span style="font-weight:bold"> Authors: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> Sepehr Assadi, <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>, <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>. </span>
+	</span>
+	</div>
+	
+	<div style="padding-bottom:30px;">
+	<span style="font-weight:bold;"> Conference: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	<a href="http://www.siam.org/meetings/da17/">The 28th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA'17).</a>
+	</span>
+	<div style="padding-top:10px;color:#ff4000;font-weight:bold"> This paper resolves an open question of Li and Woodruff in <a href="http://dl.acm.org/citation.cfm?id=2897581" style="font-weight:bold;color:#ff4000">[LW'16]</a> on proving super-linear lower bounds for matrix rank estimation in data streams.</div>   
+	
+<!--	<div style="padding-top:10px;color:green;font-weight:bold"> This paper settles the <a href="http://sublinear.info/index.php?title=Open_Problems:64" style="font-weight:bold;color:green">
+	Open Problem 64</a> from the
+	<a href="http://sublinear.info/index.php?title=Main_Page" style="font-weight:bold;color:green">List of Open Problems in Sublinear Algorithms</a>. </div>   
+-->	</span>
+	</div>
+	
+	<div style="padding-bottom:50px;">
+	<span style="font-weight:bold;"> Abstract: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	We study the problem of estimating the maximum matching size in graphs whose edges are revealed in a streaming manner.
+	We consider both insertion-only streams, which only contain edge insertions, and dynamic streams that allow both insertions and deletions of the edges, and present new upper and lower
+	bound results for both cases. 
+	<br/>
+
+	On the upper bound front, we show that an α-approximate estimate of the matching size can be computed in dynamic streams using O(n^2/α^4) space, and in insertion-only streams using O (n/α^2)-space.
+	These bounds respectively shave off a factor of α from the space necessary to compute an α-approximate matching (as opposed to only size), thus proving a non-trivial separation between
+	approximate estimation and approximate computation of matchings in data streams. 
+	<br/>
+
+	On the lower bound front, we prove that any α-approximation algorithm for estimating matching size in dynamic graph streams requires Ω(√n/α^2.5) bits of space, even if the underlying graph
+	is both sparse and has arboricity bounded by O(α). We further improve our lower bound to Ω(n/α^2) in the case of dense graphs. 
+	These results establish the first non-trivial streaming lower bounds for super-constant approximation of matching size.
+	<br/>
+
+	Furthermore, we present the first super-linear space lower bound for computing a (1+ε)- approximation of matching size even in insertion-only streams. In particular, we prove
+	that a (1 + ε)-approximation to matching size requires RS(n) · n^{1−O(ε)} space; here, RS(n) denotes the maximum number of edge-disjoint induced matchings of size Θ(n) in an n-vertex graph. 
+	It is a major open problem with far-reaching implications to determine the value of RS(n), and current results leave open the possibility that RS(n) may be as large as n/log n. 
+	Moreover, using the best known lower bounds for RS(n), our result already rules out any (n · poly(log n/ε))-space algorithm for (1 + ε)-approximation of matchings. 
+	We also show how to avoid the dependency on the parameter RS(n) in proving lower bound for dynamic streams and present a near-optimal lower bound of n^{2−O(ε)} for (1+ε)-approximation in this model.
+	<br/>
+
+	Using a well-known connection between matching size and matrix rank, all our lower bounds also hold for the problem of estimating matrix rank. 
+	In particular our results imply a near-optimal n^{2−O(ε)} bit lower bound for (1 + ε)-approximation of matrix ranks for dense matrices
+	in dynamic streams, answering an open question of Li and Woodruff (STOC 2016).
+	</span>
+	</span>
+	</div>
+
+	
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Conference version: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="../stuff/papers/matching-size-soda17.pdf">[PDF]</a>
+	</span>
+	</span>
+	</div>
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Full version: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="https://arxiv.org/abs/1701.04364">[arXiv]</a> 
+	</span>
+	</span>
+	</div>
+	
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> Presentation slides: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+		<a href="../stuff/presentations/matching-size-soda17-slides.pdf">[PDF]</a>
+	</span>
+	</span>
+	</div>
+
+
+	<div style=padding-bottom:10px;">
+	<span style="font-weight:bold;"> BibTex: </span>
+	<span id="pub" style="font-size:16px">
+	<span class="paper-author"> 
+	<a href="http://dblp.uni-trier.de/rec/bibtex/conf/soda/AssadiKL17">[DBLP]</a>
+	</span>
+	</span>
+	</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="spacer"></div>
+</div>
+
+<!--END of content-->
+</div>	
+
+</body>
+</html>

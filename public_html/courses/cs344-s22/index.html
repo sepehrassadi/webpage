@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS344: Design and Analysis of Computer Algorithms (Spring 2022) </title>
+
+<style>
+
+
+.header{
+	height: 30px;	
+	background-color:#9fdfbf;
+	padding-top:10px;
+}
+
+
+.top{
+	color:green;
+	font-weight:bold;
+}
+
+.event{
+	color:green;
+	font-weight:bold;
+}
+
+a:link {
+  text-decoration: none;
+	color:blue;
+}
+
+a:visited {
+  text-decoration: none;
+	color:blue;
+}
+
+a:hover {
+  text-decoration: underline;
+	color:blue;
+}
+
+a:active {
+  text-decoration: underline;
+	color:blue;
+}
+
+.cal table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+.cal td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+.cal tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+    </head>
+    <body>
+
+<h1 style="color:#FF4136">CS 344: Design and Analysis of Computer Algorithms -- Spring 2022</h1>
+<hr>
+<div style="padding-left:20px;width:1200px">
+<table class="w3-table" style="padding:5px">
+  <tr>
+    <td style="width:100px"></td>
+    <td></td>
+  </tr>
+<tr>
+  <td><span class="top">Instructor</span></td>
+  <td><a href="https://www.cs.rutgers.edu/~sa1497/">Sepehr Assadi</a></td>
+</tr>
+
+<tr>
+  <td><span class="top">Credits</span></td>
+  <td>4 units</td>
+</tr>
+
+<tr>
+  <td><span class="top">Schedule</span></td>
+  <td> Tuesdays and Thursdays, 2:00 PM - 3:20PM in <a href="https://maps.rutgers.edu/#/?click=true&lat=40.524373&lng=-74.459681&selected=3913&sidebar=true&zoom=19">RWH-105</a> (Richard Weeks Hall; Busch campus) -- the class will be online in January (see <a href="https://rutgers.instructure.com/courses/160873">Canvas</a>).</td>
+</tr>
+
+<tr>
+  <td><span class="top">Prerequisites</span></td>
+  <td>CS 112 Data Structures, CS 206 Introduction to Discrete Structures II</td>
+</tr>
+
+
+<tr>
+  <td><span class="top">Syllabus</span></td>
+  <td>The full course syllabus is available on <a href="course-syllabus-s22.pdf">here</a>. 
+      This webpage contains the highlights of course syllabus that are potentially updated as the semester progresses. </td>
+</tr>
+
+</table>
+
+<h3 class="header"><span style="padding-left:10px"/> Overview</h3>
+<p>
+The goal of this course is to familiarize students with basic concepts and techniques
+in algorithm design. The course covers mathematical induction, techniques for analyzing algorithms, sorting and searching, 
+divide and conquer, greedy algorithms, dynamic programming, graph algorithms, and elements of the theory of NP-completeness.
+</p>
+<h3 class="header"> <span style="padding-left:10px"/>  Logistics</h3>
+
+<span style="color:red; font-weight:bold">Important Note</span>: Following <a href="https://coronavirus.rutgers.edu/significant-changes-related-to-covid-19/">Rutgers's response</a> to recent surge of COVID-19 cases, all in-person instructions will <b>temporarily</b> convert to remote classes through Sunday, January 30, 2022. Please see <a href="https://rutgers.instructure.com/courses/160873">Canvas</a> for more information.
+
+<br/><br/>
+
+<b>Lecture:</b>
+<ul>
+<li> Instructor: <a href="http://www.cs.rutgers.edu/~sa1497/">Sepehr Assadi</a></li>
+<li> Instructor Email: sepehr.assadi@rutgers.edu</li>
+<li> Lecture Schedule: Tuesdays and Thursdays 2:00 PM - 3:20 PM (<a href="https://maps.rutgers.edu/#/?click=true&lat=40.524373&lng=-74.459681&selected=3913&sidebar=true&zoom=19">RWH-105</a>) -- the class will be online in January </li>
+<li> Office hours: Tuesdays and Thursdays 4:00 PM - 5:00 PM (CoRE 310) -- the office hours will be online in January </li>
+</ul>
+
+The information on teaching assistants will be published soon. 
+<!--
+This course has three teaching assistants.  
+<br/><br/>
+
+<b>Teaching Assistant 1:</b>
+<ul>
+<li> Teaching Assistant: Shuchang Liu  </li>
+<li> Teaching Assistant Email: sl1471@rutgers.edu </li>
+<li> Office Hours: Mondays 11:00am to 12:00noon and Wednesdays 11:00am to 12:00noon (on Zoom)</li>
+</ul>
+
+
+<b>Teaching Assistant 2:</b>
+<ul>
+<li> Teaching Assistant: Vihan Shah  </li>
+<li> Teaching Assistant Email: vjs69@scarletmail.rutgers.edu </li>
+<li> Office Hours: Tuesdays 5:00pm to 6:00pm and Fridays 3:00pm to 4:00pm (on Zoom)</li>
+</ul>
+
+
+<b>Teaching Assistant 3:</b>
+<ul>
+<li> Teaching Assistant: Janani Sundaresan  </li>
+<li> Teaching Assistant Email: js2816@scarletmail.rutgers.edu </li>
+<li> Office Hours: Tuesdays 8:00pm to 9:00pm and Wednesdays 3:00pm to 4:00pm (on Zoom)</li>
+</ul>
+-->
+
+<h3 class="header"> <span style="padding-left:10px"/>  Important Dates</h3>
+<ul>
+<li> Mid-term exam 1: Thursday 02/24 (lecture time) </li>
+<li> Mid-term exam 2: Thursday 04/07 (lecture time) </li>
+<li> Final exam: TBA (according to the University schedule)  </li>
+</ul>
+
+
+<h3 class="header"> <span style="padding-left:10px"/>  Reading</h3>
+The official textbook for the course is: 
+<ul>
+<li> Jeff Erickson: <span style="font-weight:bold">Algorithms</span>, © Copyright 2019 Jeff Erickson. The electronic version is freely available on <a href="http://jeffe.cs.illinois.edu/teaching/algorithms">this webpage</a>. </li>
+</ul>
+
+<span style="font-weight:bold">Homeworks and exams will be solely based on the materials presented in the class -- this includes the parts that may not necessarily be  covered in the textbook. </span>
+<h3 class="header"><span style="padding-left:10px"/> Grading</h3>
+The final grade for the course will be based on the following weights:
+<ul>
+<li> 25% Quizzes (weekly for ~2% each)</li>
+<li> 25% Homeworks (5 for 5% each + a "homework 0" with 2% bonus credit)</li>
+<li> 20% Mid-term exams (2 for 10% each) </li>
+<li> 30% Final exam </li>
+<li> +10% Bonus credit  (at the discretion of the Instructor/TAs) </li>
+</ul>	
+See the <a href="course-syllabus-s22.pdf">syllabus</a> for more details. 
+<br/><br/>
+The students are expected to follow <a href="https://nbprovost.rutgers.edu/academic-integrity-students">Rutgers academic integrity policy</a> and 
+<a href="https://www.cs.rutgers.edu/academics/undergraduate/academic-integrity-policy">CS Department academic integrity policy</a> for all their work in this course.
+See the <a href="course-syllabus-s22.pdf">syllabus</a> for more details. 
+
+<h3 class="header" id="course-calendar"><span style="padding-left:10px"/> Course Calendar</h3>
+The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change. 
+All the reading references are to Erickson's book and its supplementary materials unless stated otherwise. 
+<br/>
+<br/>
+<table class="cal">
+  <tr>
+    <th>#</th>
+    <th style="width:70px">Date</th>
+    <th style="width:630px">Topics</th>
+    <th style="width:500px">Readings and Remarks</th>
+  </tr>
+
+
+  <tr>
+    <td> 1 </td>
+    <td> Tue 01/18</td>
+    <td> Introduction and Course Policy, Intro to Algorithm Design </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/00-intro.pdf">[Chap 0]</a> -- <span class="event">HW0 release</span> </td>
+  </tr>
+ <tr>
+    <td> 2 </td>
+    <td> Thu 01/20</td>
+    <td> Algorithm Design and Asymptotic Analysis </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/00-intro.pdf">[Chap 0]</a> </td>
+  </tr>
+
+  <tr>
+    <td> 3 </td>
+    <td> Tue 01/25 </td>
+    <td> Proof by Induction, Recursions </td>
+  
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/98-induction.pdf">[Appendix I]</a>, 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf">[Chap 1]</a> 
+	    -- <span class="event">HW0 due </span>,  <span class="event">HW1 release</span> 
+    </td>
+  
+  </tr>
+
+
+  <tr>
+    <td> 4 </td>
+    <td> Thu 01/27 </td>
+    <td> Divide and Conquer, Merge Sort </td>
+  
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/98-induction.pdf">[Appendix I]</a>, 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf">[Chap 1]</a> 
+    </td>
+  
+  </tr>
+
+
+  <tr>
+    <td> 5 </td>
+    <td> Tue 02/01</td>
+    <td> Solving Recurrences, Quick Sort </td>
+     <td>
+            <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf">[Chap 1]</a>
+    </td>
+  
+  </tr>
+
+  <tr>
+    <td> 6 </td>
+    <td> Thu 02/03</td>
+    <td> Basics of Probability, Randomized Quick Sort </td>
+     <td>
+            <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/01-random.pdf">[Discrete Probability]</a>
+            <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/02-nutsbolts.pdf">[Nuts and Bolts]</a>
+    </td>
+  
+  </tr>
+
+
+  <tr>
+    <td> 7 </td>
+    <td> Tue 02/08</td>
+    <td> Hashing, Hash Functions </td>
+     <td>
+            <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/05-hashing.pdf">[Hashing]</a>
+            -- <span class="event">HW1 due</span> , <span class="event">HW2 release</span>
+    </td> 
+  
+  </tr>
+
+
+  <tr>
+    <td> 8 </td>
+    <td> Thu 02/10</td>
+    <td>  Hash Tables </td>
+     <td>
+            <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/05-hashing.pdf">[Hashing]</a>
+    </td> 
+  
+  </tr>
+
+
+ 
+  <tr>
+    <td> 9 </td>
+    <td> Tue 02/15</td>
+    <td> Dynamic Programming: Fibonacci Numbers</td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap 3]</a> (see also <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf">[Chap 2]</a>) </td>
+  </tr>
+
+
+  <tr>
+    <td> 10 </td>
+    <td> Thu 02/17</td>
+    <td> Dynamic Programming: Knapsack</td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap 3]</a> (see also <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf">[Chap 2]</a>) </td>
+  </tr>
+
+ 
+  <tr>
+    <td> 11 </td>
+    <td> Tue 02/22</td>
+    <td> Dynamic Programming: Longest Increasing Subsequence</td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap 3]</a> (see also <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf">[Chap 2]</a>)
+    	--  <span class="event">HW2 due</span>
+    </td>
+  </tr>
+
+ 
+
+  <tr>
+    <td> * </td>
+    <td> Thu 02/24 </td>
+    <td> <span style="color:green; font-weight:bold"> Mid-term Exam 1</span>  </td>
+    <td> Online take-home exam </td>
+  </tr>
+
+
+ 
+<tr>
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+</tr>
+
+
+
+  <tr>
+    <td> 12 </td>
+    <td> Tue 03/01 </td>
+    <td> Greedy Algorithms: Job Scheduling </td>
+    <td> 
+	 <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/04-greedy.pdf">[Chap 4]</a> 
+    </td>
+  </tr>
+
+
+  <tr>
+    <td> 13 </td>
+    <td> Thu 03/03</td>
+    <td> Greedy Algorithms: Maximum Disjoint Intervals </td>
+    <td> 
+	 <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/04-greedy.pdf">[Chap 4]</a> 
+    </td>
+  </tr>
+
+  <tr>
+    <td> 14 </td>
+    <td> Tue 03/08</td>
+    <td> Intro to Graph Algorithms, Graph Reductions </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf">[Chap5]</a> 
+    	 -- <span class="event">HW3 release</span>
+    </td></tr>
+
+ <tr>
+    <td> 15 </td>
+    <td> Thu 03/10</td>
+    <td> Graph Search: Depth-First-Search and Breadth-First-Search </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf">[Chap5]</a> </td>
+  </tr>
+
+    <td> * </td>
+    <td> Tue 03/15</td>
+    <td> <span style="color:red">No Class: Spring Recess</span> </td>
+    <td> </td>
+  </tr>
+
+
+  <tr>
+    <td> * </td>
+    <td> Thu 03/17</td>
+    <td> <span style="color:red">No Class: Spring Recess</span> </td>
+    <td> </td>
+  </tr>
+
+
+  <tr>
+    <td> 16 </td>
+    <td> Tue 03/22</td>
+     <td> Graph Search: Depth-First-Search and Breadth-First-Search </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf">[Chap5]</a> -- <span class="event">HW4 release</span>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td> 17 </td>
+    <td> Thu 03/24</td>
+    <td> Minimum Spanning Tree: The Generic Algorithm</td> 
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf">[Chap 7]</a>
+    	 --  <span class="event">HW3 due*</span> (the deadline is on Thursday instead) 
+    </td>
+  </tr>
+
+  <tr>
+    <td> 18 </td>
+    <td> Tue 03/29</td>
+    <td> Minimum Spanning Tree: Kruskal's and Prim's Algorithms</td> 
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf">[Chap 7]</a>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td> 19 </td>
+    <td> Thu 03/31</td>
+    <td> Shortest Path: Bellman-Ford Algorithm</td> 
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf">[Chap 7]</a>
+    </td>
+  </tr>
+
+   <tr>
+    <td> 20 </td>
+    <td> Tue 04/05</td>
+    <td> Shortest Path: Dijkstra's Algorithm </td> 
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/08-sssp.pdf">[Chap 8]</a> 
+   --  <span class="event">HW4 due</span> 
+
+    </td> </tr>
+
+ <tr>
+    <td> * </td>
+    <td> Thu 04/07 </td>
+    <td> <span class="event">Mid-term Exam 2</span> </td>
+    <td> Online take-home exam </td>
+ </tr>
+
+  <tr>
+    <td> 21 </td>
+    <td> Tue 04/12</td>
+    <td> Introduction to Network Flow </td> 
+    <td>
+ 	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/10-maxflow.pdf">[Chap 10.1]</a> 
+  </td>
+ </tr>
+
+
+  <tr>
+    <td> 22 </td>
+    <td> Thu 04/14</td>
+    <td> Network Flow Applications: Bipartite Matching </td> 
+    <td>
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/11-maxflowapps.pdf">[Chap 11]</a>  
+  </td>
+ </tr>
+
+  <tr>
+    <td> 23 </td>
+    <td> Tue 04/19</td>
+    <td> Intro to P vs NP </td>
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf">[Chap 12]</a>
+   -- <span class="event">HW5 released</span> 
+    </td>
+  </tr>
+
+  <tr>
+    <td> 24 </td>
+    <td> Thu 04/21</td>
+    <td> NP-Completeness and Reductions </td>
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf">[Chap 12]</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td> 25 </td>
+    <td> Tue 04/26</td>
+    <td> NP-Hardness Reductions</td>
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf">[Chap 12]</a>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td> 27 </td>
+    <td> Thu 04/28</td>
+    <td> NP-Hardness Reductions</td>
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf">[Chap 12]</a>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td> * </td>
+    <td> Tue 05/03</td>
+    <td> Reading Day </td>
+    <td>
+	    <span class="event">HW5 due</span> </td>
+  </tr>
+
+
+  <tr>
+    <td> * </td>
+    <td>  </td>
+    <td> <span class="event">Final Exam</span> </td>
+    <td> According to the University Schedule. </td>
+  </tr>
+
+
+</table>
+
+<h3 class="header"> <span style="padding-left:10px"/> Questions?</h3>
+
+The course has a <a href="https://rutgers.instructure.com/courses/160873/external_tools/1590">Piazza page</a> accessible through <a href="https://rutgers.instructure.com/courses/160873">Canvas</a>.
+
+If you have something to discuss directly with the Instructor (e.g., a concern, a question, or a comment)
+outside regular office hours, send an email with the subject “[CS344S22] ?” (replace ? with what you like
+to discuss) to the Instructor.
+<h3 class="header" id="latex"> <span style="padding-left:10px"/> Resources on LaTeX</h3>
+
+
+You can download LaTeX for free <a href="https://www.latex-project.org/get/">here</a>. For the purpose of this course, you do not even need to install LaTeX and 
+can instead use an online LaTeX editor such as <a href="https://www.overleaf.com">Overleaf</a>. <br/><br/>
+
+Two great introductory resources for  LaTeX are <a href="https://www.tug.org/begin.html">Getting started with TeX, LaTeX, and friends</a> by <a href="http://users.wfu.edu/cottrell/">Allin Cottrell</a>
+ (for general purpose LaTeX)
+and <a href="http://joshua.smcvt.edu/proofs/tutorial.pdf">LaTeX for Undergraduates</a> by <a href="http://joshua.smcvt.edu/math/hefferon.html">Jim Hefferson</a> (for undergraduates mathematics) 
+accompanied by the following <a href="http://joshua.smcvt.edu/undergradmath/">cheatsheet</a> (note that this document use "\( MATH \)" notation compared to the perhaps more
+ widely used "$ MATH $" -- both are completely fine in LaTeX). 
+You can also use this wonderful tool <a href="http://detexify.kirelabs.org/classify.html">Detexify</a> by <a href="http://kirelabs.org">Daniel Kirsch</a> for finding the
+ LaTeX commands of a symbol (just draw the symbol!).  
+<br/><br/>
+If you are interested in learning more about LaTeX (beyond what is needed for this course), check the <a href="https://en.wikibooks.org/wiki/LaTeX">Wikibook on LaTeX</a> and
+the <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#List_of_Mathematical_Symbols">Wikibook on LaTeX for Mathematics</a>. 
+
+<h3 class="header" id="inclusion"> <span style="padding-left:10px"/> Rutgers CS Diversity and Inclusion Statement</h3>
+Rutgers Computer Science Department is committed to creating a consciously anti-racist, inclusive community that welcomes diversity in various dimensions (e.g., race, national origin, gender, sexuality, disability status, class, or religious beliefs). We will not tolerate micro-aggressions and discrimination that creates a hostile atmosphere in the class and/or threatens the well-being of our students. We will continuously strive to create a safe learning environment that allows for the open exchange of ideas and cherished freedom of speech, while also ensuring equitable opportunities and respect for all of us. Our goal is to maintain an environment where students, staff, and faculty can contribute without the fear of ridicule or intolerant or offensive language.
+<br/><br/>
+If you witness or experience racism, discrimination micro-aggressions, or other offensive behavior, you are encouraged to bring it to the attention to the undergraduate program director and/or the department chair. You can also report it to the <a href="http://inclusion.rutgers.edu/report-bias-incident/">Bias Incident Reporting System</a>.
+
+
+<h3 class="header" id="inclusion"> <span style="padding-left:10px"/> COVID-19 Protocols</h3>
+
+In order to protect the health and well-being of all members of the University community, masks must be worn by all persons on campus when in the presence of others (within six feet) and in buildings in non-private enclosed settings (e.g., common workspaces, workstations, meeting rooms, classrooms, etc.). Masks must be worn during class meetings; any student not wearing a mask will be asked to leave.
+
+<br/><br/>
+
+Masks should conform to <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coverings.html">CDC guidelines</a> and should completely cover the nose and mouth.
+
+<br/><br/>
+
+If you are feeling sick, or suspect you may have been exposed to COVID-19, do not come to the class. Arrangements will be made for students who are not able to attend class because of an illness or quarantine.
+
+<h3 class="header"> <span style="padding-left:10px"/> Open and Affordable Textbooks Program</h3>
+<table>
+<tr>
+<td style="width:800px">	
+	A previous iteration of this course has received an <a href="https://www.libraries.rutgers.edu/open-textbooks">
+		Open and Affordable Textbooks Program Award</a> 
+from the Rutgers University Libraries. 
+The OAT Program supports textbook affordability at Rutgers by encouraging courses to adopt educational
+materials that are freely available, available at a low cost (compared to similar courses),
+or part of the Rutgers University Libraries' electronic collections, and thereby free of charge
+to Rutgers University students. 
+	</td>
+	<td style="width:40px;"> <td/>
+	<td>
+	<img src="OAT.png" alt="OAT program" width="300" height="100">
+	</td>
+</tr>
+</table>
+
+	<hr/>
+	<br/>
+</div>
+
+
+    </body>
+</html>
+
