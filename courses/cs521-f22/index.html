@@ -1,1 +1,695 @@
-Under construction: The materials for this course will be posted later ... 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS 521: Linear Programming (Fall 2022) </title>
+
+<style>
+
+.ref{
+font-family: "Courier New", serif;
+}
+
+.header{
+	height: 30px;	
+	background-color:#9fdfbf;
+	padding-top:10px;
+}
+
+
+.top{
+	color:green;
+	font-weight:bold;
+}
+
+.event{
+	color:green;
+	font-weight:bold;
+}
+
+a:link {
+  text-decoration: none;
+	color:blue;
+}
+
+a:visited {
+  text-decoration: none;
+	color:blue;
+}
+
+a:hover {
+  text-decoration: underline;
+	color:blue;
+}
+
+a:active {
+  text-decoration: underline;
+	color:blue;
+}
+
+.cal table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+.cal td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+.cal tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+    </head>
+    <body>
+
+	    <h1 style="color:#FF4136">CS 521: Linear Programming -- Fall 2022 </h1>
+<hr>
+<div style="padding-left:20px;width:1200px">
+<table class="w3-table" style="padding:5px">
+  <tr>
+    <td style="width:100px"></td>
+    <td></td>
+  </tr>
+<tr>
+  <td><span class="top">Instructor</span></td>
+  <td><a href="https://sepehr.assadi.info">Sepehr Assadi</a></td>
+</tr>
+
+<tr>
+  <td><span class="top">Credits</span></td>
+  <td>3 units</td>
+</tr>
+
+<tr>
+  <td><span class="top">Schedule</span></td>
+  <td>Fridays 10:20 AM - 1:20 PM in 
+<a href="https://maps.rutgers.edu/#/?click=true&selected=3750">PH-111</a> (Busch campus) </td>
+</tr>
+
+<tr>
+  <td><span class="top">Prerequisites</span></td>
+  <td> Undergraduate courses on algorithms, complexity theory, discrete mathematics, linear algebra, and probability; mathematical maturity. An advanced 
+  graduate course on algorithms (like CS 513 or 514) is strongly encouraged.  </td>
+</tr>
+
+<tr>
+  <td><span class="top">Syllabus</span></td>
+  <td>The full course syllabus will be posted soon here. <!--is available <a href="course-syllabus.pdf">here</a>. -->This webpage contains the highlights of course syllabus that are potentially updated as the semester progresses. </td>
+</tr>
+
+
+</table>
+
+<h3 class="header"><span style="padding-left:10px"/> Overview</h3>
+<p>
+Linear programming (LP) is an extremely general and popular method of optimization in various domains including computer science, operations research, engineering, and economics. This course primarily focuses on the theoretical foundations of LPs including modeling concepts, theory, algorithms, and theoretical applications. 
+<br/><br/>
+The course is intended for computer science graduate students, as well as advanced graduate students from other disciplines, with the main purpose of
+equipping the students with required background to use linear programming as part of their own research toolkit.  
+
+
+</p>
+<h3 class="header"> <span style="padding-left:10px"/>  Logistics</h3>
+
+<ul>
+<li> Instructor: <a href="http://sepehr.assadi.info">Sepehr Assadi</a></li>
+<li> Instructor Email: sepehr.assadi@rutgers.edu</li>
+<li> Lecture Schedule: Fridays 10:20 PM - 1:20 PM in <a href="https://maps.rutgers.edu/#/?click=true&selected=3750">PH-111</a> (Busch campus)</li>
+<li> Office hours: Fridays 2:00 PM to 3:00 PM in CORE 310 or on Zoom (email the Instructor for the Zoom link)</li>
+</ul>
+
+This course  has no recitation sections.
+
+<br/><br/>
+<b style="color:red">COVID-19 Protocols:</b> In accordance with Rutger’s policy, masks must be worn during class meetings. 
+<!--See the <a href="course-syllabus.pdf">course syllabus</a> for more details.-->
+<br/>
+
+<h3 class="header"> <span style="padding-left:10px"/> List of Topics</h3>
+
+The following is a tentative list of topics (not necessarily in order) that will be covered in this course. 
+<ul>
+<li> Canonical LP Formulations</li>
+<li> Examples of LP: Shortest Path, Maximum Matching, Maximum Flows, Minimum Cost Flows, Spanning Trees, ... </li>
+<li> Cutting Plane Methods, Center of Gravity</li>
+<li> Convexity and Basics of Convex Optimization: Gradient Descent 
+<li> Special Cases: Covering and Packing LPs, Low-dimensional LPs, ... </li>
+<li> Fundamental Theorem of LP, Farkas's Lemma, ...</li>
+<li> Duality and Complementary Slackness</li>
+<li> The Simplex Algorithm</li>
+<li> Polynomial Time Algorithms: Ellipsoid and Interior-Point Methods</li> 
+<li> Integer Programming, LP Relaxations, and Approximation Algorithms </li>
+<li> Basics of Matroid Theory and Combinatorial Optimization </li>
+<li> Advanced topics: LP Hierarchies, Extended Formulations, ... 
+</ul>
+
+Along the way, we will learn about various algorithmic, analytic, and structural results in the context of linear programming that are widely applicable 
+to other areas of theoretical computer science as well.  
+
+
+<h3 class="header"><span style="padding-left:10px"/> Grading</h3>
+The final grade for the course will be based on the following weights:
+<ul>
+<li> 30% Problem sets</li>
+<li> 30% Final Exam </li>
+<li> 40% Scribe notes </li>
+</ul>	
+
+More details on the grading will be posted later in the semester. 
+
+<!--
+Students are expected to follow <a href="http://academicintegrity.rutgers.edu/academic-integrity-at-rutgers/">Rutgers academic integrity policy</a> for all their work in this course. 
+See the <a href="cs514-s20/course-syllabus.pdf">course syllabus</a> for more information. <br/><br/>
+
+
+<span style="font-weight:bold">Problem sets:</span> There will be <strike>three</strike> two problem sets in the course and a tentative schedule of release and due dates are available on the 
+<a href="#course-calendar">course calendar</a>. <span> Solutions must be typeset in LaTeX and submitted via <a href="https://canvas.rutgers.edu/">Canvas</a> <span style="font-weight:bold">by 11:59pm EST on 
+Tuesday</span> the problem set is due</span>. Problem sets can (and probably should) be done in teams of up to three students. However, (1) the students should write their solutions completely independently (in particular, you should understand and be able to explain everything that is written in your solution); (2) you should include the name of your collaborators in your solutions. 
+
+<br/><br/>
+<b style="color:red">Update:</b> Due to the recent changes in the course to account for the COVID-19 situation, we are going to only have two problem sets. Instead, each lecture will also contain
+ a single practice problem on the topics of the lecture. <b> You do not need to turn in a solution for these practice problems</b>. 
+
+
+<br/><br/>
+<span style="font-weight:bold">Project: </span> There is a final project that will consist of exploring a topic of interest related to this course. This particularly involves reading one or two recent research papers in complete details to get a sense of the background on a research problem and then exploring ideas for addressing this problem. More details on the project will be released later in the semester
+in the <a href="#project">Project</a> section. 
+
+
+<br/><br/>
+
+<span style="font-weight:bold">Scribe notes and participation: </span> 
+For each lecture, there will be one team (of one or two students) in charge of taking detailed notes, typing them in LaTeX, preparing any needed figures, and sending them to the Instructor <span style="font-weight:bold">by 11:59pm on Friday</span> after the lecture to be posted on the course website. When preparing scribe notes, please use this LaTeX <a href="cs514-s20/template.tex">template</a>  just edit it to
+ include your notes. Further instruction on scribing the notes is available in the template. 
+
+<br/><br/>
+The <a href="cs514-s20/course-syllabus.pdf">course syllabus</a> has further information about each of these assignments. 
+-->
+
+<!--
+<h3 class="header" id="course-calendar"><span style="padding-left:10px"/> Course Calendar</h3>
+The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change.
+<br/>
+<br/>
+<table class="cal">
+  <tr>
+    <th>#</th>
+     <th style="width:80px">Date</th>
+    <th style="width:600px">Topics</th>
+    <th style="width:280px">References</th>
+    <th style="width:440px">Lecture notes and Remarks</th>
+ </tr>
+
+
+  <tr>
+    <td> 1 </td>
+    <td> Tue 09/07</td>
+    <td> Introduction, Course Policy, Probabilistic Analysis  </td>
+    <td> -- </td>
+
+    <td> <a href="lec1.pdf">Lecture Notes 1</a> </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td> 2 </td>
+    <td> Tue 09/14</td>
+    <td> Sublinear Time Algorithms: Connected Components, Average Degree</td>
+    <td class="ref"> <a href="#CRT05">CRT05</a>, <a href="#F06">F06</a>, <a href="GR08">GR08</a>, <a href="#S15">S15</a></td>
+    <td> <a href="lec2.pdf">Lecture Notes 2</a> </td>
+  </tr>
+
+
+  <tr>
+    <td> 3 </td>
+    <td> Tue 09/21</td>
+    <td> Query Complexity: OR Function and Connectivity </td>
+    <td class="ref"> <a href="#BW02">BW02</a> </td>
+    <td> <a href="lec3.pdf">Lecture Notes 3</a> -- <span class="event"> Pset 1 release: </span><a href="pset1.pdf">[pdf]</a></td>
+    
+  </tr>
+
+ 
+
+<tr>
+    <td> 4 </td>
+    <td> Tue 09/28</td>
+    <td> Property Testing: Testing Sortedness</td>
+    <td class="ref"> <a href="#EKKRV98">EKKRV98</a></td>
+    <td> <a href="lec4.pdf">Lecture Notes 4</a> </td>
+ </tr>
+
+
+  <tr>
+    <td> 5 </td>
+    <td> Tue 10/05</td>
+    <td> Local Computation Algorithms (LCA): Maximal Independent Set </td>
+    <td class="ref"> <a href="#PR07">PR07</a>, <a href="#RTVX11">RTVX11</a> </td>
+<td> </td>
+  </tr>
+
+
+  <tr>
+    <td> 5 </td>
+    <td> Tue 10/05</td>
+    <td> Distribution Testing: Uniformity Testing </td>
+    <td class="ref"> <a href="#BFRSW00">BFRSW00</a> </td>
+    <td> <a href="lec5.pdf">Lecture Notes 5</a> </td>
+  </tr>
+
+
+  <tr>
+    <td> 6 </td>
+    <td> Tue 10/12</td>
+    <td> Compressed Sensing and Sparse Recovery</td>
+    <td class="ref"> <a href="#BHRRS18">BHRRS18</a>, <a href="#RSW18">RSW18</a> </td>
+    <td> <span class="event"> Pset 1 due date </span></a></td>
+  </tr>
+
+
+
+  <tr>
+    <td> 7 </td>
+    <td> Tue 10/19</td>
+    <td> Streaming Algorithms: Frequency Moments Estimation </td>
+    <td class="ref"> <a href="#AMS96">AMS96</a>, <a href="#BJKST02">BJKST02</a> </td>
+    <td> <a href="lec7.pdf">Lecture Notes 7</a> --  <span class="event"> Pset 2 release: </span><a href="pset2.pdf">[pdf]</a></td>
+  </tr>
+
+  <tr>
+    <td> 8 </td>
+    <td> Tue 10/26</td>
+    <td> Communication Complexity: Equality, Index </td>
+    <td class="ref"> <a href="#A96">A96</a>, <a href="#T16">T16</a> </td>
+    <td> <a href="lec8.pdf">Lecture Notes 8</a></td>
+  </tr>
+
+
+  <tr>
+    <td>  </td>
+    <td> Tue 10/17</td>
+    <td> <span style="color:red">No Class: Spring Recess</span> </td>
+    <td> </td>
+    <td> </td>  
+</tr>
+
+
+
+  <tr>
+    <td> 9 </td>
+    <td> Tue 11/02</td>
+    <td> Streaming Algorithms:  Regression via Dimensionality Reduction</td>
+    <td class="ref"> <a href="#CW09">CW09</a> </td>
+    <td> </td>  
+  </tr>
+
+
+ 
+
+
+  <tr>
+    <td> 10 </td>
+    <td> Tue 11/09</td>
+    <td> Streaming Algorithms: Clustering via Coresets</td>
+    <td class="ref"> <a href="#GMMMO03">GMMMO03</a>, <a href="#G09">G09</a> </td>
+    <td> <span class="event"> Pset 2 due date </span></a></td>
+  </tr>
+
+  <tr>
+    <td> 11 </td>
+    <td> Tue 11/16</td>
+    <td> Graph Streaming Algorithms: Connectivity, Shortest Paths, Coloring</td>
+    <td class="ref"> <a href="#FKMSZ04">FKMSZ04</a>, <a href="#ACK19">ACK19</a> </td>
+    <td> <span class="event"> Pset 3 release date: </span><a href="pset3.pdf">[pdf]</a></td>
+</tr>
+
+
+  <tr>
+    <td> 12 </td>
+    <td> Tue 11/23</td>
+    <td> Graph Sketching: AGM Sketch for Connectivity</td>
+    <td class="ref"> <a href="#AGM12">AGM12</a> </td>
+    <td> </td>
+  </tr>
+ 
+<tr>
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+</tr>
+
+
+
+  <tr>
+    <td> 13 </td>
+    <td> Tue 11/30</td>
+    <td> Multi-Pass Graph Streaming Algorithms </td>
+    <td class="ref"> <a href="#AHK12">AHK12</a> </td>
+   <td> 
+</td>  
+</tr>
+  <tr>
+    <td> 14 </td>
+    <td> Tue 12/07</td>
+    <td> Student Presentations</td>
+    <td> </td> 
+    <td> <span class="event"> Pset 3 due date </span></a></td>
+ </tr>
+
+</table>
+
+-->
+<!--
+<h3 class="header" id="project"> <span style="padding-left:10px"/> Project</h3>
+
+The project can take one of the following forms: 
+<ul>
+<li style="padding:0.1cm;"> Solve an open theory problem, formulate a new problem, or make some other contribution to the study of sublinear algorithms and/or lower bounds. </li>
+<li style="padding:0.1cm;"> Write a survey on a few related papers. A good approach is to first try to solve an open problem, which generally requires reading several background papers first, then switching to a survey
+if the problem evades solution. However, even in this case, recording any partial progress is very important.</li>
+
+<li style="padding:0.1cm;"> Implement one or more of the sublinear algorithms studied in the course and compare their performance with standard classical algorithms for the problem on different datasets. 
+
+</ul>
+
+
+A list of project ideas (including open theory problems and some directions to explore) will be posted sometime in October. However, you are strongly encouraged to approach the Instructor with any project idea you have on sublinear algorithms before this date to pick as your own project -- note that your project does not need to be limited to the topics discussed in class as long as it is (loosly) related to sublinear algorithms. 
+
+<br/><br/>
+<span style="font-weight:bold">Project policies:</span> 
+<ul>
+<li style="padding:0.1cm"> The projects are done in teams of two to three students. Each team needs to submit a single write-up for the project and the presentation time will be split evenly between the team members.
+The team members receive the same grade for their project. You are encouraged to discuss your progress on your project with the Instructor and get feedback.   
+</li>
+
+<br/>
+
+<li style="padding:0.1cm"> The write-up for the project is due by the end of the semester. </ul>
+
+<b> Updated Project Expectations and Requirements </b>
+
+<ul>
+
+<li> You should learn a significant amount about your chosen project topic. This will involve closely and carefully reading literature on your specific project topic (likely to be a paper or two). 
+You will demonstrate this aspect of your project in the "Background" section of your project report, which should be a clear exposition of the topic in your own words. You can format this according to the scribe notes of the class. Basically, for this portion of the project you should turn in a polished and high-quality set of scribe notes, as if you had been the scribe for a lecture on your chosen topic.</li>
+
+<br/>
+
+<li> You should gain research experience in this area; i.e. make a serious effort to contribute to the state of knowledge on your project topic by (i) identifying an interesting open question or direction for future research related to your project topic; (ii) coming up with an approach to make progress; and (iii) working to carry out your approach. You will demonstrate this aspect of your project by explaining in detail what you did for (i), (ii) and (iii) in the rest of your project report and during your project presentation.</li>
+
+<br/>
+
+
+<li> <b style="color:red">New:</b> Instead of the problem set three and the project presentation, you are now required to provide weekly reports on your project following the 
+updated timetable below. Exactly one report per group is required and it should be emailed to the Instructor by 11:59PM on the date specified in the timetable. 
+
+</ul>
+ <b> Timetable for Projects:</b>
+
+<ul>
+<li> Tuesday, November 2: For those of you who are planning to work on the suggested project ideas, send me an email listing your top three favorite projects. For the remainder of you, turn in a brief (1-2 paragraph) project proposal to me by email, describing your chosen topic, the sources you will use, and the portions of those sources that you will cover.
+	<br/><br/>
+<li> Wednesday, November 3: For those of you who have sent their favorite projects from the list of suggested project ideas, I will send out an assignment of the project. 
+</li>
+<br/>
+<li> Tuesday, November 30: Each group should send me an email containing the preliminary version of your presentation slides and topics you like to cover. </li>
+	<br/>
+<li> Tuesday, December 7: 20- to 30-minutes presentations in the class for each group, in style of a conference presentation. </li>
+<br/>
+
+<li> Tuesday, December 14: Email me a five to ten page report on your project containing the following: 
+	<ul>
+		<br/>
+		<li> A technical summary of the main prior work in the literature, including (1) the formal statement of their result, (2) a high level overview of their proof idea, (3) a lower level description of their proof including the main technical lemmas and claims, and (4) either complete proofs or proof sketches of these technical parts <b> in your own words</b>. This part of the document should be at a level that one could get the full picture of the result you are describing solely based on your write-up. </li>
+
+		<br/>
+
+		<li> A technical summary of your main contributions, including (1) a high level description of a concrete plan for approaching your problem and the type of result you hope to obtain, (2) a lower level set of lemmas and claims that <b> if proven </b> would imply your desired result, (3) either the proofs of the lemmas and claims from the previous part, <b> or </b> concrete and technical reasons for why your attempts failed to prove the desired technical results and any possible update that you came along the way that may allow you to bypass these barriers. For more experiment-based projects, steps (2) and (3) should instead be replaced by description of the exact methodology you used for implementing the algorithms and the experimental results you obtained. This document should be at a level that one (including yourself in near future!) could pickup the project from this part and continue making progress on the main problem.</li> 
+<br/><br/>
+	</ul>
+</ul>
+
+-->
+
+<h3 class="header"> <span style="padding-left:10px"/> Resources</h3>
+
+There is no official textbook for this course and all required materials will be posted on this webpage. 
+
+The following is a list of some helpful supplementary materials (this list is by no means comprehensive): 
+
+<ul>
+<li style="padding:0.1cm;"> Textbooks on Linear Programming (most relevant to the topics covered in our course):  
+<ul style="padding-top:0.2cm;">
+<li style="padding:0.1cm;"> Introduction to Linear Optimization, by Bertsimas and Tsitsiklis; </li> 
+<li style="padding:0.1cm;"> Understanding and Using Linear Programming, by Matoušek and Gärtner. </li> 
+</ul>
+
+
+
+
+
+</li>
+
+<li style="padding:0.1cm;"> Useful Books and Surveys: 
+<ul style="padding-top:0.2cm;">
+<li style="padding:0.1cm;"><a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">Convex Optimization</a>, by Boyd and Vandenberghe;
+<li style="padding:0.1cm;"> <a href="https://www.microsoft.com/en-us/research/publication/convex-optimization-algorithms-complexity/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fum%2Fpeople%2Fsebubeck%2Fbubeck15.pdf">Convex Optimization: Algorithms and Complexity</a>, by Bubeck; </li>
+<li style="padding:0.1cm;"> <a href="https://www2.isye.gatech.edu/~nemirovs/Lect_IPM.pdf">Interior Point Polynomial Time Methods in Convex Programming</a>, by Nemirovski; </li>
+<li style="padding:0.1cm;"><a href="https://theoryofcomputing.org/articles/v008a006/v008a006.pdf"> The Multiplicative Weights Update Method: a Meta-Algorithm and Applications</a>, by Arora, Hazan, and Kale; </li>
+</ul>
+
+</li>
+
+<li style="padding:0.1cm;"> Background on Algorithms and Probabilistic Analysis: 
+<ul style="padding-top:0.2cm;">
+<li style="padding:0.1cm;"> Algorithm Design, by Kleinberg and Tardos; </li>   
+<li style="padding:0.1cm;"> Randomized Algorithms, by Motwani and Raghavan; </li> 
+<li style="padding:0.1cm;"> The Probabilistic Method, by Alon and Spencer; </li> 
+<li style="padding:0.1cm;"> Concentration of Measure for the Analysis of Randomised Algorithms, by Dubhashi and Panconesi. </li>
+</ul>
+
+</ul>
+
+
+<!--
+<h3 class="header" id="bib"> <span style="padding-left:10px"/> Bibliography</h3>
+
+This is a (rather incomprehensive) list of the papers related to the topics discussed in the lectures. The list will be updated after each lecture to add the new relevant papers. 
+<br/><br/>
+
+<table style="padding-left:20pt; border-spacing: 0 10px; ">
+
+
+
+<tr id="A96"> 
+<td class="ref" style="width:100px"> A96 </td>
+<td style="width:900px;"> Farid M. Ablayev, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.51.394&rep=rep1&type=pdf">
+Lower Bounds for One-Way Probabilistic Communication Complexity and Their Application to Space Complexity</a>. Theor. Comput. Sci. 1996, ICALP 1993.</td>
+</tr>
+
+
+<tr id="AG11"> 
+<td class="ref" style="width:100px"> AG11 </td>
+<td style="width:900px;"> Kook Jin Ahn, Sudipto Guha, <a href="https://arxiv.org/abs/1104.2315">
+Linear Programming in the Semi-streaming Model with Application to the Maximum Matching Problem</a>. ICALP 2011.</td>
+</tr>
+
+
+<tr id="AGM12"> 
+<td class="ref" style="width:100px"> AGM12 </td>
+<td style="width:900px;"> Kook Jin Ahn, Sudipto Guha, Andrew McGregor, <a href="https://people.cs.umass.edu/~mcgregor/papers/12-dynamic.pdf">
+Analyzing Graph Structure via Linear Measurements</a>. SODA 2012.</td>
+</tr>
+
+
+
+<tr id="AMS96"> 
+<td class="ref" style="width:100px"> AMS96 </td>
+<td style="width:900px;"> Noga Alon, Yossi Matias, and Mario Szegedy, <a href="http://www.math.tau.ac.il/~nogaa/PDFS/amsz4.pdf">
+The space complexity of approximating the frequency moments</a>. STOC 1996.</td>
+</tr>
+
+
+<tr id="AHK12"> 
+<td class="ref" style="width:100px"> AHK12 </td>
+<td style="width:900px;"> Sanjeev Arora, Elad Hazan, Satyen Kale, <a href="https://theoryofcomputing.org/articles/v008a006/v008a006.pdf">
+The Multiplicative Weights Update Method: a Meta-Algorithm and Applications</a>. Theory of Computing 2012.</td>
+</tr>
+
+
+<tr id="ACK19"> 
+<td class="ref" style="width:100px"> ACK19 </td>
+<td style="width:900px;"> Sepehr Assadi, Yu Chen, Sanjeev Khanna, <a href="https://arxiv.org/abs/1807.08886">
+Sublinear Algorithms for (Δ+1) Vertex Coloring</a>. SODA 2019.</td>
+</tr>
+
+
+<tr id="BFRSW00"> 
+<td class="ref" style="width:100px"> BFRSW00 </td>
+<td style="width:900px;"> Tugkan Batu, Lance Fortnow, Ronitt Rubinfeld, Warren D. Smith, Patrick White, <a href="http://www.maths.lse.ac.uk/Personal/batu/papers/jcloseness.pdf">
+Testing that distributions are close</a>. FOCS 2000.</td>
+</tr>
+
+
+<tr id="BJKST02"> 
+<td class="ref" style="width:100px"> BJKST02 </td>
+<td style="width:900px;"> Ziv Bar-Yossef, T. S. Jayram, Ravi Kumar, D. Sivakumar, Luca Trevisan, <a href="http://cs.haifa.ac.il/~ilan/randomized_algorithms/bar-yosef_jayram.pdf">
+Counting Distinct Elements in a Data Stream</a>. 
+RANDOM 2002.</td>
+</tr>
+
+
+<tr id="BHRRS18"> 
+<td class="ref" style="width:100px"> BHRRS18 </td>
+<td style="width:900px;"> Paul Beame, Sariel Har-Peled, Sivaramakrishnan Natarajan Ramamoorthy, Cyrus Rashtchian, Makrand Sinha, <a href="https://arxiv.org/abs/1711.07567">
+Edge Estimation with Independent Set Oracles</a>. 
+ITCS 2018.</td>
+</tr>
+
+
+<tr id="BW02"> 
+<td class="ref" style="width:100px"> BW02 </td>
+<td style="width:900px;"> Harry Buhrman, Ronald de Wolf, <a href="http://www.cs.columbia.edu/~rocco/Teaching/S12/Readings/BdW.pdf">Complexity Measures and Decision Tree Complexity: A Survey</a>. 
+Theor. Comput. Sci., 2002. </td>
+</tr>
+
+
+<tr id="CW09"> 
+<td class="ref" style="width:100px"> CW09 </td>
+<td style="width:900px;"> Kenneth L. Clarkson, David P. Woodruff,  
+<a href="http://www.cs.cmu.edu/afs/cs/user/dwoodruf/www/cw09.pdf">Numerical Linear Algebra in the Streaming Model</a>. STOC 2009. </td>
+</tr>
+
+
+
+<tr id="CRT05"> 
+<td class="ref" style="width:100px"> CRT05 </td>
+<td style="width:900px;"> Bernard Chazelle, Ronitt Rubinfeld, Luca Trevisan, 
+<a href="https://www.cs.princeton.edu/~chazelle/pubs/mstapprox.pdf">Approximating the Minimum Spanning Tree Weight in Sublinear Time</a>. SIAM Journal of Computing 2005, ICALP 2001. </td>
+</tr>
+
+
+<tr id="EKKRV98"> 
+<td class="ref" style="width:100px"> EKKRV98 </td>
+<td style="width:900px;"> Funda Ergün, Sampath Kannan, Ravi Kumar, Ronitt Rubinfeld, Mahesh Viswanathan,
+<a href="http://www.cs.columbia.edu/~rocco/Teaching/S14/Readings/EKKRV-spot-checkers.pdf">Spot-Checkers</a>. STOC 1998. </td>
+</tr>
+
+<tr id="F06">
+<td class="ref" style="width:100px;"> F06 </td>
+<td style="width:900px;"> Uriel Feige, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.94.3996&rep=rep1&type=pdf">On Sums of Independent Random Variables with Unbounded Variance and Estimating the Average Degree in a Graph</a>. SIAM Journal of Computing 2006, STOC 2004. </td>
+</tr>
+
+
+<tr id="FKMSZ04">
+<td class="ref" style="width:100px;"> FKMSZ04 </td>
+<td style="width:900px;"> Joan Feigenbaum, Sampath Kannan, Andrew McGregor, Siddharth Suri, Jian Zhang <a href="https://www.cs.yale.edu/homes/jf/FKMSZ1.pdf">On Graph Problems in a Semi-streaming Model</a>. ICALP 2004. </td>
+</tr>
+
+
+<tr id="G09">
+<td class="ref" style="width:100px;"> G09 </td>
+<td style="width:900px;"> Sudipto Guha, <a href="https://repository.upenn.edu/cgi/viewcontent.cgi?article=1420&context=cis_papers">Tight Results for Clustering and Summarizing Data Streams</a>. ICDT 2009. </td>
+</tr>
+
+
+<tr id="GMMMO03">
+<td class="ref" style="width:100px;"> GMMMO03 </td>
+<td style="width:900px;"> Sudipto Guha, Adam Meyerson, Nina Mishra, Rajeev Motwani, Liadan O'Callaghan, <a href="https://theory.stanford.edu/~nmishra/Papers/clusteringDataStreamsTheoryPractice.pdf">Clustering Data Streams: Theory and Practice</a>. IEEE Trans. Knowl. Data Eng. 2003, FOCS 2000. </td>
+</tr>
+
+
+<tr id="GR08">
+<td class="ref" style="width:100px;"> GR08 </td>
+<td style="width:900px;"> Oded Goldreich, Dana Ron, <a href="http://www.eng.tau.ac.il/~danar/Public-pdf/avg.pdf">Approximating average parameters of graphs</a>. Random Structures and Algorithms 2006, APPROX-RANDOM 2006. </td>
+</tr>
+
+
+<tr id="PR07">
+<td class="ref" style="width:100px;"> PR07 </td>
+<td style="width:900px;"> Michal Parnas, Dana Ron, <a href="http://www.eng.tau.ac.il/~danar/Public-pdf/vcj.pdf">Approximating the Minimum Vertex Cover in Sublinear Time and a Connection
+ to Distributed Algorithms</a>. Theor. Comput. Sci., 2007. </td>
+</tr>
+
+
+<tr id="RSW18">
+<td class="ref" style="width:100px;"> RSW18 </td>
+<td style="width:900px;"> Aviad Rubinstein, Tselil Schramm, S. Matthew Weinberg, <a href="https://arxiv.org/abs/1711.03165">Computing Exact Minimum Cuts Without Knowing the Graph</a>. ITCS 2018. </td>
+</tr>
+
+
+<tr id="RTVX11">
+<td class="ref" style="width:100px;"> RTVX11 </td>
+<td style="width:900px;"> Ronitt Rubinfeld, Gil Tamir, Shai Vardi, Ning Xie, <a href="http://people.csail.mit.edu/ningxie/papers/RTVX11.pdf">Fast Local Computation Algorithms</a>. I(T)CS 2011. </td>
+</tr>
+
+<tr id="S15">
+<td class="ref" style="width:100px;"> S15 </td>
+<td style="width:900px;"> C. Seshadhri, <a href="https://arxiv.org/abs/1505.01927">A simpler sublinear algorithm for approximating the triangle count</a>. available on arXiv. </td>
+</tr>
+
+
+<tr id="T16">
+<td class="ref" style="width:100px;"> T16 </td>
+<td style="width:900px;"> Tim Roughgarden, <a href="https://arxiv.org/abs/1509.06257">Communication Complexity (for Algorithm Designers)</a>.  Foundations and Trends in Theoretical Computer Science 2016. </td>
+</tr>
+
+
+</table>
+
+-->
+
+<h3 class="header" id="latex"> <span style="padding-left:10px"/> LaTeX</h3>
+
+You can download LaTeX for free <a href="https://www.latex-project.org/get/">here</a>. For the purpose of this course, you do not even need to install LaTeX and 
+can instead use an online LaTeX editor such as <a href="https://www.overleaf.com">Overleaf</a>. <br/><br/>
+
+Two great introductory resources for  LaTeX are <a href="https://www.ece.iastate.edu/~hongwei/group/miscl/LaTEX-shortIntro.pdf">A Short Introduction to LaTeX</a> by <a href="http://users.wfu.edu/cottrell/">Allin Cottrell</a>
+ (for general purpose LaTeX)
+and <a href="http://joshua.smcvt.edu/proofs/tutorial.pdf">LaTeX for Undergraduates</a> by <a href="http://joshua.smcvt.edu/math/hefferon.html">Jim Hefferson</a> (for undergraduates mathematics) 
+accompanied by the following <a href="http://joshua.smcvt.edu/undergradmath/">cheatsheet</a> (note that this document use "\( MATH \)" notation compared to the perhaps more
+ widely used "$ MATH $" -- both are completely fine in LaTeX). 
+You can also use this wonderful tool <a href="http://detexify.kirelabs.org/classify.html">Detexify</a> by <a href="http://kirelabs.org">Daniel Kirsch</a> for finding the
+ LaTeX commands of a symbol (just draw the symbol!).  
+<br/><br/>
+If you are interested in learning more about LaTeX (beyond what is needed for this course), check the <a href="https://en.wikibooks.org/wiki/LaTeX">Wikibook on LaTeX</a> and
+the <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#List_of_Mathematical_Symbols">Wikibook on LaTeX for Mathematics</a>. 
+
+
+<h3 class="header" id="latex"> <span style="padding-left:10px"/>
+Rutgers CS Diversity and Inclusion Statement
+</h3>
+
+Rutgers Computer Science Department is committed to creating a consciously anti-racist, inclusive community that welcomes diversity in various dimensions
+(e.g., race, national origin, gender, sexuality, disability status, class, or religious beliefs).  
+We will not tolerate micro-aggressions and discrimination that creates a hostile atmosphere in the class and/or threatens the well-being of our students.
+We will continuously strive to create a safe learning environment that allows for the open exchange of ideas and cherished freedom of speech, while also
+ensuring equitable opportunities and respect for all of us. Our goal is to maintain an environment where students, staff, and faculty can contribute without the fear
+of ridicule or intolerant or offensive language. 
+
+<br/><br/>
+If you witness or experience racism, discrimination micro-aggressions, or other offensive behavior, you are encouraged to
+bring it to the attention to the undergraduate program director and/or the department chair. You can also report it to the 
+<a href=http://inclusion.rutgers.edu/report-bias-incident/>Bias Incident Reporting System</a>
+
+<h3 class="header" id="latex"> <span style="padding-left:10px"/>
+COVID-19 Protocols
+</h3>
+
+In order to protect the health and well-being of all members of the University community, masks must be worn by all persons on campus when in the presence of others (within six feet) and in buildings in non-private enclosed settings (e.g., common workspaces, workstations, meeting rooms, classrooms, etc.). Masks must be worn during class meetings; any student not wearing a mask will be asked to leave.
+
+<br/><br/>
+Masks should conform to <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coverings.html">CDC guidelines</a> and should completely cover the nose and mouth.
+
+<br/><br/>
+If you are feeling sick, or suspect you may have been exposed to COVID-19, do not come to the class. Arrangements will be made for students who are not able to attend class because of an illness or quarantine.
+
+</div>
+<hr>
+<br/>
+   </body>
+</html>
+
