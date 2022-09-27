@@ -43,12 +43,12 @@
 
 <div class="spacer"></div>
 <h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> 
-Deterministic Graph Coloring in the Streaming Model  </h2> 
+Decremental Matching in General Graphs </h2> 
 <div class="pages">
 	<div style="padding-bottom:10px">
 	<span style="font-weight:bold"> Authors: </span>
 	<span id="pub" style="font-size:16px">
-		<span class="paper-author"> Sepehr Assadi, <a href="https://math.cornell.edu/andrew-chen">Andrew Chen</a>, <a href="https://glennsun.com/">Glenn Sun</a>. </span>	
+		<span class="paper-author"> Sepehr Assadi, <a href="https://aaronbernstein.cs.rutgers.edu/">Aaron Bernstein</a>, <a href="https://aditidudeja.github.io/">Aditi Dudeja</a>. </span>	
  </span>
 	</div>
 	
@@ -56,9 +56,9 @@ Deterministic Graph Coloring in the Streaming Model  </h2>
 	<span style="font-weight:bold;"> Conference: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="http://acm-stoc.org/stoc2022/">54th Annual ACM Symposium on Theory of Computing (STOC'22)</a>
+	<a href="https://icalp2022.irif.fr/">49th EATCS International Colloquium on Automata, Languages and Programming (ICALP 2022)</a>
 	</span>
-</span>
+	</span>
 	</div>
 	
 	<div style="padding-bottom:50px;">
@@ -66,15 +66,27 @@ Deterministic Graph Coloring in the Streaming Model  </h2>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
 
-Recent breakthroughs in graph streaming have led to the design of single-pass semi-streaming algorithms for various graph coloring problems such as (Δ+1)-coloring, degeneracy-coloring, coloring triangle-free graphs, and others. These algorithms are all randomized in crucial ways and whether or not there is any deterministic analogue of them has remained an important open question in this line of work.
+		We consider the problem of maintaining an approximate maximum integral matching in a dynamic
+graph G, while the adversary makes changes to the edges of the graph. The goal is to maintain a
+(1 + ε)-approximate maximum matching for constant ε > 0, while minimizing the update time. In
+the fully dynamic setting, where both edge insertion and deletions are allowed, Gupta and Peng (see
+[GP13]) gave an algorithm for this problem with an update time of O(√m/ε^2).
 
 <br/><br/>
-
-We settle this fundamental question by proving that there is no deterministic single-pass semi-streaming algorithm that given a graph G with maximum degree Δ, can output a proper coloring of G using any number of colors which is sub-exponential in Δ. Our proof is based on analyzing the multi-party communication complexity of a related communication game, using random graph theory type arguments that may be of independent interest.
+Motivated by the fact that the Oε(√m) barrier is hard to overcome (see Henzinger, Krinninger,
+Nanongkai, and Saranurak [HKNS15]; Kopelowitz, Pettie, and Porat [KPP16]), we study this problem
+in the decremental model, where the adversary is only allowed to delete edges. Recently, Bernstein,
+Probst-Gutenberg, and Saranurak (see [BGS20]) gave an poly(log n/ε) update time decremental
+algorithm for this problem in bipartite graphs. However, beating O(√m) update time remained an
+open problem for general graphs.
 
 <br/><br/>
-
-We complement our lower bound by showing that just one extra pass over the input allows one to recover an O(Δ^2) coloring via a deterministic semi-streaming algorithm. This result is further extended to an O(Δ) coloring in O(logΔ) passes even in dynamic streams.
+In this paper, we bridge the gap between bipartite and general graphs, by giving an Oε(poly(log n))
+update time algorithm that maintains a (1 + ε)-approximate maximum integral matching under
+adversarial deletions. Our algorithm is randomized, but works against an adaptive adversary. Together
+with the work of Grandoni, Leonardi, Sankowski, Schwiegelshohn, and Solomon [GLS+19] who give
+an Oε(1) update time algorithm for general graphs in the incremental (insertion-only) model, our
+result essentially completes the picture for partially dynamic matching.
 
 </span>
 </span>
@@ -84,7 +96,7 @@ We complement our lower bound by showing that just one extra pass over the input
 	<span style="font-weight:bold;"> Conference version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[PDF]</a>
+		<a href="https://drops.dagstuhl.de/opus/volltexte/2022/16352/pdf/LIPIcs-ICALP-2022-11.pdf">[PDF]</a>
 	</span>
 	</span>
 	</div>
@@ -93,29 +105,22 @@ We complement our lower bound by showing that just one extra pass over the input
 	<span style="font-weight:bold;"> Full version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://arxiv.org/abs/2109.14891">[arXiv]</a> 
+		<a href="https://arxiv.org/abs/2207.00927">[arXiv]</a> 
 	</span>
 	</span>
 	</div>
-	
-	<div style="padding-bottom:10px;">
-        <span style="font-weight:bold;"> Streaming video: </span>
-        <span id="pub" style="font-size:16px">
-        <span class="paper-author">
-        <a href="https://www.youtube.com/watch?v=bq-upL_Vk88">[YouTube]</a> (Glenn @STOC'22)</a>
-        </span>
-        </span>
-        </div>
+
 
 
 	<div style="padding-bottom:10px;">
 	<span style="font-weight:bold;"> BibTex: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="https://dblp.org/rec/conf/stoc/AssadiCS22.html?view=bibtex">[DBLP]</a>
+	<a href="https://dblp.org/rec/conf/icalp/AssadiBD22.html?view=bibtex">[DBLP]</a>
 	</span>
 	</span>
 	</div>
+
 
 </div>
 

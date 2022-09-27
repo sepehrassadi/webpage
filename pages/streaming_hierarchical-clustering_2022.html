@@ -43,12 +43,12 @@
 
 <div class="spacer"></div>
 <h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> 
-Deterministic Graph Coloring in the Streaming Model  </h2> 
+Hierarchical Clustering in Graph Streams: Single-Pass Algorithms and Space Lower Bounds </h2> 
 <div class="pages">
 	<div style="padding-bottom:10px">
 	<span style="font-weight:bold"> Authors: </span>
 	<span id="pub" style="font-size:16px">
-		<span class="paper-author"> Sepehr Assadi, <a href="https://math.cornell.edu/andrew-chen">Andrew Chen</a>, <a href="https://glennsun.com/">Glenn Sun</a>. </span>	
+		<span class="paper-author"> Sepehr Assadi, <a href="https://cs.stanford.edu/~vaggos/">Vaggos Chatziafratis</a>, <a href="https://research.google/people/105517/">Jakub Łącki</a>, <a href="https://people.csail.mit.edu/mirrokni/Welcome.html">Vahab Mirrokni</a>, <a href="https://sites.google.com/view/chen-wang/home">Chen Wang</a>. </span>	
  </span>
 	</div>
 	
@@ -56,9 +56,9 @@ Deterministic Graph Coloring in the Streaming Model  </h2>
 	<span style="font-weight:bold;"> Conference: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="http://acm-stoc.org/stoc2022/">54th Annual ACM Symposium on Theory of Computing (STOC'22)</a>
+	<a href="https://learningtheory.org/colt2022/">35th Annual Conference on Learning Theory (COLT 2022)</a>
 	</span>
-</span>
+	</span>
 	</div>
 	
 	<div style="padding-bottom:50px;">
@@ -66,15 +66,19 @@ Deterministic Graph Coloring in the Streaming Model  </h2>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
 
-Recent breakthroughs in graph streaming have led to the design of single-pass semi-streaming algorithms for various graph coloring problems such as (Δ+1)-coloring, degeneracy-coloring, coloring triangle-free graphs, and others. These algorithms are all randomized in crucial ways and whether or not there is any deterministic analogue of them has remained an important open question in this line of work.
+The Hierarchical Clustering (HC) problem consists of building a hierarchy of clusters to represent a given dataset. Motivated by the modern large-scale applications, we study the problem in the streaming model, in which the memory is heavily limited and only a single or very few passes over the input are allowed. Specifically, we investigate whether a good hierarchical clustering can be obtained, or at least whether we can approximately estimate the value of the optimal hierarchy. To measure the quality of a hierarchy, we use the HC minimization objective introduced by Dasgupta [STOC’16]. 
 
 <br/><br/>
+Assuming that the input is an 𝑛-vertex weighted graph whose edges arrive in a stream, we derive the following results on space-vs-accuracy tradeoffs: <br/><br/>
+<ul>
+	<li> With O(n polylog n) space, we develop a single-pass algorithm, whose approximation ratio matches the currently best offline algorithm by Charikar and Chatziafratis [SODA’17]. </li> <br/>
+	<li> When the space is more limited, namely, 𝑛^{1−𝑜(1)}, we prove that no algorithm can even estimate the value of the optimum hierarchical tree to within an 𝑜(log(𝑛)/loglog(𝑛)) factor, even when allowed polylog(n) passes over the input and exponential time. </li> <br/>
 
-We settle this fundamental question by proving that there is no deterministic single-pass semi-streaming algorithm that given a graph G with maximum degree Δ, can output a proper coloring of G using any number of colors which is sub-exponential in Δ. Our proof is based on analyzing the multi-party communication complexity of a related communication game, using random graph theory type arguments that may be of independent interest.
+	<li> In the most stringent setting of polylog(n) space, studied extensively in the literature, we rule out algorithms that can even distinguish between “highly”-vs-“poorly” clusterable graphs, namely, graphs that have an 𝑛^{1/2−𝑜(1)} factor gap between their HC objective value. </li><br/>
 
-<br/><br/>
-
-We complement our lower bound by showing that just one extra pass over the input allows one to recover an O(Δ^2) coloring via a deterministic semi-streaming algorithm. This result is further extended to an O(Δ) coloring in O(logΔ) passes even in dynamic streams.
+	<li> Finally, we prove that any single-pass streaming algorithm that computes an optimal HC clustering requires storing almost the entire input even if allowed exponential time. </li> <br/>
+</ul>
+Our algorithmic results establish a general structural result that proves that cut sparsifiers of input graphs can preserve the cost of “balanced” hierarchical trees to within some constant factor, and thus can be used in place of the original (dense) graphs when solving HC. Our lower bound results involve establishing a new streaming lower bound for a novel problem “One-vs-Many-Expanders”, which can be of independent interest.
 
 </span>
 </span>
@@ -84,7 +88,7 @@ We complement our lower bound by showing that just one extra pass over the input
 	<span style="font-weight:bold;"> Conference version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[PDF]</a>
+		<a href="https://proceedings.mlr.press/v178/assadi22a.html">[PMLR]</a>
 	</span>
 	</span>
 	</div>
@@ -93,29 +97,22 @@ We complement our lower bound by showing that just one extra pass over the input
 	<span style="font-weight:bold;"> Full version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://arxiv.org/abs/2109.14891">[arXiv]</a> 
+		<a href="https://arxiv.org/abs/2206.07554">[arXiv]</a> 
 	</span>
 	</span>
 	</div>
-	
-	<div style="padding-bottom:10px;">
-        <span style="font-weight:bold;"> Streaming video: </span>
-        <span id="pub" style="font-size:16px">
-        <span class="paper-author">
-        <a href="https://www.youtube.com/watch?v=bq-upL_Vk88">[YouTube]</a> (Glenn @STOC'22)</a>
-        </span>
-        </span>
-        </div>
+
 
 
 	<div style="padding-bottom:10px;">
 	<span style="font-weight:bold;"> BibTex: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="https://dblp.org/rec/conf/stoc/AssadiCS22.html?view=bibtex">[DBLP]</a>
+	<a href="https://dblp.org/rec/conf/colt/AssadiCLMW22.html?view=bibtex">[DBLP]</a>
 	</span>
 	</span>
 	</div>
+
 
 </div>
 

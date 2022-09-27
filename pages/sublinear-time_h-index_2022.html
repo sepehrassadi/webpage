@@ -43,12 +43,14 @@
 
 <div class="spacer"></div>
 <h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> 
-Brooks’ Theorem in Graph Streams: A Single-Pass Semi-Streaming Algorithm for ∆-Coloring </h2> 
+Asymptotically Optimal Bounds for Estimating
+H-Index in Sublinear Time <br/> with Applications to
+Subgraph Counting </h2> 
 <div class="pages">
 	<div style="padding-bottom:10px">
 	<span style="font-weight:bold"> Authors: </span>
 	<span id="pub" style="font-size:16px">
-		<span class="paper-author"> Sepehr Assadi, <a href="#">Pankaj Kumar</a>, <a href="https://people.cs.rutgers.edu/~pm822/">Parth Mittal</a>. </span>	
+		<span class="paper-author"> Sepehr Assadi, <a href="https://sites.google.com/scarletmail.rutgers.edu/hoaiannguyen/">Hoai-An Nguyen</a>. </span>	
  </span>
 	</div>
 	
@@ -56,15 +58,10 @@ Brooks’ Theorem in Graph Streams: A Single-Pass Semi-Streaming Algorithm for �
 	<span style="font-weight:bold;"> Conference: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="http://acm-stoc.org/stoc2022/">54th Annual ACM Symposium on Theory of Computing (STOC'22)</a>
+	<a href="https://approxconference.wordpress.com/">
+International Conference on Approximation Algorithms for Combinatorial Optimization Problems (APPROX 2022)</a>
 	</span>
-<!--	<div style="padding-top:10px;color:green;font-weight:bold"> This paper resolves an open question raised
-	by Li and Woodruff in <a href="http://dl.acm.org/citation.cfm?id=2897581" style="font-weight:bold;color:green">[LW'16]</a>.</div>   
-	
-	<div style="padding-top:10px;color:green;font-weight:bold"> This paper settles the <a href="http://sublinear.info/index.php?title=Open_Problems:64" style="font-weight:bold;color:green">
-	Open Problem 64</a> from the
-	<a href="http://sublinear.info/index.php?title=Main_Page" style="font-weight:bold;color:green">List of Open Problems in Sublinear Algorithms</a>. </div>   
--->	</span>
+	</span>
 	</div>
 	
 	<div style="padding-bottom:50px;">
@@ -72,17 +69,28 @@ Brooks’ Theorem in Graph Streams: A Single-Pass Semi-Streaming Algorithm for �
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
 
-		Every graph with maximum degree ∆ can be colored with (∆ + 1) colors using a simple greedy algorithm. Remarkably, recent work have shown that one can find such a coloring even in the semi-streaming model: there exist a randomized algorithm that with high probability finds a (∆ + 1)-coloring of the input graph in only O(n · polylog n) space assuming a single pass over the edges of the graph in any arbitrary order. But, in reality, one almost never needs (∆ + 1) colors for proper coloring a graph. Indeed, the celebrated Brooks’ theorem states that every (connected) graph beside cliques and odd cycles can be colored with ∆ colors. Can we find a ∆-coloring in the semi-streaming model as well?
+The h-index is a metric used to measure the impact of a user in a publication setting, such as a
+member of a social network with many highly liked posts or a researcher in an academic domain
+with many highly cited publications. Specifically, the h-index of a user is the largest integer h such
+that at least h publications of the user have at least h units of positive feedback.
+<br/><br/>
 
-		<br/><br/>
+We design an algorithm that, given query access to the n publications of a user and each
+publication’s corresponding positive feedback number, outputs a (1±ε)-approximation of the h-index
+of this user with probability at least 1 − δ in time O(n·ln (1/δ)/ε^2·h), where h is the actual h-index which
+is unknown to the algorithm a-priori. We then design a novel lower bound technique that allows us
+to prove that this bound is in fact asymptotically optimal for this problem in all parameters
+n, h, ε, and δ.
+<br/><br/>
 
-		We settle this key question in the affirmative by designing a randomized semi-streaming algorithm that given any graph, with high probability, either correctly declares that the graph is not ∆-colorable or outputs a ∆-coloring of the graph.
-
-		<br/><br/>
-		The proof of this result starts with a detour. We first (provably) identify to what extent the previous approaches for streaming coloring fail for ∆-coloring: for instance, all these approaches naturally handle streams with repeated edges and they can also run in o(n2) time – we prove that either of these tasks are simply impossible for ∆-coloring. These impossibility results however pinpoint exactly what is missing from prior approaches when it comes to ∆-coloring.
-
-		<br/><br/>
-		We then build on these insights to design a semi-streaming algorithm that uses (i) a novel sparse-recovery approach based on sparse-dense decompositions to (partially) recover the “prob- lematic” subgraphs of the input—the ones that form the basis of our impossibility results—and (ii) a new coloring approach for these subgraphs that allows for recoloring of other vertices in a controlled way without relying on local explorations or finding “augmenting paths” that are generally impossible for semi-streaming algorithms. We believe both these techniques can be of independent interest.
+Our work is one of the first in sublinear time algorithms that addresses obtaining asymptotically
+optimal bounds, especially in terms of the error and confidence parameters. As such, we focus
+on designing novel techniques for this task. In particular, our lower bound technique seems quite
+general – to showcase this, we also use our approach to prove an asymptotically optimal lower bound
+for the problem of estimating the number of triangles in a graph in sublinear time, which now is
+also optimal in the error and confidence parameters. This latter result improves upon prior lower
+bounds of Eden, Levi, Ron, and Seshadhri (FOCS’15) for this problem, as well as multiple follow-up
+works that extended this lower bound to other subgraph counting problems. 
 
 </span>
 </span>
@@ -92,7 +100,7 @@ Brooks’ Theorem in Graph Streams: A Single-Pass Semi-Streaming Algorithm for �
 	<span style="font-weight:bold;"> Conference version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520005?casa_token=TaVprs9bKBcAAAAA:ACltMlTw1JCr1M6YBP4DvzWBeHc0xgYl5HT8_mKl4GxojQE3I9mfV5KgoyEjrLC44bU6IcjrzNsM1A">[PDF]</a>
+		<a href="https://drops.dagstuhl.de/opus/volltexte/2022/17170/pdf/LIPIcs-APPROX48.pdf">[PDF]</a>
 	</span>
 	</span>
 	</div>
@@ -101,26 +109,27 @@ Brooks’ Theorem in Graph Streams: A Single-Pass Semi-Streaming Algorithm for �
 	<span style="font-weight:bold;"> Full version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://arxiv.org/abs/2203.10984">[arXiv]</a> 
+		<a href="https://arxiv.org/abs/2209.08114">[arXiv]</a> 
 	</span>
 	</span>
 	</div>
-	
-	<div style="padding-bottom:10px;">
+
+<!--
+<div style="padding-bottom:10px;">
         <span style="font-weight:bold;"> Streaming video: </span>
         <span id="pub" style="font-size:16px">
         <span class="paper-author">
-        <a href="https://www.youtube.com/watch?v=y0Q_IyAhbKI">[YouTube]</a> (Parth @STOC'22)</a>
+        <a href="https://www.youtube.com/watch?v=bq-upL_Vk88">[YouTube]</a> (Glenn @STOC'22)</a>
         </span>
         </span>
         </div>
-
+-->
 
 	<div style="padding-bottom:10px;">
 	<span style="font-weight:bold;"> BibTex: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="https://dblp.org/rec/conf/stoc/AssadiKM22.html?view=bibtex">[DBLP]</a>
+	<a href="https://dblp.org/rec/conf/approx/AssadiN22.html?view=bibtex">[DBLP]</a>
 	</span>
 	</span>
 	</div>
