@@ -43,12 +43,12 @@
 
 <div class="spacer"></div>
 <h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> 
-An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2> 
+	Single-pass Streaming Lower Bounds for Multi-armed Bandits Exploration <br/> with Instance-sensitive Sample Complexity </h2> 
 <div class="pages">
 	<div style="padding-bottom:10px">
 	<span style="font-weight:bold"> Authors: </span>
 	<span id="pub" style="font-size:16px">
- <span class="paper-author"> Sepehr Assadi, <a href="https://people.cs.rutgers.edu/~vjs69/">Vihan Shah</a>. </span>	
+ <span class="paper-author"> Sepehr Assadi, <a href="https://sites.google.com/view/chen-wang/publications?authuser=0">Chen Wang</a>. </span>	
  </span>
 	</div>
 	
@@ -56,15 +56,9 @@ An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2
 	<span style="font-weight:bold;"> Conference: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="http://itcs-conf.org">The 13th Innovations in Theoretical Computer Science (ITCS'22)</a>
+	<a href="https://nips.cc/Conferences/2022">The 36th Conference on Neural Information Processing Systems (NeurIPS 2022)</a>.
 	</span>
-<!--	<div style="padding-top:10px;color:green;font-weight:bold"> This paper resolves an open question raised
-	by Li and Woodruff in <a href="http://dl.acm.org/citation.cfm?id=2897581" style="font-weight:bold;color:green">[LW'16]</a>.</div>   
-	
-	<div style="padding-top:10px;color:green;font-weight:bold"> This paper settles the <a href="http://sublinear.info/index.php?title=Open_Problems:64" style="font-weight:bold;color:green">
-	Open Problem 64</a> from the
-	<a href="http://sublinear.info/index.php?title=Main_Page" style="font-weight:bold;color:green">List of Open Problems in Sublinear Algorithms</a>. </div>   
--->	</span>
+	</span>
 	</div>
 	
 	<div style="padding-bottom:50px;">
@@ -72,69 +66,64 @@ An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
 
-We present an algorithm for the maximum matching problem in dynamic (insertion-deletions) streams
-with asymptotically optimal space complexity: for any n-vertex graph, our algorithm with high
-probability outputs an α-approximate matching in a single pass using O(n^2/α^3) bits of space.
+Motivated by applications to process massive datasets, we study streaming algorithms for pure exploration in Stochastic Multi Armed Bandits (MABs). This problem was first formulated by Assadi and Wang [STOC 2020] as follows: A collection of n arms with unknown rewards are arriving one by one in a stream, and the algorithm is only allowed to store a limited number of arms at any point. The goal is to find the arm with the largest reward while minimizing the number of arm pulls (sample complexity) and the maximum number of stored arms (space complexity). Assuming ∆_[2] is known, Assadi and Wang designed an algorithm that uses a memory of just one arm and still achieves the sample complexity of O(n/∆_[2]^2) which is worst-case optimal even for non-streaming algorithms; here ∆_[i] is the gap between the rewards of the best and the i-th best arms.
 
 <br/><br/>
 
-A long line of work on the dynamic streaming matching problem has reduced the gap between
-space upper and lower bounds first to n^o(1) factors [Assadi-Khanna-Li-Yaroslavtsev; SODA 2016] and
-subsequently to polylog(n) factors [Dark-Konrad; CCC 2020]. Our upper bound now matches the DarkKonrad lower bound up to O(1) factors, thus completing this research direction.
+In this paper, we extended this line of work to stochastic MABs in the streaming
+model with the instance-sensitive sample complexity, similar to Karnin et.al. [ICML 2013] and Jamieson et.al. [COLT 2014] in the classical setting. 
+We devise strong negative results under this setting: our results show that any streaming algorithm under a single pass has to use either asymptotically higher sample complexity than the instance-sensitive bound, or a memory of Ω(n) arms, even if the parameter ∆_[2] is
+known. In fact, the lower bound holds under much stronger assumptions, including
+the random order streams or the knowledge of all gap parameters {∆_[i]}_i>1. We
+complement our lower bounds by proposing a new algorithm that uses a memory of a single arm and achieves the instance-optimal sample complexity when all the strong assumptions hold simultaneously.
 
 <br/><br/>
 
-Our approach consists of two main steps: we first (provably) identify a family of graphs, similar
-to the instances used in prior work to establish the lower bounds for this problem, as the only “hard”
-instances to focus on. These graphs include an induced subgraph which is both sparse and contains a
-large matching. We then design a dynamic streaming algorithm for this family of graphs which is more
-efficient than prior work. The key to this efficiency is a novel sketching method, which bypasses the
-typical loss of polylog (n)-factors in space compared to standard L0-sampling primitives, and can be of
-independent interest in designing optimal algorithms for other streaming problems.
-
+Our results are developed based on a novel arm trapping lemma. This generic complexity result shows that any algorithm to trap the index of the best arm among o(n) indices (but not necessarily to find it) has to use Θ(n/∆_[2]^2) sample complexity. This result is not restricted to the streaming setting, and to the best of our knowledge, this is the first result that captures the sample-space trade-off for ‘trapping’ arms in multi-armed bandits, and it can be of independent interest.
 
 </span>
 </span>
 </div>
 
-	<div style=padding-bottom:10px;">
+<!--
+	<div style=padding-bottom:10px;>
 	<span style="font-weight:bold;"> Conference version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://drops.dagstuhl.de/opus/volltexte/2022/15605/pdf/LIPIcs-ITCS-2022-9.pdf">[PDF]</a>
+		<a href="https://drops.dagstuhl.de/opus/volltexte/2022/15606/pdf/LIPIcs-ITCS-2022-10.pdf">[PDF]</a>
 	</span>
 	</span>
 	</div>
 
 
-	<div style=padding-bottom:10px;">
+	<div style=padding-bottom:10px;>
 	<span style="font-weight:bold;"> Full version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://arxiv.org/abs/2201.12710">[arXiv]</a> 
+		<a href="https://arxiv.org/abs/2109.14528">[arXiv]</a> 
 	</span>
 	</span>
 	</div>
 	
-      <div style=padding-bottom:10px;">
+      <div style=padding-bottom:10px;>
         <span style="font-weight:bold;"> Streaming video: </span>
         <span id="pub" style="font-size:16px">
         <span class="paper-author">
-        <a href="https://www.youtube.com/watch?v=zxKP4fh6qNU&list=PLgKuh-lKre11M2GCKkTySipbMIxXqKzkE&index=46">[YouTube]</a> (Vihan @ITCS'22)</a>
+        <a href="https://www.youtube.com/watch?v=ituGSR7hMcM&list=PLgKuh-lKre11M2GCKkTySipbMIxXqKzkE&index=12">[YouTube]</a> (Chen @ITCS'22)</a>
         </span>
         </span>
         </div>
 
 
-	<div style=padding-bottom:10px;">
+	<div style=padding-bottom:10px;>
 	<span style="font-weight:bold;"> BibTex: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="https://dblp.org/rec/conf/innovations/AssadiS22.html?view=bibtex">[DBLP]</a>
+	<a href="https://dblp.org/rec/conf/innovations/Assadi022.html?view=bibtex">[DBLP]</a>
 	</span>
 	</span>
 	</div>
-
+-->
 
 </div>
 

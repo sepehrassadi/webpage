@@ -32,7 +32,7 @@
         <div id="menus">
             <div class="menu">
                 <ul>
-                    <li class="page_item page-item-1"><a href="../index.html#2022">Back</a></li>
+                    <li class="page_item page-item-1"><a href="../index.html#2023">Back</a></li>
                 </ul>
             </div>
         </div>
@@ -43,12 +43,13 @@
 
 <div class="spacer"></div>
 <h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> 
-An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2> 
+Generalizing Greenwald-Khanna Streaming
+Quantile Summaries for Weighted Inputs</h2> 
 <div class="pages">
 	<div style="padding-bottom:10px">
 	<span style="font-weight:bold"> Authors: </span>
 	<span id="pub" style="font-size:16px">
- <span class="paper-author"> Sepehr Assadi, <a href="https://people.cs.rutgers.edu/~vjs69/">Vihan Shah</a>. </span>	
+		<span class="paper-author"> Sepehr Assadi, <a href="https://nirmitj6.github.io/static-webpage/">Nirmit Joshi</a>, <a href="#">Milind Prabhu</a>, <a href="https://people.cs.rutgers.edu/~vjs69/">Vihan Shah</a>. </span>	
  </span>
 	</div>
 	
@@ -56,15 +57,10 @@ An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2
 	<span style="font-weight:bold;"> Conference: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="http://itcs-conf.org">The 13th Innovations in Theoretical Computer Science (ITCS'22)</a>
+	<a href="http://edbticdt2023.cs.uoi.gr/">
+26th International Conference on Database Theory (ICDT 2023)</a>.
 	</span>
-<!--	<div style="padding-top:10px;color:green;font-weight:bold"> This paper resolves an open question raised
-	by Li and Woodruff in <a href="http://dl.acm.org/citation.cfm?id=2897581" style="font-weight:bold;color:green">[LW'16]</a>.</div>   
-	
-	<div style="padding-top:10px;color:green;font-weight:bold"> This paper settles the <a href="http://sublinear.info/index.php?title=Open_Problems:64" style="font-weight:bold;color:green">
-	Open Problem 64</a> from the
-	<a href="http://sublinear.info/index.php?title=Main_Page" style="font-weight:bold;color:green">List of Open Problems in Sublinear Algorithms</a>. </div>   
--->	</span>
+	</span>
 	</div>
 	
 	<div style="padding-bottom:50px;">
@@ -72,69 +68,75 @@ An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
 
-We present an algorithm for the maximum matching problem in dynamic (insertion-deletions) streams
-with asymptotically optimal space complexity: for any n-vertex graph, our algorithm with high
-probability outputs an α-approximate matching in a single pass using O(n^2/α^3) bits of space.
+Estimating quantiles, like the median or percentiles, is a fundamental task in data mining and
+data science. A (streaming) quantile summary is a data structure that can process a set S of n
+elements in a streaming fashion and at the end, for any phi ∈ (0, 1], return a phi-quantile of S up to an
+eps error. We are particularly interested in comparison-based
+summaries that only compare elements of the universe under a total ordering and are otherwise
+completely oblivious of the universe. The best known deterministic quantile summary is the 20-year
+old Greenwald-Khanna (GK) summary that uses O((1/ε)log (εn)) space [SIGMOD’01]. This bound
+was recently proved to be optimal for all deterministic comparison-based summaries by Cormode
+and Vesleý [PODS’20].
 
 <br/><br/>
 
-A long line of work on the dynamic streaming matching problem has reduced the gap between
-space upper and lower bounds first to n^o(1) factors [Assadi-Khanna-Li-Yaroslavtsev; SODA 2016] and
-subsequently to polylog(n) factors [Dark-Konrad; CCC 2020]. Our upper bound now matches the DarkKonrad lower bound up to O(1) factors, thus completing this research direction.
+In this paper, we study weighted quantiles, a generalization of the quantiles problem, where each
+element arrives with a positive integer weight which denotes the number of copies of that element
+being inserted. The only known method of handling weighted inputs via GK summaries is the naive
+approach of breaking each weighted element into multiple unweighted items, and feeding them one
+by one to the summary, which results in a prohibitively large update time (proportional to the
+maximum weight of input elements).
 
 <br/><br/>
 
-Our approach consists of two main steps: we first (provably) identify a family of graphs, similar
-to the instances used in prior work to establish the lower bounds for this problem, as the only “hard”
-instances to focus on. These graphs include an induced subgraph which is both sparse and contains a
-large matching. We then design a dynamic streaming algorithm for this family of graphs which is more
-efficient than prior work. The key to this efficiency is a novel sketching method, which bypasses the
-typical loss of polylog (n)-factors in space compared to standard L0-sampling primitives, and can be of
-independent interest in designing optimal algorithms for other streaming problems.
-
+We give the first non-trivial extension of GK summaries for weighted inputs and show that it
+takes O((1/ε)log (εn)) space and O(log(1/ε) + log log(εn)) update time per element to process a
+stream of length n (under some quite mild assumptions on the range of weights and ε). En route to
+this, we also simplify the original GK summaries for unweighted quantiles.
 
 </span>
 </span>
 </div>
 
-	<div style=padding-bottom:10px;">
+<!--
+<div style="padding-bottom:10px;">
 	<span style="font-weight:bold;"> Conference version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://drops.dagstuhl.de/opus/volltexte/2022/15605/pdf/LIPIcs-ITCS-2022-9.pdf">[PDF]</a>
+		<a href="https://drops.dagstuhl.de/opus/volltexte/2022/17170/pdf/LIPIcs-APPROX48.pdf">[PDF]</a>
 	</span>
 	</span>
 	</div>
 
-
-	<div style=padding-bottom:10px;">
+<div style="padding-bottom:10px;">
 	<span style="font-weight:bold;"> Full version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-		<a href="https://arxiv.org/abs/2201.12710">[arXiv]</a> 
+		<a href="https://arxiv.org/abs/2209.08114">[arXiv]</a> 
 	</span>
 	</span>
 	</div>
-	
-      <div style=padding-bottom:10px;">
+
+
+<div style="padding-bottom:10px;">
         <span style="font-weight:bold;"> Streaming video: </span>
         <span id="pub" style="font-size:16px">
         <span class="paper-author">
-        <a href="https://www.youtube.com/watch?v=zxKP4fh6qNU&list=PLgKuh-lKre11M2GCKkTySipbMIxXqKzkE&index=46">[YouTube]</a> (Vihan @ITCS'22)</a>
+        <a href="https://www.youtube.com/watch?v=bq-upL_Vk88">[YouTube]</a> (Glenn @STOC'22)</a>
         </span>
         </span>
         </div>
 
-
-	<div style=padding-bottom:10px;">
+	<div style="padding-bottom:10px;">
 	<span style="font-weight:bold;"> BibTex: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="https://dblp.org/rec/conf/innovations/AssadiS22.html?view=bibtex">[DBLP]</a>
+	<a href="https://dblp.org/rec/conf/approx/AssadiN22.html?view=bibtex">[DBLP]</a>
 	</span>
 	</span>
 	</div>
 
+-->
 
 </div>
 

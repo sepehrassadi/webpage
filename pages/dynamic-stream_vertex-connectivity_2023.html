@@ -32,7 +32,7 @@
         <div id="menus">
             <div class="menu">
                 <ul>
-                    <li class="page_item page-item-1"><a href="../index.html#2022">Back</a></li>
+                    <li class="page_item page-item-1"><a href="../index.html#2023">Back</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +43,7 @@
 
 <div class="spacer"></div>
 <h2  id = "research" style="font-weight:bold;font-family:times;text-align:center;padding-bottom:30px;"> 
-An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2> 
+Tight Bounds for Vertex Connectivity in Dynamic Streams </h2> 
 <div class="pages">
 	<div style="padding-bottom:10px">
 	<span style="font-weight:bold"> Authors: </span>
@@ -56,7 +56,7 @@ An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2
 	<span style="font-weight:bold;"> Conference: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
-	<a href="http://itcs-conf.org">The 13th Innovations in Theoretical Computer Science (ITCS'22)</a>
+	<a href="https://www.siam.org/conferences/cm/conference/sosa23">The SIAM Symposium on Simplicity in Algorithms (SOSA@SODA'23)</a>.
 	</span>
 <!--	<div style="padding-top:10px;color:green;font-weight:bold"> This paper resolves an open question raised
 	by Li and Woodruff in <a href="http://dl.acm.org/citation.cfm?id=2897581" style="font-weight:bold;color:green">[LW'16]</a>.</div>   
@@ -64,7 +64,8 @@ An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2
 	<div style="padding-top:10px;color:green;font-weight:bold"> This paper settles the <a href="http://sublinear.info/index.php?title=Open_Problems:64" style="font-weight:bold;color:green">
 	Open Problem 64</a> from the
 	<a href="http://sublinear.info/index.php?title=Main_Page" style="font-weight:bold;color:green">List of Open Problems in Sublinear Algorithms</a>. </div>   
--->	</span>
+-->	
+    </span>
 	</div>
 	
 	<div style="padding-bottom:50px;">
@@ -72,32 +73,18 @@ An Asymptotically Optimal Algorithm for Maximum Matching in Dynamic Streams </h2
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
 
-We present an algorithm for the maximum matching problem in dynamic (insertion-deletions) streams
-with asymptotically optimal space complexity: for any n-vertex graph, our algorithm with high
-probability outputs an α-approximate matching in a single pass using O(n^2/α^3) bits of space.
-
+We present a streaming algorithm for the vertex connectivity problem in dynamic streams with a (nearly) optimal space bound: for any n-vertex graph G and any integer k > 0, our algorithm with high probability outputs whether or not G is k-vertex-connected in a single pass using O~(kn) space. 
 <br/><br/>
 
-A long line of work on the dynamic streaming matching problem has reduced the gap between
-space upper and lower bounds first to n^o(1) factors [Assadi-Khanna-Li-Yaroslavtsev; SODA 2016] and
-subsequently to polylog(n) factors [Dark-Konrad; CCC 2020]. Our upper bound now matches the DarkKonrad lower bound up to O(1) factors, thus completing this research direction.
-
-<br/><br/>
-
-Our approach consists of two main steps: we first (provably) identify a family of graphs, similar
-to the instances used in prior work to establish the lower bounds for this problem, as the only “hard”
-instances to focus on. These graphs include an induced subgraph which is both sparse and contains a
-large matching. We then design a dynamic streaming algorithm for this family of graphs which is more
-efficient than prior work. The key to this efficiency is a novel sketching method, which bypasses the
-typical loss of polylog (n)-factors in space compared to standard L0-sampling primitives, and can be of
-independent interest in designing optimal algorithms for other streaming problems.
+Our upper bound matches the known Ω(kn) lower bound for this problem even in insertion-only streams—which we extend to multi-pass algorithms in this paper—and closes one of the last remaining gaps in our understanding of dynamic versus insertion-only streams. Our result is obtained via a novel analysis of the previous best dynamic streaming algorithm of Guha, McGregor, and Tench [PODS 2015] who obtained an O~(k^2 n) space algorithm for this problem. 
 
 
 </span>
 </span>
 </div>
 
-	<div style=padding-bottom:10px;">
+<!--
+	<div style=padding-bottom:10px;>
 	<span style="font-weight:bold;"> Conference version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
@@ -107,7 +94,7 @@ independent interest in designing optimal algorithms for other streaming problem
 	</div>
 
 
-	<div style=padding-bottom:10px;">
+	<div style=padding-bottom:10px;>
 	<span style="font-weight:bold;"> Full version: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
@@ -116,7 +103,7 @@ independent interest in designing optimal algorithms for other streaming problem
 	</span>
 	</div>
 	
-      <div style=padding-bottom:10px;">
+      <div style=padding-bottom:10px;>
         <span style="font-weight:bold;"> Streaming video: </span>
         <span id="pub" style="font-size:16px">
         <span class="paper-author">
@@ -126,7 +113,7 @@ independent interest in designing optimal algorithms for other streaming problem
         </div>
 
 
-	<div style=padding-bottom:10px;">
+	<div style=padding-bottom:10px;>
 	<span style="font-weight:bold;"> BibTex: </span>
 	<span id="pub" style="font-size:16px">
 	<span class="paper-author"> 
@@ -135,6 +122,7 @@ independent interest in designing optimal algorithms for other streaming problem
 	</span>
 	</div>
 
+-->
 
 </div>
 
