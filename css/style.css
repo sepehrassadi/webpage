@@ -32,7 +32,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-a{
+a {
     color:black;
 }
 a:hover{
@@ -265,7 +265,7 @@ blockquote {
 	margin-top: 0px;
 }
 a:hover {
-	color: #E35A88;
+	/*color: #E35A88;*/
 }
 .spacer {
 	height: 1px;
@@ -1219,8 +1219,54 @@ This is the CSS for the social links
 	font-size:20px;
 }
 
+.selected_papers{
+	background-color:#F0F0F0; 
+	padding: 10px; 
+	border-radius: 25px;
+	line-height: 1.6em;
+	text-decoration: none;
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 15px;
+}
+.selected-links{
+	padding-bottom: 5px;
+}
+.selected-links a {
+	color:#0870a9;
+    margin: 2px 0;
+    font-size:16px;
+     text-decoration:none;
+    border-bottom: 1px dashed;
+}
 
+.pc table {
+	width:80%; 
+	margin-top: 10px;
+	font-size:16px;
+}
 
+.pc td{
+	 padding:10px;
+}
+
+/*
+#about-me .bullet- a {
+	color:#0870a9;
+}
+
+#about-me .pc a {
+	color:#0870a9;
+}
+
+#about-me .pc a {
+	color:#0870a9;
+}
+
+#about-me .pc a:hover {
+	color:#0870a9;
+}
+*/
 #pub ul{
 list-style-type:circle;	
 padding-left:40px;
@@ -1233,6 +1279,8 @@ padding-left:40px;
     font-size:17px;
     line-height:20px;
 }
+
+
 #pub .paper-title a{
     color: blue;
     text-decoration:none;
@@ -1260,6 +1308,37 @@ color:#444444;
 font-weight:bold;
 margin-left:3px;
 }
+
+#pub .paper-title {
+    color: blue;
+    font-size:17px;
+    line-height:20px;
+}
+
+#pub .talk-title{
+    display: inline-block;
+    line-height:20px;
+    font-size:16px;
+    width:50%;
+    text-align: left;
+}
+#pub .talk-title a{
+   //  color:#0870a9;
+    text-decoration:none;
+    border-bottom: 1px dashed ;
+
+}
+#pub .talk-place {
+	display: inline-block;
+	width:49%;
+	text-align:left;
+	font-size: 16px; 
+//	color:black;
+}
+#pub .talk-title a:hover{
+//    color:#0870a9;   
+}
+
 /*****************************************
  About Me Part 
  *****************************************/
