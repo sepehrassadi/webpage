@@ -1191,9 +1191,12 @@ This is the CSS for the social links
 
 #menus a{-moz-border-radius:6px 6px 0 0;border-radius:6px 6px 0 0;-webkit-border-radius:6px 6px 0 0; text-decoration:none}
 #menus ul ul a{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;}
-#nav{z-index:5;position:relative;height:43px;margin:0 auto;padding-top:20px;clear:both;background:#454546;}
 
-#menus{width:50%;height:31px;margin:12px auto 0;padding-right:260px;font-size:14px;text-shadow:0 1px 0 #000;}
+#nav{ padding-top:20px; background:#454546; overflow:hidden;}
+
+#menus{width:60%; height:31px; margin:12px auto 0; padding-right:260px; font-size:14px; text-shadow:0 1px 0 #000;}
+
+
 #menus a{border:1px solid #555;border-bottom:none;color:#abaaaa;display:block;line-height:30px;background:#333;padding:0 10px;}
 #menus ul{list-style:none;margin:0;}
 #menus li{float:left;position:relative;margin-right:8px;}
@@ -1243,12 +1246,13 @@ This is the CSS for the social links
 .pc table {
 	width:80%; 
 	margin-top: 10px;
-	font-size:16px;
+	font-size:100%;
 }
 
 .pc td{
 	 padding:10px;
 }
+
 
 /*
 #about-me .bullet- a {
@@ -1351,6 +1355,10 @@ margin-left:3px;
 #about-me a:hover{
     color:black;
     text-decoration:none;
+}
+#about-me .bullet-title{
+	font-weight:bold; 
+	font-size: 110%;
 }
 /*****************************************
  Education and Research part *************
