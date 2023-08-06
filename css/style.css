@@ -1193,7 +1193,7 @@ This is the CSS for the social links
 #menus ul ul a{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;}
 #nav{z-index:5;position:relative;height:43px;margin:0 auto;padding-top:20px;clear:both;background:#454546;}
 
-#menus{width:700px;height:31px;margin:12px auto 0;padding-right:260px;font-size:14px;text-shadow:0 1px 0 #000;}
+#menus{width:50%;height:31px;margin:12px auto 0;padding-right:260px;font-size:14px;text-shadow:0 1px 0 #000;}
 #menus a{border:1px solid #555;border-bottom:none;color:#abaaaa;display:block;line-height:30px;background:#333;padding:0 10px;}
 #menus ul{list-style:none;margin:0;}
 #menus li{float:left;position:relative;margin-right:8px;}
