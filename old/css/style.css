@@ -1229,8 +1229,9 @@ This is the CSS for the social links
 	line-height: 1.6em;
 	text-decoration: none;
 	font-size: 14px;
-	color: #666;
+	color: black;
 	margin-bottom: 15px;
+
 }
 .selected-links{
 	padding-bottom: 5px;

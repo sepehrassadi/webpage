@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS 466/666: Algorithm Design and Analysis (Fall 2023) </title>
+
+
+
+<style>
+
+.header{
+	height: 20px;	
+  font-size: 35px;
+	background-color:white;
+  color:black;
+  margin-top: 30px;
+}
+
+.top{
+	color:green;
+	font-weight:bold;
+}
+
+.event{
+	color:green;
+	font-weight:bold;
+}
+
+a:link {
+  text-decoration: none;
+	color:blue;
+}
+
+a:visited {
+  text-decoration: none;
+	color:blue;
+}
+
+a:hover {
+  text-decoration: underline;
+	color:blue;
+}
+
+a:active {
+  text-decoration: underline;
+	color:blue;
+}
+
+.cal table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+.cal td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+.cal tr:nth-child(even) {
+  background-color: #89CFF0;
+}
+
+.big-table td{
+  padding:4px;
+}
+
+.big-table {
+  background-color:#F0F0F0; 
+  padding: 7px; 
+  border-radius: 25px;
+//  border-style: solid;
+  width:1200px;
+  margin-top: 20px;
+}
+.bold-bullet {
+  margin-left: 30px;
+}
+.bold-bullet td {
+  padding:7px;
+}
+.bold-bullet .first {
+  font-weight: bold;
+  width: 30%;
+}
+.bold-bullet .second {
+  color: dimgray;
+}
+
+.distant-list li {
+  padding:7px;
+}
+</style>
+</head>
+    
+<body style="line-height:130%;">
+
+<table style="margin-bottom: 0px;">
+  <tr>
+    <td style="width:60%;"><h1 style="color:#C60078; font-size:40px;">CS 466/666: Algorithm Design and Analysis (Fall 2023)</h1></td>
+    <td align="left" style="width:30%;"> <img src="logo.png" width="70%" alt="Did NOT work :|" /> </td>
+  </tr>
+</table>
+
+<hr>
+
+<div style="padding-left:20px;width:1200px">
+
+  <table class="big-table">
+
+    <tr>
+      <td style="width:25%;"><span class="top">Lectures</span></td>
+      <td style="width:75%"> Mondays and Wednesdays, 4:00 PM - 5:20PM in <a href="#">PHY 313</a></td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Instructor</span></td>
+      <td><a href="https://sepehr.assadi.info">Sepehr Assadi</a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+        (userid: <span style="border-bottom: 1px dashed;">sassadi</span>)</td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Office hours</span></td>
+      <td> [will be announced soon]</td>
+    </tr>
+
+    <tr>
+      <td> <span class="top"> Teaching assistant</span></td>
+      <td> Kam Chuen (Alex) Tung &emsp;&emsp; (userid: <span style="border-bottom: 1px dashed;">kctung</span>)</td>
+    </tr>
+
+    <tr>
+      <td> <span class="top"> TA office hours</span></td>
+      <td> [will be announced soon]</td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Prerequisites</span></td>
+      <td>CM 339/CS 341; Computer Science or Computational Mathematics students only</td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Course outline</span></td>
+      <td>The full course outline is available on <a href="course-outline-f23.pdf">here</a>. 
+          This webpage contains the highlights of course outline that are potentially updated as the semester progresses. </td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Contact</span></td>
+      <td>The course has a Piazza page for general questions. For specific concerns, questions, or comments, 
+      email me (sassadi) or Alex (kctung); just please prefix your email subject with [CS466] for a timely reply.</td>
+    </tr>
+
+</table>
+
+<h3 class="header" id="topics"><span style="padding-left:10px"/> Topics</h3>
+
+This is an advanced algorithm design and analysis course, aimed at undergraduate students interested in a deep dive in theoretical computer science (TCS), 
+as well as graduate students doing research in TCS. It is more specialized and in-depth than the undergraduate level Algorithms course (CS 341). We will cover advanced algorithmic ideas (some classical, some very recent), and the theory behind them (theorems, proofs). <br/><br/>
+
+The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics that we will cover in this course but definitely not
+in this particular order and not all of them (throughout the semester, 
+we will <span style="color:green">mark</span> the topics covered actually in the course explicitly in this list): 
+<br/><br/>
+<table class="bold-bullet">
+  <tr> 
+    <td class="first"> &#8226; Probabilistic analysis:</td>
+    <td class="second"> Randomized algorithms, Concentration inequalities, Balls-and-bins experiments</td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Minimum cuts:</td>
+    <td class="second">Karger's algorithm, Cut sparsifiers, Edge-out contractions, Weighted minimum cuts, Isolating cuts, Vertex connectivity </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Minimum spanning trees (MSTs):</td>
+    <td class="second">Boruvka's algorithm, Linear-time randomized algorithm, Optimal algorithms  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Maximum matchings:</td>
+    <td class="second"> Hopcroft-Karp algorithm, Edmonds algorithm for non-bipartite graphs, Auction algorithm  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Shortest paths:</td>
+    <td class="second"> Low diameter decompositions, Tree embeddings, Negative-weight shortest paths</td>
+  </tr>
+
+ <tr> 
+    <td class="first"> &#8226; Maximum flows:</td>
+    <td class="second"> Electrical flows, Congestion approximators, Transhipment problem, Nearly-linear time approximations</td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Graph sparsification:</td>
+    <td class="second"> Directed shortcuts, Spanners, Cut sparsifiers, Matching sparsifiers   </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Linear programming</td>
+    <td class="second"> Basics, Duality, Applications </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Convex optimization:</td>
+    <td class="second"> Center-of-gravity algorithm, Gradient descent </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Multiplicative weight update (MWU):</td>
+    <td class="second"> Expert problem, Fast packing/covering linear programs  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Lovasz Local Lemma (LLL):</td>
+    <td class="second"> Basics, Algorithmic LLL  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Random walks:</td>
+    <td class="second"> Connectivity in L, Perfect matchings in regular bipartite graphs, Sampling matchings and colorings  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Sublinear time algorithms:</td>
+    <td class="second">Connected components, Subgraph counting, Graph coloring </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Streaming algorithms:</td>
+    <td class="second"> Distinct element problem, AGM sketches, Approximate matching, Graph sketches </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Distributed (LOCAL) algorithms:</td>
+    <td class="second"> Luby's Maximal Independent Set algorithm, Network decompositions, Shattering  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Online algorithms:</td>
+    <td class="second"> Ski rental, Karp-Vazirani-Vazirani (KVV) algorithm for bipartite matching </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Approximation algorithms:</td>
+    <td class="second"> Minimum vertex cover, Set cover, LP rounding </td>
+  </tr>
+</table>
+<br/>
+
+<span style="font-weight:bold;"> Learning outcomes:</span> By the end of the course, the students should be able to design and analyze 
+algorithms for a wide range of problems studied in this course as well as new ones, and have a basic familiarity with various algorithmic models and paradigms
+discussed in the course. 
+
+<br/><br/>
+
+<a href="https://ucalendar.uwaterloo.ca/1011/COURSE/course-CS.html#CS466">Official course description:</a> Algorithmic approaches and methods of assessment that reflect a broad spectrum of criteria, including randomized algorithms, amortized analysis, lower bounds, approximation algorithms, and on-line algorithms. Particular examples will be chosen from different areas of active research and application.
+
+
+<h3 class="header" id="grading"><span style="padding-left:10px"/> Grading</h3>
+The final grade for the course will be based on the following weights:
+<ul>
+  <li> 50% Assignments (4 for 12.5% points each)</li>
+  <li> 50% Exams:
+  <table>
+    <tr>
+      <td style="width:50%">  &#8227; Mid-term exam 1: [TBA: early October] </td>
+      <td> (25% points) </td>
+    </tr>
+    <tr>
+      <td style="width:50%">  &#8227; Mid-term exam 2: [TBA: mid November] </td>
+      <td> (25% points) </td>
+    </tr>
+  </table></li>
+</ul> 
+There will be <span style="font-weight:bold">no final exam</span> in this course. Participation in lectures is <span style="font-weight:bold">not mandatory</span>
+although strongly encouraged. </br><br/>
+
+<span style="font-weight:bold; color:red;">Important note:</span> To pass this course, students
+must obtain <span style="font-weight:bold">at least 50% of the class average grade</span> in the assignments and exams categories <span style="font-weight:bold">separately</span>. 
+
+<br/><br/>
+The <a href="course-outline-f23.pdf">course outline</a> contains more details on the grading scheme for this course. 
+
+
+
+<!--
+<br/><br/>
+<span style="font-weight: bold;">Assignments:</span> The policy for the assignments are the following: 
+<ol>
+  <li> Assignments can (and probably should) be done in teams of three students. However,
+you should still write their solutions completely independently (in particular, you should understand and be able to explain everything that is written in your solution),
+and you should include the name of your collaborators in your solutions. </li>
+  <br/>
+
+  <li> The assignments should be typeset in LaTeX and handed in as a single PDF.  Simple instructions on using LaTeX are available
+  on the <a href="#latex">course webpage</a> and a template will be released with each assignment. You can also ask any question you have about LaTeX on Piazza. </li> 
+
+  <br/>
+  <li> You are allowed to submit two assignments late in total, each for two extra days. You do not need to take permission for 
+  using your extensions – simply write on the first page of your assignment that you are using an extension. You will receive zero credit for any homework
+  submitted after two days passed the deadline or after you have used both your extensions. Exceptions
+  will be made only for exceptional circumstances and you will need to provide a university-issued written
+  verification</li>
+</ol>
+
+<span style="font-weight: bold;">Exams:</span> The policy for the exams are the following: 
+<ol>
+  <li> Exams should be done individually and, unlike the assignments, no collaborations or discussing the questions/solutions are allowed for the exams. </li>
+  <br/>
+
+  <li> [More details on the exams will be announced soon]</li> 
+</ol>
+-->
+
+
+<h3 class="header" id="reading"> <span style="padding-left:10px"/>  Reading</h3>
+The course has no official textbook and all required materials will be posted on this webpage. The following is a list of some helpful supplementary materials:
+
+<ul class="distant-list">
+  <li> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms">Algorithms</a> by J. Erickson </li> 
+  <li> <a href="https://theoryofcomputing.org/articles/v008a006/v008a006.pdf">The Multiplicative Weights Update Method: a Meta-Algorithm and Applications</a>
+  by S. Arora, E. Hazan, S. Kale </li>
+  <li> <a href="https://convex-optimization.github.io/">Algorithms for Convex Optimization</a> by N. Vishnoi </li>
+  <li> Randomized Algorithms by R. Motwani and P. Raghavan </li>
+  <li> The Probabilistic Method by N. Alon and J. Spencer</li>
+  <li> Concentration of Measure for the Analysis of Randomised Algorithms by D. Dubhashi and A. Panconesi. </li>
+</ul>
+
+
+<h3 class="header" id="course-calendar"><span style="padding-left:10px"/> Course Calendar</h3>
+The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change. 
+<br/>
+<br/>
+
+<table class="cal">
+  <tr>
+    <th>#</th>
+    <th style="width:70px">Date</th>
+    <th style="width:630px">Topics</th>
+    <th style="width:500px">Readings and Remarks</th>
+  </tr>
+
+
+<tr>
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+</tr>
+
+  <tr>
+    <td> 1 </td>
+    <td> Tue 01/17</td>
+    <td> Introduction and Course Policy, Intro to Algorithm Design </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/00-intro.pdf">[Chap 0]</a> -- <span class="event">HW0 release</span> </td>
+  </tr>
+
+
+ <tr>
+    <td> 2 </td>
+    <td> Thu 01/19</td>
+    <td> Algorithm Design and Asymptotic Analysis </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/00-intro.pdf">[Chap 0]</a> </td>
+  </tr>
+
+ 
+
+
+  <tr>
+    <td> 3 </td>
+    <td> Tue 01/24 </td>
+    <td> Proof of Correctness and Induction </td>
+  
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/98-induction.pdf">[Appendix I]</a>, 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf">[Chap 1]</a> 
+	    -- <span class="event">HW0 due </span>,  <span class="event">HW1 release</span> 
+    </td>
+  
+  </tr>
+
+
+  <tr>
+    <td> 4 </td>
+    <td> Thu 01/26 </td>
+    <td> Recursions and Recurrences</td>
+  
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/98-induction.pdf">[Appendix I]</a>, 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf">[Chap 1]</a> 
+    </td>
+  
+  </tr>
+
+
+  <tr>
+    <td> 5 </td>
+    <td> Tue 01/31</td>
+    <td> Divide and Conquer: Merge Sort, Solving Recurrences</td>
+     <td>
+            <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf">[Chap 1]</a>
+    </td>
+  
+  </tr>
+
+
+
+  <tr>
+    <td> 6 </td>
+    <td> Thu 02/02</td>
+    <td> Divide and Conquer: Quick Sort, Randomized Quick Sort </td>
+     <td>
+      <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf">[Chap 1]</a>
+            <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/02-nutsbolts.pdf">[Nuts and Bolts]</a>
+    </td>
+  
+  </tr>
+
+
+
+  <tr>
+    <td> 7 </td>
+    <td> Tue 02/07</td>
+    <td> Randomized Quick Sort, Counting Sort, Searching </td>
+     <td>
+        <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/01-random.pdf">[Discrete Probability]</a>
+            -- <span class="event">HW1 due</span> , <span class="event">HW2 release</span>
+    </td> 
+  
+  </tr>
+
+
+  <tr>
+    <td> 8 </td>
+    <td> Thu 02/09</td>
+    <td>  Hashing, Hash Functions, Hash Tables </td>
+     <td>
+            <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/05-hashing.pdf">[Hashing]</a>
+    </td> 
+  
+  </tr>
+
+
+
+ 
+  <tr>
+    <td> 9 </td>
+    <td> Tue 02/14</td>
+    <td> Dynamic Programming: Fibonacci Numbers</td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap 3]</a> (see also <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf">[Chap 2]</a>) </td>
+  </tr>
+
+
+  <tr>
+    <td> 10 </td>
+    <td> Thu 02/16</td>
+    <td> Dynamic Programming: Knapsack</td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap 3]</a> (see also <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf">[Chap 2]</a>) </td>
+  </tr>
+
+ 
+  <tr>
+    <td> 11 </td>
+    <td> Tue 02/21</td>
+    <td> Dynamic Programming: Longest Increasing Subsequence</td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf">[Chap 3]</a> (see also <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf">[Chap 2]</a>)
+    	--  <span class="event">HW2 due</span>
+    </td>
+  </tr>
+
+ 
+
+  <tr>
+    <td> * </td>
+    <td> Thu 02/23 </td>
+    <td> <span style="color:green; font-weight:bold"> Mid-term Exam 1</span>  </td>
+    <td>  </td>
+  </tr>
+
+
+
+
+
+
+  <tr>
+    <td> 12 </td>
+    <td> Tue 02/28 </td>
+    <td> Greedy Algorithms: Unit-Weight Knapsack, Job Scheduling </td>
+    <td> 
+	 <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/04-greedy.pdf">[Chap 4]</a> 
+    </td>
+  </tr>
+
+
+  <tr>
+    <td> 13 </td>
+    <td> Thu 03/02</td>
+    <td> Greedy Algorithms: Maximum Disjoint Intervals </td>
+    <td> 
+	 <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/04-greedy.pdf">[Chap 4]</a> 
+    </td>
+  </tr>
+
+  <tr>
+    <td> 14 </td>
+    <td> Tue 03/07</td>
+    <td> Intro to Graph Algorithms, Graph Reductions </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf">[Chap5]</a> 
+    	 -- <span class="event">HW3 release</span>
+    </td></tr>
+
+ <tr>
+    <td> 15 </td>
+    <td> Thu 03/09</td>
+    <td> Graph Search: Depth-First-Search and Breadth-First-Search </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf">[Chap5]</a> </td>
+  </tr>
+
+    <td> * </td>
+    <td> Tue 03/14</td>
+    <td> <span style="color:red">No Class: Spring Recess</span> </td>
+    <td> </td>
+  </tr>
+
+
+  <tr>
+    <td> * </td>
+    <td> Thu 03/16</td>
+    <td> <span style="color:red">No Class: Spring Recess</span> </td>
+    <td> </td>
+  </tr>
+
+
+  <tr>
+    <td> 16 </td>
+    <td> Tue 03/21</td>
+     <td> Graph Search: Depth-First-Search and Breadth-First-Search </td>
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf">[Chap5]</a> -- <span class="event">HW4 release</span>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td> 17 </td>
+    <td> Thu 03/23</td>
+    <td> Minimum Spanning Tree: The Generic Algorithm</td> 
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf">[Chap 7]</a>
+    	 --  <span class="event">HW3 due*</span> (the deadline is on Thursday instead) 
+    </td>
+  </tr>
+
+  <tr>
+    <td> 18 </td>
+    <td> Tue 03/28</td>
+    <td> Minimum Spanning Tree: Kruskal's and Prim's Algorithms</td> 
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf">[Chap 7]</a>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td> 19 </td>
+    <td> Thu 03/30</td>
+    <td> Shortest Path: Bellman-Ford Algorithm</td> 
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/08-sssp.pdf">[Chap 8]
+    </td>
+  </tr>
+
+   <tr>
+    <td> 20 </td>
+    <td> Tue 04/04</td>
+    <td> Shortest Path: Dijkstra's Algorithm </td> 
+    <td> <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/08-sssp.pdf">[Chap 8]</a> 
+   --  <span class="event">HW4 due</span> 
+
+    </td> </tr>
+
+ <tr>
+    <td> * </td>
+    <td> Thu 04/06 </td>
+    <td> <span class="event">Mid-term Exam 2</span> </td>
+    <td>  </td>
+ </tr>
+
+  <tr>
+    <td> 21 </td>
+    <td> Tue 04/11</td>
+    <td> <s>Introduction to Network Flow</s> </td> 
+    <td>
+ 	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/10-maxflow.pdf">[Chap 10.1]</a> 
+  </td>
+ </tr>
+
+
+  <tr>
+    <td> 22 </td>
+    <td> Thu 04/13</td>
+    <td> <s>Network Flow Applications: Bipartite Matching</s> </td> 
+    <td>
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/11-maxflowapps.pdf">[Chap 11]</a>  
+  </td>
+ </tr>
+
+  <tr>
+    <td> 23 </td>
+    <td> Tue 04/18</td>
+    <td> Intro to P vs NP </td>
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf">[Chap 12]</a>
+   -- <span class="event">HW5 released</span> 
+    </td>
+  </tr>
+
+  <tr>
+    <td> 24 </td>
+    <td> Thu 04/20</td>
+    <td> NP-Completeness and Reductions </td>
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf">[Chap 12]</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td> 25 </td>
+    <td> Tue 04/25</td>
+    <td> NP-Hardness Reductions</td>
+    <td> 
+	    <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf">[Chap 12]</a>
+    </td>
+  </tr>
+
+
+
+
+</table>
+
+
+<h3 class="header" id="territorial-ack"> <span style="padding-left:10px"/> Territorial Acknowledgement </h3>
+
+The University of Waterloo acknowledges that much of our work takes place on the traditional territory of the Neutral, Anishinaabeg and Haudenosaunee peoples. Our main campus is situated on the Haldimand Tract, the land granted to the Six Nations that includes six miles on each side of the Grand River. Our active work toward reconciliation takes place across our campuses through research, learning, teaching, and community building, and is co-ordinated within the Office of Indigenous Relations.
+
+<h3 class="header" id="territorial-ack"> <span style="padding-left:10px"/> Students with Disabilities </h3>
+
+<a href="https://uwaterloo.ca/disability-services/">AccessAbility Services</a>, located in Needles Hall, Room 1401, collaborates with all academic departments/schools to arrange appropriate accommodations for students with disabilities without compromising the academic integrity of the curriculum. If you require academic accommodations to lessen the impact of your disability, please register with AccessAbility Services at the beginning of each academic term.
+
+<br/><br/>
+
+You are encouraged to discuss with me any appropriate accommodations that we might make on your behalf following the guidelines of the
+<a href="https://uwaterloo.ca/disability-services/">AccessAbility Services</a>. 
+
+<h3 class="header" id="territorial-ack"> <span style="padding-left:10px"/> Statement of Inclusivity</h3>
+
+I am committed to creating a learning environment in which all of my
+students feel safe and included, regardless of race, ethnicity, religion, gender or sexual orientation.
+Because we are individuals with varying needs, I rely on your feedback to achieve this goal. I invite
+you to let me know about what I can stop, start, or continue doing to make sure every one of my
+students feels valued and can engage actively in our learning community.
+<br/><br/>
+
+<span style="font-weight:bold">Faculty of Math Statement on Diversity:</span>
+It is our intent that students from all diverse backgrounds and perspectives be well served by this course, and that students’ learning needs be addressed both in and out of class. We recognize the immense value of the diversity in identities, perspectives, and contributions that students bring, and the benefit it has on our educational environment. Your suggestions are encouraged and appreciated. Please let us know ways to improve the effectiveness of the course for you personally or for other students or student groups. In particular:
+<ul>
+  <li> We will gladly honour your request to address you by an alternate/preferred name or gender pronoun. Please advise us of this preference early in the term so we may make appropriate changes to our records.</li>
+<li> We will honour your religious holidays and celebrations. Please inform us of these at the start of the course. </li>
+<li> We will follow <a href="https://uwaterloo.ca/disability-services/">AccessAbility Services</a> guidelines and protocols on how to best support
+students with different learning needs.</li>
+</ul>
+
+<h3 class="header" id="territorial-ack"> <span style="padding-left:10px"/> Mental Health Support</h3>
+
+The Faculty of Math encourages students to seek out mental health support if needed.
+
+<br/><br/>
+
+<span style="font-weight:bold">On-campus Resources:</span>
+<ul> 
+  <li> <a href="https://uwaterloo.ca/campus-wellness/">Campus Wellness</a>: here to help enhance and support your wellness in a safe, respectful, and inclusive environment.</li>
+  <li> Counselling Services: email <a href="mailto:counselling.services@uwaterloo.ca"> counselling.services@uwaterloo.ca</a> or phone 519-888-4567 ext. 32655</li>
+  <li> <a href="https://wusa.ca/wusa-101-mates/">MATES</a>: one-to-one peer support program offered by Waterloo Undergraduate Student Association (WUSA) 
+    and Counselling Services: <a href="mailto:mates@wusa.ca"> mates@wusa.ca</a></li>
+  <li> <a href="https://uwaterloo.ca/campus-wellness/health-services">Health Services</a>: located across the creek from the Student Life Centre; phone: 519-888-4096.</li>
+</ul>
+
+<span style="font-weight:bold">Off-campus Resources:</span>
+<ul> 
+  <li> Good2Talk (24/7): Free confidential help line for post-secondary students. Phone: 1-866-925-5454 (Ontario and Nova Scotia only)</li>
+  <li> Here 24/7: Mental Health and Crisis Service Team. Phone: 1-844-437-3247 (Waterloo Region only) </li>
+  <li> OK2BME: set of support services for lesbian, gay, bisexual, transgender, or questioning teens. Phone: 519-884-0000 extension 213 (Waterloo Region only)</li>
+  <li> EMPOWER ME: Phone 1-833-628-5589 for Cdn./USA; for other countries see <a href="http://studentcare.ca/rte/en/IHaveAPlan_WUSA_EmpowerMe_EmpowerMe">here</a> </li>
+  <li> EMPOWER ME in China: China North 108007142831 and China South 108001402851</li>
+</ul>
+
+<h3 class="header" id="territorial-ack"> <span style="padding-left:10px"/> University Policy on Academic Integrity</h3>
+
+<span style="font-weight:bold">Academic Integrity:</span>
+In order to maintain a culture of <a href="https://uwaterloo.ca/academic-integrity/">academic integrity</a>, members of the University of Waterloo community are expected to promote honesty, trust, fairness, respect and responsibility. <br/><br/>
+
+<span style="font-weight:bold">Grievance:</span> 
+A student who believes that a decision affecting some aspect of their university life has been unfair or unreasonable may have grounds for initiating a grievance
+(<a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70">Policy 70</a>). 
+When in doubt please be certain to contact the department/school’s administrative assistant who will provide further assistance.
+<br/><br/>
+
+<span style="font-weight:bold">Discipline:</span> A student is expected to know what constitutes academic integrity to avoid committing academic offences and to take responsibility for their actions. A student who is unsure whether an action constitutes an offence, or who needs help in learning how to avoid offences (e.g., plagiarism, cheating) or about "rules" for group work/collaboration should seek guidance from the course professor, academic advisor, or the undergraduate associate dean. 
+
+<br/>
+
+For information on categories of offences and types of penalties, students should refer to <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71">Policy 71</a>. For typical penalties check <a href="https://uwaterloo.ca/secretariat/guidelines/guidelines-assessment-penalties">Guidelines for the Assessment of Penalties</a>.
+<br/><br/>
+
+<span style="font-weight:bold">Appeals:</span> A decision made or penalty imposed under <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70">Policy 70</a>, Student Petitions and Grievances (other than a petition) or <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71">Policy 71</a>, Student Discipline may be appealed if there is a ground. A student who believes they have a ground for an appeal should refer to <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72">Policy 72</a>, Student Appeals.
+
+<h3 class="header" id="latex"> <span style="padding-left:10px"/> Resources on LaTeX</h3>
+You can download LaTeX for free <a href="https://www.latex-project.org/get/">here</a>. For the purpose of this course, you do not even need to install LaTeX and 
+can instead use an online LaTeX editor such as <a href="https://www.overleaf.com">Overleaf</a>. <br/><br/>
+
+Two great introductory resources for  LaTeX are <a href="https://www.tug.org/begin.html">Getting started with TeX, LaTeX, and friends</a> by <a href="http://users.wfu.edu/cottrell/">Allin Cottrell</a>
+ (for general purpose LaTeX)
+and <a href="http://joshua.smcvt.edu/proofs/tutorial.pdf">LaTeX for Undergraduates</a> by <a href="http://joshua.smcvt.edu/math/hefferon.html">Jim Hefferson</a> (for undergraduates mathematics) 
+accompanied by the following <a href="http://joshua.smcvt.edu/undergradmath/">cheatsheet</a> (note that this document use "\( MATH \)" notation compared to the perhaps more
+ widely used "$ MATH $" -- both are completely fine in LaTeX). 
+You can also use this wonderful tool <a href="http://detexify.kirelabs.org/classify.html">Detexify</a> by <a href="http://kirelabs.org">Daniel Kirsch</a> for finding the
+ LaTeX commands of a symbol (just draw the symbol!).  
+<br/><br/>
+If you are interested in learning more about LaTeX (beyond what is needed for this course), check the <a href="https://en.wikibooks.org/wiki/LaTeX">Wikibook on LaTeX</a> and
+the <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#List_of_Mathematical_Symbols">Wikibook on LaTeX for Mathematics</a>. 
+
+<!--
+<h3 class="header" id="inclusion"> <span style="padding-left:10px"/> Rutgers CS Diversity and Inclusion Statement</h3>
+Rutgers Computer Science Department is committed to creating a consciously anti-racist, inclusive community that welcomes diversity in various dimensions (e.g., race, national origin, gender, sexuality, disability status, class, or religious beliefs). We will not tolerate micro-aggressions and discrimination that creates a hostile atmosphere in the class and/or threatens the well-being of our students. We will continuously strive to create a safe learning environment that allows for the open exchange of ideas and cherished freedom of speech, while also ensuring equitable opportunities and respect for all of us. Our goal is to maintain an environment where students, staff, and faculty can contribute without the fear of ridicule or intolerant or offensive language.
+<br/><br/>
+If you witness or experience racism, discrimination micro-aggressions, or other offensive behavior, you are encouraged to bring it to the attention to the undergraduate program director and/or the department chair. You can also report it to the <a href="http://inclusion.rutgers.edu/report-bias-incident/">Bias Incident Reporting System</a>.
+-->
+
+	<hr/>
+	<br/>
+</div>
+
+
+    </body>
+</html>
+
