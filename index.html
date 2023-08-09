@@ -27,7 +27,7 @@
       display: none;
       position: absolute;
       background-color: #f9f9f9;
-      min-width: 100%;
+      min-width: 150%;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       padding: 12px 16px;
       z-index: 1;
@@ -40,11 +40,7 @@
       display: block;
       font-weight: normal;
       color: #454544;
-    }
-
-
-    .bullet-table{
-
+      font-style: italic;
     }
 
     .bullet-table td:first-child{
@@ -72,7 +68,6 @@
 
     .small-list {
       font-size: 16px;
-     // color:gray;
     }
 
     .small-list li {
@@ -83,10 +78,10 @@
     .small-list .comment {
       color: dimgray;
     }
-    .small-list .comment a {
-     // color: dimgray;
-    }
 
+    .bullet-table .comment {
+      color: dimgray;
+    }
 
     /* Main Parts */ 
     body {
@@ -113,15 +108,11 @@
       margin-bottom: 10px;
       display: none;
     }
+
     .make-margin a {
      text-decoration: none;
       border-bottom: 1px dashed;
-    // color: #454544;
-    // color:#0096FF;
       color: #4169E1; 
-    // color: #6495ED;
-    // color: #0096FF;
-    // color: #0870a9;
     }
 
     .make-margin a:hover{
@@ -227,17 +218,7 @@
       line-height: 1.6em;
     }
     .selected-paper .title {
-      color:#a23000;
-     // color:#880808;
-     // color:#EE4B2B;
       color:#D22B2B;
-     // color: #C41E3A; 
-    //  color: #FF3131;
-    //  color: #FF2400;
-    //  color: #E0115F;
-     // color: #FF4433;
-     // color: #FA5F55;
-    //  color:red;
     }
 
     .selected-paper .conf {
@@ -249,15 +230,6 @@
 
     .selected-paper .journal {
       color:black;
-    }
-
-    .selected-paper .author {
-    }
-
-    .selected-paper .info {
-    }
-
-    .selected-paper .award{
     }
 
     .selected-paper .summary{
@@ -280,9 +252,6 @@
       display: block;
       margin-top: 20px;
     }
-
-    
-
 
     .all-papers .paper-author a, .all-papers .paper-author a:hover {
       color: #454544;
@@ -320,8 +289,6 @@
       padding-top:20px;
       line-height: 1.8em;
     }
-
-    /* Links sections */ 
 
   </style>
 
@@ -368,7 +335,12 @@
 
       <table class="bullet-table"> 
         <tr>
-          <td> Email: </td> <td>[firstname] (at) [lastname] (dot) info </td> 
+          <td> Email: </td> <td>[firstname] (at) [lastname] (dot) info </td>
+          <td> <span class="comment">(for general purpose)</span></td>
+        </tr>
+        <tr>
+          <td> Email: </td> <td> (s)[lastname] (at) uwaterloo (dot) ca </td>
+          <td> <span class="comment">(for administrative purposes at Waterloo)</span></td> 
         </tr>
         <tr> 
           <td> Office: </td> <td> DC 3117 </td>
@@ -406,15 +378,16 @@
         Interested specifically in working with me and my team and have a 
         <span class="dropdown">strong background in theoretical computer science and/or mathematics
           <span class="dropdown-content">
-            What does a strong background mean in this context? <br/><br/>
+            What does a strong background roughly look like?<br/><br/>
 
-            The most important factor is having <b>mathematical maturity</b>. Beyond that, 
+            The most important factor is having <span style="font-weight: bold;">mathematical maturity</span>. Beyond that, 
             this also includes but definitely is not limited to one or more of: <br/><br/>
             * Having done research (and possibly publications) on these topics; <br/>
-            * Having participated in IOI/IMO or ACM-ICPC or similar competitions; <br/>
-            * Having passed a few graduate and advanced-level undergraduate courses, or participated in reading groups on algorithms, complexity theory, discrete mathematics, probability, information theory, and/or algebra; <br/>
+            * Having passed a few graduate and advanced-level undergraduate courses, or participated in reading groups on algorithms, complexity theory, combinatorics, probability, information theory, and/or algebra; <br/>
+            * Having participated in IOI/IMO or ACM-ICPC or similar national or international competitions; <br/>
             * Having read a number of papers or followed developments in recent years on one or more area of research of your interest in TCS or Math, 
             and can explain their significance to others.
+            
           </span>
         </span>? Submit an application to our <a href="https://cs.uwaterloo.ca/future-graduate-students">graduate program</a> and mention my name. 
         
@@ -466,18 +439,18 @@
 
       <li> Past courses:  
         <ul class="small-list">
-          <li>  CS 671: Graph Streaming Algorithms and Lower Bounds @ Rutgers (<a href="courses/cs671-f20.html">Fall 2020</a>)
+          <li>  CS 671: Graph Streaming Algorithms and Lower Bounds @ Rutgers (<a href="courses/cs671-f20/index.html">Fall 2020</a>)
           </li>
 
           <li> CS 521: Linear Programming @ Rutgers (<a href="courses/cs521-f22/index.html">Fall 2022</a>)
           </li>
 
           <li> CS 514: Advanced Algorithms II -- Sublinear Algorithms @ Rutgers 
-              (<a href="courses/cs514-f21/index.html">Fall 2021</a>, <a href="courses/cs514-s20.html"> Spring 2020</a>)
+              (<a href="courses/cs514-f21/index.html">Fall 2021</a>, <a href="courses/cs514-s20/index.html"> Spring 2020</a>)
           </li>
 
           <li>CS 344: Design and Analysis of Computer Algorithms @ Rutgers 
-              (<a href="courses/cs344-s23/index.html">Spring 2023</a>,<a href="courses/cs344-s22/index.html"> Spring 2022</a>, <a href="courses/cs344-s21/index.html"> Spring 2021</a>, <a href="courses/cs344-f19.html"> Fall 2019</a>)
+              (<a href="courses/cs344-s23/index.html">Spring 2023</a>,<a href="courses/cs344-s22/index.html"> Spring 2022</a>, <a href="courses/cs344-s21/index.html"> Spring 2021</a>, <a href="courses/cs344-f19/index.html"> Fall 2019</a>)
           </li>
         </ul>
     </ul>
@@ -964,7 +937,7 @@
           <a href="https://youtu.be/VU7Y_8ZcNu0">[talk: Sepehr @ Simons Institute]</a>,
           <a href="https://www.youtube.com/watch?v=CyXKINjcKik">[talk: Sepehr @ HALG]</a>,
           <a href="courses/cs671-f20/lec3.pdf">[Streamlined lecture notes]</a>,
-          <a href="sublinear_vertex-coloring-slides.pdf">[Slides]</a>,
+          <a href="presentations/sublinear_vertex-coloring-slides.pdf">[Slides]</a>,
           <a href="https://ptreview.sublinear.info/?p=1016">[Property testing review]</a>
         </div>
 
@@ -1062,7 +1035,7 @@
           <a href="https://dl.acm.org/doi/pdf/10.1145/3381521">[Journal paper]</a>,
           <a href="https://dl.acm.org/doi/10.1145/3381521">[Conference paper]</a>,
           <a href="https://youtu.be/gArrHh9AF90">[talk: Sepehr @ EC]</a>,
-          <a href="presentations/combinatorial-auctions_round-slides.pdf">[slides]</a>
+          <a href="presentations/combinatorial-auctions_round-slides.pdf">[Slides]</a>
         </div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> 
@@ -1112,7 +1085,8 @@
         </div>
         <div class="info"> 
           <a href="http://arxiv.org/abs/1512.06143">[arXiv]</a> <span style="color:gray">(preliminary version)</span>,
-          <a href="https://www.cis.upenn.edu/~sanjeev/papers/matchings_streaming_soda2016.pdf">[Conference paper]</a>
+          <a href="https://www.cis.upenn.edu/~sanjeev/papers/matchings_streaming_soda2016.pdf">[Conference paper]</a>,
+          <a href="presentations/dynamic_simultaneous_matching-slides.pdf">[Slides]</a>
         </div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> 
@@ -2033,7 +2007,7 @@
             <a href="https://dl.acm.org/doi/pdf/10.1145/3381521">[Journal paper]</a>,
             <a href="https://dl.acm.org/doi/10.1145/3381521">[Conference paper]</a>,
             <a href="https://youtu.be/gArrHh9AF90">[talk: Sepehr @ EC]</a>,
-            <a href="presentations/combinatorial-auctions_round-slides.pdf">[slides]</a>
+            <a href="presentations/combinatorial-auctions_round-slides.pdf">[Slides]</a>
           </div>
           <div class="award">Invited to <span style="font-weight: bold;"> TEAC special issue </span> for EC'17 papers </div>
         </li>
@@ -2152,7 +2126,8 @@
           </div>
           <div class="paper-info"> 
             <a href="http://arxiv.org/abs/1512.06143">[arXiv]</a> <span style="color:gray">(preliminary version)</span>,
-            <a href="https://www.cis.upenn.edu/~sanjeev/papers/matchings_streaming_soda2016.pdf">[Conference paper]</a>
+            <a href="https://www.cis.upenn.edu/~sanjeev/papers/matchings_streaming_soda2016.pdf">[Conference paper]</a>,
+            <a href="presentations/dynamic_simultaneous_matching-slides.pdf">[Slides]</a>
           </div>
         </li>
 
