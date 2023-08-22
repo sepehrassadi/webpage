@@ -13,7 +13,6 @@
 	background-color:white;
   color:black;
   margin-top: 30px;
-  padding-left:10px
 }
 
 .sub-header{
@@ -22,7 +21,6 @@
   background-color:white;
   color:black;
   margin-top: 30px;
-  padding-left:10px
 }
 
 .top{
@@ -64,6 +62,9 @@ a:active {
   border: 1px solid black;
   text-align: left;
   padding: 8px;
+}
+.cal tr{
+  height:60px;
 }
 
 .cal tr:nth-child(even) {
@@ -167,7 +168,7 @@ a:active {
 
     <tr>
       <td><span class="top">Textbook</span></td>
-      <td>There is no official textbook. Lecture notes and all other required materials will be posted on this webpage.</td>
+      <td>There is no official textbook. Lecture notes and other required materials will be posted on this webpage.</td>
     </tr>
 
     <tr>
@@ -177,22 +178,23 @@ a:active {
     </tr>
 
     <tr>
-      <td><span class="top">Contact</span></td>
-      <td>We use <a href="#">Piazza</a> for general questions and announcements. For specific concerns, questions, or comments, 
-      email me (sassadi) or Alex (kctung); just please prefix your email subject with [CS466] for a timely reply.</td>
+      <td><span class="top">Communication</span></td>
+      <td>The lectures will be delivered on the blackboard. We use <a href="#">Piazza</a> for general questions and discussions. For specific concerns, questions, or comments regarding your experience in the course,  
+      email me (sassadi) or Alex (kctung); just please prefix your email subject with [CS466-F23] or [CS666-F23] accordingly for a timely reply.</td>
     </tr>
 
 </table>
 
 <h3 class="header" id="topics"> Topics</h3>
-
-This is an advanced algorithm design and analysis course, aimed at undergraduate students interested in a deep dive in theoretical computer science (TCS), 
-as well as graduate students doing research in TCS. It is more specialized and in-depth than the undergraduate level Algorithms course (CS 341). We will cover advanced algorithmic ideas (some classical, some very recent), and the theory behind them (theorems, proofs). <br/><br/>
-
+<p>
+  This  is an advanced algorithm design and analysis course, aimed at undergraduate students interested in a deep dive in theoretical computer science (TCS), 
+  as well as graduate students doing research in TCS. It is more specialized and in-depth than the undergraduate level Algorithms course (CS 341). We will cover advanced algorithmic ideas (some classical, some very recent), and the theory behind them (theorems, proofs). Mathematical maturity, and a strong background in probability theory, data structures, and algorithm design are all essential.
+</p>
+<p>
 The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics that we will cover in this course but  not
 in this particular order and definitely not all of them (throughout the semester, 
 we will <span style="color:green">mark</span> the topics covered actually in the course explicitly in this list): 
-<br/><br/>
+</p>
 <table class="bold-bullet">
   <tr> 
     <td class="first"> &#8226; Probabilistic analysis:</td>
@@ -225,7 +227,7 @@ we will <span style="color:green">mark</span> the topics covered actually in the
   </tr>
 
   <tr> 
-    <td class="first"> &#8226; Graph sparsification:</td>
+    <td class="first"> &#8226; Graph compression:</td>
     <td class="second"> Directed shortcuts, Spanners, Cut sparsifiers, Matching sparsifiers   </td>
   </tr>
 
@@ -293,37 +295,33 @@ we will <span style="color:green">mark</span> the topics covered actually in the
     <td class="first"> &#8226; Parallel algorithms:</td>
     <td class="second"> Matching in RNC, Isolation lemma </td>
   </tr>
-
-
-
-
 </table>
-<br/>
 
-<span style="font-weight:bold;"> Learning outcomes:</span> By the end of the course, the students should be able to design and analyze 
-algorithms for a wide range of problems studied in this course as well as new ones, and have a basic familiarity with various algorithmic models of computation
-studied in TCS. 
 
-<br/><br/>
-
-<a href="https://ucalendar.uwaterloo.ca/1011/COURSE/course-CS.html#CS466">Official course description:</a> Algorithmic approaches and methods of assessment that reflect a broad spectrum of criteria, including randomized algorithms, amortized analysis, lower bounds, approximation algorithms, and on-line algorithms. Particular examples will be chosen from different areas of active research and application.
-
+<p>
+  <a href="https://ucalendar.uwaterloo.ca/1011/COURSE/course-CS.html#CS466">Official course description:</a> Algorithmic approaches and methods of assessment that reflect a broad spectrum of criteria, including randomized algorithms, amortized analysis, lower bounds, approximation algorithms, and on-line algorithms. Particular examples will be chosen from different areas of active research and application.
+</p>
+<h4 class="sub-header" id="learning-outcomes">Learning Outcomes </h4>
+<p>
+  I am hoping that by the end of the course, (1) you are able to design and analyze algorithms for a wide range of canonical problems studied in this course, and even more importantly, for new problems that you may have not encountered directly in this course, and (2) you know a wide range of algorithmic and mathematical tools
+  commonly used in design and analysis of algorithms, and (3) you have a have a basic familiarity with various algorithmic models of computation studied in TCS. 
+</p>
 
 <h3 class="header" id="grading">Grading</h3>
 The final grade for the course will be based on the following weights:
 <ul class="distant-list">
-  <li> 40% Assignments (4 for 10% points each)</li>
-  <li> 60% Exams: <br/>
+  <li> 50% Assignments and peer grading (4 for 12.5% points each)</li>
+  <li> 50% Exams: <br/>
   <table>
     <tr>
-      <td style="width:40%">  &#8227; Mid-term exam (take-home): </td>
-      <td> [TBA: mid-October] </td>
-      <td> (20% points) </td>
+      <td style="width:35%">  &#8227; Mid-term exam (takehome): </td>
+      <td style="width:50%"> October 26 </td>
+      <td> (25% points) </td>
     </tr>
     <tr>
-      <td style="width:40%">  &#8227; Final exam (in-person): </td>
+      <td style="width:30%">  &#8227; Final exam (in-person): </td>
       <td> [Scheduled by the University] </td>
-      <td> (40% points) </td>
+      <td> (25% points) </td>
     </tr>
   </table>
   </li>
@@ -331,10 +329,10 @@ The final grade for the course will be based on the following weights:
 
 <p> 
   Participation in lectures is <span style="font-weight:bold">not mandatory</span>
-  but is strongly encouraged -- this is a fast-moving course, so if you miss a lecture you may find it more difficult to keep up.
+  but I strongly encourage it -- this is a fast-moving course, so if you miss a lecture you may find it more difficult to keep up.
 </p>
 
-<span style="font-weight:bold; color:red;">Important note:</span> To pass this course, students
+<span style="font-weight:bold; color:red;">Important note:</span> To pass this course, you
 must obtain <span style="font-weight:bold">at least 50% of the <u>class average</u> grade</span> in the assignments and exams categories <span style="font-weight:bold">separately</span>. 
 
 <br/><br/>
@@ -375,50 +373,50 @@ and you should include the name of your collaborators in your solutions. </li>
 
 
 <h3 class="header" id="course-calendar"> Course Calendar</h3>
-The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change. 
+The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change (including potentially the release and due dates for assignments). 
 <br/>
 <br/>
 
 <table class="cal">
   <tr>
     <th>#</th>
-    <th style="width:11%">Date</th>
-    <th style="width:50%">Topics</th>
-    <th style="width:14%">References</th>
-    <th style="width:25%">Lecture notes and Remarks</th>
+    <th style="width:11%;">Date</th>
+    <th style="width:50%;">Topics</th>
+    <th style="width:20%;">Lecture notes & References</th>
+    <th style="width:20%;">Assignments</th>
   </tr>
 
   <tr>
     <td> 1 </td>
-    <td> Wed - Sep 06</td>
+    <td> Wednesday <br/> September 06</td>
     <td> Introduction, Course policy, Probabilistic analysis, Karger's Min Cut Algorithm  </td>
     <td class="ref"> <a href="#K93">K93</a>, <a href="#KS96">KS96 </td>
     <td> </td>
   </tr>
 
-  <tr>
+  <tr style="height:1px;">
     <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
   </tr>
 
   <tr>
     <td> 2 </td>
-    <td> Mon - Sep 11</td>
+    <td> Monday <br/> September 11</td>
     <td> Concentration inequalities: Chebyshev, Streaming distinct elements </td>
     <td> -- </td>
-    <td> </td>
+    <td> <span class="event">HW1 release</span> <br/></td>
   </tr>
 
    <tr>
     <td> 3 </td>
-    <td> Wed - Sep 13</td>
-        <td> Concentration inequalities: Chernoff, Success amplification, Sublinear-time  coloring </td>
+    <td> Wednesday <br/> September 13</td>
+        <td> Concentration inequalities: Chernoff, Sublinear-time  coloring </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> 4 </td>
-    <td> Mon - Sep 18*</td>
+    <td> Monday <br/> September 18*</td>
     <td> Balls-and-bins experiments: Basics, Power of two choices  </td>
     <td> -- </td>
     <td> </td>
@@ -426,7 +424,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
    <tr>
     <td> 5 </td>
-    <td> Wed - Sep 20*</td>
+    <td> Wednesday <br/> September 20*</td>
     <td> Polynomial identity testing: String equality, Schwartz-Zippel, Parallel matching  </td>
     <td> -- </td>
     <td> </td>
@@ -434,15 +432,15 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
   <tr>
     <td> 6 </td>
-    <td> Mon - Sep 25</td>
+    <td> Monday <br/> September 25</td>
     <td> MSTs: Basics (blue & red rules), Barouvka's algorithm, Yao's algorithm  </td>
     <td> -- </td>
-    <td> </td>
+    <td> <span class="event">HW1 due <br/> HW2 release</span> </td>
   </tr>
 
   <tr>
     <td> 7 </td>
-    <td> Wed - Sep 27</td>
+    <td> Wednesday <br/> September 27</td>
     <td> MSTs: Fredman-Tarjan algorithm, Karger-Klein-Tarjan algorithm  </td>
     <td> -- </td>
     <td> </td>
@@ -450,15 +448,15 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
   <tr>
     <td> 8 </td>
-    <td> Mon - Oct 02</td>
+    <td> Monday <br/> October 02</td>
     <td> Linear programming (LP): Basics, LP duality, Center-of-gravity algorithm  </td>
     <td> -- </td>
-    <td> </td>
+    <td> <span class="event">HW1 peer grades due </span> </td>
   </tr>
 
   <tr>
     <td> 9 </td>
-    <td> Wed - Oct 04</td>
+    <td> Wednesday <br/> October 04</td>
     <td> LP rounding: Weighted vertex cover, Set cover, Min cut  </td>
     <td> -- </td>
     <td> </td>
@@ -466,7 +464,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
   <tr>
     <td>  </td>
-    <td> Mon - Oct 09</td>
+    <td> Monday <br/> October 09</td>
     <td> <span style="font-weight:bold; color:red">No class: Reading week</span>  </td>
     <td> -- </td>
     <td> </td>
@@ -474,7 +472,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
   <tr>
     <td>  </td>
-    <td> Wed - Oct 11</td>
+    <td> Wednesday <br/> October 11</td>
     <td> <span style="font-weight:bold; color:red">No class: Reading week</span>   </td>
     <td> -- </td>
     <td> </td>
@@ -482,63 +480,63 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
   <tr>
     <td> 10 </td>
-    <td> Mon - Oct 16</td>
+    <td> Monday <br/> October 16</td>
     <td> Bipartite matching: Konig's theorem, Combinatorial algorithms  </td>
     <td> -- </td>
-    <td> </td>
+    <td> <span class="event">HW2 due</span></td>
   </tr>
 
   <tr>
     <td> 11 </td>
-    <td> Wed - Oct 18</td>
-    <td> Bipartite matching: Matching polytope, Auction algorithms  </td>
+    <td> Wednesday <br/> October 18</td>
+    <td> Bipartite matching: Matching polytope, Primal-dual algorithms  </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> 12 </td>
-    <td> Mon - Oct 23</td>
+    <td> Monday <br/> October 23</td>
     <td> Multiplicative weight update (MWU): Learning from experts  </td>
     <td> -- </td>
-    <td> </td>
+    <td> <span class="event">HW2 peer grades due </span></td>
   </tr>
 
   <tr>
     <td> 13 </td>
-    <td> Wed - Oct 25</td>
+    <td> Wednesday <br/> October 25</td>
     <td> Multiplicative weight update (MWU): Packing/covering LPs </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
-  <tr>
-    <td> 13 </td>
-    <td> Mon - Oct 30</td>
-    <td> Lovasz Local Lemma (LLL): Basics, Frugal coloring </td>
-    <td> -- </td>
+  <tr> 
+    <td> * </td>
+    <td> Thursday <br/> October 26 </td>
+    <td> <span class="event">Midterm take-home exam </span></td>
+    <td> </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> 14 </td>
-    <td> Wed - Nov 01</td>
+    <td> Monday <br/> October 30</td>
+    <td> Lovasz Local Lemma (LLL): Basics, Frugal coloring </td>
+    <td> -- </td>
+    <td> <span class="event">HW3 release </span></td>
+  </tr>
+
+  <tr>
+    <td> 15 </td>
+    <td> Wednesday <br/> November 01</td>
     <td> Algorithmic LLL: k-satisfiability </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
-    <td> 15 </td>
-    <td> Mon - Nov 06*</td>
-    <td> Spectral graph theory  </td>
-    <td> -- </td>
-    <td> </td>
-  </tr>
-
-  <tr>
     <td> 16 </td>
-    <td> Wed - Nov 08*</td>
+    <td> Monday <br/> November 06*</td>
     <td> Spectral graph theory  </td>
     <td> -- </td>
     <td> </td>
@@ -546,64 +544,72 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
   <tr>
     <td> 17 </td>
-    <td> Mon - Nov 13</td>
-    <td> Random walks: fundamental theorem, connectivity in RL </td>
+    <td> Wednesday <br/> November 08*</td>
+    <td> Spectral graph theory  </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> 18 </td>
-    <td> Wed - Nov 15</td>
+    <td> Monday <br/> November 13</td>
+    <td> Random walks: fundamental theorem, connectivity in RL </td>
+    <td> -- </td>
+    <td> <span class="event">HW3 due <br/>HW4 release</span> </td>
+  </tr>
+
+  <tr>
+    <td> 19 </td>
+    <td> Wednesday <br/> November 15</td>
     <td> Random walks: Perfect matching in regular bipartite graphs  </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
-    <td> 22 </td>
-    <td> Mon - Nov 20</td>
-    <td> Introduction, Course Policy, Probabilistic Analysis  </td>
+    <td> 20 </td>
+    <td> Monday <br/> November 20</td>
+    <td> Shortest paths: Low-stretch spanning trees and applications  </td>
+    <td> -- </td>
+    <td> <span class="event">HW3 peer grades due <br/> </td>
+  </tr>
+
+  <tr>
+    <td> 21 </td>
+    <td> Wednesday <br/> November 22</td>
+    <td> Shortest paths: Low-diameter decompositions </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
+    <td> 22 </td>
+    <td> Monday <br/> November 27</td>
+    <td> Graph compression: Spanners, Directed shortcuts  </td>
+    <td> -- </td>
+    <td> <span class="event">HW4 due <br/> </td>
+  </tr>
+
+  <tr>
     <td> 23 </td>
-    <td> Wed - Nov 22</td>
-    <td> Introduction, Course Policy, Probabilistic Analysis  </td>
+    <td> Wednesday <br/> November 29</td>
+    <td> Graph sketches: Connectivity, MSTs  </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> 24 </td>
-    <td> Mon - Nov 27</td>
-    <td> Introduction, Course Policy, Probabilistic Analysis  </td>
+    <td> Monday <br/> December 04</td>
+    <td> Online algorithms: Ski-rental, Online matching  </td>
     <td> -- </td>
-    <td> </td>
+    <td> <span class="event">HW4 peer grades due <br/></td>
   </tr>
 
   <tr>
-    <td> 25 </td>
-    <td> Wed - Nov 29</td>
-    <td> Introduction, Course Policy, Probabilistic Analysis  </td>
-    <td> -- </td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 26 </td>
-    <td> Mon - Dec 04</td>
-    <td> Introduction, Course Policy, Probabilistic Analysis  </td>
-    <td> -- </td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 27 </td>
-    <td> Wed - Dec 06</td>
-    <td> Pre-examination study day  </td>
+    <td> * </td>
+    <td> Wednesday <br/> December 06</td>
+    <td> <span style="font-weight:bold; color:red">Pre-examination study day </span>  </td>
     <td> -- </td>
     <td> </td>
   </tr>
@@ -615,7 +621,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 <h3 class="header" id="resources"> Resources </h3>
 
 <p>
-  The following resources are all optional but they can be quite helpful and you are encouraged to refer to them throughout the semester for more details on 
+  There is no official textbook for the course (most of our material is not in textbooks yet anyway). The following resources are all optional but they can be quite helpful and I encourage you to refer to them throughout the semester for more details on 
   the topics we cover in the class. 
 </p>
 
@@ -737,12 +743,16 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <a href="https://advanced-algorithms-fall-2021.s3.amazonaws.com/aaf21-book.pdf"> Advanced Topics in Algorithms, Fall 2021</a> by Kent Quanrud @ Purdue. 
   </li>
 
+  <li> 
+    <a href="https://www.cs.toronto.edu/~anikolov/CSC473W20/index.html">Advanced Algorithms, Winter 2020 </a> by Aleksandar Nikolov @ University of Toronto. 
+  </li>
+
 </ul>
 
 
   <h4 class="sub-header" id="latex">  Resources on LaTeX</h4>
     <p>
-      You can download LaTeX for free <a href="https://www.latex-project.org/get/">here</a>. For the purpose of this course, you do not even need to install LaTeX and 
+      You can <a href="https://www.latex-project.org/get/">download</a> LaTeX for free. For the purpose of this course, you do not even need to install LaTeX and 
       can instead use an online LaTeX editor such as <a href="https://www.overleaf.com">Overleaf</a>. 
     </p>
 
@@ -760,21 +770,39 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
 
 
+<h3 class="header" id="admins">Policies and Statements</h3>
 
-<h3 class="header" id="territorial-ack"> Territorial Acknowledgement </h3>
+<h4 class="sub-header" id="territorial-ack"> Territorial Acknowledgement </h4>
+<p>
+  The University of Waterloo acknowledges that much of our work takes place on the traditional territory of the Neutral, Anishinaabeg and Haudenosaunee peoples. Our main campus is situated on the Haldimand Tract, the land granted to the Six Nations that includes six miles on each side of the Grand River. Our active work toward reconciliation takes place across our campuses through research, learning, teaching, and community building, and is co-ordinated within the <a href="https://uwaterloo.ca/indigenous/">Office of Indigenous Relations</a>.
+</p>
 
-The University of Waterloo acknowledges that much of our work takes place on the traditional territory of the Neutral, Anishinaabeg and Haudenosaunee peoples. Our main campus is situated on the Haldimand Tract, the land granted to the Six Nations that includes six miles on each side of the Grand River. Our active work toward reconciliation takes place across our campuses through research, learning, teaching, and community building, and is co-ordinated within the Office of Indigenous Relations.
+<h4 class="sub-header" id="emails">Email Policy </h4>
 
-<h3 class="header" id="territorial-ack">  Students with Disabilities </h3>
+<p>
+  Email is fast and tends to give the illusion of constant and immediate access. But that cannot realistically happen. I am available to you in 
+  general during this course via email but it may take up 24 hours (48 hours over the weekends) before you hear
+  back from me on your emails. Also, please use email only to communicate specific concerns, questions, or comments regarding your experience in the course, or 
+  setting up appointments for in-person meetings outside office hours in case necessary. Questions directly related to the materials of the course and clarifications about
+  lectures should be posted on <a href="#">Piazza</a> instead. 
+</p>
+<p>
+  <span style="font-weight:bold; color:red;">Important note:</span> Please start the subject of all your emails in this course with '[CS466-F23]:' or '[CS666-F23]:' accordingly (see the <a href="course-outline-f23.pdf">course outline</a> for an example) -- I am using bunch of different email filters to manage my (unmanagable) inbox and I may not get to see emails without this format at all.  
+</p>
 
-<a href="https://uwaterloo.ca/disability-services/">AccessAbility Services</a>, located in Needles Hall, Room 1401, collaborates with all academic departments/schools to arrange appropriate accommodations for students with disabilities without compromising the academic integrity of the curriculum. If you require academic accommodations to lessen the impact of your disability, please register with AccessAbility Services at the beginning of each academic term.
 
-<br/><br/>
+<h4 class="sub-header" id="territorial-ack">  Students with Disabilities </h4>
 
-You are encouraged to discuss with me any appropriate accommodations that we might make on your behalf following the guidelines of the
-<a href="https://uwaterloo.ca/disability-services/">AccessAbility Services</a>. 
+<p>
+  You are encouraged to discuss with me any appropriate accommodations that we might make on your behalf following the guidelines of the
+  <a href="https://uwaterloo.ca/disability-services/">AccessAbility Services</a>. 
+</p>
 
-<h3 class="header" id="territorial-ack">  Statement of Inclusivity</h3>
+<p>
+  <a href="https://uwaterloo.ca/disability-services/">AccessAbility Services</a>, located in Needles Hall, Room 1401, collaborates with all academic departments/schools to arrange appropriate accommodations for students with disabilities without compromising the academic integrity of the curriculum. If you require academic accommodations to lessen the impact of your disability, please register with AccessAbility Services at the beginning of each academic term.
+</p>
+
+<h4 class="sub-header" id="territorial-ack">  Statement of Inclusivity</h4>
 
 I am committed to creating a learning environment in which all of my
 students feel safe and included, regardless of race, ethnicity, religion, gender or sexual orientation.
@@ -792,11 +820,22 @@ It is our intent that students from all diverse backgrounds and perspectives be 
 students with different learning needs.</li>
 </ul>
 
-<h3 class="header" id="territorial-ack"> Mental Health Support</h3>
+<h4 class="sub-header" id="territorial-ack"> Your Health & Well-Being</h4>
 
-The Faculty of Math encourages students to seek out mental health support if needed.
+<p>
+  This is a challenging course with various advanced topics and  not-so-easy assignments and exams. All of these are going to be time and energy consuming. 
+  But, this is also an <em>elective</em> course so one of my main goals is for you to enjoy taking this course
+  and learning these cool materials as much as I enjoy teaching them. Part of making sure you have fun involves taking care of yourself. Do your best to maintain a healthy lifestyle and work-life balance this term by eating well, exercising, getting enough sleep, and taking some time to relax -- all of these will tremendously help you to achieve your goals in the course and to enjoy the process in the meantime. 
+</p>
+<p>
+  You can find more resources to help you with your health & well-being with the <a href="https://uwaterloo.ca/campus-wellness/">Campus Wellness</a>
+  and <a href="https://uwaterloo.ca/student-success">Student Success Office</a> -- they have 
+  tons of <a href="https://uwaterloo.ca/student-success/resources">resources</a> on helping you to succeed, including very good tips on <a href="https://uwaterloo.ca/student-success/resources/time-management">time management</a> techniques. 
+</p>
 
-<br/><br/>
+<p>
+<span style="font-weight:bold;">Faculty of Math Statement on Mental Health:</span> The Faculty of Math encourages students to seek out mental health support if needed:
+</p>
 
 <span style="font-weight:bold">On-campus Resources:</span>
 <ul> 
@@ -816,26 +855,57 @@ The Faculty of Math encourages students to seek out mental health support if nee
   <li> EMPOWER ME in China: China North 108007142831 and China South 108001402851</li>
 </ul>
 
-<h3 class="header" id="territorial-ack"> University Policy on Academic Integrity</h3>
+<h4 class="sub-header" id="territorial-ack">Rights and Responsibilities</h4>
 
-<span style="font-weight:bold">Academic Integrity:</span>
-In order to maintain a culture of <a href="https://uwaterloo.ca/academic-integrity/">academic integrity</a>, members of the University of Waterloo community are expected to promote honesty, trust, fairness, respect and responsibility. <br/><br/>
+<p>
+  Every member  of  this class---instructor, TA, and students---has rights and responsibilities  
+  toward having a pleasant, fair, supportive, and free of discrimination and micro-aggression environment in this course, and we 
+  are all answerable to the University policies governing ethical behaviour (<a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-33">Policy 33</a>). 
+</p>
 
-<span style="font-weight:bold">Grievance:</span> 
-A student who believes that a decision affecting some aspect of their university life has been unfair or unreasonable may have grounds for initiating a grievance
-(<a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70">Policy 70</a>). 
-When in doubt please be certain to contact the department/school’s administrative assistant who will provide further assistance.
-<br/><br/>
+<p>
+  In addition, academic dishonesty and plagiarism is considered a serious offense in this course. I expect that any assignment or exam you submit in this course will 
+  be your own product and follows the collaboration and external resources policies specified in the <a href="course-outline-f23">course outline</a>.   
+  If an assignment is too hard, start earlier, ask for help, or simply do not answer the question --- academic dishonesty is never the right answer.
+  If you have any concerns or questions about these policies, please discuss them with me.  
+</p>
+<p>
+  Finally, a reminder that all the course content including lecture notes, presentations,  and other materials prepared  for the course, are the intellectual 
+  property (IP) of the instructor. These course materials are available to you to enhance your educational  experience, and sharing them 
+  without permission and proper citation is a violation of intellectual property rights. 
+</p>
 
-<span style="font-weight:bold">Discipline:</span> A student is expected to know what constitutes academic integrity to avoid committing academic offences and to take responsibility for their actions. A student who is unsure whether an action constitutes an offence, or who needs help in learning how to avoid offences (e.g., plagiarism, cheating) or about "rules" for group work/collaboration should seek guidance from the course professor, academic advisor, or the undergraduate associate dean. 
+<span style="font-weight:bold">University Policies</span>: It is your job to know the university  policies  that  govern  your  behaviour in this course. Some pointers are: 
 
-<br/>
-
-For information on categories of offences and types of penalties, students should refer to <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71">Policy 71</a>. For typical penalties check <a href="https://uwaterloo.ca/secretariat/guidelines/guidelines-assessment-penalties">Guidelines for the Assessment of Penalties</a>.
-<br/><br/>
-
-<span style="font-weight:bold">Appeals:</span> A decision made or penalty imposed under <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70">Policy 70</a>, Student Petitions and Grievances (other than a petition) or <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71">Policy 71</a>, Student Discipline may be appealed if there is a ground. A student who believes they have a ground for an appeal should refer to <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72">Policy 72</a>, Student Appeals.
-
+<ul>
+  <li>
+    <span style="font-weight:bold">Academic Integrity:</span>
+    In order to maintain a culture of <a href="https://uwaterloo.ca/academic-integrity/">academic integrity</a>, members of the University of Waterloo community are expected to promote honesty, trust, fairness, respect and responsibility. All
+    members of the UW community are expected to hold to the highest standard of academic
+    integrity in their studies, teaching, and research. The <a href="https://www.uwaterloo.ca/academicintegrity">Office of Academic Integrity's website</a>
+    contains detailed information on UW policy
+    for students and faculty. This site explains why academic integrity is important and how
+    students can avoid academic misconduct. It also identifies resources available on campus
+    for students and faculty to help achieve academic integrity in---and out---of the classroom.
+  </li>
+  <br/>
+  <li>
+    <span style="font-weight:bold">Grievance:</span> 
+    A student who believes that a decision affecting some aspect of their university life has been unfair or unreasonable may have grounds for initiating a grievance
+    (<a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70">Policy 70</a>). 
+    When in doubt please be certain to contact the department/school’s administrative assistant who will provide further assistance.
+  </li>
+  <br/>
+  <li>
+    <span style="font-weight:bold">Discipline:</span> A student is expected to know what constitutes academic integrity to avoid committing academic offences and to take responsibility for their actions. A student who is unsure whether an action constitutes an offence, or who needs help in learning how to avoid offences (e.g., plagiarism, cheating) or about "rules" for group work/collaboration should seek guidance from the course professor, academic advisor, or the undergraduate associate dean. 
+    <br/>
+    For information on categories of offences and types of penalties, students should refer to <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71">Policy 71</a>. For typical penalties check <a href="https://uwaterloo.ca/secretariat/guidelines/guidelines-assessment-penalties">Guidelines for the Assessment of Penalties</a>.
+  </li>
+  <br/>
+  <li>
+    <span style="font-weight:bold">Appeals:</span> A decision made or penalty imposed under <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70">Policy 70</a>, Student Petitions and Grievances (other than a petition) or <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71">Policy 71</a>, Student Discipline may be appealed if there is a ground. A student who believes they have a ground for an appeal should refer to <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72">Policy 72</a>, Student Appeals.
+  </li>
+</ul>
 	<hr/>
 </div>
 
