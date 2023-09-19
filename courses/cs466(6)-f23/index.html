@@ -33,6 +33,7 @@
 	font-weight:bold;
 }
 
+
 a:link {
   text-decoration: none;
 	color:blue;
@@ -122,10 +123,10 @@ a:active {
     
 <body style="line-height:130%;">
 
-<table style="margin-bottom: 0px;">
+<table>
   <tr>
-    <td style="width:60%;"><h1 style="color:#C60078; font-size:40px;">CS 466/666: Algorithm Design and Analysis (Fall 2023)</h1></td>
-    <td align="left" style="width:30%;"> <img src="logo.png" width="70%" alt="Did NOT work :|" /> </td>
+    <td style="width:75%;"><h1 style="color:#C60078; font-size:40px;">CS 466/666: Algorithm Design and Analysis (Fall 2023)</h1></td>
+    <td align="left"> <img src="logo.png" width="70%" alt="Did NOT work :|" /> </td>
   </tr>
 </table>
 
@@ -336,8 +337,8 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <th>#</th>
     <th style="width:11%;">Date</th>
     <th style="width:50%;">Topics</th>
-    <th style="width:20%;">Lecture notes & References</th>
-    <th style="width:20%;">Assignments</th>
+    <th style="width:22%;">Lecture notes & References</th>
+    <th style="width:18%;">Assignments</th>
   </tr>
 
   <tr>
@@ -354,20 +355,10 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> 2 </td>
     <td> Monday <br/> September 11</td>
     <td> Probabilistic Background, Concentration inequalities, Streaming algorithms </td>
-    <td class="ref"> <a href="Lectures/lec2.pdf">[lec2]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/01-random.pdf">[discrete probability]</a>,
+    <td class="ref"> <a href="Lectures/lec2.pdf">[lec2]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/01-random.pdf">discrete probability</a>@<a href="#E19">E19</a>,
       <a href="#AMS96">AMS96</a> </td>
     <td> <span class="event">HW1 release:</span> <a href="Homeworks/HW1.pdf">[HW1]</a> <br/></td>
   </tr>
-
-<!--
-  <tr>
-    <td> 3 </td>
-    <td> Wednesday <br/> September 13</td>
-        <td> Concentration inequalities: Chernoff, Sublinear-time  coloring </td>
-    <td> -- </td>
-    <td> </td>
-  </tr>
- -->
 
   <tr>
     <td> 3 </td>
@@ -377,24 +368,35 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> </td>
   </tr>
 
- <tr style="height:1px;">
-    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
-  </tr>
+
 
   <tr>
     <td> 4 </td>
     <td> Monday <br/> September 18</td>
-    <td> Balls-and-bins experiments, More on concentration inequalities </td>
+    <td> Balls-and-bins experiments: More on concentration inequalities </td>
+    <td class="ref"> <a href="Lectures/lec4.pdf">[lec4]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/04-chernoff.pdf">Tail Inequalities</a>@<a href="#E19">E19</a> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 5 </td>
+    <td> Wednesday <br/> September 20</td>
+    <td> Balls-and-bins experiments: Power of two choices via random graph theory  </td>
     <td> -- </td>
     <td> </td>
   </tr>
 
+<!--
    <tr>
     <td> 5 </td>
     <td> Wednesday <br/> September 20</td>
     <td> Polynomial identity testing: Schwartz-Zippel Lemma, Parallel matching  </td>
     <td> -- </td>
     <td> </td>
+  </tr>
+-->
+ <tr style="height:1px;">
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
   </tr>
 
   <tr>
@@ -424,7 +426,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
   <tr>
     <td> 9 </td>
     <td> Wednesday <br/> October 04</td>
-    <td> LP rounding: Weighted vertex cover, Set cover, Min cut  </td>
+    <td> LP rounding: Weighted vertex cover, Set cover </td>
     <td> -- </td>
     <td> </td>
   </tr>
