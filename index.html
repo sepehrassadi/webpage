@@ -431,13 +431,18 @@
       <li>
         Current courses:
         <ul class="small-list">
-          <li> <a href="courses/cs466(6)-f23/">CS 466/666: Algorithm Design and Analysis (Advanced Algorithms) @ UWaterloo (Fall 2023)</a>  </li>
+          <li> <a href="courses/cs860-w24">CS 860: Modern Topics in Graph Algorithms @ UWaterloo (Winter 2024)</a>  </li>
         </ul>
       </li>
 
       <li> Past courses:  
         <ul class="small-list">
-          <li>  CS 671: Graph Streaming Algorithms and Lower Bounds @ Rutgers (<a href="courses/cs671-f20/index.html">Fall 2020</a>)
+
+          <li> CS 466/666: Algorithm Design and Analysis (Advanced Algorithms) @ UWaterloo (<a href="courses/cs466(6)-f23/">Fall 2023</a>)
+          </li>
+
+          <li>CS 344: Design and Analysis of Computer Algorithms @ Rutgers 
+              (<a href="courses/cs344-s23/index.html">Spring 2023</a>,<a href="courses/cs344-s22/index.html"> Spring 2022</a>, <a href="courses/cs344-s21/index.html"> Spring 2021</a>, <a href="courses/cs344-f19/index.html"> Fall 2019</a>)
           </li>
 
           <li> CS 521: Linear Programming @ Rutgers (<a href="courses/cs521-f22/index.html">Fall 2022</a>)
@@ -447,9 +452,8 @@
               (<a href="courses/cs514-f21/index.html">Fall 2021</a>, <a href="courses/cs514-s20/index.html"> Spring 2020</a>)
           </li>
 
-          <li>CS 344: Design and Analysis of Computer Algorithms @ Rutgers 
-              (<a href="courses/cs344-s23/index.html">Spring 2023</a>,<a href="courses/cs344-s22/index.html"> Spring 2022</a>, <a href="courses/cs344-s21/index.html"> Spring 2021</a>, <a href="courses/cs344-f19/index.html"> Fall 2019</a>)
-          </li>
+           <li>  CS 671: Graph Streaming Algorithms and Lower Bounds @ Rutgers (<a href="courses/cs671-f20/index.html">Fall 2020</a>)
+           </li>
         </ul>
     </ul>
 
@@ -573,6 +577,20 @@
       </p>
 
       <div class="selected-paper">
+        <div class="title"> O(log log n) Passes is Optimal for Semi-Streaming Maximal Independent Set 
+          <span class="conf"> Manuscript 2023 </span> 
+        </div>
+        <div class="author"> Sepehr Assadi, <a href="https://people.cs.bris.ac.uk/~konrad/">Christian Konrad</a>, <a href="https://kheerannaidu.com/">Kheeran K. Naidu</a>, <a href="https://student.cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> </div>
+        <div class="info"><a href="https://arxiv.org/pdf/2312.13178.pdf">[arXiv]</a></div>
+        <div class="summary">
+          <span style="font-weight: bold;"> Summary:</span> An optimal multi-pass semi-streaming lower bound for MIS, matching prior algorithms of <a href="https://arxiv.org/abs/1812.02023">[ACGMW15]</a> and<a href="https://arxiv.org/pdf/1802.08237.pdf">[GGKMR18]</a> up to n^{o(1)} terms for any number of passes. 
+          The proof is quite general and shows how to implement a classical "round elimination" technique, modulo a crucial twist, on graphs. A key component is a new family of extremal graphs, in spirit of RS graphs, that instead of induced matchings, 
+          contain many induced copies of themselves on smaller set of vertices. 
+        </div>
+      </div>
+
+
+      <div class="selected-paper">
         <div class="title"> A Simple (1−ε)-Approximation Semi-Streaming Algorithm for Maximum (Weighted) Matching 
           <span class="conf"> SOSA 2024 </span> 
         </div>
@@ -582,7 +600,7 @@
           <span style="font-weight: bold;"> Summary:</span> A really simple (1-ε) approximation semi-streaming algorithm
           for matchings in O(log(n)/ε) passes (even for weighted non-bipartite graphs), 
           matching the state-of-the-art in <a href="https://arxiv.org/abs/1307.4359v3">[AG15]</a>,
-          by a direct and white-box application of MWU (and without paying the typical 1/ε^2 iteration bound of "standard" MWU).
+          by a direct application of MWU (and without paying the typical 1/ε^2 iteration bound of "standard" MWU-based frameworks).
         </div>
       </div>
 
