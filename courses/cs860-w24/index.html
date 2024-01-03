@@ -132,16 +132,20 @@ a:active {
 <hr>
 
 <div style="padding-left:20px;width:1200px">
-  <br/>
-  <div style="color: red;font-weight: bold; text-align: center;">
-    [This is a very preliminary version of the course page that will be updated frequently before the start of the Winter 2024 term. Come back later for a more accurate version.]
+ 
+ 
+<br/>
+
+  <div style="color: red; font-size:25pt; font-weight: bold; text-align: center;">
+    [Note: This class starts on <b>January 15</b> instead of January 8]
   </div>
   <br/>
+
   <table class="big-table">
 
     <tr>
       <td style="width:25%;"><span class="top">Lectures</span></td>
-      <td style="width:75%"> TBA</td>
+      <td style="width:75%"> Mondays 3:00 PM to 5:50 PM in <a href="#">DC 2585</a> </td>
     </tr>
 
     <tr>
@@ -152,19 +156,9 @@ a:active {
 
     <tr>
       <td><span class="top">Instructor office hours</span></td>
-      <td> TBA</td>
-    </tr>
-<!--
-    <tr>
-      <td> <span class="top"> Teaching assistant</span></td>
-      <td> Kam Chuen (Alex) Tung &emsp;&emsp; (userid: <span style="border-bottom: 1px dashed;">kctung</span>)</td>
+      <td> Mondays 10:00 AM (by appointment)</td>
     </tr>
 
-    <tr>
-      <td> <span class="top"> TA office hours</span></td>
-      <td> Thursdays, 2 PM - 3 PM in <a href="https://plantops.uwaterloo.ca/floor_plans/pdf_drawings/037DC_03FLR.pdf">DC 3139</a></td>
-    </tr>
--->
     <tr>
       <td><span class="top">Prerequisites</span></td>
       <td>Mathematical maturity, and a strong background in undergraduate-level probability theory, data structures, and algorithm design are all essential.</td>
@@ -180,13 +174,12 @@ a:active {
       <td>The course outline will be posted here at some point before the start of the term. <!--is available <a href="course-outline-w24.pdf">here</a>.--> 
           This page contains the highlights of course outline that can be updated as the term progresses. </td>
     </tr>
-<!--
+
     <tr>
       <td><span class="top">Communication</span></td>
-      <td>The lectures will be delivered on the blackboard. We use <a href="https://learn.uwaterloo.ca/d2l/home/933212">LEARN</a> for assignments and grades and use <a href="https://piazza.com/uwaterloo.ca/fall2023/cs466666/home">Piazza</a> for general questions and discussions. For specific concerns, questions, or comments regarding your experience in the course,  
-      email me (sassadi) or Alex (kctung); just please prefix your email subject with [CS466-F23] for a timely reply.</td>
+      <td>The lectures will be delivered on the blackboard. We use <a href="https://learn.uwaterloo.ca/d2l/home/982268">LEARN</a> for assignments and grades. 
+        For specific concerns, questions, or comments regarding your experience in the course, you can directly email me @ (sassadi).</td>
     </tr>
--->
 </table>
 
 <h3 class="header" id="topics"> Topics</h3>
@@ -194,87 +187,78 @@ a:active {
   Last decade or so have witnessed major advances in the study of graph algorithms, including solutions to longstanding problems, development of various new tools and techniques,  and introduction of new models and frontiers in research on graphs. This course covers some of the highlights in this area, ranging from fast graph algorithms in classical setting using advanced techniques such as sparsification, convex optimization, graph decompositions, etc., to various modern models of graph 
   algorithms including streaming, sublinear-time, dynamic, and distributed algorithms. 
 </p>
+
+
 <p>
   The course has no formal prerequisite but mathematical maturity, and a strong background in undergraduate-level probability theory, data structures, and algorithm design are all essential. The courseload involves participating in lectures, scribing notes, and solving algorithmic problems. 
 </p>
 
-<p>
-  A detailed list of topics and a schedule of lectures will be posted before the start of the term.  A wonderful resource to familiarize yourself with the topics of this course is the <a href="https://sites.google.com/view/dimacswmtga">Workshop on Modern Techniques in Graph Algorithms</a> that was held at DIMACS in Summer 2023, organized by <a href="https://sites.google.com/view/prantarg/home">Prantar Ghosh</a>, <a href="https://sites.google.com/view/zihantan">Zihan Tan</a>, and <a href="https://web.eecs.umich.edu/~nswein/">Nicole Wein</a>. 
-</p>
 <!--
   This  is an advanced algorithm design and analysis course, aimed at undergraduate students interested in a deep dive in theoretical computer science (TCS), 
   as well as graduate students doing research in TCS. It is more specialized and in-depth than the undergraduate level Algorithms course (CS 341). We will cover advanced algorithmic ideas (some classical, some very recent), and the theory behind them (theorems, proofs). Mathematical maturity, and a strong background in probability theory, data structures, and algorithm design are all essential.
 </p>
+-->
 <p>
 The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics that we will cover in this course (not
 necessarily in this particular order): 
 </p>
 <table class="bold-bullet">
   <tr> 
-    <td class="first"> &#8226; Probabilistic analysis:</td>
-    <td class="second"> Randomized algorithms, Concentration inequalities, Balls-and-bins experiments</td>
+    <td class="first"> &#8226; Graph Sparsification:</td>
+    <td class="second"> Cut/spectral sparsifiers, Spanners, Palette sparsification, Edge-degree constrained subgraphs </td>
   </tr>
 
   <tr> 
-    <td class="first"> &#8226; Minimum cuts:</td>
-    <td class="second">Karger's algorithm, Vertex connectivity </td>
+    <td class="first"> &#8226; Hopsets, Shortcuts, Spanners:</td>
+    <td class="second"> Graph shortcutting, Additive spanners, Emulators and distance preservers </td>
   </tr>
 
   <tr> 
-    <td class="first"> &#8226; Minimum spanning trees (MSTs):</td>
-    <td class="second">Boruvka's algorithm, Linear-time randomized algorithm  </td>
+    <td class="first"> &#8226; Extremal Graph Theory:</td>
+    <td class="second"> Ruzsa-Szemeredi (RS) Graphs, Shortcutting Graphs, Matching sparsifiers, Additive spanners </td>
+  </tr>
+
+
+  <tr> 
+    <td class="first"> &#8226; Minimum Cuts:</td>
+    <td class="second"> Tree packing, Isolating cut, Vertex connectivity  </td>
   </tr>
 
   <tr> 
-    <td class="first"> &#8226; Maximum matchings:</td>
-    <td class="second"> Hopcroft-Karp algorithm, Edmonds' algorithm, Auction algorithm  </td>
+    <td class="first"> &#8226; Maximum Matchings:</td>
+    <td class="second"> Edmond's algorithm, Primal-dual approximation algorithms, Recent advances  </td>
   </tr>
 
   <tr> 
     <td class="first"> &#8226; Shortest paths:</td>
-    <td class="second"> Low diameter decompositions, Tree embeddings</td>
+    <td class="second"> Low diameter decompositions, Tree embeddings, Negative-weight shortest path</td>
   </tr>
 
   <tr> 
-    <td class="first"> &#8226; Graph compression:</td>
-    <td class="second"> Directed shortcuts, Spanners, Cut sparsifiers, Graph sketches   </td>
+    <td class="first"> &#8226; Maximum Flow:</td>
+    <td class="second"> Multiplicative weight method, Congestion approximators, Oblivious routing, Recent advances   </td>
   </tr>
 
   <tr> 
-    <td class="first"> &#8226; Linear programming:</td>
-    <td class="second"> Basics, Duality, Center-of-gravity algorithm, Applications </td>
+    <td class="first"> &#8226; Graph coloring:</td>
+    <td class="second"> Approximation algorithms, Edge coloring and Vizing's theorem, Fast (Delta+1) vertex coloring </td>
   </tr>
 
-
-
-  <tr> 
-    <td class="first"> &#8226; Multiplicative weight update (MWU):</td>
-    <td class="second"> Expert problem, Fast packing/covering linear programs  </td>
-  </tr>
+  
 
   <tr> 
-    <td class="first"> &#8226; Lovasz Local Lemma (LLL):</td>
-    <td class="second"> Basics, Algorithmic LLL  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Random walks:</td>
-    <td class="second"> Connectivity in RL, Perfect matchings in regular bipartite graphs, Sampling  </td>
+    <td class="first"> &#8226; Streaming algorithms:</td>
+    <td class="second"> Maximum matchings, Transhipment </td>
   </tr>
 
   <tr> 
     <td class="first"> &#8226; Sublinear time algorithms:</td>
-    <td class="second">Connected components, Subgraph counting, Graph coloring </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Streaming algorithms:</td>
-    <td class="second"> Distinct element problem, Approximate matching, Graph sketches </td>
+    <td class="second">Connected components, Approximate matching/vertex cover </td>
   </tr>
 
   <tr> 
     <td class="first"> &#8226; Distributed (LOCAL) algorithms:</td>
-    <td class="second"> Luby's Maximal Independent Set algorithm, Network decompositions </td>
+    <td class="second"> Maximal Independent Set (MIS) algorithms, Network decompositions </td>
   </tr>
 
   <tr> 
@@ -283,22 +267,12 @@ necessarily in this particular order):
   </tr>
 
   <tr> 
-    <td class="first"> &#8226; Online algorithms:</td>
-    <td class="second"> Ski rental, Karp-Vazirani-Vazirani (KVV) algorithm for bipartite matching </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Approximation algorithms:</td>
-    <td class="second"> Vertex cover, Set cover, Graph coloring, LP rounding </td>
-  </tr>
-
-  <tr> 
     <td class="first"> &#8226; Parallel algorithms:</td>
-    <td class="second"> Matching in RNC, Isolation lemma </td>
+    <td class="second"> Matching in RNC, Isolation lemma, Derandomization, Massively Parallel Computation (MPC) algorithms </td>
   </tr>
 </table>
 
-
+<!--
 <p>
   <a href="https://ucalendar.uwaterloo.ca/1011/COURSE/course-CS.html#CS466">Official course description:</a> Algorithmic approaches and methods of assessment that reflect a broad spectrum of criteria, including randomized algorithms, amortized analysis, lower bounds, approximation algorithms, and on-line algorithms. Particular examples will be chosen from different areas of active research and application.
 </p>
@@ -310,43 +284,17 @@ necessarily in this particular order):
 -->
 <h3 class="header" id="grading">Grading</h3>
 
-This information will be added at some point before the start of the term. 
-<!--
-
 The final grade for the course will be based on the following weights:
 <ul class="distant-list">
-  <li> 50% Homework assignments (4 assignments for 12.5% points each)</li>
-  <li> 50% Exams: <br/>
-  <table>
-    <tr>
-      <td style="width:35%">  &#8227; Mid-term exam (take-home): </td>
-      <td style="width:50%"> October 26, 9:00am to October 27, 9:00am </td>
-      <td> (25% points) </td>
-    </tr>
-    <tr>
-      <td style="width:30%">  &#8227; Final exam (in-person): </td>
-      <td> [Scheduled by the University] </td>
-      <td> (25% points) </td>
-    </tr>
-  </table>
-  </li>
+  <li> 50% Problem sets</li>
+  <li> 50% Scribe notes</li>
 </ul> 
 
-<p> 
-  Participation in lectures is <span style="font-weight:bold">not mandatory</span>
-  but I strongly encourage it -- this is a fast-moving course, so if you miss a lecture you may find it more difficult to keep up.
+
+<p>
+  The <a href="course-outline-w24.pdf">course outline</a> contains more details on the grading scheme of this course and collaboration policies and groups
+  for the problem sets and scribe notes. 
 </p>
-
-<span style="font-weight:bold; color:red;">Important note:</span> To pass this course, you
-must obtain <span style="font-weight:bold">at least 50% of the <u>class average</u> grade</span> in the homework assignments and exams categories <span style="font-weight:bold">separately</span>. 
-
-<br/><br/>
-The <a href="course-outline-f23.pdf">course outline</a> contains more details on the grading scheme of this course and collaboration policies and groups
-for the assignments. 
-
--->
-
-
 <!--
 
 <h3 class="header" id="course-calendar"> Course Calendar</h3>
@@ -600,11 +548,18 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
 </table>
 
+-->
+
 <h3 class="header" id="resources"> Resources </h3>
 
 <p>
-  There is no official textbook for the course (most of our material is not in textbooks yet anyway). The following resources are all optional but they can be quite helpful and I encourage you to refer to them throughout the term for more details on 
-  the topics we cover in the class. 
+  There is no official textbook for the course (most of our material is not in textbooks yet anyway). The following resources are all optional but they can be quite helpful and I encourage you to refer to them throughout the term for more details on the topics we cover in the class. 
+</p>
+
+<h4 class="sub-header" id="reading"> Workshop on Modern Techniques in Graph Algorithms</h4>
+
+<p>
+  Possibly the best resource to familiarize yourself with the topics of this course is the <a href="https://sites.google.com/view/dimacswmtga">Workshop on Modern Techniques in Graph Algorithms</a> that was held at DIMACS in Summer 2023, organized by <a href="https://sites.google.com/view/prantarg/home">Prantar Ghosh</a>, <a href="https://sites.google.com/view/zihantan">Zihan Tan</a>, and <a href="https://web.eecs.umich.edu/~nswein/">Nicole Wein</a>. 
 </p>
 
 <h4 class="sub-header" id="reading"> Further Reading</h4>
@@ -642,16 +597,6 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     </td>
   </tr>
 
-
-  <tr id="E19"> 
-    <td> E19 </td>
-    <td> 
-      Jeff Erickson, 
-      <a href="http://jeffe.cs.illinois.edu/teaching/algorithms">Algorithms textbook</a>. 
-      © Copyright 2019 Jeff Erickson.
-    </td>
-  </tr>
-
   <tr id="V20"> 
     <td> V20 </td>
     <td> 
@@ -676,6 +621,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
 <p> This is a (rather incomprehensive) list of the papers related to the topics discussed in the lectures. The list will be updated frequently throughout the term.  </p>
 
+<!--
 <table class="bibs">
 
   <tr id="AMS96"> 
@@ -764,27 +710,13 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
 -->
 
-<!--
+
 <h3 class="header" id="admins">Policies and Statements</h3>
 
 <h4 class="sub-header" id="territorial-ack"> Territorial Acknowledgement </h4>
 <p>
   The University of Waterloo acknowledges that much of our work takes place on the traditional territory of the Neutral, Anishinaabeg and Haudenosaunee peoples. Our main campus is situated on the Haldimand Tract, the land granted to the Six Nations that includes six miles on each side of the Grand River. Our active work toward reconciliation takes place across our campuses through research, learning, teaching, and community building, and is co-ordinated within the <a href="https://uwaterloo.ca/indigenous/">Office of Indigenous Relations</a>.
 </p>
-
-<h4 class="sub-header" id="emails">Email Policy </h4>
-
-<p>
-  Email is fast and tends to give the illusion of constant and immediate access. But that cannot realistically happen. I am available to you in 
-  general during this course via email but it may take up 24 hours (48 hours over the weekends) before you hear
-  back from me. Also, please use email only to communicate specific concerns, questions, or comments regarding your experience in the course, or 
-  setting up appointments for in-person meetings outside office hours in case necessary. Questions directly related to the materials of the course and clarifications about
-  lectures should be posted on <a href="https://piazza.com/uwaterloo.ca/fall2023/cs466666/home">Piazza</a> or discussed during office hours instead. 
-</p>
-<p>
-  <span style="font-weight:bold; color:red;">Important note:</span> Please start the subject of all your emails in this course with '[CS466-F23]' (like "[CS466-F23] discuss my final grade") -- I am using bunch of different email filters to manage my (unmanageable) inbox and I may not get to see emails without this format at all or there is no guarantee on response time for such emails.   
-</p>
-
 
 <h4 class="sub-header" id="territorial-ack">  Students with Disabilities </h4>
 
@@ -930,8 +862,7 @@ students with different learning needs.</li>
       <p>
         You are accountable for the content and accuracy of all work you submit in this class, including any supported by generative AI.
       </p>
--->
-<br/><br/>
+
   <hr/>
 </div>
   <p style="color:dimgray; font-size:14px; text-align: center;">Created & maintained by Sepehr Assadi</p>
