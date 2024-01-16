@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CS 860: Modern Topics in Graph Algorithms (Winter 2024) </title>
+        <title>CS 860 (02): Reading Seminar on Algorithmic Gems (Winter 2024) </title>
 
 
 
@@ -124,7 +124,7 @@ a:active {
 
 <table style="margin-bottom: 0px;">
   <tr>
-    <td style="width:75%;"><h1 style="color:#C60078; font-size:35px;">CS 860 (01): Modern Topics in Graph Algorithms (Winter 2024)</h1></td>
+    <td style="width:75%;"><h1 style="color:#C60078; font-size:35px;">CS 860 (02): Reading Seminar on Algorithmic Gems (Winter 2024)</h1></td>
     <td align="left" style="width:30%;"> <img src="logo.png" width="70%" alt="Did NOT work :|" /> </td>
   </tr>
 </table>
@@ -133,12 +133,11 @@ a:active {
 
 <div style="padding-left:20px;width:1200px">
  
-
   <table class="big-table">
 
     <tr>
       <td style="width:25%;"><span class="top">Lectures</span></td>
-      <td style="width:75%"> Mondays 3:00 PM to 5:50 PM in <a href="#">DC 2585</a> </td>
+      <td style="width:75%"> Thursdays 1:30 PM to 4:20 PM in <a href="#">DC 2585</a> </td>
     </tr>
 
     <tr>
@@ -159,7 +158,7 @@ a:active {
 
     <tr>
       <td><span class="top">Textbook</span></td>
-      <td>There is no official textbook. Lecture notes and other required materials will be posted on this webpage.</td>
+      <td>There is no official textbook. Required materials will be posted on this webpage.</td>
     </tr>
 
     <tr>
@@ -177,155 +176,108 @@ a:active {
 
 <h3 class="header" id="topics"> Topics</h3>
 <p>
-  Last decade or so have witnessed major advances in the study of graph algorithms, including solutions to longstanding problems, development of various new tools and techniques,  and introduction of new models and frontiers in research on graphs. This course covers some of the highlights in this area, ranging from fast graph algorithms in classical setting using advanced techniques such as sparsification, convex optimization, graph decompositions, etc., to various modern models of graph 
-  algorithms including streaming, sublinear-time, dynamic, and distributed algorithms. 
+  This course is a journey through several beautiful algorithmic ideas and results, many of which 
+  have already had a profound impact on theoretical computer science. We will cover a mix of 
+  classical and modern results. The class will be organized as a blend of lectures and a reading group. 
+  The first few weeks (say, topics 1 through 4) include guest lectures by our <a href="https://uwaterloo.ca/math/research/deans-distinguished-visiting-professorship">Dean's Distinguished Visitor, Prof. Sanjeev Khanna</a> and during
+  this period the students can sign up to present other topics. This will be a great opportunity
+  for us to collectively learn about exciting algorithmic results.
 </p>
-
-
-<p>
-  The course has no formal prerequisite but mathematical maturity, and a strong background in undergraduate-level probability theory, data structures, and algorithm design are all essential. The courseload involves participating in lectures, scribing notes, and solving algorithmic problems. 
-</p>
-
-<!--
-  This  is an advanced algorithm design and analysis course, aimed at undergraduate students interested in a deep dive in theoretical computer science (TCS), 
-  as well as graduate students doing research in TCS. It is more specialized and in-depth than the undergraduate level Algorithms course (CS 341). We will cover advanced algorithmic ideas (some classical, some very recent), and the theory behind them (theorems, proofs). Mathematical maturity, and a strong background in probability theory, data structures, and algorithm design are all essential.
-</p>
--->
 <p>
 The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics that we will cover in this course (not
 necessarily in this particular order): 
 </p>
-<table class="bold-bullet">
-  <tr> 
-    <td class="first"> &#8226; Graph Sparsification:</td>
-    <td class="second"> Cut/spectral sparsifiers, Spanners, Palette sparsification, Edge-degree constrained subgraphs </td>
-  </tr>
 
-  <tr> 
-    <td class="first"> &#8226; Hopsets, Shortcuts, Spanners:</td>
-    <td class="second"> Graph shortcutting, Additive spanners, Emulators and distance preservers </td>
-  </tr>
+<br/>
+<ul>
+  <li> Karger’s Min cut algorithm and Cut Sparsifiers for graphs</li> <br/>
+  <li> Fingerprinting: Equality testing, Matrix multiplication verification, Polynomial Identity
+testing, Schwarz-Zippel Lemma, Matchings </li> <br/>
+  <li> The PCP Theorem and the proof of the PCP(n^3,1) verifier </li> <br/>
 
-  <tr> 
-    <td class="first"> &#8226; Extremal Graph Theory:</td>
-    <td class="second"> Ruzsa-Szemeredi (RS) Graphs, Shortcutting Graphs, Matching sparsifiers, Additive spanners </td>
-  </tr>
+  <li> Random walks in graphs: s-t connectivity, the Pagerank algorithm, matchings in regular
+bipartite graphs </li> <br/>
+
+  <li> The Multiplicative Weights Algorithms (MWU) and its Applications </li> <br/>
+
+  <li> Small space computation: distinct elements sketch, ell_0 samplers, and its applications
+to graph connectivity in dynamic streams </li> <br/>
+
+  <li> Submodular Function Minimization </li> <br/>
+
+  <li> The AKS Primality Testing Algorithm (<a href="https://annals.math.princeton.edu/wp-content/uploads/annals-v160-n2-p12.pdf">Annals of Mathematics 2004</a>). </li> <br/>
+
+  <li> Cut Matching Game and Sparsest Cut  (<a href="https://dl.acm.org/doi/10.1145/1538902.1538903">JACM 2009</a>) </li> <br/>
+
+  <li> Polylogarithmic-Time Deterministic Network Decomposition and Distributed
+Derandomization (<a href="https://arxiv.org/abs/1907.10937">STOC 2020</a>) </li> <br/>
+
+ <li>  Matching Size Estimation in Sublinear Time (<a href="https://arxiv.org/abs/2106.02942">FOCS 2021</a>) </li> <br/>
+
+ <li>  Nearly Optimal Communication and Query Complexity of Bipartite Matching (<a href="https://arxiv.org/abs/2208.02526">FOCS 2022</a>) </li> <br/>
+
+ <li> Almost-Linear-Time Algorithms for Maximum Flow and Minimum-Cost Flow (<a href="https://arxiv.org/abs/2203.00671">FOCS 2022</a>) </li> <br/>
+
+</ul>
 
 
-  <tr> 
-    <td class="first"> &#8226; Minimum Cuts:</td>
-    <td class="second"> Tree packing, Isolating cut, Vertex connectivity  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Maximum Matchings:</td>
-    <td class="second"> Edmond's algorithm, Primal-dual approximation algorithms, Recent advances  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Shortest paths:</td>
-    <td class="second"> Low diameter decompositions, Tree embeddings, Negative-weight shortest path</td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Maximum Flow:</td>
-    <td class="second"> Multiplicative weight method, Congestion approximators, Oblivious routing, Recent advances   </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Graph coloring:</td>
-    <td class="second"> Approximation algorithms, Edge coloring and Vizing's theorem, Fast (Delta+1) vertex coloring </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Streaming algorithms:</td>
-    <td class="second"> Maximum matchings, Transhipment </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Sublinear time algorithms:</td>
-    <td class="second">Connected components, Approximate matching/vertex cover </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Distributed (LOCAL) algorithms:</td>
-    <td class="second"> Maximal Independent Set (MIS) algorithms, Network decompositions </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Dynamic graph algorithms:</td>
-    <td class="second"> Connectivity, Approximate matching  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Parallel algorithms:</td>
-    <td class="second"> Matching in RNC, Isolation lemma, Derandomization, Massively Parallel Computation (MPC) algorithms </td>
-  </tr>
 </table>
 
-<!--
-<p>
-  <a href="https://ucalendar.uwaterloo.ca/1011/COURSE/course-CS.html#CS466">Official course description:</a> Algorithmic approaches and methods of assessment that reflect a broad spectrum of criteria, including randomized algorithms, amortized analysis, lower bounds, approximation algorithms, and on-line algorithms. Particular examples will be chosen from different areas of active research and application.
-</p>
-<h4 class="sub-header" id="learning-outcomes">Learning Outcomes </h4>
-<p>
-  I am hoping that by the end of the course, (1) you are able to design and analyze algorithms for a wide range of canonical problems studied in this course, and even more importantly, for new problems that you may have not encountered directly in this course,  (2) you know a wide range of algorithmic and mathematical tools
-  commonly used in design and analysis of algorithms, and (3) you have a have a basic familiarity with various algorithmic models of computation studied in TCS. 
-</p>
--->
 <h3 class="header" id="grading">Grading</h3>
 
 The final grade for the course will be based on the following weights:
 <ul class="distant-list">
-  <li> 50% Problem sets</li>
-  <li> 50% Scribe notes</li>
+  <li> 100% Class Presentation</li>
 </ul> 
 
-
+<!--
 <p>
   The <a href="course-outline-w24.pdf">course outline</a> contains more details on the grading scheme of this course and collaboration policies and groups
   for the problem sets and scribe notes. 
 </p>
-
-
+-->
+<!--
 
 <h3 class="header" id="course-calendar"> Course Calendar</h3>
-The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change (including potentially the release and due dates for problemsets). 
+The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change (including potentially the release and due dates for assignments). 
 <br/>
 <br/>
 
 <table class="cal">
   <tr>
     <th>#</th>
-    <th style="width:7%;">Date</th>
+    <th style="width:11%;">Date</th>
     <th style="width:50%;">Topics</th>
-    <th style="width:23%;">Lecture notes & References</th>
-    <th style="width:20%;">Problemsets</th>
+    <th style="width:20%;">Lecture notes & References</th>
+    <th style="width:20%;">Assignments</th>
   </tr>
 
   <tr>
     <td> 1 </td>
-    <td> Monday <br/> Jan 15</td>
-    <td> Minimum Spanning Trees: A Linear-Time Randomized Algorithm  </td>
-    <td class="ref"> <!--<a href="Lectures/lec1.pdf">[lec1]</a>,--> <a href="#KKT95">KKT95</a> </td>
-    <td> </td>
+    <td> Wednesday <br/> September 06</td>
+    <td> Introduction, Course policy, Probabilistic analysis, Karger's Min Cut Algorithm  </td>
+    <td class="ref"> <a href="Lectures/lec1.pdf">[lec1]</a>, <a href="#K93">K93</a>, <a href="#KS96">KS96 </td>
+    <td> <span class="event">HW0 release: </span> <a href="Homeworks/HW0.pdf">[HW0]</a></td>
   </tr>
 
 
 
   <tr>
     <td> 2 </td>
-    <td> Monday <br/> Jan 22</td>
-    <td> Maximum Matchings: Primal-Dual Algorithms </td>
-    <td class="ref"> </td>
-    <td> </td>
+    <td> Monday <br/> September 11</td>
+    <td> Probabilistic Background, Concentration inequalities, Streaming algorithms </td>
+    <td class="ref"> <a href="Lectures/lec2.pdf">[lec2]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/01-random.pdf">[discrete probability]</a>,
+      <a href="#AMS96">AMS96</a> </td>
+    <td> <span class="event">HW1 release:</span> <a href="Homeworks/HW1.pdf">[HW1]</a> <br/></td>
   </tr>
+
+
 
   <tr>
     <td> 3 </td>
-    <td> Monday <br/> Jan 29</td>
-    <td> Vertex Coloring: Palette Sparsification </td>
-    <td class="ref">  </td>
+    <td> Wednesday <br/> September 13</td>
+        <td> Streaming distinct elements, Limited independence hash functions </td>
+    <td class="ref"> <a href="Lectures/lec3.pdf">[lec3]</a>, <a href="#AMS96">AMS96</a>, <a href="#BJKST02">BJKST02</a> </td>
     <td> </td>
   </tr>
 
@@ -335,85 +287,205 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
   <tr>
     <td> 4 </td>
-    <td> Monday <br/> Feb 05</td>
-    <td> Graph Shortcutting: Extremal Results and Algorithms </td>
-   <td class="ref">  </td>
+    <td> Monday <br/> September 18</td>
+    <td> Balls-and-bins experiments, More on concentration inequalities </td>
+    <td> -- </td>
     <td> </td>
   </tr>
 
    <tr>
     <td> 5 </td>
-    <td> Monday <br/> Feb 12</td>
-    <td> Matching Sparsifiers and Ruzsa-Szemeredi Graphs </td>
-    <td class="ref">  </td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>  </td>
-    <td> Monday <br/> Feb 19</td>
-    <td> <span style="font-weight:bold; color:red">No class: Reading Week</span>  </td>
-    <td class="ref"> </td>
+    <td> Wednesday <br/> September 20</td>
+    <td> Polynomial identity testing: Schwartz-Zippel Lemma, Parallel matching  </td>
+    <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> 6 </td>
-    <td> Monday <br/> Feb 26</td>
-    <td> Expander Decomposition: A Simple Application to Minimum Cuts </td>
-   <td class="ref"> </td>
-    <td> </td>
+    <td> Monday <br/> September 25</td>
+    <td> MSTs: Basics (blue & red rules), Barouvka's algorithm, Yao's algorithm  </td>
+    <td> -- </td>
+    <td> <span class="event">HW1 due <br/> HW2 release</span> </td>
   </tr>
 
   <tr>
     <td> 7 </td>
-    <td> Monday <br/> March 04</td>
-    <td> Expander Decomposition: Fast Algorithms </td>
-    <td class="ref"> </td>
+    <td> Wednesday <br/> September 27</td>
+    <td> MSTs: Fredman-Tarjan algorithm, Karger-Klein-Tarjan algorithm  </td>
+    <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> 8 </td>
-    <td> Monday <br/> March 11</td>
-    <td> Isolating Cuts for Minimum Cut Problems </td>
-    <td class="ref"> </td>
-    <td> </td>
+    <td> Monday <br/> October 02</td>
+    <td> Linear programming (LP): Basics, LP duality, Center-of-gravity algorithm  </td>
+    <td> -- </td>
+    <td>  </td>
   </tr>
 
   <tr>
     <td> 9 </td>
-    <td> Monday <br/> March 18</td>
-    <td> Multiplicative Weight Update Method </td>
-    <td class="ref"> </td>
+    <td> Wednesday <br/> October 04</td>
+    <td> LP rounding: Weighted vertex cover, Set cover, Min cut  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> Monday <br/> October 09</td>
+    <td> <span style="font-weight:bold; color:red">No class: Reading week</span>  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> Wednesday <br/> October 11</td>
+    <td> <span style="font-weight:bold; color:red">No class: Reading week</span>   </td>
+    <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> 10 </td>
-    <td> Monday <br/> March 25</td>
-    <td> Laplacian Paradigm: Faster Approximate Maximum Flow </td>
-    <td class="ref"> </td>
-    <td> </td>
+    <td> Monday <br/> October 16</td>
+    <td> Bipartite matching: Konig's theorem, Combinatorial algorithms  </td>
+    <td> -- </td>
+    <td> <span class="event">HW2 due</span></td>
   </tr>
 
   <tr>
     <td> 11 </td>
-    <td> Monday <br/> April 01 </td>
-    <td> Negative Weight Shortest Path in Near-Linear Time  </td>
-    <td class="ref"> </td>
+    <td> Wednesday <br/> October 18</td>
+    <td> Bipartite matching: Matching polytope, Primal-dual algorithms  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 12 </td>
+    <td> Monday <br/> October 23</td>
+    <td> Multiplicative weight update (MWU): Learning from experts  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 13 </td>
+    <td> Wednesday <br/> October 25</td>
+    <td> Multiplicative weight update (MWU): Packing/covering LPs </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr> 
+    <td> * </td>
+    <td> Thursday <br/> October 26 </td>
+    <td> <span class="event">Midterm take-home exam </span></td>
+    <td> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 14 </td>
+    <td> Monday <br/> October 30</td>
+    <td> Lovasz Local Lemma (LLL): Basics, Lopsided Version, Frugal coloring </td>
+    <td> -- </td>
+    <td> <span class="event">HW3 release </span></td>
+  </tr>
+
+  <tr>
+    <td> 15 </td>
+    <td> Wednesday <br/> November 01</td>
+    <td> Algorithmic LLL: k-satisfiability </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 16 </td>
+    <td> Monday <br/> November 06*</td>
+    <td> Spectral graph theory  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 17 </td>
+    <td> Wednesday <br/> November 08*</td>
+    <td> Spectral graph theory  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 18 </td>
+    <td> Monday <br/> November 13</td>
+    <td> Random walks: fundamental theorem, connectivity in RL </td>
+    <td> -- </td>
+    <td> <span class="event">HW3 due <br/>HW4 release</span> </td>
+  </tr>
+
+  <tr>
+    <td> 19 </td>
+    <td> Wednesday <br/> November 15</td>
+    <td> Random walks: Perfect matching in regular bipartite graphs  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 20 </td>
+    <td> Monday <br/> November 20</td>
+    <td> Shortest paths: Low-stretch spanning trees and applications  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 21 </td>
+    <td> Wednesday <br/> November 22</td>
+    <td> Shortest paths: Low-diameter decompositions </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 22 </td>
+    <td> Monday <br/> November 27</td>
+    <td> Graph compression: Spanners, Directed shortcuts  </td>
+    <td> -- </td>
+    <td> <span class="event">HW4 due <br/> </td>
+  </tr>
+
+  <tr>
+    <td> 23 </td>
+    <td> Wednesday <br/> November 29</td>
+    <td> Graph sketches: Connectivity, MSTs  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 24 </td>
+    <td> Monday <br/> December 04</td>
+    <td> Online algorithms: Ski-rental, Online matching  </td>
+    <td> -- </td>
     <td> </td>
   </tr>
 
   <tr>
     <td> * </td>
-    <td> Monday <br/> April 08</td>
-    <td> <span style="font-weight:bold; color:red">End of classes</span>   </td>
-   <td class="ref"> </td>
+    <td> Wednesday <br/> December 06</td>
+    <td> <span style="font-weight:bold; color:red">Pre-examination study day </span>  </td>
+    <td> -- </td>
     <td> </td>
   </tr>
 
-  
+
 
 </table>
 
@@ -493,13 +565,6 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
 <table class="bibs">
 
-  <tr id="KKT95"> 
-    <td> KKT95 </td>
-    <td> David R. Karger, Philip N. Klein, Robert Endre Tarjan, <a href="https://dl.acm.org/doi/10.1145/201019.201022">
-    A randomized linear-time algorithm to find minimum spanning trees</a>. JACM 1995.</td>
-  </tr>
-
-  <!--
   <tr id="AMS96"> 
     <td> AMS96 </td>
     <td> Noga Alon, Yossi Matias, Mario Szegedy, <a href="https://www.tau.ac.il/~nogaa/PDFS/amsz4.pdf">
@@ -523,9 +588,8 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> David R. Karger and Clifford Stein, <a href="https://dl.acm.org/doi/pdf/10.1145/234533.234534">
     A New Approach to the Minimum Cut Problem</a>. JACM 1996.</td>
   </tr>
--->
 </table>
-<!--
+
 <h4 class="sub-header" id="other-courses"> Similar Courses </h4>
 
 <p> This is a list of some other closely related courses or other offering of the same course at Waterloo and elsewhere: </p>
@@ -565,7 +629,6 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
   </li>
 
 </ul>
--->
 
 
   <h4 class="sub-header" id="latex">  Resources on LaTeX</h4>
@@ -586,7 +649,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
       If you are interested in learning more about LaTeX (beyond what is needed for this course), check the <a href="https://en.wikibooks.org/wiki/LaTeX">Wikibook on LaTeX</a> and the <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#List_of_Mathematical_Symbols">Wikibook on LaTeX for Mathematics</a>. 
     </p>
 
-
+-->
 
 
 <h3 class="header" id="admins">Policies and Statements</h3>
