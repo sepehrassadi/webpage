@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS 761: Randomized Algorithms (Winter 2025) </title>
+
+
+
+<style>
+
+.header{
+	height: 20px;	
+  font-size: 35px;
+	background-color:white;
+  color:black;
+  margin-top: 30px;
+}
+
+.sub-header{
+  height: 20px; 
+  font-size: 25px;
+  background-color:white;
+  color:black;
+  margin-top: 30px;
+}
+
+.top{
+	color:green;
+	font-weight:bold;
+}
+
+.event{
+	color:green;
+	font-weight:bold;
+}
+
+
+a:link {
+  text-decoration: none;
+	color:blue;
+}
+
+a:visited {
+  text-decoration: none;
+	color:blue;
+}
+
+a:hover {
+  text-decoration: underline;
+	color:blue;
+}
+
+a:active {
+  text-decoration: underline;
+	color:blue;
+}
+
+.cal table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+.cal td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+.cal tr{
+  height:60px;
+}
+
+.cal tr:nth-child(even) {
+  background: rgba(137,207,240,0.6);
+}
+
+.big-table td{
+  padding:4px;
+}
+
+.big-table {
+  background-color:#F0F0F0; 
+  padding: 7px; 
+  border-radius: 25px;
+  width:1200px;
+  margin-top: 20px;
+}
+.bold-bullet {
+  margin-left: 30px;
+}
+.bold-bullet td {
+  padding:7px;
+}
+.bold-bullet .first {
+  font-weight: bold;
+  width: 30%;
+}
+.bold-bullet .second {
+  color: dimgray;
+}
+
+.distant-list li {
+  padding:7px;
+}
+
+.ref {
+  font-family: "Courier New", serif;
+}
+
+.bibs {
+  padding-left:20pt; 
+  border-spacing:  10px;
+}
+
+.bibs td:nth-child(1){
+  width:7%;
+  font-family: "Courier New", serif;
+}
+.bibs td:nth-child(2){
+  width:83%;
+}
+
+</style>
+</head>
+    
+<body style="line-height:130%;">
+
+<table>
+  <tr>
+    <td style="width:75%;"><h1 style="color:#C60078; font-size:40px;">CS 761: Randomized Algorithms (Winter 2025)</h1></td>
+    <td align="left"> <img src="logo.png" width="70%" alt="Did NOT work :|" /> </td>
+  </tr>
+</table>
+
+<hr>
+
+<div style="padding-left:20px;width:1200px">
+
+  <table class="big-table">
+
+    <tr>
+      <td style="width:25%;"><span class="top">Lectures</span></td>
+      <td style="width:75%"> Tuesdays and Thursdays, 2:30 PM - 3:50PM in DC 2568</td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Instructor</span></td>
+      <td><a href="https://sepehr.assadi.info">Sepehr Assadi</a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+        (userid: <span style="border-bottom: 1px dashed;">sassadi</span>)</td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Instructor office hours</span></td>
+      <td> Mondays, 5 PM - 6 PM in DC 2334</td>
+    </tr>
+<!--
+    <tr>
+      <td> <span class="top"> Teaching assistant</span></td>
+      <td> Mohammad Hossein Ebtehaj &emsp;&emsp; (userid: <span style="border-bottom: 1px dashed;">mhebtehaj</span>)</td>
+    </tr>
+
+    <tr>
+      <td> <span class="top"> TA office hours</span></td>
+      <td> Wednesday, 3 PM - 4 PM in DC2331 </td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Prerequisites</span></td>
+      <td>CM 339/CS 341; Computer Science or Computational Mathematics students only</td>
+    </tr>
+-->
+    <tr>
+      <td><span class="top">Textbook</span></td>
+      <td>There is no official textbook. Lecture notes and other required materials will be posted on this webpage.</td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Course outline</span></td>
+      <td>The course outline is available <a href="course-outline-w25.pdf">here</a>. 
+          This page contains the highlights of course outline that can be updated as the term progresses. </td>
+    </tr>
+
+    <tr>
+      <td><span class="top">Communication</span></td>
+      <td>The lectures will be delivered on the blackboard. We use <a href="">LEARN</a> for assignments, <a href="">Crowdmark</a> for grades, and <a href="">Piazza</a> for general questions and discussions. For specific concerns, questions, or comments regarding your experience in the course,  
+      email me (sassadi); just please prefix your email subject with [CS761-W25] for a timely reply.</td>
+    </tr>
+
+</table>
+
+<h3 class="header" id="topics"> Topics</h3>
+<p>
+  This is an advanced graduate algorithm course on the topic of Randomized Algorithms in particular and Theoretical Computer Science (TCS) in general. 
+</p>
+<!--
+  is an advanced algorithm design and analysis course, aimed at undergraduate students interested in a deep dive in theoretical computer science (TCS), 
+  as well as graduate students doing research in TCS. It is more specialized and in-depth than the undergraduate level Algorithms course (CS 341). We will cover advanced algorithmic ideas (some classical, some very recent), and the theory behind them (theorems, proofs). Mathematical maturity, and a strong background in probability theory, data structures, and algorithm design are all essential.
+</p>
+-->
+<p>
+The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics that we will cover in this course (not
+necessarily in this particular order): 
+</p>
+<table class="bold-bullet">
+  <tr> 
+    <td class="first"> &#8226; Probabilistic analysis:</td>
+    <td class="second"> Randomized algorithms, Concentration inequalities, Balls-and-bins experiments</td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Minimum cuts:</td>
+    <td class="second">Karger's algorithm, Cut sparsifiers, Vertex connectivity via maximum flow </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Minimum spanning trees (MSTs):</td>
+    <td class="second">Linear-time randomized algorithm  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Sample and prune:</td>
+    <td class="second"> Luby's Distributed MIS algorithm, Maximal matching, Approximate matching </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Hash functions:</td>
+    <td class="second"> Basics, Limited independence hash functions, Cuckoo hashing</td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Shortest paths:</td>
+    <td class="second"> Low diameter decompositions, Tree embeddings</td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Graph coloring:</td>
+    <td class="second"> (Delta+1) coloring, Sampling colorings</td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Multiplicative weight update (MWU):</td>
+    <td class="second"> Fast packing/covering linear programs  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Lovasz Local Lemma (LLL):</td>
+    <td class="second"> Basics, Algorithmic LLL  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Random walks:</td>
+    <td class="second"> Connectivity in RL, Perfect matchings in regular bipartite graphs, Markov Chains  </td>
+  </tr>
+
+    <tr> 
+    <td class="first"> &#8226; Information theory:</td>
+    <td class="second"> Basics, Communication complexity  </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Sublinear time algorithms:</td>
+    <td class="second">Connected components, Subgraph counting, Graph coloring </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Streaming algorithms:</td>
+    <td class="second"> Distinct element problem, Approximate matching, Graph sketches </td>
+  </tr>
+
+
+  <tr> 
+    <td class="first"> &#8226; Online algorithms:</td>
+    <td class="second"> Ski rental, Karp-Vazirani-Vazirani (KVV) algorithm for bipartite matching </td>
+  </tr>
+
+  <tr> 
+    <td class="first"> &#8226; Parallel algorithms:</td>
+    <td class="second"> Matching in RNC, Isolation lemma </td>
+  </tr>
+</table>
+
+
+<p>
+  <a href="https://uwaterloo.ca/academic-calendar/graduate-studies/catalog#/courses/S1xuUtVXt3?bc=true&bcCurrent=CS761%20-%20Randomized%20Algorithms&bcGroup=Computer%20Science%20(CS)&bcItemType=courses">Official course description:</a> Introduction to the design and analysis of algorithms that make use of randomization. Topics include review of basic probabiloity and introduction to randomized algorithms; game theoretic techniques; uses of Markov and Chebyshev inequalities; tail inequalities; Markov chains and random walks; algebraic techniques; data structures and graph algorithms.
+</p>
+<h4 class="sub-header" id="learning-outcomes">Learning Outcomes </h4>
+<p>
+  I am hoping that by the end of the course, (1) you have a good understanding of randomness and its role in computation and algorithm design, (2) you are able to design and analyze algorithms for a wide range of canonical problems studied in this course, and even more importantly, for new problems that you may have not encountered directly in this course, and (3) you know a wide range of algorithmic and probabilistic tools
+  commonly used in design and analysis of randomized algorithms. 
+</p>
+
+<h3 class="header" id="grading">Grading</h3>
+The final grade for the course will be based on the following weights:
+<ul class="distant-list">
+  <li> 60% Homework assignments (3 assignments for 20% points each)</li>
+  <li> 40% Scribe notes </li>
+</ul> 
+
+<p> 
+  Participation in lectures is <span style="font-weight:bold">not mandatory</span> 
+  but I strongly encourage it -- this is a fast-moving course, so if you miss a lecture you may find it more difficult to keep up.
+</p>
+
+The <a href="course-outline-w25.pdf">course outline</a> contains more details on the grading scheme of this course and collaboration policies and groups
+for the assignments, as well as the format of the projects. 
+
+<h3 class="header" id="course-calendar"> Course Calendar</h3>
+The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change (including potentially the release and due dates for assignments). 
+<br/>
+<br/>
+
+<table class="cal">
+  <tr>
+    <th>#</th>
+    <th style="width:11%;">Date</th>
+    <th style="width:50%;">Topics</th>
+    <th style="width:22%;">Lecture notes & References</th>
+    <th style="width:18%;">Assignments</th>
+  </tr>
+
+  <tr>
+    <td> 1 </td>
+    <td> Tuesday <br/> January 7</td>
+    <td> Introduction, Probabilistic analysis, Fast (Delta+1) vertex coloring </td>
+    <td class="ref"> <!--<a href="Lectures/lec1.pdf">[lec1]</a>,--> <a href="#ACK19">ACK19</a>, <a href="#AY25">AY25</a> </td>
+    <td> <span class="event">HW0 release: </span> <a href="Homeworks/HW0.pdf">[HW0]</a></td>
+  </tr>
+
+
+<tr style="height:1px;">
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+  </tr>
+
+  <tr>
+    <td> 2 </td>
+    <td> Tuesday <br/> January 9</td>
+    <td> Karger's minimum cut algorithm, Randomized maximum cut, Derandomization </td>
+    <td class="ref"> <!--<a href="Lectures/lec2.pdf">[lec2]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/01-random.pdf">discrete probability</a>@<a href="#E19">E19</a>--></td>
+    <td> </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td> * </td>
+    <td> Tuesday <br/> January 14</td>
+        <td> <span style="font-weight:bold; color:red">No class: a make-up class will be arranged later in the term</span>  </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+  </tr>
+
+
+
+  <tr>
+    <td> * </td>
+    <td> Thursday <br/> January 16</td>
+        <td> <span style="font-weight:bold; color:red">No class: a make-up class will be arranged later in the term</span>  </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+  </tr>
+
+ <tr>
+    <td> 3 </td>
+    <td> Tuesday <br/> January 21</td>
+    <td> Balls and bins: Concentration inequalities </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 4 </td>
+    <td> Thursday <br/> January 23</td>
+    <td> Balls and bins: Power of two choices via random graph theory </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> HW1 release </span></td>
+</tr>
+<tr>
+    <td> 5 </td>
+    <td> Tuesday <br/> January 28</td>
+    <td> Communication complexity: Equality testing, Error correcting codes </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 6 </td>
+    <td> Thursday <br/> January 30</td>
+    <td> Communication complexity: Information theory tools</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 7 </td>
+    <td> Tuesday <br/> February 4</td>
+    <td> Lovász Local Lemma (LLL): Motivation and applications </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 8 </td>
+    <td> Thursday <br/> February 6</td>
+    <td> Algorithmic LLL: k-satisfiability, Entropy compression </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> HW1 due </span> </td>
+</tr>
+<tr>
+    <td> 9 </td>
+    <td> Tuesday <br/> February 11</td>
+    <td> Probabilistic method: Basics, Frugal coloring </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 10 </td>
+    <td> Thursday <br/> February 13</td>
+    <td> Probabilistic method: Coloring graphs with sparse neighborhood </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> * </td>
+    <td> Tuesday <br/> February 18</td>
+    <td> <span style="font-weight:bold; color:red">No class: Reading week</span> </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> * </td>
+    <td> Thursday <br/> February 20</td>
+    <td> <span style="font-weight:bold; color:red">No class: Reading week</span> </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 11 </td>
+    <td> Tuesday <br/> February 25</td>
+    <td> Dimensionality reduction: Johnson-Lindenstrauss (JL) theorem </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 12 </td>
+    <td> Thursday <br/> February 27</td>
+    <td> Dimensionality reduction: Subspace embedding, eps-Nets, Linear regression </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> HW2 release </span> </td>
+</tr>
+<tr>
+    <td> 13 </td>
+    <td> Tuesday <br/> March 3</td>
+    <td> Polynomial methods: Schwartz–Zippel lemma, Polynomial identity testing </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 14 </td>
+    <td> Thursday <br/> March 5</td>
+    <td> Polynomial methods: Parallel matching, Isolation lemma </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 15 </td>
+    <td> Tuesday <br/> March 10</td>
+    <td> Graph Algorithms: Shortest paths, Tree embeddings, Low diameter decomposition</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 16 </td>
+    <td> Thursday <br/> March 12</td>
+    <td> Graph Algorithms: Negative-weight shortest paths</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> HW2 due </span> </td>
+</tr>
+<tr>
+    <td> 17 </td>
+    <td> Tuesday <br/> March 17</td>
+    <td> Hashing: Basics, Various types</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 18 </td>
+    <td> Thursday <br/> March 19</td>
+    <td> Hashing: MinHash, Bloom filters</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> HW3 release </span> </td>
+</tr>
+<tr>
+    <td> 19 </td>
+    <td> Tuesday <br/> March 24</td>
+    <td> Streaming algorithms: Distinct Elements</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 20 </td>
+    <td> Thursday <br/> March 26</td>
+    <td> Streaming algorithms: AMS Sketches </td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 21 </td>
+    <td> Tuesday <br/> March 31</td>
+    <td> Graph streaming algorithms: Spanners</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 22 </td>
+    <td> Thursday <br/> April 2</td>
+    <td> Graph streaming algorithms: Approximate matching</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> HW3 due </span> </td>
+</tr>
+
+
+<tr>
+    <td> 23 </td>
+    <td> * <br/> *</td>
+    <td> Random walks: Basics</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 24 </td>
+    <td> * <br/> * </td>
+    <td> Random walks: sampling</td>
+    <td class="ref"> </td>
+    <td> <span class="event"> </td>
+</tr>
+
+<!--
+
+  <tr>
+    <td> 5 </td>
+    <td> Thursday <br/> September 19</td>
+    <td> Balls-and-bins experiments: Power of two choices via random graph theory  </td>
+    <td class="ref"> <a href="Lectures/lec5.pdf">[lec5]</a>, <a href="#M01">M01</a>, <a href="#KLM92">KLM92</a></td>
+    <td> </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td> 6 </td>
+    <td> Tuesday <br/> September 24</td>
+    <td> MSTs: Basics, Fredman-Tarjan algorithm  </td>
+    <td class="ref"> <a href="Lectures/lec6.pdf">[lec6]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf">Minimum Spanning Trees</a>@<a href="#E19">E19</a>, <a href="#FT87">FT87</a> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 7 </td>
+    <td> Thursday <br/> September 26</td>
+    <td> MSTs: Karger-Klein-Tarjan algorithm  </td>
+    <td class="ref"> <a href="Lectures/lec7.pdf">[lec7]</a>, <a href="#KKT95">KKT95</a>, <a href="#K97">K97</a> </td>
+    <td> <span class="event">HW1 due <br/> HW2 release </span> <a href="Homeworks/HW2.pdf">[HW2]</a>  </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td> 8 </td>
+    <td> Tuesday <br/> October 1</td>
+    <td> Linear programming (LP): Basics and Applications  </td>
+    <td class="ref"> <a href="Lectures/lec8.pdf">[lec8]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/H-lp.pdf">Linear Programming</a>@<a href="#E19">E19</a></td>
+    <td>  </td>
+  </tr>
+
+
+  <tr>
+    <td> 9 </td>
+    <td> Thursday <br/> October 3</td>
+    <td> Linear Programming (LP): Duality and Integrality gaps </td>
+     <td class="ref"> <a href="Lectures/lec9.pdf">[lec9]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/H-lp.pdf">Linear Programming</a>@<a href="#E19">E19</a> </td>
+    <td>  </td>
+  </tr>
+
+  <tr>
+    <td> 10 </td>
+    <td> Tuesday <br/> October 8</td>
+    <td> Linear Programming (LP): More on Integrality gaps, Dual fitting for set cover </td>
+    <td class="ref"> <a href="Lectures/lec10.pdf">[lec10]</a>, <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/notes/J-approx.pdf">Approximation Algorithms</a>@<a href="#E19">E19</a> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 11 </td>
+    <td> Thursday <br/> October 10</td>
+    <td> Linear Programming (LP): Primal-dual for bipartite matching </td>
+    <td class="ref"> <a href="Lectures/lec11.pdf">[lec11]</a>, <a href="#B88">B88</a>, <a href="#HK73">HK73</a>, <a href="#ALT21">ALT21</a></td>
+    <td> <span class="event">HW2 due</span></td>
+  </tr>
+
+
+
+  <tr>
+    <td>  </td>
+    <td> Tuesday <br/> October 15</td>
+    <td> <span style="font-weight:bold; color:red">No class: Reading week</span>  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>  </td>
+    <td> Thursday <br/> October 17</td>
+    <td> <span style="font-weight:bold; color:red">No class: Reading week</span>   </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+
+  <tr>
+    <td> 12 </td>
+    <td> Tuesday <br/> October 22</td>
+    <td> Online matching with a primal-dual analysis  </td>
+    <td class="ref"> <a href="Lectures/lec12.pdf">[lec12]</a>, <a href="#KVV90">KVV90</a>, <a href="#DJK13">DJK13</a> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 13 </td>
+    <td> Thursday <br/> October 24</td>
+    <td> Online decision making: Secretary problem, Prophet inequalities </td>
+    <td class="ref"> <a href="Lectures/lec13.pdf">[lec13]</a>, <a href="#CFHOV18">CFHOV18</a></td>
+    <td> </td>
+  </tr>
+
+
+
+
+  <tr> 
+    <td> * </td>
+    <td> Monday <br/> October 28 </td>
+    <td> <span class="event">Midterm exam </span></td>
+    <td> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 14 </td>
+    <td> Tuesday <br/> October 29</td>
+    <td> Graph sketches: Connectivity</td>
+    <td class="ref"> <a href="Lectures/lec14.pdf">[lec14]</a>, <a href="#AGM12">AGM12</a>  </td>
+    <td>  </td>
+  </tr>
+
+  <tr>
+    <td> 15 </td>
+    <td> Thursday <br/> October 31</td>
+    <td> Sparse recovery and L0-samplers </td>
+    <td class="ref"> <a href="Lectures/lec15.pdf">[lec15]</a>, <a href="#JST11">JST11</a></td>
+    <td> <span class="event">HW3 release </span>: <a href="Homeworks/HW3.pdf">[HW3]</a></td>
+  </tr>
+
+ spanners
+ <tr>
+    <td> 15 </td>
+    <td> Thursday <br/> October 31</td>
+    <td> Sparse Recovery and L0-Samplers </td>
+    <td class="ref"> <a href="Lectures/lec15.pdf">[lec15]</a>, <a href="#ABSHJKS20">ABSHJKS20</a></td>
+    <td> <span class="event">HW3 release </span>: <a href="Homeworks/HW3.pdf">[HW3]</a> <br/></td>
+  </tr>
+
+
+
+
+  <tr>
+    <td> 16 </td>
+    <td> Tuesday <br/> November 5</td>
+    <td> Multiplicative weight update (MWU): Learning from experts</td>
+    <td class="ref"> <a href="Lectures/lec16.pdf">[lec16]</a>, <a href="#AHK12">AHK12</a> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 17 </td>
+    <td> Thursday <br/> November 7</td>
+    <td> Multiplicative weight update (MWU): Approximating linear programs </td>
+    <td class="ref"> <a href="Lectures/lec17.pdf">[lec17]</a>, <a href="#PST91">PST91</a></td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 18 </td>
+    <td> Tuesday <br/> November 12</td>
+    <td>  Multiplicative weight update (MWU): Width reduction techniques</td>
+    <td class="ref"> <a href="Lectures/lec18.pdf">[lec18]</a>, <a href="#AG11">AG11</a> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 19 </td>
+    <td> Thursday <br/> November 14</td>
+    <td> Multiplicative weight update (MWU): Approximate undirected maximum flow </td>
+    <td class="ref"> <a href="Lectures/lec19.pdf">[lec19]</a>, <a href="#CKMST11">CKMST11</a>, <a href="#V13">V13</a></td>
+    <td> <span class="event">HW3 due <br/>HW4 release</span>: <a href="Homeworks/HW4.pdf">[HW4]</a> <br/> </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td> 20 </td>
+    <td> Tuesday <br/> November 19*</td>
+    <td> Algebraic Techniques: Fingerprinting, PIT, and Parallel Matching</td>
+    <td class="ref"> <a href="https://www.dropbox.com/scl/fi/xxelvc8x7jg3dv9vhcu05/Lecture-20.pdf?rlkey=zjouyf26cjcv1khn0ipw1vjff&st=aavuy5aa&dl=0">[Guest lecture by Rafael Oliveira]</a></td>
+    <td>  </td>
+  </tr>
+
+  <tr>
+    <td> 21 </td>
+    <td> Thursday <br/> November 21*</td>
+    <td> Hardness of Approximation</td>
+    <td class="ref"> <a href="Lectures/lec21.pdf">[Guest lecture by Rafael Oliveira]</a></td>
+    <td> </td>
+  </tr>
+
+
+
+  <tr>
+    <td> 22 </td>
+    <td> Tuesday <br/> November 26</td>
+    <td> Random walks: fundamental theorem of Markov chains, connectivity in RL </td>
+    <td class="ref"> <a href="Lectures/lec22.pdf">[lec22]</a>, <a href="https://www.cambridge.org/core/books/abs/randomized-algorithms/markov-chains-and-random-walks/9D32C7392C83697E83D403E0AD6397A8">Markov Chains and Random Walks</a>@<a href="#MR13">MR13</a>use</td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 23 </td>
+    <td> Thursday <br/> November 28</td>
+    <td>  Random walks: Perfect matching in regular bipartite graphs </td>
+     <td class="ref"> <a href="Lectures/lec23.pdf">[lec23]</a>, <a href="#GKK10">GKK10</a> </td>
+    <td> <span class="event">HW4 due</span> </td>
+  </tr>
+
+
+  <tr>
+    <td> 24 </td>
+    <td> Tuesday <br/> December 3</td>
+    <td> Random walks: Mixing Time, Coupling, and Sampling Colorings</td>
+     <td class="ref"> <a href="Lectures/lec24.pdf">[lec24]</a>, <a href="#V99">V99</a></td>
+   
+    <td> </td>
+  </tr>
+
+
+
+  <tr>
+    <td> * </td>
+    <td> Thursday <br/> December 5</td>
+    <td> <span style="font-weight:bold; color:red">Pre-examination study day </span>  </td>
+    <td> -- </td>
+    <td> </td>
+  </tr>
+
+-->
+
+ 
+</table>
+
+<h3 class="header" id="resources"> Resources </h3>
+
+<p>
+  There is no official textbook for the course (most of our material is not in textbooks yet anyway). The following resources are all optional but they can be quite helpful and I encourage you to refer to them throughout the term for more details on 
+  the topics we cover in the class. 
+</p>
+
+<h4 class="sub-header" id="reading"> Further Reading</h4>
+
+<p>For some related textbooks and surveys, you can refer to:</p>
+
+<table class="bibs">
+
+  <tr id="H21a">
+    <td> H21a </td>
+    <td> 
+      Nick Harvey, 
+      <a href="https://www.cs.ubc.ca/~nickhar/Book1.pdf">A First Course in Randomized Algorithms</a>. 
+       © Copyright 2021 Nick Harvey. 
+    </td>
+  </tr>
+
+ <tr id="H21b">
+    <td> H21b </td>
+    <td> 
+      Nick Harvey, 
+      <a href="https://www.cs.ubc.ca/~nickhar/Book2.pdf">A Second Course in Randomized Algorithms</a>. 
+       © Copyright 2021 Nick Harvey. 
+    </td>
+  </tr>
+
+  <tr id="MR13">
+    <td> MR13 </td>
+    <td> 
+      Rajeev Motwani and Prabhakar Raghavan, 
+      <a href="https://www.cambridge.org/core/books/randomized-algorithms/6A3E5CD760B0DDBA3794A100EE2843E8">Randomized Algorithms</a>. 
+      Cambridge University Press, 2013. 
+    </td>
+  </tr>
+
+  <tr id="DP09">
+    <td> DP09 </td>
+    <td> 
+      Devdatt P. Dubhashi and Alessandro Panconesi, 
+      <a href="https://www.cambridge.org/core/books/concentration-of-measure-for-the-analysis-of-randomized-algorithms/2E8BD6FD04F30E2BD3A53F8AC3888478">
+      Concentration of Measure for the Analysis of Randomised Algorithms</a>. 
+      Cambridge University Press, 2009. 
+    </td>
+  </tr>
+
+  <tr id="AS16">
+    <td> AS16 </td>
+    <td> 
+      Noga Alon and Joel H. Spencer,
+      <a href="https://www.wiley.com/en-gb/The+Probabilistic+Method%2C+4th+Edition-p-9781119061953">
+      The Probabilistic Method, 4th Edition</a>. 
+      Wiley, 2016. 
+    </td>
+  </tr>
+
+
+  <tr id="E19"> 
+    <td> E19 </td>
+    <td> 
+      Jeff Erickson, 
+      <a href="http://jeffe.cs.illinois.edu/teaching/algorithms">Algorithms textbook</a>. 
+      © Copyright 2019 Jeff Erickson.
+    </td>
+  </tr>
+</table>
+
+
+<h4 class="sub-header" id="bib"> Bibliography </h4>
+
+<p> This is a (rather incomprehensive) list of the papers related to the topics discussed in the lectures. The list will be updated frequently throughout the term.  </p>
+
+<table class="bibs">
+
+  <tr id="ACK19"> 
+    <td> ACK19 </td>
+    <td> Sepehr Assadi, Yu Chen, Sanjeev Khanna, <a href="https://arxiv.org/abs/1807.08886">
+    Sublinear Algorithms for (Δ + 1) Vertex Coloring</a>. SODA 2019.</td>
+  </tr>
+
+  <tr id="AY25"> 
+    <td> AY25 </td>
+    <td> Sepehr Assadi, Helia Yazdanyar, <a href="#">
+    Simple Sublinear Algorithms for (Δ + 1) Vertex Coloring via Asymmetric Palette Sparsification</a>. SOSA 2025.</td>
+  </tr>
+
+<!--
+ <tr id="AG11"> 
+    <td> AG11 </td>
+    <td> Kook Jin Ahn, Sudipto Guha <a href="https://arxiv.org/abs/1104.2315">
+    Linear Programming in the Semi-streaming Model with Application to the Maximum Matching Problem</a>. ICALP 2011.</td>
+  </tr>
+
+  <tr id="AGM12"> 
+    <td> AGM12 </td>
+    <td> Kook Jin Ahn, Sudipto Guha, Andrew McGregor, <a href="https://people.cs.umass.edu/~mcgregor/papers/12-dynamic.pdf">
+    Analyzing graph structure via linear measurements</a>. SODA 2012.</td>
+  </tr>
+
+  <tr id="AMS96"> 
+    <td> AMS96 </td>
+    <td> Noga Alon, Yossi Matias, Mario Szegedy, <a href="https://www.tau.ac.il/~nogaa/PDFS/amsz4.pdf">
+    The Space Complexity of Approximating the Frequency Moments</a>. STOC 1996.</td>
+  </tr>
+
+  <tr id="ACK19"> 
+    <td> ACK19 </td>
+    <td> Sepehr Assadi, Yu Chen, Sanjeev Khanna, <a href="https://arxiv.org/abs/1807.08886">
+    Sublinear Algorithms for (Δ + 1) Vertex Coloring</a>. SODA 2019.</td>
+  </tr>
+
+<tr id="ALT21"> 
+    <td> ALT21 </td>
+    <td> Sepehr Assadi, S. Cliff Liu, Robert E. Tarjan, <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976472.18">
+    An Auction Algorithm for Bipartite Matching in Streaming and Massively Parallel Computation Models</a>. SOSA 2021.</td>
+  </tr>
+
+
+  <tr id="BJKST02"> 
+    <td> BJKST02 </td>
+    <td>    Ziv Bar-Yossef, T. S. Jayram, Ravi Kumar, D. Sivakumar, Luca Trevisan, <a href="https://cs.haifa.ac.il/~ilan/randomized_algorithms/bar-yosef_jayram.pdf">
+    Counting Distinct Elements in a Data Stream</a>. RANDOM 2002.</td>
+  </tr>
+
+  <tr id="B88">
+    <td> B88 </td>
+    <td> Dimitri P. Bertsekas, <a href="https://link.springer.com/article/10.1007/BF02186476">
+    The auction algorithm: A distributed relaxation method for the assignment problem</a>. Annals of Operations Research 88. </td>
+  </tr>
+
+  <tr id="CKMST11"> 
+    <td> CKMST11 </td>
+    <td> Paul Christiano, Jonathan A. Kelner, Aleksander Mądry, Daniel Spielman, Shang-Hua Teng, <a href="https://arxiv.org/pdf/1010.2921.pdf">
+    Electrical Flows, Laplacian Systems, and Faster Approximation of
+Maximum Flow in Undirected Graphs</a>. STOC 2011.</td>
+  </tr>
+
+<tr id="CFHOV18">
+    <td> CFOV18 </td>
+    <td> Jose Correa, Patricio Foncea, Ruben Hoeksma, Tim Oosterwijk, Tjark Vredeveld, <a href="https://www.sigecom.org/exchanges/volume_17/1/CORREA.pdf">
+    Recent Developments in Prophet Inequalities</a>. SIGecom Exchanges 2018. </td>
+  </tr>
+
+  <tr id="DJK13">
+    <td> DJK13 </td>
+    <td> Nikhil R. Devanur, Kamal Jain, and Robert D. Kleinberg, <a href="https://epubs.siam.org/doi/10.1137/1.9781611973105.7">
+    Randomized Primal-Dual Analysis of RANKING for Online Bipartite Matching</a>. SODA 2013. </td>
+  </tr>
+
+<tr id="FT87">
+    <td> FT87 </td>
+    <td> Michael L. Fredman and Robert E. Tarjan, <a href="https://web.eecs.umich.edu/~pettie/matching/Fredman-Tarjan-Fibonacci-Heaps.pdf">
+    Fibonacci Heaps and Their Uses in Improved Network Optimization Algorithms</a>. JACM 87. </td>
+  </tr>
+
+
+
+  <tr id="GKK10">
+    <td> GKK10 </td>
+    <td> Ashish Goel, Michael Kapralov, Sanjeev Khanna, <a href="https://arxiv.org/pdf/0909.3346.pdf">
+    Perfect Matchings in O(n log n) Time in Regular Bipartite Graphs</a>. STOC 2010, SICOMP 2013. </td>
+  </tr>
+
+
+ <tr id="HK73">
+    <td> HK73 </td>
+    <td> John E. Hopcroft and Richard M. Karp, <a href="https://epubs.siam.org/doi/10.1137/0202019">
+    An n^{5/2} Algorithm for Maximum Matchings in Bipartite Graphs</a>. SICOMP 1973. </td>
+  </tr>
+
+  <tr id="JST11">
+    <td> JST11 </td>
+    <td> Hossein Jowhari, Mert Saglam, Gábor Tardos, <a href="https://arxiv.org/abs/1012.4889">Tight bounds for Lp samplers, finding duplicates in streams, and related problems</a>. PODS 2011 </td>
+  </tr>
+
+  <tr id="K97">
+    <td> K97 </td>
+    <td> Valerie King, <a href="https://link.springer.com/article/10.1007/BF02526037">
+    A Simpler Minimum Spanning Tree Verification Algorithm</a>. Algorithmica 1997. </td>
+  </tr>
+
+  <tr id="KKT95"> 
+    <td> KKT95 </td>
+    <td> David R. Karger, Philip N. Klein, Robert Endre Tarjan, <a href="https://dl.acm.org/doi/10.1145/201019.201022">
+    A randomized linear-time algorithm to find minimum spanning trees</a>. JACM 1995.</td>
+  </tr>
+
+ <tr id="KLM92"> 
+    <td> KLM92 </td>
+    <td> Richard M. Karp, Michael Luby, Friedhelm Meyer auf der Heidet, <a href="https://dl.acm.org/doi/pdf/10.1145/129712.129743">
+    Efficient PRAM Simulation on a Distributed Memory Machine</a>. STOC 1992.</td>
+  </tr>
+
+ <tr id="KVV90"> 
+    <td> KVV90 </td>
+    <td> Richard M. Karp, Umesh V. Vazirani, Vijay V. Vazirani, <a href="https://people.eecs.berkeley.edu/~vazirani/pubs/online.pdf">
+    An Optimal Algorithm for On-line Bipartite Matching </a>. STOC 1990.</td>
+  </tr>
+
+
+  <tr id="M01"> 
+    <td> M01 </td>
+    <td> Michael Mitzenmacher, <a href="https://www.eecs.harvard.edu/~michaelm/postscripts/tpds2001.pdf">
+    The Power of Two Choices in Randomized Load Balancing</a>. IEEE TPDS 2001.</td>
+  </tr>
+
+
+ <tr id="PST91">
+    <td> PST91 </td>
+    <td> Serge A. Plotkin, David B. Shmoys, Éva Tardos, <a href="http://i.stanford.edu/pub/cstr/reports/cs/tr/92/1419/CS-TR-92-1419.pdf">
+    Fast Approximation Algorithms for Fractional Packing and Covering Problems</a>. FOCS 1991. </td>
+  </tr>
+
+<tr id="V99"> 
+    <td> V99 </td>
+    <td> 
+      Eric Vigoda, 
+      <a href="https://www.math.cmu.edu/users/af1p/Teaching/MCC17/Papers/color116.pdf">Improved Bounds for Sampling Colorings</a>. 
+      FOCS 1999. 
+    </td>
+  </tr>
+
+<tr id="V13"> 
+    <td> V13 </td>
+    <td> 
+      Nisheeth K. Vishnoi, 
+      <a href="https://www.cs.yale.edu/homes/vishnoi/Lxb-Web.pdf">Lx=b  -- Laplacian Solvers and
+Their Algorithmic Applications</a>. 
+      Foundations and Trends in Theoretical Computer Science, 2013. 
+    </td>
+  </tr>
+
+
+  
+
+
+
+
+
+  
+
+  <tr id="HMR97">
+    <td> HMR97 </td>
+    <td> Hugh Hind, Michael Molloy, and Bruce Reed, <a href="https://tspace.library.utoronto.ca/bitstream/1807/9472/3/colouring%20a%20graph%20frugally%202.pdf">
+    Colouring a Graph Frugally</a>. Combinatorica 1995. </td>
+  </tr>
+
+
+  <tr id="HK73">
+    <td> HK73 </td>
+    <td> John E. Hopcroft and Richard M. Karp, <a href="https://epubs.siam.org/doi/10.1137/0202019">
+    An n^{5/2} Algorithm for Maximum Matchings in Bipartite Graphs</a>. SICOMP 1973. </td>
+  </tr>
+
+
+  <tr id="K93"> 
+    <td> K93 </td>
+    <td> David R. Karger, <a href="https://dl.acm.org/doi/pdf/10.5555/313559.313605">
+    Global Min-cuts in RNC, and Other Ramifications of a Simple Min-Cut Algorithm</a>. SODA 1993.</td>
+  </tr>
+
+  <tr id="KKT95"> 
+    <td> KKT95 </td>
+    <td> David R. Karger, Philip N. Klein, Robert Endre Tarjan, <a href="https://dl.acm.org/doi/10.1145/201019.201022">
+    A randomized linear-time algorithm to find minimum spanning trees</a>. JACM 1995.</td>
+  </tr>
+
+
+
+  <tr id="KS96"> 
+    <td> KS96 </td>
+    <td> David R. Karger and Clifford Stein, <a href="https://dl.acm.org/doi/pdf/10.1145/234533.234534">
+    A New Approach to the Minimum Cut Problem</a>. JACM 1996.</td>
+  </tr>
+
+ 
+
+ 
+
+
+  <tr id="K97">
+    <td> K97 </td>
+    <td> Valerie King, <a href="https://link.springer.com/article/10.1007/BF02526037">
+    A Simpler Minimum Spanning Tree Verification Algorithm</a>. Algorithmica 1997. </td>
+  </tr>
+
+  <tr id="M09">
+    <td> M09 </td>
+    <td> Robin Moser, <a href="https://dl.acm.org/doi/10.1145/1536414.1536462">
+    A Constructive Proof of The Lovasz Local Lemma</a>. STOC 2009. </td>
+  </tr>
+
+<tr id="MT10">
+    <td> MT10 </td>
+    <td> Robin Moser and Gabor Tardos <a href="https://dl.acm.org/doi/10.1145/1667053.1667060">
+    A Constructive Proof of The General Lovasz Local Lemma</a>. JACM 2010. </td>
+  </tr>
+    
+
+-->
+</table>
+
+
+
+
+<h4 class="sub-header" id="other-courses"> Similar Courses </h4>
+
+<p> This is a list of some other closely related courses taught elsewhere: </p>
+<ul class="distant-list">
+
+  <li> 
+    <a href="https://cs.uwaterloo.ca/~lapchi/cs761/">Randomized Algorithms, Summer 2023 </a> by Lap Chi Lau @ University of Waterloo. 
+  </li>
+
+  <li> 
+    <a href="https://ccanonne.github.io/teaching/COMPx270">Randomised and Advanced Algorithms, Winter 2024 </a> by Clément Canonne @ University of Sydney. 
+  </li>
+
+
+  <li> 
+    <a href="https://www.cs.ubc.ca/~nickhar/W22/"> (Graduate) Randomized Algorithms, Winter 2022 </a> by Nick Harvey @ University of British Columbia. 
+  </li>
+
+  <li> 
+    <a href="https://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15859m-s11/www/">Randomized Algorithms, Spring 2011 </a> by Avrim Blum and Anupam Gupta @ Carnegie Mellon University. 
+  </li>
+
+</ul>
+
+<!--
+<h4 class="sub-header" id="other-courses"> Previous Iterations </h4>
+
+<p> This is a list of some previous iterations of this course taught at UWaterloo: </p>
+<ul class="distant-list">
+
+
+  <li> 
+    <a href="https://cs.uwaterloo.ca/~r5olivei/courses/2024-spring-cs466/">CS466/666: Algorithm Design and Analysis, Spring 2024</a> by Rafael Oliveira 
+  </li>
+
+  <li> 
+    <a href="https://sepehr.assadi.info/courses/cs466(6)-f23/">CS466/666: Algorithm Design and Analysis, Fall 2023</a> by Sepehr Assadi  
+  </li>
+
+
+  <li> 
+    <a href="https://student.cs.uwaterloo.ca/~cs466/">CS466/666: Algorithm Design and Analysis, Fall 2022</a> by Therese Biedl  
+  </li>
+
+  <li> 
+    <a href="https://cs.uwaterloo.ca/~lapchi/cs466/index.html">CS466/666: Algorithm Design and Analysis, Spring 2022</a> by Lap Chi Lau  
+  </li>
+
+</ul>
+-->
+
+  <h4 class="sub-header" id="latex">  Resources on LaTeX</h4>
+    <p>
+      You can <a href="https://www.latex-project.org/get/">download</a> LaTeX for free. For the purpose of this course, you do not even need to install LaTeX and 
+      can instead use an online LaTeX editor such as <a href="https://www.overleaf.com">Overleaf</a>. 
+    </p>
+
+    <p>
+      Two great introductory resources for LaTeX are <a href="https://www.tug.org/begin.html">Getting started with TeX, LaTeX, and friends</a> by <a href="http://users.wfu.edu/cottrell/">Allin Cottrell</a>
+       (for general purpose LaTeX)
+      and <a href="https://ctan.org/pkg/undergradmath">LaTeX for Undergraduates</a> by <a href="http://joshua.smcvt.edu/math/hefferon.html">Jim Hefferon</a> (for undergraduates mathematics) 
+      accompanied by the following <a href="https://mirror.quantum5.ca/CTAN/info/undergradmath/undergradmath.pdf">cheatsheet</a>.   
+      You can also use this wonderful tool <a href="http://detexify.kirelabs.org/classify.html">Detexify</a> by <a href="http://kirelabs.org">Daniel Kirsch</a> for finding the LaTeX commands of a symbol (just draw the symbol!). 
+    </p> 
+    
+    <p> 
+      If you are interested in learning more about LaTeX (beyond what is needed for this course), check the <a href="https://en.wikibooks.org/wiki/LaTeX">Wikibook on LaTeX</a> and the <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#List_of_Mathematical_Symbols">Wikibook on LaTeX for Mathematics</a>. 
+    </p>
+
+<h3 class="header" id="admins">Policies and Statements</h3>
+
+<h4 class="sub-header" id="territorial-ack"> Territorial Acknowledgement </h4>
+<p>
+  The University of Waterloo acknowledges that much of our work takes place on the traditional territory of the Neutral, Anishinaabeg and Haudenosaunee peoples. Our main campus is situated on the Haldimand Tract, the land granted to the Six Nations that includes six miles on each side of the Grand River. Our active work toward reconciliation takes place across our campuses through research, learning, teaching, and community building, and is co-ordinated within the <a href="https://uwaterloo.ca/indigenous/">Office of Indigenous Relations</a>.
+</p>
+
+<h4 class="sub-header" id="emails">Email Policy </h4>
+
+<p>
+  Email is fast and tends to give the illusion of constant and immediate access. But that cannot realistically happen. I am available to you in 
+  general during this course via email but it may take up 24 hours (48 hours over the weekends) before you hear
+  back from me. Also, please use email only to communicate specific concerns, questions, or comments regarding your experience in the course, or 
+  setting up appointments for in-person meetings outside office hours in case necessary. Questions directly related to the materials of the course and clarifications about
+  lectures should be posted on <a href="">Piazza</a> or discussed during office hours instead. 
+</p>
+<p>
+  <span style="font-weight:bold; color:red;">Important note:</span> Please start the subject of all your emails in this course with '[CS761-W25]' (like "[CS761-W25] discuss my final grade") -- I am using bunch of different email filters to manage my (unmanageable) inbox and I may not get to see emails without this format at all or there is no guarantee on response time for such emails.   
+</p>
+
+
+<h4 class="sub-header" id="territorial-ack">  Students with Disabilities </h4>
+
+<p>
+  You are encouraged to discuss with me any appropriate accommodations that we might make on your behalf following the guidelines of the
+  <a href="https://uwaterloo.ca/accessability-services/">AccessAbility Services</a>. 
+</p>
+
+<p>
+  <a href="https://uwaterloo.ca/accessability-services/">AccessAbility Services</a>, located in Needles Hall, Room 1401, collaborates with all academic departments/schools to arrange appropriate accommodations for students with disabilities without compromising the academic integrity of the curriculum. If you require academic accommodations to lessen the impact of your disability, please register with AccessAbility Services at the beginning of each academic term.
+</p>
+
+<h4 class="sub-header" id="territorial-ack">  Statement of Inclusivity</h4>
+
+I am committed to creating a learning environment in which all of my
+students feel safe and included, regardless of race, ethnicity, religion, gender or sexual orientation.
+Because we are individuals with varying needs, I rely on your feedback to achieve this goal. I invite
+you to let me know about what I can stop, start, or continue doing to make sure every one of my
+students feels valued and can engage actively in our learning community.
+<br/><br/>
+
+<span style="font-weight:bold">Faculty of Math Statement on Diversity:</span>
+It is our intent that students from all diverse backgrounds and perspectives be well served by this course, and that students’ learning needs be addressed both in and out of class. We recognize the immense value of the diversity in identities, perspectives, and contributions that students bring, and the benefit it has on our educational environment. Your suggestions are encouraged and appreciated. Please let us know ways to improve the effectiveness of the course for you personally or for other students or student groups. In particular:
+<ul>
+  <li> We will gladly honour your request to address you by an alternate/preferred name or gender pronoun. Please advise us of this preference early in the term so we may make appropriate changes to our records.</li>
+<li> We will honour your religious holidays and celebrations. Please inform us of these at the start of the course. </li>
+<li> We will follow <a href="https://uwaterloo.ca/accessability-services/">AccessAbility Services</a> guidelines and protocols on how to best support
+students with different learning needs.</li>
+</ul>
+
+<h4 class="sub-header" id="territorial-ack"> Your Health & Well-Being</h4>
+
+<p>
+  This is a challenging course with various advanced topics and  not-so-easy assignments and exams. All of these are going to be time and energy consuming. 
+  But, this is also an <em>elective</em> course so one of my main goals is for you to enjoy taking this course
+  and learning these cool materials as much as I enjoy teaching them. Part of making sure you have fun involves taking care of yourself. Do your best to maintain a healthy lifestyle and work-life balance this term by eating well, exercising, getting enough sleep, and taking some time to relax -- all of these will tremendously help you to achieve your goals in the course and to enjoy the process in the meantime. 
+</p>
+<p>
+  You can find more resources to help you with your health & well-being with the <a href="https://uwaterloo.ca/campus-wellness/">Campus Wellness</a>
+  and <a href="https://uwaterloo.ca/student-success">Student Success Office</a> -- they have 
+  tons of <a href="https://uwaterloo.ca/student-success/resources">resources</a> on helping you to succeed, including very good tips on <a href="https://uwaterloo.ca/student-success/resources/time-management">time management</a> techniques. 
+</p>
+
+<p>
+<span style="font-weight:bold;">Faculty of Math Statement on Mental Health:</span> The Faculty of Math encourages students to seek out mental health support if needed:
+</p>
+
+<span style="font-weight:bold">On-campus Resources:</span>
+<ul> 
+  <li> <a href="https://uwaterloo.ca/campus-wellness/">Campus Wellness</a>: here to help enhance and support your wellness in a safe, respectful, and inclusive environment.</li>
+  <li> Counselling Services: email <a href="mailto:counselling.services@uwaterloo.ca"> counselling.services@uwaterloo.ca</a> or phone 519-888-4567 ext. 32655</li>
+  <li> <a href="https://wusa.ca/wusa-101-mates/">MATES</a>: one-to-one peer support program offered by Waterloo Undergraduate Student Association (WUSA) 
+    and Counselling Services: <a href="mailto:mates@wusa.ca"> mates@wusa.ca</a></li>
+  <li> <a href="https://uwaterloo.ca/campus-wellness/health-services">Health Services</a>: located across the creek from the Student Life Centre; phone: 519-888-4096.</li>
+</ul>
+
+<span style="font-weight:bold">Off-campus Resources:</span>
+<ul> 
+  <li> Good2Talk (24/7): Free confidential help line for post-secondary students. Phone: 1-866-925-5454 (Ontario and Nova Scotia only)</li>
+  <li> Here 24/7: Mental Health and Crisis Service Team. Phone: 1-844-437-3247 (Waterloo Region only) </li>
+  <li> OK2BME: set of support services for lesbian, gay, bisexual, transgender, or questioning teens. Phone: 519-884-0000 extension 213 (Waterloo Region only)</li>
+  <li> EMPOWER ME: Phone 1-833-628-5589 for Cdn./USA; for other countries see <a href="http://studentcare.ca/rte/en/IHaveAPlan_WUSA_EmpowerMe_EmpowerMe">here</a> </li>
+  <li> EMPOWER ME in China: China North 108007142831 and China South 108001402851</li>
+</ul>
+
+<h4 class="sub-header" id="territorial-ack">Rights and Responsibilities</h4>
+
+<p>
+  Every member  of  this class---instructor, TA, and students---has rights and responsibilities  
+  toward having a pleasant, fair, supportive, and free of discrimination and micro-aggression environment in this course, and we 
+  are all answerable to the University policies governing ethical behaviour (<a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-33">Policy 33</a>). 
+</p>
+
+<p>
+  In addition, academic dishonesty and plagiarism is considered a serious offense in this course. I expect that any assignment or exam you submit in this course will 
+  be your own product and follows the collaboration and external resources policies specified in the <a href="">course outline</a>.   
+  If an assignment is too hard, start earlier, ask for help, or simply do not answer the question --- academic dishonesty is never the right answer.
+  If you have any concerns or questions about these policies, please discuss them with me.  
+</p>
+<p>
+  Finally, a reminder that all the course content including lecture notes, presentations,  and other materials prepared  for the course, are the intellectual 
+  property (IP) of the instructor. These course materials are available to you to enhance your educational  experience, and sharing them 
+  without permission and proper citation is a violation of intellectual property rights. 
+</p>
+
+<span style="font-weight:bold">University Policies</span>: It is your job to know the university  policies  that  govern  your  behaviour in this course. Some pointers are: 
+
+<ul>
+  <li>
+    <span style="font-weight:bold">Academic Integrity:</span>
+    In order to maintain a culture of <a href="https://uwaterloo.ca/academic-integrity/">academic integrity</a>, members of the University of Waterloo community are expected to promote honesty, trust, fairness, respect and responsibility. All
+    members of the UW community are expected to hold to the highest standard of academic
+    integrity in their studies, teaching, and research. The <a href="https://www.uwaterloo.ca/academicintegrity">Office of Academic Integrity's website</a>
+    contains detailed information on UW policy
+    for students and faculty. This site explains why academic integrity is important and how
+    students can avoid academic misconduct. It also identifies resources available on campus
+    for students and faculty to help achieve academic integrity in---and out---of the classroom.
+  </li>
+  <br/>
+  <li>
+    <span style="font-weight:bold">Grievance:</span> 
+    A student who believes that a decision affecting some aspect of their university life has been unfair or unreasonable may have grounds for initiating a grievance
+    (<a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70">Policy 70</a>). 
+    When in doubt please be certain to contact the department/school’s administrative assistant who will provide further assistance.
+  </li>
+  <br/>
+  <li>
+    <span style="font-weight:bold">Discipline:</span> A student is expected to know what constitutes academic integrity to avoid committing academic offences and to take responsibility for their actions. A student who is unsure whether an action constitutes an offence, or who needs help in learning how to avoid offences (e.g., plagiarism, cheating) or about "rules" for group work/collaboration should seek guidance from the course professor, academic advisor, or the undergraduate associate dean. 
+    <br/>
+    For information on categories of offences and types of penalties, students should refer to <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71">Policy 71</a>. For typical penalties check <a href="https://uwaterloo.ca/secretariat/guidelines/guidelines-assessment-penalties">Guidelines for the Assessment of Penalties</a>.
+  </li>
+  <br/>
+  <li>
+    <span style="font-weight:bold">Appeals:</span> A decision made or penalty imposed under <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70">Policy 70</a>, Student Petitions and Grievances (other than a petition) or <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71">Policy 71</a>, Student Discipline may be appealed if there is a ground. A student who believes they have a ground for an appeal should refer to <a href="https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72">Policy 72</a>, Student Appeals.
+  </li>
+</ul>
+
+  <span style="font-weight:bold;">Intellectual Property:</span> Students should be aware that this course contains the intellectual property of their instructor, TA, and/or the University of Waterloo.  Intellectual property includes items such as: <br/>
+  <ul>
+    <li> Lecture content, spoken and written (and any audio/video recording thereof); </li>
+    <li> Lecture handouts, presentations, and other materials prepared for the course (e.g., PowerPoint slides); </li>
+    <li> Questions or solution sets from various types of assessments (e.g., assignments, quizzes, tests, final exams); and </li>
+    <li> Work protected by copyright (e.g., any work authored by the instructor or TA or used by the instructor or TA with permission of the copyright owner).</li>
+  </ul>
+  <p> 
+    Course materials and the intellectual property contained therein, are used to enhance a student’s educational experience.  However, sharing this intellectual property without the intellectual property owner’s permission is a violation of intellectual property rights.  For this reason, it is necessary to ask the instructor, TA and/or the University of Waterloo for permission before uploading and sharing the intellectual property of others online (e.g., to an online repository).
+  </p>
+  <p> 
+    Permission from an instructor, TA or the University is also necessary before sharing the intellectual property of others from completed courses with students taking the same/similar courses in subsequent terms/years.  In many cases, instructors might be happy to allow distribution of certain materials.  However, doing so without expressed permission is considered a violation of intellectual property rights.
+  </p>
+  <p> 
+    Please alert the instructor if you become aware of intellectual property belonging to others (past or present) circulating, either through the student body or online.  The intellectual property rights owner deserves to know (and may have already given their consent).
+  </p>
+
+  <span style="font-weight:bold;"> Use of Generative Artificial Intelligence: </span> The following statement is prepared by the Office of Academic Integrity with input from the Centre for Teaching Excellence, Library, and consultations with Associate Deans and members of the Standing Committee on New Technologies, Pedagogy, and Academic Integrity (Last Updated: August 2023):
+  
+      <p> Generative artificial intelligence (GenAI) trained using large language models (LLM) or other methods to produce text, images, music, or code, like Chat GPT, DALL-E, or GitHub CoPilot, may be used for assignments in this class with proper documentation, citation, and acknowledgement. Recommendations for how to cite GenAI in student work at the University of Waterloo may be found through the <a href="https://subjectguides.uwaterloo.ca/chatgpt_generative_ai">Library</a>. 
+      </p>
+      <p>
+        Please be aware that generative AI is known to falsify references to other work and may fabricate facts and inaccurately express ideas. GenAI generates content based on the input of other human authors and may therefore contain inaccuracies or reflect biases.
+        In addition, you should be aware that the legal/copyright status of generative AI inputs and outputs is unclear. Exercise caution when using large portions of content from AI sources, especially images. More information is available from the <a href="https://uwaterloo.ca/copyright-at-waterloo/teaching/generative-artificial-intelligence">Copyright Advisory Committee</a>. 
+      </p>
+      <p>
+        You are accountable for the content and accuracy of all work you submit in this class, including any supported by generative AI.
+      </p>
+	<hr/>
+</div>
+
+  <p style="color:dimgray; font-size:14px; text-align: center;">Created & maintained by Sepehr Assadi</p>
+
+    </body>
+</html>
+
