@@ -458,14 +458,14 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> 13 </td>
     <td> Tuesday <br/> March 3</td>
     <td> Polynomial methods: Schwartz-Zippel lemma, Polynomial identity testing </td>
-    <td class="ref"> </td>
+    <td class="ref"> Chapter 7 @ <a href="#MR13">MR13</a> </td>
     <td> <span class="event"> </td>
 </tr>
 <tr>
     <td> 14 </td>
     <td> Thursday <br/> March 5</td>
-    <td> Polynomial methods: Parallel matching, Isolation lemma </td>
-    <td class="ref"> </td>
+    <td> Polynomial methods: Parallel matching, Arthur-Merlin communication </td>
+    <td class="ref"> <a href="#MVV87">MVV877</a>, <a href="#AW08">AW08</a></td>
     <td> <span class="event"> </td>
 </tr>
 
@@ -473,22 +473,33 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> 15 </td>
     <td> Tuesday <br/> March 10</td>
     <td> Graph Simplification: Tree embeddings, Low diameter decomposition</td>
-    <td class="ref"> </td>
+    <td class="ref"> <a href="#B96">B96</a>, <a href="#A85">A85</a></td>
     <td> <span class="event"> </td>
 </tr>
 <tr>
     <td> 16 </td>
     <td> Thursday <br/> March 12</td>
     <td> Graph Simplification: Cut Sparsifiers</td>
-    <td class="ref"> </td>
+    <td class="ref"> <a href="#K94">K94</a>, <a href="#BK96">BK96</a></td>
     <td> <span class="event"> HW2 due </span> </td>
 </tr>
 
-
-<tr style="height:1px;">
-    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+<tr>
+    <td> 17 </td>
+    <td> Tuesday <br/> March 17</td>
+    <td> Graph Algorithms: Negative-Weight Shortest Path</td>
+    <td class="ref"> <a href="BNW22">BNW22</a></td>
+    <td> <span class="event"> </td>
+</tr>
+<tr>
+    <td> 18 </td>
+    <td> Thursday <br/> March 19</td>
+    <td> Graph Algorithms: (Delta+1) Edge Coloring</td>
+    <td class="ref"> <a href="#ABBCSZ25">ABBCSZ25</a></td>
+    <td> <span class="event"> HW3 release </span> </td>
 </tr>
 
+<!--
 <tr>
     <td> 17 </td>
     <td> Tuesday <br/> March 17</td>
@@ -503,6 +514,12 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td class="ref"> </td>
     <td> <span class="event"> HW3 release </span> </td>
 </tr>
+-->
+
+<tr style="height:1px;">
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+</tr>
+
 <tr>
     <td> 19 </td>
     <td> Tuesday <br/> March 24</td>
@@ -638,6 +655,19 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
 <table class="bibs">
 
+
+  <tr id="AW08"> 
+    <td> AW08 </td>
+    <td> Scott Aaronson, Avi Wigderson, <a href="https://www.scottaaronson.com/papers/alg.pdf">
+    Algebrization: a new barrier in complexity theory</a>. STOC 2008.</td>
+  </tr>
+
+  <tr id="ABBCSZ25"> 
+    <td> ABBCSZ25 </td>
+    <td> Sepehr Assadi, Soheil Behnezhad, Sayan Bhattacharya, Martin Costa, Shay Solomon, Tianyi Zhang, <a href="https://arxiv.org/abs/2410.05240">
+    Vizing's Theorem in Near-Linear Time</a>. STOC 2025.</td>
+  </tr>
+
   <tr id="ACK19"> 
     <td> ACK19 </td>
     <td> Sepehr Assadi, Yu Chen, Sanjeev Khanna, <a href="https://arxiv.org/abs/1807.08886">
@@ -646,16 +676,44 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
   <tr id="AY25"> 
     <td> AY25 </td>
-    <td> Sepehr Assadi, Helia Yazdanyar, <a href="#">
+    <td> Sepehr Assadi, Helia Yazdanyar, <a href="https://arxiv.org/abs/2502.17629">
     Simple Sublinear Algorithms for (Delta + 1) Vertex Coloring via Asymmetric Palette Sparsification</a>. SOSA 2025.</td>
   </tr>
 
+
+
+  <tr id="A85"> 
+    <td> A85 </td>
+    <td> Baruch Awerbuch, <a href="https://courses.csail.mit.edu/6.852/15/papers/awerbuch.pdf">
+    Complexity of Network Synchronization</a>. JACM 1985.</td>
+  </tr>
+
+
+  <tr id="B96"> 
+    <td> B96 </td>
+    <td> Yair Bartal, <a href="https://www.cs.bgu.ac.il/~elkinm/bartal96.pdf">
+    Probabilistic approximations of metric spaces and its algorithmic applications</a>. FOCS 1996.</td>
+  </tr>
 
   <tr id="BJKS02"> 
     <td> BJKS02 </td>
     <td> Ziv Bar-Yossef, T.S. Jayram, Ravi Kumar, D. Sivakumar, <a href="https://ieeexplore.ieee.org/document/1004344">
     Information theory methods in communication complexity</a>. CCC 2002.</td>
   </tr>
+
+  <tr id="BK96"> 
+    <td> BK96 </td>
+    <td> Andras A. Benczur, David R. Karger, <a href="https://people.csail.mit.edu/karger/Papers/stcut.pdf">
+    Approximating s-t Minimum Cuts in ~O(n^2) Time</a>. STOC 1996.</td>
+  </tr>
+
+  <tr id="BNW22"> 
+    <td> BNW22 </td>
+    <td> Aaron Bernstein, Danupon Nanongkai, Christian Wulff-Nilsen, <a href="https://arxiv.org/abs/2203.03456">
+    Negative-Weight Single-Source Shortest Paths in Near-linear Time</a>. FOCS 2022.</td>
+  </tr>
+
+  
 
  <tr id="CW09"> 
     <td> CW09 </td>
@@ -668,6 +726,12 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> K93 </td>
     <td> David R. Karger, <a href="https://dl.acm.org/doi/pdf/10.5555/313559.313605">
     Global Min-cuts in RNC, and Other Ramifications of a Simple Min-Cut Algorithm</a>. SODA 1993.</td>
+  </tr>
+
+  <tr id="K94"> 
+    <td> K94 </td>
+    <td> David R. Karger, <a href="https://dl.acm.org/doi/pdf/10.1145/195058.195422">
+    Random sampling in cut, flow, and network design problems</a>. STOC 1994.</td>
   </tr>
 
 
@@ -703,6 +767,11 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     A bound on the strong chromatic index of a graph</a>. Journal of Combinatorial Theory, 1997. </td>
   </tr>
 
+  <tr id="MVV87">
+    <td> MVV87 </td>
+    <td> Ketan Mulmuley, Umesh V. Vazirani, Vijay V. Vazirani, <a href="https://people.eecs.berkeley.edu/~vazirani/pubs/matching.pdf">
+    Matching Is as Easy as Matrix Inversion</a>. STOC 1987. </td>
+  </tr>
 
 <!--
  <tr id="AG11"> 
