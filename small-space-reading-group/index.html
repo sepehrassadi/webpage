@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Small Space Computation Reading Group </title>
+
+
+
+<style>
+
+.header{
+	height: 20px;	
+  font-size: 35px;
+	background-color:white;
+  color:black;
+  margin-top: 30px;
+}
+
+.sub-header{
+  height: 20px; 
+  font-size: 25px;
+  background-color:white;
+  color:black;
+  margin-top: 30px;
+}
+
+.top{
+	color:green;
+	font-weight:bold;
+}
+
+.event{
+	color:green;
+	font-weight:bold;
+}
+
+
+a:link {
+  text-decoration: none;
+	color:blue;
+}
+
+a:visited {
+  text-decoration: none;
+	color:blue;
+}
+
+a:hover {
+  text-decoration: underline;
+	color:blue;
+}
+
+a:active {
+  text-decoration: underline;
+	color:blue;
+}
+
+.cal table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+.cal td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+.cal tr{
+  height:60px;
+}
+
+.cal tr:nth-child(even) {
+  background: rgba(137,207,240,0.6);
+}
+
+.big-table td{
+  padding:4px;
+}
+
+.big-table {
+  background-color:#F0F0F0; 
+  padding: 7px; 
+  border-radius: 25px;
+  width:1200px;
+  margin-top: 20px;
+}
+.bold-bullet {
+  margin-left: 30px;
+}
+.bold-bullet td {
+  padding:7px;
+}
+.bold-bullet .first {
+  font-weight: bold;
+  width: 30%;
+}
+.bold-bullet .second {
+  color: dimgray;
+}
+
+.distant-list li {
+  padding:7px;
+}
+
+.ref {
+  font-family: "Courier New", serif;
+}
+
+.bibs {
+  padding-left:20pt; 
+  border-spacing:  10px;
+}
+
+.bibs td:nth-child(1){
+  width:7%;
+  font-family: "Courier New", serif;
+}
+.bibs td:nth-child(2){
+  width:83%;
+}
+
+</style>
+</head>
+    
+<body style="line-height:130%;">
+
+<table>
+  <tr>
+    <td style="width:75%;"><h1 style="color:#C60078; font-size:40px;">Small Space Computation Reading Group</h1></td>
+    <td align="left"> <img src="logo.png" width="70%" alt="Did NOT work :|" /> </td>
+  </tr>
+</table>
+
+<hr>
+
+<div style="padding-left:20px;width:1200px">
+
+
+
+
+<h3 class="header" id="topics"> Topics</h3>
+<p>
+The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics and papers that we will cover in this reading group (not
+necessarily in this particular order):
+</p>
+
+<h4> Catalytic Space </h4>
+
+<table class="bibs">
+
+ <tr id="AM25">
+    <td> AM25 </td>
+    <td> 
+      <a href="https://arxiv.org/abs/2504.09991">Bipartite Matching is in Catalytic Logspace</a>, by Aryan Agarwala, Ian Mertz. 
+    </td>
+  </tr>
+
+  <tr id="BC92">
+    <td> BC92 </td>
+    <td> 
+      <a href="https://epubs.siam.org/doi/10.1137/0221006">Computing Algebraic Formulas Using a Constant Number of Registers</a>, by Michael Ben-Or and Richard Cleve. 
+  </tr>
+
+
+
+
+  <tr id="BCKLS14">
+    <td> BCKLS14 </td>
+    <td> 
+      <a href="https://eccc.weizmann.ac.il/report/2014/053/">Computing with a full memory: Catalytic space</a>, by Harry Buhrman, Richard Cleve, Michal Koucky, Bruno Loff, Florian Speelman. 
+    </td>
+  </tr>
+
+  <tr id="CLMP25">
+    <td> CLMP25 </td>
+    <td> 
+      <a href="https://iuuk.mff.cuni.cz/~iwmertz/papers/clmp25.structure_of_catalytic_space.pdf">The Structure of Catalytic Space: Capturing Randomness and Time via Compression</a>, by James Cook, Jiatu Li, Ian Mertz, Edward Pyne.  
+    </td>
+  </tr>
+
+  <tr id="KMPS25">
+    <td> KMPS25 </td>
+    <td> 
+      <a href="https://arxiv.org/abs/2504.08444">Collapsing Catalytic Classes</a>, by Michal Koucky, Ian Mertz, Edward Pyne, Sasha Sami.  
+    </td>
+  </tr>
+
+<tr id="PSW25">
+    <td> PSW25 </td>
+    <td> 
+      <a href="https://nathan-sheffield.github.io/assets/papers/catalytic-communication.pdf">Catalytic Communication</a>, by Edward Pyne, Nathan S. Sheffield, William Wang.  
+    </td>
+  </tr>
+
+</table>
+
+<h4> Space Bounded Derandomization </h4>
+
+<table class="bibs">
+
+  <tr id="CL24">
+    <td> CL24 </td>
+    <td> 
+      <a href="https://arxiv.org/abs/2309.04551">Recursive Error Reduction for Regular Branching Programs</a>, by Eshan Chattopadhyay, Jyun-Jie Liao. 
+    </td>
+  </tr>
+
+  <tr id="DPTW25">
+    <td> DPTW25 </td>
+    <td> 
+      <a href="https://people.csail.mit.edu/rrw/NL_vs_BPL-3.pdf">When Connectivity Is Hard, Random Walks Are Easy with Non-determinism</a>, by Dean Doron, Edward Pyne, Roei Tell, R. Ryan Williams.  
+    </td>
+  </tr>
+
+  <tr id="N92">
+    <td> N92 </td>
+    <td> 
+      <a href="https://link.springer.com/article/10.1007/BF01305237">Pseudorandom generators for space-bounded computation</a>, by Noam Nisan.  
+    </td>
+  </tr>
+
+  <tr id="NW94">
+    <td> NW94 </td>
+    <td> 
+      <a href="https://www.math.ias.edu/~avi/PUBLICATIONS/MYPAPERS/NOAM/HARDNESS/final.pdf">Hardness vs. Randomness</a>, by Noam Nisan, Avi Wigderson.  
+    </td>
+  </tr>
+
+
+ <tr id="PRZ23">
+    <td> PRZ23 </td>
+    <td> 
+      <a href="https://arxiv.org/abs/2303.16413">Certified Hardness vs. Randomness for Log-Space</a>, by Edward Pyne, Ran Raz, Wei Zhan. 
+    </td>
+  </tr>
+
+
+
+</table>
+
+<h4> Time-Space Tradeoffs </h4>
+
+<table class="bibs">
+
+  <tr id="BBRS98">
+    <td> BBRS98 </td>
+    <td> 
+      <a href="https://epubs.siam.org/doi/10.1137/S0097539793283151">A Sublinear Space, Polynomial Time Algorithm for Directed s-t Connectivity</a>, by Greg Barnes, Jonathan F. Buss, Walter L. Ruzzo, Baruch Schieber.  
+    </td>
+  </tr>
+
+
+ <tr id="B89">
+    <td> B89 </td>
+    <td> 
+      <a href="https://homes.cs.washington.edu/~beame/papers/stocsorting.pdf">A General Sequential Time-Space Tradeoff
+for Finding Unique Elements</a>, by Paul Beame.  
+    </td>
+  </tr>
+
+  <tr id="BSSV03">
+    <td> BSSV03 </td>
+    <td> 
+      <a href="https://homes.cs.washington.edu/~beame/papers/randomts.pdf">Time-Space Trade-Off Lower Bounds for Randomized
+Computation of Decision Problems</a>, by Paul Beame, Michael Saks, Xiaodong Sun, Erik Vee.  
+    </td>
+  </tr>
+
+  <tr id="BC82">
+    <td> BC82 </td>
+    <td> 
+      <a href="https://dl.acm.org/doi/10.1145/800141.804677">A time-space tradeoff for sorting on a general sequential
+model of computation</a>, by Allan Borodin, Stephen Cook.  
+    </td>
+  </tr>
+
+  <tr id="CM24">
+    <td> CM24 </td>
+    <td> 
+      <a href="https://eccc.weizmann.ac.il/report/2023/174/">Tree Evaluation Is in Space O(log n  log log n)</a>, by James Cook, Ian Mertz.  
+    </td>
+  </tr>
+
+
+
+<tr id="EP95">
+    <td> EP95 </td>
+    <td> 
+      <a href="https://dlnext.acm.org/doi/pdf/10.1145/225058.225103">A Nearly Optimal Time-Space Lower Bound
+for Directed st-Connectivity on the NNJAG Model</a>, by Jeff Edmonds, Chung Keung Poon.  
+    </td>
+</tr>
+
+  <tr id="S01">
+    <td> S01 </td>
+    <td> 
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0020019000002271">Lower bounds on the complexity of recognizing SAT by Turing machines</a>, by Rahul Santhanam.  
+    </td>
+  </tr>
+
+
+  <tr id="W25">
+    <td> W25 </td>
+    <td> 
+      <a href="https://arxiv.org/abs/2502.17779">Simulating Time With Square-Root Space</a>, by Ryan Williams.  
+    </td>
+  </tr>
+
+
+
+
+
+</table>
+
+
+
+
+<h3 class="header" id="course-calendar"> Schedule</h3>
+The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change. 
+<br/>
+<br/>
+
+<table class="cal">
+  <tr>
+    <th>#</th>
+    <th style="width:11%;">Date</th>
+    <th style="width:60%;">Topic</th>
+    <th style="width:30%;">Presenter</th>
+  </tr>
+
+  <tr>
+    <td> 1 </td>
+    <td> Thursday <br/> September 05</td>
+    <td> Introduction</td>
+    <td> Sepehr Assadi</td>
+  </tr>
+
+ <tr style="height:1px;">
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+  </tr>
+
+</table>
+
+<h3 class="header" id="resources"> Resources </h3>
+
+<p>
+ Some surveys and reading suggestions closely related to the topics of this reading group: 
+</p>
+
+
+<table class="bibs">
+
+
+  <tr id="H22">
+    <td> H22 </td>
+    <td> 
+      <a href="https://williamhoza.com/research/papers/H4/">Recent Progress on Derandomizing Space-Bounded Computation</a>, by William Hoza (Bulletin of the EATCS 2022). 
+    </td>
+  </tr>
+
+  <tr id="M07">
+    <td> M07 </td>
+    <td> 
+      <a href="https://pages.cs.wisc.edu/~dieter/Papers/sat-lb-survey-fttcs.pdf">A Survey of Lower Bounds for Satisfiability
+and Related Problems</a>, by Dieter van Melkebeek (Foundations and Trends in Theoretical Computer Science 2007). 
+    </td>
+  </tr>
+
+
+  <tr id="M23">
+    <td> M23 </td>
+    <td> 
+      <a href="https://iuuk.mff.cuni.cz/~iwmertz/papers/m23.reusing_space.pdf">  Reusing Space: Techniques and Open Problems</a>, by Ian Mertz (Bulletin of the EATCS 2023). 
+    </td>
+  </tr>
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<h4 class="sub-header" id="other-courses"> Related Reading Groups or Courses </h4>
+
+
+<ul class="distant-list">
+
+  <li> 
+    <a href="https://docs.google.com/document/d/1yjBP7rXqWaEQQ8RA0E5vKA2qAVN9lVdtYh8tfR48m1o">Derandomization and its connections throughout complexity theory</a>, by Roei Tell @ Rutgers (Winter 2022). 
+  </li>
+  <li>
+    <a href="https://williamhoza.com/teaching/winter2025-derandomizing-space-bounded-computation/">Derandomizing Space-Bounded Computation</a>, by William Hoza @ University of Chicago (Winter 2025).
+  </li>
+</ul>
+
+<!--
+<p> This is a list of some other closely related courses taught elsewhere: </p>
+<ul class="distant-list">
+
+  <li> 
+    <a href="https://ccanonne.github.io/teaching/COMPx270">Randomised and Advanced Algorithms, Winter 2024 </a> by Clément Canonne @ University of Sydney. 
+  </li>
+
+
+  <li> 
+    <a href="https://www.cs.cmu.edu/~15850/">Advanced Algorithms, Spring 2023 </a> by Anupam Gupta @ CMU. 
+  </li>
+
+  <li> 
+    <a href="https://people.inf.ethz.ch/gmohsen/AA21/">Advanced Algorithms, Fall 2021 </a> by Mohsen Ghaffari @ ETH. 
+  </li>
+
+  <li> 
+    <a href="https://www.cs.princeton.edu/~hy2/teaching/fall22-cos521/index.html"> Advanced Algorithm Design, Fall 2022 </a> by Matt Weinberg and Huacheng Yu @ Princeton. 
+  </li>
+
+  <li> 
+    <a href="https://advanced-algorithms-fall-2021.s3.amazonaws.com/aaf21-book.pdf"> Advanced Topics in Algorithms, Fall 2021</a> by Kent Quanrud @ Purdue. 
+  </li>
+
+  <li> 
+    <a href="https://www.cs.toronto.edu/~anikolov/CSC473W20/index.html">Advanced Algorithms, Winter 2020 </a> by Aleksandar Nikolov @ University of Toronto. 
+  </li>
+
+</ul>
+-->
+
+<h3 class="header" id="territorial-ack"> Territorial Acknowledgement </h4>
+<p>
+  The University of Waterloo acknowledges that much of our work takes place on the traditional territory of the Neutral, Anishinaabeg and Haudenosaunee peoples. Our main campus is situated on the Haldimand Tract, the land granted to the Six Nations that includes six miles on each side of the Grand River. Our active work toward reconciliation takes place across our campuses through research, learning, teaching, and community building, and is co-ordinated within the <a href="https://uwaterloo.ca/indigenous/">Office of Indigenous Relations</a>.
+</p>
+
+
+
+
+	<hr/>
+</div>
+
+  <p style="color:dimgray; font-size:14px; text-align: center;">Created & maintained by Sepehr Assadi</p>
+
+    </body>
+</html>
+
