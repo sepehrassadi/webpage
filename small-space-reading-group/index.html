@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Small Space Computation Reading Group </title>
+        <title> Space-Bounded Computation Reading Group </title>
 
 
 
@@ -125,7 +125,7 @@ a:active {
 
 <table>
   <tr>
-    <td style="width:75%;"><h1 style="color:#C60078; font-size:40px;">Small Space Computation Reading Group</h1></td>
+    <td style="width:75%;"><h1 style="color:#C60078; font-size:40px;">Space-Bounded Computation Reading Group</h1></td>
     <td align="left"> <img src="logo.png" width="70%" alt="Did NOT work :|" /> </td>
   </tr>
 </table>
@@ -135,12 +135,23 @@ a:active {
 <div style="padding-left:20px;width:1200px">
 
 
+<br/>
+Space-bounded computation is one of the oldest and most fundamental areas of theoretical computer science. At its core, it asks a very basic question: 
+<blockquote>
+<b><i>how much memory is truly necessary to solve a given computational problem?</i></b> 
+</blockquote>
+This reading group focuses on some exciting recent frontiers in this area: 
+<ul>
+<li> <b> Catalytic space:</b> a new model that refines our understanding of space efficiency by allowing "borrowed" memory that must be returned unchanged. </li> <br/>
+<li><b>Space-bounded derandomization:</b> randomness is a powerful resource in logspace, but can it always be removed? </li> </br>
+<li> <b>Time-space tradeoffs:</b> what is the inherent tension between limited memory and running time? </li>
+</ul>
 
 
 <h3 class="header" id="topics"> Topics</h3>
 <p>
 The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics and papers that we will cover in this reading group (not
-necessarily in this particular order):
+in this particular order):
 </p>
 
 <h4> Catalytic Space </h4>
@@ -150,7 +161,7 @@ necessarily in this particular order):
  <tr id="AM25">
     <td> AM25 </td>
     <td> 
-      <a href="https://arxiv.org/abs/2504.09991">Bipartite Matching is in Catalytic Logspace</a>, by Aryan Agarwala, Ian Mertz. 
+      <a href="https://arxiv.org/abs/2504.09991">Bipartite Matching is in Catalytic Logspace</a>, by Aryan Agarwala and Ian Mertz. 
     </td>
   </tr>
 
@@ -315,30 +326,71 @@ for Directed st-Connectivity on the NNJAG Model</a>, by Jeff Edmonds, Chung Keun
 
 
 <h3 class="header" id="course-calendar"> Schedule</h3>
-The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change. 
+The schedule below is <span style="font-weight:bold">tentative</span> and subject to change. We are also tentatively planning to meet <b>Wednesdays, 10 to 11:30 am </b>(Location TBD).  
 <br/>
 <br/>
+
 
 <table class="cal">
   <tr>
     <th>#</th>
     <th style="width:11%;">Date</th>
-    <th style="width:60%;">Topic</th>
+    <th style="width:60%;">Papers</th>
     <th style="width:30%;">Presenter</th>
   </tr>
 
   <tr>
     <td> 1 </td>
-    <td> Thursday <br/> September 05</td>
-    <td> Introduction</td>
+    <td> Wednesday <br/> September 10</td>
+    <td> <a class="ref" href="#BC92">BC92</a>: Computing Algebraic Formulas Using a Constant Number of Registers </td>
     <td> Sepehr Assadi</td>
   </tr>
+
+
+  <tr>
+    <td> 2 </td>
+    <td> Wednesday <br/> September 17</td>
+    <td> <a class="ref" href="#BCKLS14"> BCKLS14</a>: Computing with a full memory: Catalytic space</a></td>
+    <td> TBD </td>
+  </tr>
+
+
+  <tr>
+    <td> * </td>
+    <td> Wednesday <br/> September 24</td>
+    <td> <span style="font-weight:bold; color:red">No meeting</span> </td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td> 3 </td>
+    <td> Wednesday <br/> October 1</td>
+    <td> <a class="ref" href="#CLMP25">CLMP25</a>: The Structure of Catalytic Space: Capturing Randomness and Time via Compression <br/> <a class="ref" href="#KMPS25"> KMPS25</a>: Collapsing Catalytic Classes</a></td>
+    <td> TBD </td>
+  </tr>
+
+   <tr>
+    <td> 4 </td>
+    <td> Wednesday <br/> October 8</td>
+    <td> <a class="ref" href="#AM25"> AM25</a>: Bipartite Matching is in Catalytic Logspace</a></td>
+    <td> TBD </td>
+  </tr>
+
+ <tr>
+    <td> 5 </td>
+    <td> Wednesday <br/> October 15</td>
+    <td> <a class="ref" href="#PSW25"> PSW25</a>: Catalytic Communication</a></td>
+    <td> TBD </td>
+  </tr>
+
 
  <tr style="height:1px;">
     <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
   </tr>
 
+
 </table>
+
 
 <h3 class="header" id="resources"> Resources </h3>
 
