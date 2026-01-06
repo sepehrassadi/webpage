@@ -174,6 +174,7 @@ a:active {
 
 </table>
 
+<!--
 <h3 class="header" id="topics"> Topics</h3>
 <p>
   Space-bounded computation is one of the oldest and most fundamental areas of theoretical computer science. At its core, it asks a very basic question: 
@@ -182,7 +183,7 @@ a:active {
 </blockquote>
 We will examine various aspects of this question in this course.
 </p>
-<!--
+
 <p>
 The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics that we will cover in this course (not
 necessarily in this particular order): 
@@ -281,6 +282,7 @@ necessarily in this particular order):
 </table>
 
 
+
 <p>
   <a href="https://ucalendar.uwaterloo.ca/1011/COURSE/course-CS.html#CS466">Official course description:</a> Algorithmic approaches and methods of assessment that reflect a broad spectrum of criteria, including randomized algorithms, amortized analysis, lower bounds, approximation algorithms, and on-line algorithms. Particular examples will be chosen from different areas of active research and application.
 </p>
@@ -290,41 +292,16 @@ necessarily in this particular order):
   commonly used in design and analysis of algorithms, and (3) you have a have a basic familiarity with various algorithmic models of computation studied in TCS. 
 </p>
 
+-->
+
 <h3 class="header" id="grading">Grading</h3>
 The final grade for the course will be based on the following weights:
 <ul class="distant-list">
-  <li> 50% Homework assignments (4 assignments for 12.5% points each)</li>
-  <li> 50% Exams: <br/>
-  <table>
-    <tr>
-      <td style="width:40%">  &#8227; Mid-term exam </td>
-      <td style="width:40%"> October 27, 6:00 to 8:50 PM in MC 1085</td>
-      <td> (25% points) </td>
-    </tr>
-    <tr>
-      <td style="width:40%">  &#8227; Final exam (<a href="https://uwaterloo.ca/final-examination-schedule/">Scheduled by the University</a>): </td>
-      <td style="width:40%"> December 9, 12:30 to 3:00 PM in MC 2054  </td>
-      <td> (25% points) </td>
-    </tr>
-  </table>
-  </li>
-  <li> 15% Course Project: (only for graduate students in CS 666)</li> 
+  <li> 50% Participation and Problemsets</li>
+  <li> 50% Presentation and Scribe notes</li>
+
 </ul> 
 
-<p> 
-  Participation in lectures is <span style="font-weight:bold">not mandatory</span>
-  but I strongly encourage it -- this is a fast-moving course, so if you miss a lecture you may find it more difficult to keep up.
-</p>
-
-<span style="font-weight:bold; color:red;">Important note:</span> To pass this course, you
-must obtain <span style="font-weight:bold">at least 50% of the <u>class average</u> grade</span> in the homework assignments and exams categories <span style="font-weight:bold">separately</span>. 
-
-<br/><br/>
-The <a href="course-outline-f25.pdf">course outline</a> contains more details on the grading scheme of this course and collaboration policies and groups
-for the assignments, as well as the format of the projects. 
-
--->
-<!--
 
 <h3 class="header" id="course-calendar"> Course Calendar</h3>
 The schedule below the <span style="color:red"> red line</span> is <span style="font-weight:bold">tentative</span> and subject to change (including potentially the release and due dates for assignments). 
@@ -341,23 +318,141 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
   </tr>
 
   <tr>
-    <td> 1 </td>
-    <td> Thursday <br/> September 04</td>
-    <td> Introduction, Course policy, Probabilistic analysis, Graph coloring </td>
-    <td class="ref">  <a href="Lectures/lec1.pdf">[lec1]</a>, <a href="#ACK19">ACK19</a>, <a href="#AY25">AY25</a>
-    <td> <span class="event">HW0 release: </span> <a href="Homeworks/HW0.pdf">[HW0]</a></td>
+    <td>1</td>
+    <td>Tuesday<br/>January 6</td>
+    <td>Background: Models of computation, Basic Tools, Barrington's Theorem </td>
+    <td class="ref"><a href="Lectures/lec1.pdf">[lec1]</a></td>
+    <td></td>
   </tr>
-
-
 
 
   <tr>
+    <td>*</td>
+    <td>Tuesday<br/>January 13</td>
+    <td><span style="font-weight:bold; color:red">No class: A make-up class will be scheduled later </span> </td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+ <tr style="height:1px;">
+    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>Tuesday<br/>January 20</td>
+    <td>Tree Evaluation, Simulating Time with Space  </td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>Tuesday<br/>January 27</td>
+    <td>Non-determinism: Savitch's Theorem, Immerman-Szelepcsenyi Theorem</td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>4</td>
+    <td>Tuesday<br/>February 3</td>
+    <td>Randomness: Nisan's PRG, Saks-Zhou's Theorem</td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>5</td>
+    <td>Tuesday<br/>February 10</td>
+    <td>Undirected Connectivity in Logspace</td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>*</td>
+    <td>Tuesday<br/>February 17</td>
+    <td><span style="font-weight:bold; color:red">No class: Reading Week </span> </td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>6</td>
+    <td>Tuesday<br/>February 24</td>
+    <td>Directed Reachability in Sublinear Space</td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>7</td>
+    <td>Tuesday<br/>March 3</td>
+    <td>Communication Complexity and Space</td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>8</td>
+    <td>Tuesday<br/>March 10</td>
+    <td>Time-Space Tradeoffs on RAM machines </td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>8</td>
+    <td>Tuesday<br/>March 17</td>
+    <td>Time-Space Tradeoffs on Branching Programs</td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>10</td>
+    <td>Tuesday<br/>March 24</td>
+    <td>Pebbling Lower Bounds</td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>11</td>
+    <td>Tuesday<br/>March 31</td>
+    <td>TBD</td>
+    <td class="ref"></td>
+    <td></td>
+  </tr>
+</table>
+
+<!--
+<table class="cal">
+  <tr>
+    <th>#</th>
+    <th style="width:11%;">Date</th>
+    <th style="width:50%;">Topics</th>
+    <th style="width:22%;">Lecture notes & References</th>
+    <th style="width:18%;">Assignments</th>
+  </tr>
+
+  <tr>
+    <td> 1 </td>
+    <td> Tuesday <br/> January 6</td>
+    <td> Background: Models of computation, Nondeterminism, Randomness,  </td> 
+    <td class="ref">  <a href="Lectures/lec1.pdf">[lec1]</a>
+    <td> <span class="event">HW0 release: </span> <a href="Homeworks/HW0.pdf">[HW0]</a></td>
+  </tr>
+
+  <tr>
     <td> 2 </td>
-    <td> Tuesday <br/> September 9</td>
-    <td> Probabilistic Background and Concentration inequalities </td>
-    <td class="ref"> <a href="Lectures/lec2.pdf">[lec2]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/01-random.pdf">discrete probability</a>@<a href="#E19">E19</a></td>
+    <td> Tuesday <br/> January 13</td>
+    <td> <span style="font-weight:bold; color:red">No class: A make-up class will be scheduled later </span>   </td>
+    <td class="ref"> </td>
     <td> </td>
   </tr>
+
 
   <tr>
     <td> 3 </td>
@@ -367,100 +462,6 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> <span class="event">HW1 release: </span> <a href="Homeworks/HW1.pdf">[HW1]</a> </td>
   </tr>
 
-
-
-
-
-  <tr>
-    <td> 4 </td>
-    <td> Tuesday <br/> September 16</td>
-    <td> Balls-and-bins experiments: More on concentration inequalities </td>
-    <td class="ref">  <a href="Lectures/lec4.pdf">[lec4]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/04-chernoff.pdf">Tail Inequalities</a>@<a href="#E19">E19</a></td>
-    <td> </td>
-  </tr>
-
-
-
-  <tr>
-    <td> 5 </td>
-    <td> Thursday <br/> September 18</td>
-    <td> Balls-and-bins experiments: Power of two choices via random graph theory  </td>
-    <td class="ref"> <a href="Lectures/lec5.pdf">[lec5]</a>, <a href="#M01">M01</a>, <a href="#KLM92">KLM92</a> </td>
-    <td> </td>
-  </tr>
-
-
-
-
-  <tr>
-    <td> 6 </td>
-    <td> Tuesday <br/> September 23</td>
-    <td> MSTs: Basics, Fredman-Tarjan algorithm  </td>
-    <td class="ref"> <a href="Lectures/lec6.pdf">[lec6]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/07-mst.pdf">Minimum Spanning Trees</a>@<a href="#E19">E19</a>, <a href="#FT87">FT87</a> </td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 7 </td>
-    <td> Thursday <br/> September 25</td>
-    <td> MSTs: Karger-Klein-Tarjan algorithm  </td>
-    <td class="ref"> <a href="Lectures/lec7.pdf">[lec7]</a>, <a href="#KKT95">KKT95</a>, <a href="#K97">K97</a></td>
-    <td> <span class="event">HW1 due <br/> HW2 release: </span> <a href="Homeworks/HW2.pdf">[HW2]</a> </td>
-  </tr>
-
-
-
-
-  <tr>
-    <td> 8 </td>
-    <td> Tuesday <br/> September 30</td>
-    <td> Linear programming (LP): Basics and Applications  </td>
-    <td class="ref"> <a href="Lectures/lec8.pdf">[lec8]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/H-lp.pdf">Linear Programming</a>@<a href="#E19">E19</a></td>
-    <td>  </td>
-  </tr>
-
-
-  <tr>
-    <td> 9 </td>
-    <td> Thursday <br/> October 2</td>
-    <td> Linear Programming (LP): Duality </td>
-     <td class="ref"> <a href="Lectures/lec9.pdf">[lec9]</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/H-lp.pdf">Linear Programming</a>@<a href="#E19">E19</a> </td>
-    <td>  </td>
-  </tr>
-
-  <tr>
-    <td> 10 </td>
-    <td> Tuesday <br/> October 7</td>
-    <td> Linear Programming (LP): Integrality gaps, Approximation algorithms for set cover </td>
-    <td class="ref"> <a href="Lectures/lec10.pdf">[lec10]</a>, <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/notes/J-approx.pdf">Approximation Algorithms</a>@<a href="#E19">E19</a></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 11 </td>
-    <td> Thursday <br/> October 9</td>
-    <td> Linear Programming (LP): Primal-dual for bipartite matching </td>
-    <td class="ref"> <a href="Lectures/lec11.pdf">[lec11]</a>, <a href="#B88">B88</a>,<a href="#HK73">HK73</a>, <a href="#ALT21">ALT21</a></td>
-    <td> <span class="event">HW2 due</span></td>
-  </tr>
-
-
-
-  <tr>
-    <td>  </td>
-    <td> Tuesday <br/> October 14</td>
-    <td> <span style="font-weight:bold; color:red">No class: Reading week</span>  </td>
-    <td> -- </td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>  </td>
-    <td> Thursday <br/> October 16</td>
-    <td> <span style="font-weight:bold; color:red">No class: Reading week</span>   </td>
-    <td> -- </td>
-    <td> </td>
-  </tr>
 
 
   <tr>
@@ -605,7 +606,8 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
   </tr>
 
 
-
+-->
+<!--
   <tr>
     <td> * </td>
     <td> Thursday <br/> December 4</td>
@@ -613,116 +615,30 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> -- </td>
     <td> </td>
   </tr>
-</table>
+  -->
 
--->
-<!--
+
+
+
 <h3 class="header" id="resources"> Resources </h3>
 
 <p>
   There is no official textbook for the course (most of our material is not in textbooks yet anyway). The following resources are all optional but they can be quite helpful and I encourage you to refer to them throughout the term for more details on the topics we cover in the class. 
 </p>
 
-<h4 class="sub-header" id="suggested"> Suggested Reading</h4>
-<p>The following textbooks are most related to the topics in this course: </p>
+<h4 class="sub-header" id="suggested"> Further Reading</h4>
+<p>For some related textbooks and surveys, you can refer to:</p>
 
 <table class="bibs">
 
-
-    <tr id="AS16">
-    <td> AS16 </td>
+ <tr id="V25">
+    <td> V25 </td>
     <td> 
-      Noga Alon and Joel H. Spencer,
-      <a href="https://www.wiley.com/en-gb/The+Probabilistic+Method%2C+4th+Edition-p-9781119061953">
-      The Probabilistic Method, 4th Edition</a>. 
-      Wiley, 2016. 
+      Emanuele Viola, 
+      <a href="https://www.ccs.neu.edu/home/viola/papers/moti.pdf">Mathematics of the Impossible: The Complexity of Computation</a>. 
+       &copy Copyright 2023-2025 Emanuele Viola. 
     </td>
   </tr>
-
-
-
-  <tr id="E19"> 
-    <td> E19 </td>
-    <td> 
-      Jeff Erickson, 
-      <a href="http://jeffe.cs.illinois.edu/teaching/algorithms">Algorithms textbook</a>. 
-      &#169; Copyright 2019 Jeff Erickson.
-    </td>
-  </tr>
-
-  <tr id="H21a">
-    <td> H21a </td>
-    <td> 
-      Nick Harvey, 
-      <a href="https://www.cs.ubc.ca/~nickhar/Book1.pdf">A First Course in Randomized Algorithms</a>. 
-       &copy Copyright 2021 Nick Harvey. 
-    </td>
-  </tr>
-
- <tr id="H21b">
-    <td> H21b </td>
-    <td> 
-      Nick Harvey, 
-      <a href="https://www.cs.ubc.ca/~nickhar/Book2.pdf">A Second Course in Randomized Algorithms</a>. 
-       &copy Copyright 2021 Nick Harvey. 
-    </td>
-  </tr>
-
-
-  <tr id="MR13">
-    <td> MR13 </td>
-    <td> 
-      Rajeev Motwani and Prabhakar Raghavan, 
-      <a href="https://www.cambridge.org/core/books/randomized-algorithms/6A3E5CD760B0DDBA3794A100EE2843E8">Randomized Algorithms</a>. 
-      Cambridge University Press, 2013. 
-    </td>
-  </tr>
-
-
-</table>
-
-<h4 class="sub-header" id="reading"> Further Reading</h4>
-
-<p>For some further related textbooks and surveys, you can refer to:</p>
-
-<table class="bibs">
-
-
-  <tr id="ABSHJKS20"> 
-    <td> ABSHJKS20 </td>
-    <td>  Abu Reyan Ahmed, Greg Bodwin, Faryad Darabi Sahneh, Keaton Hamm, Mohammad Javad Latifi Jebelli, Stephen G. Kobourov, Richard Spence, 
-    <a href="https://arxiv.org/pdf/1909.03152.pdf">Graph spanners: A tutorial review</a>. Computer Science Review 2020.</td>
-  </tr>
-  
-  <tr id="AHK12"> 
-    <td> AHK12 </td>
-    <td> 
-      Sanjeev Arora, Elad Hazan, Sagar Kale,  
-      <a href="https://theoryofcomputing.org/articles/v008a006/v008a006.pdf">The Multiplicative Weights Update Method: a Meta-Algorithm and Applications</a>. 
-      Theory of Computing, 2012. 
-    </td>
-  </tr>
-
-  <tr id="DP09">
-    <td> DP09 </td>
-    <td> 
-      Devdatt P. Dubhashi and Alessandro Panconesi, 
-      <a href="https://www.cambridge.org/core/books/concentration-of-measure-for-the-analysis-of-randomized-algorithms/2E8BD6FD04F30E2BD3A53F8AC3888478">
-      Concentration of Measure for the Analysis of Randomised Algorithms</a>. 
-      Cambridge University Press, 2009. 
-    </td>
-  </tr>
-
-  <tr id="V20"> 
-    <td> V20 </td>
-    <td> 
-      Nisheeth K. Vishnoi, 
-      <a href="https://convex-optimization.github.io/">Algorithms for Convex Optimization</a>. 
-      &#169; Copyright 2020 Nisheeth K. Vishnoi.
-    </td>
-  </tr>
-
-
 
 </table>
 
@@ -731,6 +647,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
 
 <p> This is a (rather incomprehensive) list of the papers related to the topics discussed in the lectures. The list will be updated frequently throughout the term.  </p>
 
+<!--
 <table class="bibs">
 
 
@@ -738,195 +655,6 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> AG11 </td>
     <td> Kook Jin Ahn, Sudipto Guha <a href="https://arxiv.org/abs/1104.2315">
     Linear Programming in the Semi-streaming Model with Application to the Maximum Matching Problem</a>. ICALP 2011.</td>
-  </tr>
-
-
-  <tr id="AGM12"> 
-    <td> AGM12 </td>
-    <td> Kook Jin Ahn, Sudipto Guha, Andrew McGregor, <a href="https://people.cs.umass.edu/~mcgregor/papers/12-dynamic.pdf">
-    Analyzing graph structure via linear measurements</a>. SODA 2012.</td>
-  </tr>
-
-<tr id="ALT21"> 
-    <td> ALT21 </td>
-    <td> Sepehr Assadi, S. Cliff Liu, Robert E. Tarjan, <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976472.18">
-    An Auction Algorithm for Bipartite Matching in Streaming and Massively Parallel Computation Models</a>. SOSA 2021.</td>
-  </tr>
-
-
-  <tr id="AMS96"> 
-    <td> AMS96 </td>
-    <td> Noga Alon, Yossi Matias, Mario Szegedy, <a href="https://www.tau.ac.il/~nogaa/PDFS/amsz4.pdf">
-    The Space Complexity of Approximating the Frequency Moments</a>. STOC 1996.</td>
-  </tr>
-
-  <tr id="ACK19"> 
-    <td> ACK19 </td>
-    <td> Sepehr Assadi, Yu Chen, Sanjeev Khanna, <a href="https://arxiv.org/abs/1807.08886">
-    Sublinear Algorithms for (&Delta; + 1) Vertex Coloring</a>. SODA 2019.</td>
-  </tr>
-
-
-    <tr id="AY25"> 
-    <td> AY25 </td>
-    <td> Sepehr Assadi, Helia Yazdanyar, <a href="https://arxiv.org/abs/2502.17629">
-    Simple Sublinear Algorithms for (&Delta; + 1) Vertex Coloring via Asymmetric Palette Sparsification</a>. SOSA 2025.</td>
-  </tr>
-
-  <tr id="B88">
-    <td> B88 </td>
-    <td> Dimitri P. Bertsekas, <a href="https://link.springer.com/article/10.1007/BF02186476">
-    The auction algorithm: A distributed relaxation method for the assignment problem</a>. Annals of Operations Research 88. </td>
-  </tr>
-
-    <tr id="BJKST02"> 
-    <td> BJKST02 </td>
-    <td>    Ziv Bar-Yossef, T. S. Jayram, Ravi Kumar, D. Sivakumar, Luca Trevisan, <a href="https://cs.haifa.ac.il/~ilan/randomized_algorithms/bar-yosef_jayram.pdf">
-    Counting Distinct Elements in a Data Stream</a>. RANDOM 2002.</td>
-  </tr>
-
-
-
-  <tr id="CKMST11"> 
-    <td> CKMST11 </td>
-    <td> Paul Christiano, Jonathan A. Kelner, Aleksander Mądry, Daniel Spielman, Shang-Hua Teng, <a href="https://arxiv.org/pdf/1010.2921.pdf">
-    Electrical Flows, Laplacian Systems, and Faster Approximation of
-Maximum Flow in Undirected Graphs</a>. STOC 2011.</td>
-  </tr>
-
-<tr id="FT87">
-    <td> FT87 </td>
-    <td> Michael L. Fredman and Robert E. Tarjan, <a href="https://web.eecs.umich.edu/~pettie/matching/Fredman-Tarjan-Fibonacci-Heaps.pdf">
-    Fibonacci Heaps and Their Uses in Improved Network Optimization Algorithms</a>. JACM 1987. </td>
-  </tr>
-
-<tr id="GW95">
-    <td> GW95 </td>
-    <td> Michel X. Goemans and David P. Williamson, <a href="https://dl.acm.org/doi/10.1145/227683.227684">
-    Improved approximation algorithms for maximum cut and satisfiability problems using semidefinite programming</a>. JACM 1995. </td>
-  </tr>
-
- <tr id="HK73">
-    <td> HK73 </td>
-    <td> John E. Hopcroft and Richard M. Karp, <a href="https://epubs.siam.org/doi/10.1137/0202019">
-    An n^{5/2} Algorithm for Maximum Matchings in Bipartite Graphs</a>. SICOMP 1973. </td>
-  </tr>
-
-    <tr id="JST11">
-    <td> JST11 </td>
-    <td> Hossein Jowhari, Mert Saglam, Gabor Tardos, <a href="https://arxiv.org/abs/1012.4889">Tight bounds for Lp samplers, finding duplicates in streams, and related problems</a>. PODS 2011 </td>
-  </tr>
-
-  <tr id="K97">
-    <td> K97 </td>
-    <td> Valerie King, <a href="https://link.springer.com/article/10.1007/BF02526037">
-    A Simpler Minimum Spanning Tree Verification Algorithm</a>. Algorithmica 1997. </td>
-  </tr>
-
-   <tr id="KLM92"> 
-    <td> KLM92 </td>
-    <td> Richard M. Karp, Michael Luby, Friedhelm Meyer auf der Heidet, <a href="https://dl.acm.org/doi/pdf/10.1145/129712.129743">
-    Efficient PRAM Simulation on a Distributed Memory Machine</a>. STOC 1992.</td>
-  </tr>
-
-  <tr id="KKT95"> 
-    <td> KKT95 </td>
-    <td> David R. Karger, Philip N. Klein, Robert Endre Tarjan, <a href="https://dl.acm.org/doi/10.1145/201019.201022">
-    A randomized linear-time algorithm to find minimum spanning trees</a>. JACM 1995.</td>
-  </tr>
-
-
-
-  <tr id="KMS98"> 
-    <td> KMS98 </td>
-    <td> David R. Karger, Rajeev Motwani, and Madhu Sudan <a href="https://dl.acm.org/doi/10.1145/274787.274791">
-    Approximate graph coloring by semidefinite programming</a>. JACM 1998.</td>
-  </tr>
-
-  <tr id="M01"> 
-    <td> M01 </td>
-    <td> Michael Mitzenmacher, <a href="https://www.eecs.harvard.edu/~michaelm/postscripts/tpds2001.pdf">
-    The Power of Two Choices in Randomized Load Balancing</a>. IEEE TPDS 2001.</td>
-  </tr>
-
-    <tr id="M09">
-    <td> M09 </td>
-    <td> Robin Moser, <a href="https://dl.acm.org/doi/10.1145/1536414.1536462">
-    A Constructive Proof of The Lovasz Local Lemma</a>. STOC 2009. </td>
-  </tr>
-  
-<tr id="MT10">
-    <td> MT10 </td>
-    <td> Robin Moser and Gabor Tardos <a href="https://dl.acm.org/doi/10.1145/1667053.1667060">
-    A Constructive Proof of The General Lovasz Local Lemma</a>. JACM 2010. </td>
-  </tr>
-
- <tr id="PST91">
-    <td> PST91 </td>
-    <td> Serge A. Plotkin, David B. Shmoys, Eva Tardos, <a href="http://i.stanford.edu/pub/cstr/reports/cs/tr/92/1419/CS-TR-92-1419.pdf">
-    Fast Approximation Algorithms for Fractional Packing and Covering Problems</a>. FOCS 1991. </td>
-  </tr>
-
-
-<tr id="V13"> 
-    <td> V13 </td>
-    <td> 
-      Nisheeth K. Vishnoi, 
-      <a href="https://www.cs.yale.edu/homes/vishnoi/Lxb-Web.pdf">Lx=b  -- Laplacian Solvers and
-Their Algorithmic Applications</a>. 
-      Foundations and Trends in Theoretical Computer Science, 2013. 
-    </td>
-  </tr>
-
-
-
-
-
-<tr id="CFHOV18">
-    <td> CFOV18 </td>
-    <td> Jose Correa, Patricio Foncea, Ruben Hoeksma, Tim Oosterwijk, Tjark Vredeveld, <a href="https://www.sigecom.org/exchanges/volume_17/1/CORREA.pdf">
-    Recent Developments in Prophet Inequalities</a>. SIGecom Exchanges 2018. </td>
-  </tr>
-
-  <tr id="DJK13">
-    <td> DJK13 </td>
-    <td> Nikhil R. Devanur, Kamal Jain, and Robert D. Kleinberg, <a href="https://epubs.siam.org/doi/10.1137/1.9781611973105.7">
-    Randomized Primal-Dual Analysis of RANKING for Online Bipartite Matching</a>. SODA 2013. </td>
-  </tr>
-
-
-
-
-
-  <tr id="GKK10">
-    <td> GKK10 </td>
-    <td> Ashish Goel, Michael Kapralov, Sanjeev Khanna, <a href="https://arxiv.org/pdf/0909.3346.pdf">
-    Perfect Matchings in O(n log n) Time in Regular Bipartite Graphs</a>. STOC 2010, SICOMP 2013. </td>
-  </tr>
-
-
-
-
-
-
-
-
- <tr id="KVV90"> 
-    <td> KVV90 </td>
-    <td> Richard M. Karp, Umesh V. Vazirani, Vijay V. Vazirani, <a href="https://people.eecs.berkeley.edu/~vazirani/pubs/online.pdf">
-    An Optimal Algorithm for On-line Bipartite Matching </a>. STOC 1990.</td>
-  </tr>
-
-
-
-
-<tr id="V99"> 
-    <td> V99 </td>
-    <td> 
-      Eric Vigoda, 
-      <a href="https://www.math.cmu.edu/users/af1p/Teaching/MCC17/Papers/color116.pdf">Improved Bounds for Sampling Colorings</a>. 
-      FOCS 1999. 
-    </td>
   </tr>
 
 
@@ -969,40 +697,9 @@ Their Algorithmic Applications</a>.
 
 </ul>
 
-<h4 class="sub-header" id="other-courses"> Previous Iterations </h4>
-
-<p> This is a list of some previous iterations of this course taught at UWaterloo: </p>
-<ul class="distant-list">
 
 
- <li> 
-    <a href="https://cs.uwaterloo.ca/~r5olivei/courses/2025-spring-cs466/">CS466/666: Algorithm Design and Analysis, Spring 2025</a> by Rafael Oliveira 
-  </li>
-
-  <li> 
-    <a href="https://sepehr.assadi.info/courses/cs466(6)-f24/">CS466/666: Algorithm Design and Analysis, Fall 2024</a> by Sepehr Assadi  
-  </li>
-
-  <li> 
-    <a href="https://cs.uwaterloo.ca/~r5olivei/courses/2024-spring-cs466/">CS466/666: Algorithm Design and Analysis, Spring 2024</a> by Rafael Oliveira 
-  </li>
-
-  <li> 
-    <a href="https://sepehr.assadi.info/courses/cs466(6)-f23/">CS466/666: Algorithm Design and Analysis, Fall 2023</a> by Sepehr Assadi  
-  </li>
-
-
-  <li> 
-    <a href="https://student.cs.uwaterloo.ca/~cs466/">CS466/666: Algorithm Design and Analysis, Fall 2022</a> by Therese Biedl  
-  </li>
-
-  <li> 
-    <a href="https://cs.uwaterloo.ca/~lapchi/cs466/index.html">CS466/666: Algorithm Design and Analysis, Spring 2022</a> by Lap Chi Lau  
-  </li>
-
-
-</ul>
-
+-->
 
   <h4 class="sub-header" id="latex">  Resources on LaTeX</h4>
     <p>
@@ -1022,7 +719,7 @@ Their Algorithmic Applications</a>.
       If you are interested in learning more about LaTeX (beyond what is needed for this course), check the <a href="https://en.wikibooks.org/wiki/LaTeX">Wikibook on LaTeX</a> and the <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#List_of_Mathematical_Symbols">Wikibook on LaTeX for Mathematics</a>. 
     </p>
 
--->
+
 
 <h3 class="header" id="admins">Policies and Statements</h3>
 
@@ -1169,7 +866,7 @@ students with different learning needs.</li>
     <li> Work protected by copyright (e.g., any work authored by the instructor or TA or used by the instructor or TA with permission of the copyright owner).</li>
   </ul>
   <p> 
-    Course materials and the intellectual property contained therein, are used to enhance a student’s educational experience.  However, sharing this intellectual property without the intellectual property owner’s permission is a violation of intellectual property rights.  For this reason, it is necessary to ask the instructor, TA and/or the University of Waterloo for permission before uploading and sharing the intellectual property of others online (e.g., to an online repository).
+    Course materials and the intellectual property contained therein, are used to enhance a student’s educational experience.  However, sharing this intellectual property without the intellectual property owner's permission is a violation of intellectual property rights.  For this reason, it is necessary to ask the instructor, TA and/or the University of Waterloo for permission before uploading and sharing the intellectual property of others online (e.g., to an online repository).
   </p>
   <p> 
     Permission from an instructor, TA or the University is also necessary before sharing the intellectual property of others from completed courses with students taking the same/similar courses in subsequent terms/years.  In many cases, instructors might be happy to allow distribution of certain materials.  However, doing so without expressed permission is considered a violation of intellectual property rights.
