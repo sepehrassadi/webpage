@@ -174,125 +174,7 @@ a:active {
 
 </table>
 
-<!--
-<h3 class="header" id="topics"> Topics</h3>
-<p>
-  Space-bounded computation is one of the oldest and most fundamental areas of theoretical computer science. At its core, it asks a very basic question: 
-<blockquote>
-<b><i>how much memory is needed to solve a given computational problem?</i></b> 
-</blockquote>
-We will examine various aspects of this question in this course.
-</p>
 
-<p>
-The following is a <span style="font-weight:bold; color:red;">tentative list</span> of the topics that we will cover in this course (not
-necessarily in this particular order): 
-</p>
-<table class="bold-bullet">
-  <tr> 
-    <td class="first"> &#8226; Probabilistic analysis:</td>
-    <td class="second"> Randomized algorithms, Concentration inequalities, Balls-and-bins experiments</td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Minimum cuts:</td>
-    <td class="second">Karger's algorithm, Vertex connectivity </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Minimum spanning trees (MSTs):</td>
-    <td class="second">Boruvka's algorithm, Linear-time randomized algorithm  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Maximum matchings:</td>
-    <td class="second"> Hopcroft-Karp algorithm, Edmonds' algorithm, Auction algorithm  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Maximum flows:</td>
-    <td class="second"> Electrical flows, Fast approximation algorithms  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Shortest paths:</td>
-    <td class="second"> Low diameter decompositions, Tree embeddings</td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Graph compression:</td>
-    <td class="second"> Directed shortcuts, Spanners, Cut sparsifiers, Graph sketches   </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Linear programming:</td>
-    <td class="second"> Basics, Duality, Center-of-gravity algorithm, Applications </td>
-  </tr>
-
-
-
-  <tr> 
-    <td class="first"> &#8226; Multiplicative weight update (MWU):</td>
-    <td class="second"> Expert problem, Fast packing/covering linear programs  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Lovasz Local Lemma (LLL):</td>
-    <td class="second"> Basics, Algorithmic LLL  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Random walks:</td>
-    <td class="second"> Connectivity in RL, Perfect matchings in regular bipartite graphs, Sampling  </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Sublinear time algorithms:</td>
-    <td class="second">Connected components, Subgraph counting, Graph coloring </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Streaming algorithms:</td>
-    <td class="second"> Distinct element problem, Approximate matching, Graph sketches </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Distributed (LOCAL) algorithms:</td>
-    <td class="second"> Luby's Maximal Independent Set algorithm, Network decompositions </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Dynamic graph algorithms:</td>
-    <td class="second"> Connectivity, Approximate matching  </td>
-  </tr>
-  <tr> 
-    <td class="first"> &#8226; Online algorithms:</td>
-    <td class="second"> Ski rental, Karp-Vazirani-Vazirani (KVV) algorithm for bipartite matching </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Approximation algorithms:</td>
-    <td class="second"> Vertex cover, Set cover, Graph coloring, LP rounding </td>
-  </tr>
-
-  <tr> 
-    <td class="first"> &#8226; Parallel algorithms:</td>
-    <td class="second"> Matching in RNC, Isolation lemma </td>
-  </tr>
-</table>
-
-
-
-<p>
-  <a href="https://ucalendar.uwaterloo.ca/1011/COURSE/course-CS.html#CS466">Official course description:</a> Algorithmic approaches and methods of assessment that reflect a broad spectrum of criteria, including randomized algorithms, amortized analysis, lower bounds, approximation algorithms, and on-line algorithms. Particular examples will be chosen from different areas of active research and application.
-</p>
-<h4 class="sub-header" id="learning-outcomes">Learning Outcomes </h4>
-<p>
-  I am hoping that by the end of the course, (1) you are able to design and analyze algorithms for a wide range of canonical problems studied in this course, and even more importantly, for new problems that you may have not encountered directly in this course,  (2) you know a wide range of algorithmic and mathematical tools
-  commonly used in design and analysis of algorithms, and (3) you have a have a basic familiarity with various algorithmic models of computation studied in TCS. 
-</p>
-
--->
 
 <h3 class="header" id="grading">Grading</h3>
 The final grade for the course will be based on the following weights:
@@ -393,7 +275,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td>7</td>
     <td>Tuesday<br/>March 3</td>
     <td>Time-Space Tradeoffs on Braching Programs II: Decision Problems</td>
-    <td class="ref"></td>
+    <td class="ref"> <a href="#BSSV03">BSSV03</a></td>
     <td>Peter Matsakis</td>
   </tr>
 
@@ -434,198 +316,6 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td>Helia Yazdanyar</td>
   </tr>
 </table>
-
-<!--
-<table class="cal">
-  <tr>
-    <th>#</th>
-    <th style="width:11%;">Date</th>
-    <th style="width:50%;">Topics</th>
-    <th style="width:22%;">Lecture notes & References</th>
-    <th style="width:18%;">Assignments</th>
-  </tr>
-
-  <tr>
-    <td> 1 </td>
-    <td> Tuesday <br/> January 6</td>
-    <td> Background: Models of computation, Nondeterminism, Randomness,  </td> 
-    <td class="ref">  <a href="Lectures/lec1.pdf">[lec1]</a>
-    <td> <span class="event">HW0 release: </span> <a href="Homeworks/HW0.pdf">[HW0]</a></td>
-  </tr>
-
-  <tr>
-    <td> 2 </td>
-    <td> Tuesday <br/> January 13</td>
-    <td> <span style="font-weight:bold; color:red">No class: A make-up class will be scheduled later </span>   </td>
-    <td class="ref"> </td>
-    <td> </td>
-  </tr>
-
-
-  <tr>
-    <td> 3 </td>
-    <td> Thursday <br/> September 11</td>
-        <td> Streaming distinct elements, Limited independence hash functions </td>
-    <td class="ref"> <a href="Lectures/lec3.pdf">[lec3]</a>, <a href="#AMS96">AMS96</a>, <a href="#BJKST02">BJKST02</a> </td>
-    <td> <span class="event">HW1 release: </span> <a href="Homeworks/HW1.pdf">[HW1]</a> </td>
-  </tr>
-
-
-
-  <tr>
-    <td> 12 </td>
-    <td> Tuesday <br/> October 21</td>
-    <td> Semidefinite Programming (SDP): Maximum Cut </td>
-    <td class="ref"> <a href="Lectures/lec12.pdf">[lec12]</a>, <a href="#GW95">GW95</a></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 13 </td>
-    <td> Thursday <br/> October 23</td>
-    <td> Semidefinite Programming (SDP): Graph Coloring </td>
-    <td class="ref"> <a href="Lectures/lec13.pdf">[lec13]</a>, <a href="#KMS98">KMS98</a></td>
-    <td> </td>
-  </tr>
-
-
-   <tr>
-    <td> 12 </td>
-    <td> Tuesday <br/> October 21</td>
-    <td> Online matching with a primal-dual analysis  </td>
-    <td class="ref"> <a href="Lectures/lec12.pdf">[lec12]</a>, <a href="#KVV90">KVV90</a>, <a href="#DJK13">DJK13</a></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 13 </td>
-    <td> Thursday <br/> October 23</td>
-    <td> Online decision making: Secretary problem, Prophet inequalities </td>
-    <td class="ref"> <a href="Lectures/lec13.pdf">[lec13]</a>, <a href="#CFHOV18">CFHOV18</a></td>
-    <td> </td>
-  </tr>
-
-
-
-  <tr> 
-    <td> * </td>
-    <td> Monday <br/> October 27 </td>
-    <td> <span class="event">Midterm exam </span></td>
-    <td> </td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 14 </td>
-    <td> Tuesday <br/> October 28</td>
-    <td> Sparse recovery and L0-samplers </td>
-    <td class="ref"> <a href="Lectures/lec14.pdf">[lec14]</a>, <a href="#JST11">JST11</a>  </td>
-    <td>  </td>
-  </tr>
-
-  <tr>
-    <td> 15 </td>
-    <td> Thursday <br/> October 30</td>
-    <td> Graph sketches: Connectivity via L0-samplers</td>
-    <td class="ref"> <a href="Lectures/lec15.pdf">[lec15]</a>, <a href="#AGM12">AGM12</a></td>
-    <td>  <span class="event">HW3 release </span>: <a href="Homeworks/HW3.pdf">[HW3]</a></td>
-  </tr>
-
-
-  <tr>
-    <td> 16 </td>
-    <td> Tuesday <br/> November 4</td>
-    <td> Multiplicative weight update (MWU): Learning from experts</td>
-    <td class="ref"> <a href="Lectures/lec16.pdf">[lec16]</a>, <a href="#AHK12">AHK12</a> </td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 17 </td>
-    <td> Thursday <br/> November 6</td>
-    <td> Multiplicative weight update (MWU): Approximating linear programs </td>
-    <td class="ref"> <a href="Lectures/lec17.pdf">[lec17]</a>, <a href="#PST91">PST91</a></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 18 </td>
-    <td> Tuesday <br/> November 11</td>
-    <td>  Multiplicative weight update (MWU): Width reduction techniques</td>
-    <td class="ref"> <a href="Lectures/lec18.pdf">[lec18]</a>, <a href="#AG11">AG11</a></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 19 </td>
-    <td> Thursday <br/> November 13</td>
-    <td> Multiplicative weight update (MWU): Approximate undirected maximum flow </td>
-    <td class="ref"><a href="Lectures/lec19.pdf">[lec19]</a>, <a href="#CKMST11">CKMST11</a>, <a href="#V13">V13</a></td>
-    <td> <span class="event">HW3 due <br/>HW4 release:</span> <a href="Homeworks/HW4.pdf">[HW4]</a></td>
-  </tr>
-
-
-  <tr>
-    <td> 20 </td>
-    <td> Tuesday <br/> November 18</td>
- <td> Lovasz Local Lemma (LLL): Motivation and applications </td>
-    <td class="ref"> <a href="Lectures/lec20.pdf">[lec20]</a>, <a href="#AS16">The Local Lemma</a>@<a href="#AS16">AS16</a></td>
-     <td>  </td>
-  </tr>
-
-  <tr>
-    <td> 21 </td>
-    <td> Thursday <br/> November 20</td>
-     <td> Algorithmic LLL: SAT problem, Entropy compression </td>
-    <td class="ref"> <a href="Lectures/lec21.pdf">[lec21]</a>, <a href="#M09">M09</a>, <a href="#MT10">MT10</a></td>
-   <td> </td>
-  </tr>
-
-
- <tr style="height:1px;">
-    <td style="height:1px; padding:0px; padding-left:50px; padding-right:50px;" colspan="100%"> <hr style="border-top: dotted 2px; color: red" /> </td>
-  </tr>
-
-
-  <tr>
-    <td> 22 </td>
-    <td> Tuesday <br/> November 25</td>
-    <td> Random walks: fundamental theorem of Markov chains, connectivity in RL </td>
-    <td class="ref"> <a href="Lectures/lec22.pdf">[lec22]</a>, <a href="https://www.cambridge.org/core/books/abs/randomized-algorithms/markov-chains-and-random-walks/9D32C7392C83697E83D403E0AD6397A8">Markov Chains and Random Walks</a>@<a href="#MR13">MR13</a></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td> 23 </td>
-    <td> Thursday <br/> November 27</td>
-    <td>  Random walks: Perfect matching in regular bipartite graphs </td>
-     <td class="ref"> a href="Lectures/lec23.pdf">[lec23]</a>, <a href="#GKK10">GKK10</a></td>
-    <td> <span class="event">HW4 due</span> </td>
-  </tr>
-
-
-  <tr>
-    <td> 24 </td>
-    <td> Tuesday <br/> December 2</td>
-    <td> Random walks: Mixing Time, Coupling, and Sampling Colorings</td>
-     <td class="ref"> <a href="Lectures/lec24.pdf">[lec24]</a>, <a href="#V99">V99</a></td>
-   
-    <td> </td>
-  </tr>
-
-
--->
-<!--
-  <tr>
-    <td> * </td>
-    <td> Thursday <br/> December 4</td>
-    <td> <span style="font-weight:bold; color:red">Pre-examination study day </span>  </td>
-    <td> -- </td>
-    <td> </td>
-  </tr>
-  -->
-
-
 
 
 <h3 class="header" id="resources"> Resources </h3>
@@ -683,6 +373,12 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> B91 </td>
     <td> by Paul Beame. <a href="https://homes.cs.washington.edu/~beame/papers/stocsorting.pdf">A General Sequential Time-Space Tradeoff
 for Finding Unique Elements</a>. STOC 1989 and SICOMP 1991. 
+    </td>
+  </tr>
+
+  <tr id="BSSV03">
+    <td> BSSV03 </td>
+    <td> by Paul Beame, Michael Saks, Xiaodong Sun, Erik Vee. <a href="https://dl.acm.org/doi/epdf/10.1145/636865.636867f">Time-space trade-off lower bounds for randomized computation of decision problems</a>. FOCS 2000 and JACM 2003. 
     </td>
   </tr>
 
