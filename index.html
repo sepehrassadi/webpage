@@ -681,8 +681,8 @@
       </p>
 
 
-<!--
-  <div class="selected-paper" style="background-color: #f4f8fc; border: 3px solid #2f6fa3; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);">
+
+  <div class="selected-paper" style="background-color: #f4f8fc; border: 1px solid #c8d9cd;  border-radius: 4px; box-shadow: 0 2px 7px rgba(45, 80, 55, 0.08); padding: 1rem 1.15rem; margin: 1.25rem 0 1.75rem;">
         <div class="title">
           Semi-Streaming Matching in a Single Pass II: Greedy is Optimal
           <span class="conf"> arXiv 2026 </span> 
@@ -692,14 +692,52 @@
           <a href="https://ca.linkedin.com/in/max-jiang">Max Jiang</a>, 
           <a href="https://ca.linkedin.com/in/mars-xiang">Mars Xiang</a>
         </div>
-       <div class="info"><a href="https://arxiv.org/abs/2604.20648">[arXiv]</a></div>
+       <div class="info"><a href="https://arxiv.org/abs/2607.14656">[arXiv]</a></div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> 
-          We build on our earlier blueprint framework in <a href="#blueprints">here</a> to prove that no single-pass semi-streaming algorithm for the maximum (bipartite) matching problem can achieve an approximation ratio better than half. In other words, the naive greedy algorithm is optimal for this problem. This resolves possibly the single most outstanding problems in the graph streaming literature 
+          We build on our earlier <a href="#blueprints">blueprint framework</a> to prove that no single-pass semi-streaming algorithm for the maximum (bipartite) matching problem can achieve an approximation ratio better than half. In other words, the naive greedy algorithm is optimal for this problem. This fully resolves one of the most central open questions in the graph streaming literature 
           dating back to the introduction of the model two decades ago.   
         </div>
       </div>
-  -->
+
+      <div class="selected-paper" id="blueprints" style="background-color: #f4f8fc; border: 1px solid #c8d9cd;  border-radius: 4px; box-shadow: 0 2px 7px rgba(45, 80, 55, 0.08); padding: 1rem 1.15rem; margin: 1.25rem 0 1.75rem;">
+        <div class="title">
+          Semi-Streaming Matching in a Single Pass I: A New Framework for Lower Bounds via Blueprints
+          <span class="conf"> STOC 2026 </span> 
+        </div>
+        <div class="author"> 
+          Sepehr Assadi, 
+          <a href="https://ca.linkedin.com/in/max-jiang">Max Jiang</a>, 
+          <a href="https://ca.linkedin.com/in/mars-xiang">Mars Xiang</a>
+        </div>
+        <div class="info"><a href="https://arxiv.org/abs/2607.14644">[arXiv]</a>
+          <a href="https://dl.acm.org/doi/epdf/10.1145/3798129.3800811">[Conference version]</a></div>
+       <!-- <div class="info"><a href="#">[arXiv]</a></div>-->
+
+        <div class="summary">
+          <span style="font-weight: bold;"> Summary:</span> 
+         We reduce the problem of proving single-pass semi-streaming lower bounds for the maximum matching problem---one of the most longstanding open questions in the graph streaming literature---to a 
+         constant-size optimization problem which we call a "blueprint". This allows one to bypass all information theory and extremal graph theory (in particular RS graphs) arguments needed in prior work and focus
+         solely on constructing better blueprints. We then use blueprints to improve prior best lower bound of 0.59-approximtion in <a href="https://arxiv.org/pdf/2103.11669">[Kap21]</a> to a 0.55-approximation (bonus: the paper is <1/3 in length). 
+        </div>
+      </div>
+      
+       <div class="selected-paper">
+        <div class="title">
+          Settling the Pass Complexity of Streaming Set Cover
+          <span class="conf"> STOC 2026 </span> 
+        </div>
+        <div class="author"> 
+          Sepehr Assadi, 
+          <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a>
+        </div>
+        <div class="info"><a href="https://dl.acm.org/doi/epdf/10.1145/3798129.3800872">[Conference version]</a></div>
+        <div class="summary">
+          <span style="font-weight: bold;"> Summary:</span> 
+          Any p-pass polylog(n)-approximation for streaming set cover (m sets, n elements) requires Omgt(mn^{1/p}) space, proving the optimality of the algorithm of <a href="https://www.mit.edu/~mahabadi/papers/2016_SetCover.pdf">[HIMV16]</a> and settling a conjecture in that work. 
+        </div>
+      </div>
+    
 
        <div class="selected-paper">
         <div class="title">
@@ -717,44 +755,6 @@
           against adaptive adversaries called Dynamic Entropy Compression (based on the celebrated technique of Moser and Tardos <a href="https://arxiv.org/abs/0903.0544">[MT09]</a> for algorithmic LLL on static inputs). 
         </div>
       </div>
-      
-       <div class="selected-paper" id="blueprints">
-        <div class="title">
-          Semi-Streaming Matching in a Single Pass I: A New Framework for Lower Bounds via Blueprints
-          <span class="conf"> STOC 2026 </span> 
-        </div>
-        <div class="author"> 
-          Sepehr Assadi, 
-          <a href="https://ca.linkedin.com/in/max-jiang">Max Jiang</a>, 
-          <a href="https://ca.linkedin.com/in/mars-xiang">Mars Xiang</a>
-        </div>
-        <div class="info"><a href="https://dl.acm.org/doi/epdf/10.1145/3798129.3800811">[Conference version]</a></div>
-       <!-- <div class="info"><a href="#">[arXiv]</a></div>-->
-
-        <div class="summary">
-          <span style="font-weight: bold;"> Summary:</span> 
-         We reduce the problem of proving single-pass semi-streaming lower bounds for the maximum matching problem---one of the most longstanding open questions in the graph streaming literature---to a 
-         constant-size optimization problem which we call a "blueprint". This allows one to bypass all information theory and extremal graph theory (in particular RS graphs) arguments needed in prior work and focus
-         solely on constructing better blueprints. We then use blueprints to improve prior best lower bound of 0.59-approximtion in <a href="https://arxiv.org/pdf/2103.11669">[Kap21]</a> to a 0.55-approximation (bonus: the paper is <1/3 in length). 
-        </div>
-      </div>
-    
-       <div class="selected-paper">
-        <div class="title">
-          Settling the Pass Complexity of Streaming Set Cover
-          <span class="conf"> STOC 2026 </span> 
-        </div>
-        <div class="author"> 
-          Sepehr Assadi, 
-          <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a>
-        </div>
-        <div class="info"><a href="https://dl.acm.org/doi/epdf/10.1145/3798129.3800872">[Conference version]</a></div>
-        <div class="summary">
-          <span style="font-weight: bold;"> Summary:</span> 
-          Any p-pass polylog(n)-approximation for streaming set cover (m sets, n elements) requires Omgt(mn^{1/p}) space, proving the optimality of the algorithm of <a href="https://www.mit.edu/~mahabadi/papers/2016_SetCover.pdf">[HIMV16]</a> and settling a conjecture in that work. 
-        </div>
-      </div>
-    
 
       <!--
        <div class="selected-paper">
@@ -775,7 +775,7 @@
          The results include various upper and lower bounds for single-pass algorithms in adversarial-order, random-order, and insertion-deletion streams. 
         </div>
       </div>
-    -->
+    
        <div class="selected-paper">
         <div class="title">
           Better Bounds for Semi-Streaming Single-Source Shortest Paths 
@@ -793,7 +793,7 @@
           Previously, the upper bound was some unspecified polylog(n) and the lower bound was Omega(1). Both algorithm and lower bound are quite simple! 
         </div>
       </div>
-
+-->
 
       <div class="selected-paper">
         <div class="title">
