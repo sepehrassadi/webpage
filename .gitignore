@@ -1,0 +1,11 @@
+# macOS / editor cruft
+.DS_Store
+**/.DS_Store
+._*
+*.swp
+*.swo
+*.sw?
+Thumbs.db
+
+# local scratch (not part of the site)
+_to_delete/

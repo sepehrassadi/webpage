@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Testing for mobile devices:
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
--->
-
-
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sepehr Assadi </title>
   <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- SEO & social-sharing metadata -->
+  <meta name="description" content="Sepehr Assadi — Associate Professor of Computer Science at the University of Waterloo, working on sublinear algorithms and complexity theory for massive graphs.">
+  <meta name="author" content="Sepehr Assadi">
+  <link rel="canonical" href="https://sepehr.assadi.info/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Sepehr Assadi">
+  <meta property="og:title" content="Sepehr Assadi — Associate Professor, University of Waterloo">
+  <meta property="og:description" content="Theoretical computer science: sublinear algorithms and complexity theory for massive graphs (streaming, distributed, MPC).">
+  <meta property="og:url" content="https://sepehr.assadi.info/">
+  <meta property="og:image" content="https://sepehr.assadi.info/images/sepehr.png">
+  <meta property="og:image:alt" content="Photo of Sepehr Assadi">
+  <meta property="profile:first_name" content="Sepehr">
+  <meta property="profile:last_name" content="Assadi">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sepehr Assadi — Associate Professor, University of Waterloo">
+  <meta name="twitter:description" content="Theoretical computer science: sublinear algorithms and complexity theory for massive graphs.">
+  <meta name="twitter:image" content="https://sepehr.assadi.info/images/sepehr.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sepehr Assadi",
+    "givenName": "Sepehr",
+    "familyName": "Assadi",
+    "url": "https://sepehr.assadi.info/",
+    "image": "https://sepehr.assadi.info/images/sepehr.png",
+    "jobTitle": "Associate Professor",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "University of Waterloo" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Pennsylvania" },
+    "knowsAbout": ["Theoretical Computer Science", "Sublinear Algorithms", "Graph Streaming", "Complexity Theory"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=QSVAzVIAAAAJ&hl=en",
+      "https://dblp.org/pid/29/2550-4.html",
+      "https://orcid.org/0009-0006-8914-5995",
+      "https://cs.uwaterloo.ca/about/people/sassadi"
+    ]
+  }
+  </script>
   <style>
     /* General tools */
 
@@ -294,6 +333,43 @@
       line-height: 1.8em;
     }
 
+    /* ===== Responsive layout for phones / small tablets ===== */
+    @media (max-width: 768px) {
+      body { font-size: 17px; }
+
+      /* Reclaim the wide right margin on small screens */
+      .make-margin { margin-left: 5%; margin-right: 5%; }
+
+      /* Scale down the oversized display type */
+      h1 { font-size: 40px; line-height: 1.15; }
+      h2 { font-size: 19px; }
+      .section { font-size: 30px; margin-top: 8%; }
+      .paper-year { font-size: 30px; }
+
+      /* Stack the intro text and photo vertically instead of two columns */
+      .intro, .pic { display: block; width: 100%; }
+      .pic { max-width: 210px; margin: 16px auto 6px; }
+
+      /* Navigation: let items wrap and center rather than float in one row */
+      .topmenu { margin-left: 0; }
+      .topnav a { float: none; display: inline-block; padding: 10px 12px; font-size: 15px; }
+
+      /* Contact table: tighten spacing so the value column has room */
+      .bullet-table td { padding: 2px 5px; }
+
+      /* Wide reference tables (PC lists, editorials) flow as text instead of
+         forcing horizontal scroll */
+      .big-list table,
+      .big-list table tbody,
+      .big-list table tr,
+      .big-list table td { display: inline; margin: 0; }
+      .big-list table td { padding: 0 4px 0 0; }
+
+      /* Safety net: nothing should overflow the viewport width */
+      img, table { max-width: 100%; }
+      .selected-paper { padding: 0.9rem 1rem; }
+    }
+
   </style>
 
   <!-- Scripts --> 
@@ -377,7 +453,7 @@
 
 
       <p style="margin-top: 5px;">  <span style="font-weight:bold; color:red"> PC (co)chair: </span> I am co-chairing FOCS 2026, chaired by <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a> 
-        (<a href="https://sanjeevkhanna.org/FOCS2026_Accepted%20Papers.html">list of accepted papers</a> is out now). I am also chairing  <a href="https://www.local-algorithms.com/WOLA2026/">WOLA 2026</a>. I previously co-chaired SOSA 2026 together with  <a href="http://www2.compute.dtu.dk/~erot/">Eva Rotenberg</a> (<a href="https://www.siam.org/conferences-events/siam-conferences/sosa26/program/accepted-papers/">list of accepted papers</a>). 
+        (<a href="https://sanjeevkhanna.org/FOCS2026_Accepted%20Papers.html">list of accepted papers</a> is out now). I am also chairing  <a href="https://www.local-algorithms.com/WOLA2026/">WOLA 2026</a>. I previously co-chaired SOSA 2026 together with  <a href="https://algorithms.itu.dk/erot.html">Eva Rotenberg</a> (<a href="https://www.siam.org/conferences-events/siam-conferences/sosa26/program/accepted-papers/">list of accepted papers</a>). 
       <p>
 
       <p>  <span style="font-weight:bold; color:red"> A&C Seminar: </span> 
@@ -450,14 +526,14 @@
       at the <a href="https://cs.princeton.edu">Computer Science Department</a> of Princeton University,    
       supported by the <a href="https://www.simonsfoundation.org/mathematics-physical-sciences/algorithms-and-geometry/">Simons Algorithms and Geometry
       Collaboration</a>. I received my PhD in 2018 from the <a href="http://www.cis.upenn.edu">Computer & Information Science Department</a> at University of Pennsylvania 
-      and was extremely fortunate to have <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a> as my advisor. My <a href="#phd-thesis">PhD thesis</a> was on Combinatorial Optimization for Massive Datasets. 
+      and was extremely fortunate to have <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a> as my advisor. My <a href="#phd-thesis">PhD thesis</a> was on Combinatorial Optimization for Massive Datasets. 
       During my PhD, I spent the summer of 2017 as a research intern at <a href="https://research.google/locations/new-york/">Google Research (NYC)</a>
       with their amazing <a href="https://research.google/teams/algorithms-optimization/">Algorithms and Optimization team</a>. 
       I got my B.Sc. in Computer Engineering from <a href="http://sharif.edu">Sharif University of Technology</a>.
       </p>
       
       <p>
-          My research has been generously supported by the Alfred P. Sloan Foundation (<a href="https://sloan.org/fellowships/2023-Fellows">Sloan Research Fellowship</a>), the Natural Sciences and Engineering Research Council of Canada (NSERC) (<a href="https://www.nserc-crsng.gc.ca/professors-professeurs/grants-subs/dgigp-psigp_eng.asp">Discovery Grant</a>), the <a href="https://uwaterloo.ca/math/research/internal-awards-and-opportunities#faculty-mathematics-research-chairs">Faculty of Mathematics Research Chair</a> from University of Waterloo, the US National Science Foundation (NSF)</a> (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2047061">Faculty Early Career Development (CAREER) Award</a>), Google Research (<a href="https://research.google/outreach/research-scholar-program/recipients/">Research Scholar Program</a>), and Rutgers Research Council (<a href="https://academicaffairs.rutgers.edu/ay-2022-2023-research-council-award-recipients">Fulcrum Award</a>). 
+          My research has been generously supported by the Alfred P. Sloan Foundation (<a href="https://sloan.org/storage/app/media/files/press_releases/Announcing-the-2023-Sloan-Research-Fellows.pdf">Sloan Research Fellowship</a>), the Natural Sciences and Engineering Research Council of Canada (NSERC) (<a href="https://www.nserc-crsng.gc.ca/professors-professeurs/grants-subs/dgigp-psigp_eng.asp">Discovery Grant</a>), the <a href="https://uwaterloo.ca/math/research/internal-awards-and-opportunities#faculty-mathematics-research-chairs">Faculty of Mathematics Research Chair</a> from University of Waterloo, the US National Science Foundation (NSF)</a> (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2047061">Faculty Early Career Development (CAREER) Award</a>), Google Research (<a href="https://research.google/outreach/research-scholar-program/recipients/">Research Scholar Program</a>), and Rutgers Research Council (<a href="https://academicaffairs.rutgers.edu/ay-2022-2023-research-council-award-recipients">Fulcrum Award</a>). 
        </p>    
        
      <p>
@@ -542,9 +618,9 @@
         <li> Graduate students:
            <ul class="small-list">  
                 <li> <a href="https://sites.google.com/view/chen-wang/home">Chen Wang</a> <span class="comment">(PhD @ Rutgers, 2019-2024; now an Assistant Professor at Rensselaer Polytechnic Institute (RPI))</span> </li>
-                <li> <a href="https://https://vihanshah72.github.io/">Vihan Shah</a> <span class="comment">(PhD, 2020-2025; now a Marie Curie Postdoctoral Fellow at University of Birmingham)</span> </li>
-                <li> <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> <span class="comment">(PhD, 2021-2026)</span> </li>
-                <li> <a href="https://people.cs.rutgers.edu/~pm822/">Parth Mittal</a> <span class="comment">(PhD, 2021-2026)</span> </li>
+                <li> <a href="https://vihanshah72.github.io/">Vihan Shah</a> <span class="comment">(PhD, 2020-2025; now a Marie Curie Postdoctoral Fellow at University of Birmingham)</span> </li>
+                <li> <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> <span class="comment">(PhD, 2021-2026; next position: Faculty Fellow at New York University)</span> </li>
+                <li> <a href="https://people.cs.rutgers.edu/~pm822/">Parth Mittal</a> <span class="comment">(PhD, 2021-2026; now at Google, Bangalore)</span> </li>
                 <li> <a href="https://student.cs.uwaterloo.ca/~hyazdany/">Helia Yazdanyar</a> <span class="comment">(PhD, 2025--)</span> </li>
                 <li> <a href="https://nalamchaitanya.github.io/">Chaitanya Nalam</a> <span class="comment">(MS @ Rutgers, 2021--2022, now a PhD student at University of Michigan)</span></li>
           </ul>
@@ -558,9 +634,9 @@
             <li> <a href="https://glennsun.com/">Glenn Sun</a> <span class="comment">(DIMACS REU 2021, now a PhD student at University of Washington) </span></li>
             <li> <a href="https://www.linkedin.com/in/liubov-samborska-bb5915211">Liubov (Luba) Samborska</a> <span class="comment">(DIMACS REU 2022, now a PhD student at University of Michigan) </span></li>
             <li> <a href="https://www.linkedin.com/in/alexandro-garces-9a2016224">Alexandro (Alex) Garces</a> <span class="comment">(DIMACS REU 2023)</span></li>
-            <li> <a href="https://ca.linkedin.com/in/max-jiang">Max Jiang</a> <span class="comment"> (URA 2024, 2025)</span> </li>
-            <li> <a href="https://ca.linkedin.com/in/mars-xiang">Mars Xiang</a> <span class="comment"> (URA 2024, URF Winter 2025)</span> </li>
-            <li> <a href="https://ca.linkedin.com/in/chris-trevisan-865b111ba">Chris Trevisan</a> <span class="comment"> (URA 2024, URF Winter 2025)</span> </li>
+            <li> <a href="https://ca.linkedin.com/in/max-jiang">Max Jiang</a> <span class="comment"> (URA 2024-2026)</span> </li>
+            <li> <a href="https://ca.linkedin.com/in/mars-xiang">Mars Xiang</a> <span class="comment"> (URA 2024-2026, URF Winter 2025)</span> </li>
+            <li> <a href="https://ca.linkedin.com/in/chris-trevisan-865b111ba">Chris Trevisan</a> <span class="comment"> (URA 2024-2026, URF Winter 2025)</span> </li>
             <li> <a href="https://trentium.ca/">Daniel Ye</a> <span class="comment"> (URA 2024, 2025)</span> </li>
             <li> <a href="https://www.linkedin.com/in/gunadigani/">Gunadi Gani</a> <span class="comment"> (URA 2026)</span> </li>
          </ul>
@@ -590,7 +666,7 @@
         <ul class="small-list">
            <li> <a href="https://focs.computer.org/2026/">FOCS 2026</a> (co-chair; chaired by <a href="https://sanjeevkhanna.org/">Sanjeev Khanna</a>) -- list of accepted papers is available <a href="https://sanjeevkhanna.org/FOCS2026_Accepted%20Papers.html">here</a>.</li>
             <li> <a href="https://www.local-algorithms.com/WOLA2026/">WOLA 2026</a> </li>
-          <li> <a href="https://www.siam.org/conferences-events/siam-conferences/sosa26/">SOSA 2026</a> (co-chair with <a href="http://www2.compute.dtu.dk/~erot/">Eva Rotenberg</a>) -- list of accepted papers is available <a href="https://www.siam.org/conferences-events/siam-conferences/sosa26/program/accepted-papers/">here</a>.</li>
+          <li> <a href="https://www.siam.org/conferences-events/siam-conferences/sosa26/">SOSA 2026</a> (co-chair with <a href="https://algorithms.itu.dk/erot.html">Eva Rotenberg</a>) -- list of accepted papers is available <a href="https://www.siam.org/conferences-events/siam-conferences/sosa26/program/accepted-papers/">here</a>.</li>
         </ul>
       </li>  
       <li> Program committees: 
@@ -609,19 +685,19 @@
               <td> <a href="https://algo-conference.org/2023/esa/">ESA 2023</a>, </td>
               <td> <a href="https://focs.computer.org/2023/">FOCS 2023</a>, </td>
               <td> <a href="https://icalp2023.cs.upb.de/">ICALP 2023</a>, </td>
-              <td> <a href="https://www.siam.org/conferences/cm/conference/soda23">SODA 2023</a>, </td>
+              <td> <a href="https://www.siam.org/conferences-events/past-event-archive/soda23/">SODA 2023</a>, </td>
               <td> <a href="http://edbticdt2023.cs.uoi.gr/?contents=main.html">ICDT 2023</a>,  </td>
               <td> <a href="https://randomconference.com/random-2022-home/">RANDOM 2022</a>, </td>
               <td> <a href="https://hpi.de/algo2022/esa/">ESA 2022</a>, </td>
               <td> <a href="http://acm-stoc.org/stoc2022/">STOC 2022</a>, </td>
           </tr>
           <tr>
-              <td> <a href="https://www.siam.org/conferences/cm/conference/soda22">SODA 2022</a>, </td>
-              <td> <a href="https://www.siam.org/conferences/cm/conference/sosa22">SOSA 2022</a>, </td>
+              <td> <a href="https://www.siam.org/conferences-events/past-event-archive/soda22/">SODA 2022</a>, </td>
+              <td> <a href="https://www.siam.org/conferences-events/past-event-archive/sosa22/">SOSA 2022</a>, </td>
               <td> <a href="https://www.podc.org/podc2021/">PODC 2021</a>, </td>
               <td> <a href="https://databasetheory.org/index.php/node/110">PODS 2021</a>, </td>
               <td> <a href="https://icalp2020.saarland-informatics-campus.de/">ICALP 2020</a>, </td>
-              <td> <a href="https://www.siam.org/Conferences/CM/Conference/soda20">SODA 2020</a>. </td>
+              <td> <a href="https://www.siam.org/conferences-events/past-event-archive/soda20/">SODA 2020</a>. </td>
           </tr>
         </table>
       </li> 
@@ -681,7 +757,7 @@
       
       <p> As is the convention in Theoretical Computer Science, all authorships in this list are in alphabetical order.  
         See the <span class="info"><a>[tags]</a></span> below each paper for more information including full versions, videos, etc. 
-        For further details, see <a href="https://dblp.org/pers/hd/a/Assadi:Sepehr">[DBLP]</a> and <a href="https://scholar.google.com/citations?user=QSVAzVIAAAAJ&hl=en">[Google Scholar]</a>.
+        For further details, see <a href="https://dblp.org/pers/hd/a/Assadi:Sepehr">[DBLP]</a> <a href="https://scholar.google.com/citations?user=QSVAzVIAAAAJ&hl=en">[Google Scholar]</a>, and <a href="https://orcid.org/0009-0006-8914-5995">[ORCID]</a>.
       </p>
 
 
@@ -790,7 +866,7 @@
            <a href="https://web.eecs.umich.edu/~garytho/">Gary Hoppenworth</a>, 
           <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> 
         </div>
-        <div class="info"><a href="https://arxiv.org/abs/2507.17841">[arXiv]</a></div>
+        <div class="info"><a href="https://arxiv.org/abs/2507.17841">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978971.184">[Conference version]</a></div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> 
           Better upper and lower bounds on pass-complexity of semi-streaming algorithms for single-source (1+eps)-approximate shortest paths: O(log^2) pass algorithm and Omega(log n) pass lower bound. 
@@ -809,7 +885,7 @@
           <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> 
         </div>
         <div class="info">
-          <a href="https://arxiv.org/abs/2504.01802">[arXiv]</a>
+          <a href="https://arxiv.org/abs/2504.01802">[arXiv]</a>, <a href="https://doi.org/10.1109/FOCS63196.2025.00040">[Conference version]</a>
           <a href="https://youtu.be/0xTYFfRN7wA?si=duW8r4mDog4fNtYO">[talk: Janani @ TCS+] </a>
         </div>
         <div class="summary">
@@ -826,7 +902,7 @@
           <span class="conf"> STOC 2025 </span> <span style="color:black;">,</span> <span class="conf">JACM 2026</span>, <span class="conf">HALG 2026</span>  
         </div>
         <div class="author"> Sepehr Assadi, <a href="http://behnezhad.com/">Soheil Behnezhad</a>, <a href="https://www.dcs.warwick.ac.uk/~u1671158/">Sayan Bhattacharya</a>, <a href="https://www.martincosta.co.uk/home">Martin Costa</a>, <a href="https://sites.google.com/site/soloshay/">Shay Solomon</a>, <a href="https://zhangty12.github.io/">Tianyi Zhang</a>  </div>
-        <div class="info"><a href="https://arxiv.org/abs/2410.05240">[arXiv]</a>, <a href="papers/stoc25-1.pdf">[Conference version]</a>,  <a href="https://dl.acm.org/doi/10.1145/3806392">[JACM version]</a>, <a href="https://www.youtube.com/watch?v=jtz0T1EEK8w">[talk: Martin @ TCS+] </a> <a href="https://www.youtube.com/watch?v=3e6L0Bb7PZk">[talk: Martin @ STOC]</a>, <a href="https://simons.berkeley.edu/media/28058/download?inline">[Simons Institute polynomial times magazine]</a>
+        <div class="info"><a href="https://arxiv.org/abs/2410.05240">[arXiv]</a>, <a href="papers/stoc25-1.pdf">[Conference version]</a>,  <a href="https://dl.acm.org/doi/10.1145/3806392">[JACM]</a>, <a href="https://www.youtube.com/watch?v=jtz0T1EEK8w">[talk: Martin @ TCS+] </a> <a href="https://www.youtube.com/watch?v=3e6L0Bb7PZk">[talk: Martin @ STOC]</a>, <a href="https://simons.berkeley.edu/media/28058/download?inline">[Simons Institute polynomial times magazine]</a>
          </div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> A (Delta+1) edge coloring algorithm in only O(m log(Delta)) randomized time, 
@@ -843,7 +919,7 @@
           <span class="conf"> SODA 2025 </span>,  <span class="conf"> JACM 2026 </span>  
         </div>
         <div class="author"> Sepehr Assadi, <a href="http://behnezhad.com/">Soheil Behnezhad</a>, <a href="https://people.cs.bris.ac.uk/~konrad/">Christian Konrad</a>, <a href="https://kheerannaidu.com/">Kheeran K. Naidu</a>, <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> </div>
-        <div class="info"><a href="https://arxiv.org/abs/2407.21005">[arXiv]</a>, <a href="https://dl.acm.org/doi/10.1145/3820493">[JACM version]</a></div>
+        <div class="info"><a href="https://arxiv.org/abs/2407.21005">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978322.25">[Conference version]</a>, <a href="https://dl.acm.org/doi/10.1145/3820493">[JACM]</a></div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> Firstly, previous upper bounds of O(log n) passes for approximating matchings in dynamic streams
           can be exponentially improved to O(log log n) passes. Secondly, previous lower bounds of one pass can also be improved to Omega(log log n) passes, fully settling the pass complexity of this fundamental problem. Our results have further interesting implications to models like MPC. 
@@ -858,7 +934,7 @@
           <span class="conf"> SODA 2025 </span> 
         </div>
         <div class="author"> Sepehr Assadi</div>
-        <div class="info"><a href="https://arxiv.org/abs/2405.13371">[arXiv]</a>, <a href="https://www.youtube.com/live/_mp5hQx_Jcs?t=5s">[talk: Sepehr @ Simons Institute]</a></div>
+        <div class="info"><a href="https://arxiv.org/abs/2405.13371">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978322.165">[Conference version]</a>, <a href="https://www.youtube.com/live/_mp5hQx_Jcs?t=5s">[talk: Sepehr @ Simons Institute]</a></div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> A new way of solving edge coloring in general graphs by repeatedly peeling off "fair" matchings
           to get Delta+O(log n) coloring in near-linear randomized time. Corollary: an algorithm for (Delta+1) edge coloring in Vizing's theorem in ~O(n^2) randomized time, improving upon four-decades old bounds of O(m\sqrt{n}) time (see also the parallel work of <a href="https://arxiv.org/abs/2405.15449">[BCCST24]</a> with incomparable results). 
@@ -870,7 +946,7 @@
           <span class="conf"> SOSA 2025 </span> <span style="color:black;">,</span> <span class="conf">TheoretiCS 2026</span> 
         </div>
         <div class="author"> Sepehr Assadi, <a href="https://student.cs.uwaterloo.ca/~hyazdany/">Helia Yazdanyar</a> </div>
-         <div class="info"><a href="https://arxiv.org/abs/2502.17629">[arXiv]</a> <a href="https://arxiv.org/abs/2502.17629">[Journal version]</a></div>
+         <div class="info"><a href="https://arxiv.org/abs/2502.17629">[arXiv]</a> <a href="https://theoretics.episciences.org/17420">[TheoretiCS]</a></div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> A combinatorially weaker version of palette sparsification theorem in <a href="https://arxiv.org/abs/1807.08886">[ACK19]</a> still suffices for efficient sublinear algorithms for (Delta+1) coloring, but now using much simpler algorithms and analyses. 
         </div>
@@ -884,8 +960,8 @@
         </div>
         <div class="author"> Sepehr Assadi, <a href="https://people.cs.bris.ac.uk/~konrad/">Christian Konrad</a>, <a href="https://kheerannaidu.com/">Kheeran K. Naidu</a>, <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> </div>
         <div class="info">
-          <a href="https://arxiv.org/pdf/2312.13178.pdf">[arXiv]</a>
-          <a href="https://epubs.siam.org/doi/epdf/10.1137/24M1689910">[SICOMP version]</a>
+          <a href="https://arxiv.org/pdf/2312.13178.pdf">[arXiv]</a>, <a href="https://dl.acm.org/doi/10.1145/3618260.3649763">[Conference version]</a>
+          <a href="https://epubs.siam.org/doi/epdf/10.1137/24M1689910">[SICOMP]</a>
           <a href="https://youtu.be/TpybbwXDKLE">[talk: Sepehr @ Fields Institute] </a> 
         </div>
         <div class="summary">
@@ -903,8 +979,8 @@
         </div>
         <div class="author"> Sepehr Assadi </div>
         <div class="info">
-          <a href="https://arxiv.org/pdf/2307.02968v3">[arXiv]</a>, 
-          <a href="https://arxiv.org/pdf/2307.02968">[Journal paper]</a>, 
+          <a href="https://arxiv.org/pdf/2307.02968v3">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611977936.31">[Conference version]</a>, 
+          <a href="https://theoretics.episciences.org/16269">[TheoretiCS]</a>, 
           <a href="https://youtu.be/bILurZvDaYI">[talk: Sepehr @ Simons Institute]</a></div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> A really simple (1-eps) approximation semi-streaming algorithm
@@ -925,7 +1001,7 @@
           Sepehr Assadi, 
           <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> 
         </div>
-        <div class="info"><a href="https://arxiv.org/abs/2310.05728">[arXiv]</a></div>
+        <div class="info"><a href="https://arxiv.org/abs/2310.05728">[arXiv]</a>, <a href="https://ieeexplore.ieee.org/document/10353146/">[Conference version]</a></div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> 
           The first pass-approximation tradeoff for constant-factor approximation of semi-streaming matchings, a question dating back to the introduction of the model in 
@@ -948,7 +1024,7 @@
         </div>
         <div class="info">
           <a href="https://arxiv.org/abs/2207.09354">[arXiv]</a>, 
-          <a href="https://dl.acm.org/doi/abs/10.1145/3564246.3585110">[Conference paper]</a>, 
+          <a href="https://dl.acm.org/doi/abs/10.1145/3564246.3585110">[Conference version]</a>, 
           <a href="https://youtu.be/paIs0P-0vuA?t=3">[talk: Sepehr @ FODSI summer school]</a>, 
           <a href="https://www.youtube.com/watch?v=YOhRxbbQnoA">[talk: Sanjeev @ Princeton]</a>, 
           <a href="https://www.youtube.com/watch?v=ePuSjP1akYw">[talk: Huan @ STOC]</a>
@@ -968,12 +1044,12 @@
         </div>
         <div class="author"> 
           Sepehr Assadi, 
-          <a href="https://people.cs.rutgers.edu/~farach/">Martin Farach-Colton</a>, 
+          <a href="https://engineering.nyu.edu/faculty/martin-farach-colton">Martin Farach-Colton</a>, 
           <a href="https://sites.google.com/site/williamkuszmaul"> William Kuszmaul </a> 
         </div>
         <div class="info">
           <a href="https://arxiv.org/abs/2207.10556">[arXiv]</a>,
-          <a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611977554.ch20">[Conference paper]</a>,
+          <a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611977554.ch20">[Conference version]</a>,
           <a href="https://www.youtube.com/watch?v=y-lyPBH2SRk">[talk: Sepehr @ DIMACS]</a>
         </div>
         <div class="summary">
@@ -994,8 +1070,8 @@
         </div>
         <div class="info">
           <a href="https://arxiv.org/abs/2209.09049">[arXiv]</a>,
-          <a href="https://www.computer.org/csdl/proceedings-article/focs/2022/551900b193/1JtvUzzL30s">[Conference paper]</a>
-          <a href="https://epubs.siam.org/eprint/TR7KWQDHJARVNA8YJIMY/full">[Journal paper]</a>
+          <a href="https://www.computer.org/csdl/proceedings-article/focs/2022/551900b193/1JtvUzzL30s">[Conference version]</a>
+          <a href="https://epubs.siam.org/eprint/TR7KWQDHJARVNA8YJIMY/full">[SICOMP]</a>
         </div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> 
@@ -1018,7 +1094,7 @@
         </div>
         <div class="info">
           <a href="https://arxiv.org/abs/2109.14891">[arXiv]</a>,
-          <a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[Conference paper]</a>, 
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[Conference version]</a>, 
           <a href="https://www.youtube.com/watch?v=bq-upL_Vk88">[talk: Glenn @ STOC]</a>,
           <a href="https://ptreview.sublinear.info/2021/10/">[Property testing review]</a>
         </div>
@@ -1044,8 +1120,8 @@
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/pdf/2203.10984v1.pdf">[arXiv]</a>, 
-          <a href="https://arxiv.org/abs/2203.10984">[Journal paper]</a>,
-          <a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[Conference paper]</a>,  
+          <a href="https://theoretics.episciences.org/12189">[TheoretiCS]</a>,
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[Conference version]</a>,  
           <a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=e1bc0670-ce8e-44ec-b8f7-af12008a234a">[talk: Sepehr @ NUS]</a>, 
           <a href="https://www.youtube.com/watch?v=y0Q_IyAhbKI">[talk: Parth @ STOC]</a>
         </div>
@@ -1064,7 +1140,7 @@
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/2102.07011">[arXiv]</a>, 
-          <a href="http://dagstuhl.sunsite.rwth-aachen.de/volltexte/2021/14088/pdf/LIPIcs-ICALP-2021-19.pdf">[Conference paper]</a>, 
+          <a href="http://dagstuhl.sunsite.rwth-aachen.de/volltexte/2021/14088/pdf/LIPIcs-ICALP-2021-19.pdf">[Conference version]</a>, 
           <a href="https://www.youtube.com/watch?v=S180rJ5UuL4">[talk: Soheil @ STOC]</a>, 
           <a href="https://www.youtube.com/watch?v=VZXw3-ecXJ4">[talk: Soheil @ ICALP]</a>
         </div>
@@ -1082,11 +1158,11 @@
         </div>
         <div class="author">
           Sepehr Assadi, 
-          <a href="https://nvishvajeet.github.io/">Vishvajeet N.</a>
+          <a href="https://vishvajeetn.org/">Vishvajeet N.</a>
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/2104.04908">[arXiv]</a>, 
-          <a href="https://dl.acm.org/doi/10.1145/3406325.3451110">[Conference paper]</a>, 
+          <a href="https://dl.acm.org/doi/10.1145/3406325.3451110">[Conference version]</a>, 
           <a href="https://www.youtube.com/watch?v=jtP5EMOFxqI">[talk: Vishvajeet @ STOC]</a>,
           <a href="https://ptreview.sublinear.info/2021/05/news-for-april-2021/">[Property testing review]</a>
         </div>
@@ -1111,7 +1187,7 @@
           <a href="https://www.cs.princeton.edu/~ret/">Robert E. Tarjan</a>
         </div>
         <div class="info"> 
-          <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976472.18">[Conference paper]</a>
+          <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976472.18">[Conference version]</a>
         </div>
         <div class="summary">
           <span style="font-weight: bold;"> Summary:</span> 
@@ -1126,7 +1202,7 @@
         <div class="author">Sepehr Assadi, <a href="https://engineering.princeton.edu/faculty/ran-raz">Ran Raz</a></div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/2009.01161">[arXiv]</a>, 
-          <a href="http://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a342/962100a342.pdf">[Conference paper]</a>,
+          <a href="http://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a342/962100a342.pdf">[Conference version]</a>,
           <a href="https://www.youtube.com/watch?v=QvSepVoaRCU">[talk: Sepehr @ FOCS]</a>
         </div>
         <div class="summary">
@@ -1147,7 +1223,7 @@
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/2008.04148">[arXiv]</a>, 
-          <a href="https://drops.dagstuhl.de/opus/volltexte/2020/13079/pdf/LIPIcs-DISC-2020-1.pdf">[Conference paper]</a>,
+          <a href="https://drops.dagstuhl.de/opus/volltexte/2020/13079/pdf/LIPIcs-DISC-2020-1.pdf">[Conference version]</a>,
           <a href="https://www.youtube.com/watch?v=8OTUEM9yVQc">[talk: Zach @ DISC]</a>
         </div>
         <div class="summary">
@@ -1170,7 +1246,7 @@
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/pdf/2006.10456.pdf">[arXiv]</a>, 
-          <a href="https://drops.dagstuhl.de/opus/volltexte/2020/12609/pdf/LIPIcs-APPROX6.pdf">[Conference paper]</a>,
+          <a href="https://drops.dagstuhl.de/opus/volltexte/2020/12609/pdf/LIPIcs-APPROX6.pdf">[Conference version]</a>,
           <a href="https://www.youtube.com/watch?v=kkHnQyFSwLM">[talk: Sepehr @ RANDOM]</a>
           <a href="https://ptreview.sublinear.info/?p=1352">[Property testing review]</a>
         </div>
@@ -1192,12 +1268,12 @@
         <div class="author">
           Sepehr Assadi, 
           <a href="#">Hrishikesh Khandeparkar</a>, 
-          <a href="https://www.cs.princeton.edu/~rrsaxena/">Raghuvansh Saxena</a>, 
+          <a href="https://main.tifr.res.in/raghuvansh.saxena/">Raghuvansh Saxena</a>, 
           <a href="https://www.cs.princeton.edu/~smattw/">Matt Weinberg</a>
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/2011.07414">[arXiv]</a>, 
-          <a href="https://dl.acm.org/doi/abs/10.1145/3357713.3384267">[Conference paper]</a>,
+          <a href="https://dl.acm.org/doi/abs/10.1145/3357713.3384267">[Conference version]</a>, <a href="https://epubs.siam.org/doi/10.1137/20M1370021">[SICOMP]</a>,
           <a href="https://www.youtube.com/watch?v=VWmQSQzXBGI&list=PLn0nrSd4xjjadfcMd5xvmJ_GNSLDi1ATn&index=74">[talk: Raghuvansh @ STOC]</a>
         </div>
         <div class="summary">
@@ -1219,7 +1295,7 @@
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/pdf/1911.02716.pdf">[arXiv]</a>, 
-          <a href="https://ieeexplore.ieee.org/abstract/document/8948592">[Conference paper]</a>,
+          <a href="https://ieeexplore.ieee.org/abstract/document/8948592">[Conference version]</a>, <a href="https://epubs.siam.org/doi/10.1137/20M1316068">[SICOMP]</a>,
           <a href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3eb2117e-c81d-4361-95a9-ab0d013e115a">[talk: Sahil @ Northwestern]</a>
           <a href="https://www.sigecom.org/exchanges/volume_18/1/ASSADI.pdf">[research note @ Sigecom Exchanges]</a>
         </div>
@@ -1239,12 +1315,12 @@
       <div class="selected-paper">
         <div class="title"> Polynomial Pass Lower Bounds for Graph Streaming Algorithms <span class="conf"> STOC 2019 </span> </div>
         <div class="author">
-          Sepehr Assadi, <a href="https://sites.google.com/view/chenyu94">Yu Chen</a>, <a href="http://www.cis.upenn.edu/~sanjeev">
+          Sepehr Assadi, <a href="https://sites.google.com/view/chenyu94">Yu Chen</a>, <a href="https://sanjeevkhanna.org">
           Sanjeev Khanna</a>
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/1904.04720">[arXiv]</a>, 
-          <a href="https://dl.acm.org/doi/10.1145/3313276.3316361">[Conference paper]</a>,
+          <a href="https://dl.acm.org/doi/10.1145/3313276.3316361">[Conference version]</a>,
           <a href="https://www.youtube.com/watch?v=U4Q02SLsjx0">[talk: Sepehr @ Princeton]</a>
         </div>
         <div class="summary">
@@ -1263,12 +1339,12 @@
         <div class="author">
           Sepehr Assadi, 
           <a href="https://sites.google.com/view/chenyu94">Yu Chen</a>,
-          <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>
+          <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>
         </div>
 
         <div class="info"> 
           <a href="https://arxiv.org/abs/1807.08886">[arXiv]</a>, 
-          <a href="https://dl.acm.org/doi/abs/10.5555/3310435.3310483">[Conference paper]</a>,
+          <a href="https://dl.acm.org/doi/abs/10.5555/3310435.3310483">[Conference version]</a>,
           <a href="https://youtu.be/VU7Y_8ZcNu0">[talk: Sepehr @ Simons Institute]</a>,
           <a href="https://www.youtube.com/watch?v=CyXKINjcKik">[talk: Sepehr @ HALG]</a>,
           <a href="courses/cs671-f20/lec3.pdf">[Streamlined lecture notes]</a>,
@@ -1301,7 +1377,7 @@
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/1811.02009">[arXiv]</a>, 
-          <a href="https://drops.dagstuhl.de/opus/volltexte/2018/10037/pdf/OASIcs-SOSA-2019-11.pdf">[Conference paper]</a>,
+          <a href="https://drops.dagstuhl.de/opus/volltexte/2018/10037/pdf/OASIcs-SOSA-2019-11.pdf">[Conference version]</a>,
           <a href="presentations/matching-sparsifier_2019-slides.pdf">[Slides]</a>
         </div>
         <div class="summary">
@@ -1338,11 +1414,11 @@
         </div>
         <div class="author">
           Sepehr Assadi, 
-          <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>
+          <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>
         </div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/1705.08242">[arXiv]</a>,
-          <a href="https://dl.acm.org/doi/10.1145/3087556.3087581">[Conference paper]</a>,
+          <a href="https://dl.acm.org/doi/10.1145/3087556.3087581">[Conference version]</a>,
           <a href="presentations/randomized-coreset_matching-vc-slides.pdf">[Slides]</a>
         </div>
         <div class="summary">
@@ -1366,8 +1442,8 @@
         <div class="author">Sepehr Assadi</div>
         <div class="info"> 
           <a href="https://arxiv.org/abs/1705.01644">[arXiv]</a>, 
-          <a href="https://dl.acm.org/doi/pdf/10.1145/3381521">[Journal paper]</a>,
-          <a href="https://dl.acm.org/doi/10.1145/3381521">[Conference paper]</a>,
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3381521">[TEAC]</a>,
+          <a href="https://dl.acm.org/doi/10.1145/3381521">[Conference version]</a>,
           <a href="https://youtu.be/gArrHh9AF90">[talk: Sepehr @ EC]</a>,
           <a href="presentations/combinatorial-auctions_round-slides.pdf">[Slides]</a>
         </div>
@@ -1388,13 +1464,13 @@
         </div>
         <div class="author">
           Sepehr Assadi, 
-          <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>,  
-          <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>
+          <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>,  
+          <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>
         </div>
         <div class="info"> 
-            <a href="http://arxiv.org/abs/1603.05715">[arXiv]</a>, 
-            <a href="https://epubs.siam.org/doi/pdf/10.1137/16M1095482?casa_token=g5tqZIQaBowAAAAA:O6PSqDpq8uraITv5WHacIRtMMpsvnsnY3L-R3mDDtOt9rfLP5R-Bbu7B-ujg2V28iGqF3kGwqnGR">[Journal paper]</a>,
-            <a href="https://dl.acm.org/doi/10.1145/2897518.2897576">[Conference paper]</a>,
+            <a href="https://arxiv.org/abs/1603.05715">[arXiv]</a>, 
+            <a href="https://epubs.siam.org/doi/pdf/10.1137/16M1095482?casa_token=g5tqZIQaBowAAAAA:O6PSqDpq8uraITv5WHacIRtMMpsvnsnY3L-R3mDDtOt9rfLP5R-Bbu7B-ujg2V28iGqF3kGwqnGR">[SICOMP]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/2897518.2897576">[Conference version]</a>,
             <a href="presentations/single-pass_set-cover_2016-slides.pdf">[Slides]</a>
         </div>
         <div class="summary">
@@ -1412,13 +1488,13 @@
         </div>
         <div class="author">
           Sepehr Assadi, 
-          <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>, 
-          <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>,  
+          <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>, 
+          <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>,  
           <a href="http://www.grigory.us">Grigory Yaroslavtsev</a>
         </div>
         <div class="info"> 
-          <a href="http://arxiv.org/abs/1512.06143">[arXiv]</a> <span style="color:gray">(preliminary version)</span>,
-          <a href="https://sanjeevkhanna.org/papers/matchings_streaming_soda2016.pdf">[Conference paper]</a>,
+          <a href="https://arxiv.org/abs/1512.06143">[arXiv]</a> <span style="color:gray">(preliminary version)</span>,
+          <a href="https://sanjeevkhanna.org/papers/matchings_streaming_soda2016.pdf">[Conference version]</a>,
           <a href="presentations/dynamic_simultaneous_matching-slides.pdf">[Slides]</a>
         </div>
         <div class="summary">
@@ -1439,7 +1515,7 @@
       <p> As is the convention in Theoretical Computer Science, all authorships in this list are in alphabetical order 
         with a few exception that are outside TCS and are marked explicitly with *. 
         See the <span class="info"><a>[tags]</a></span> below each paper for more information including full versions, videos, etc. 
-        For further details, see <a href="https://dblp.org/pers/hd/a/Assadi:Sepehr">[DBLP]</a> and <a href="https://scholar.google.com/citations?user=QSVAzVIAAAAJ&hl=en">[Google Scholar]</a>. 
+        For further details, see <a href="https://dblp.org/pers/hd/a/Assadi:Sepehr">[DBLP]</a> <a href="https://scholar.google.com/citations?user=QSVAzVIAAAAJ&hl=en">[Google Scholar]</a>, and <a href="https://orcid.org/0009-0006-8914-5995">[ORCID]</a>. 
       </p>
 
       <p> <span style="font-weight: bold;">Jump to a particular year:</span>  <a href="#2026">2026</a>, <a href="#2025">2025</a>, <a href="#2024">2024</a>, <a href="#2023">2023</a>, <a href="#2022">2022</a>, <a href="#2021">2021</a>, <a href="#2020">2020</a>, <a href="#2019">2019</a>,
@@ -1469,7 +1545,7 @@
              Sepehr Assadi, 
                    <a href="https://ca.linkedin.com/in/max-jiang">Max Jiang</a>, 
           <a href="https://ca.linkedin.com/in/mars-xiang">Mars Xiang</a> </div>
-           <div class="paper-info"><a href="https://dl.acm.org/doi/epdf/10.1145/3798129.3800811">[Conference version]</a></div>
+           <div class="paper-info"><a href="https://arxiv.org/abs/2607.14644">[arXiv]</a>, <a href="https://dl.acm.org/doi/epdf/10.1145/3798129.3800811">[Conference version]</a></div>
        </li>
 
 
@@ -1490,7 +1566,7 @@
              Sepehr Assadi, 
           <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a>,
           <a href="https://student.cs.uwaterloo.ca/~hyazdany/">Helia Yazdanyar</a> </div>
-           <div class="paper-info"><a href="https://arxiv.org/abs/2510.18177">[arXiv]</a></div>
+           <div class="paper-info"><a href="https://arxiv.org/abs/2510.18177">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978971.217">[Conference version]</a></div>
        </li>
 
 
@@ -1499,7 +1575,7 @@
           <span class="paper-desc"> SODA 2026 </span>
           <div class="paper-author"> 
             Sepehr Assadi,  <a href="https://web.eecs.umich.edu/~garytho/">Gary Hoppenworth</a>, <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a>  </div>
-            <div class="paper-info"><a href="https://arxiv.org/abs/2507.17841">[arXiv]</a></div>
+            <div class="paper-info"><a href="https://arxiv.org/abs/2507.17841">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978971.184">[Conference version]</a></div>
        </li>
 
         <li>
@@ -1507,7 +1583,7 @@
           <span class="paper-desc"> SODA 2026 </span>
            <div class="paper-author"> 
             Sepehr Assadi, <a href="http://behnezhad.com/">Soheil Behnezhad</a>, <a href="https://www.dcs.warwick.ac.uk/~u1671158/">Sayan Bhattacharya</a>, <a href="https://www.martincosta.co.uk/home">Martin Costa</a>, <a href="https://sites.google.com/site/soloshay/">Shay Solomon</a>, <a href="https://zhangty12.github.io/">Tianyi Zhang</a>  </div>
-            <div class="paper-info"><a href="https://arxiv.org/abs/2510.12619">[arXiv]</a></div>
+            <div class="paper-info"><a href="https://arxiv.org/abs/2510.12619">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978971.198">[Conference version]</a></div>
        </li>
 
 
@@ -1519,7 +1595,7 @@
           <span class="paper-desc"> FOCS 2025 </span>
           <div class="paper-author"> 
             Sepehr Assadi, <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a>  </div>
-            <div class="paper-info"><a href="https://arxiv.org/abs/2504.01802">[arXiv]</a></div>
+            <div class="paper-info"><a href="https://arxiv.org/abs/2504.01802">[arXiv]</a>, <a href="https://doi.org/10.1109/FOCS63196.2025.00040">[Conference version]</a></div>
             <br/>
           <span class="award">Invited to <span style="font-weight: bold;"> SICOMP special issue</span> for FOCS'25 papers </span><br/>
            <span class="award">Invited talk at <span style="font-weight:bold"> TCS+</span> 2025 </span> 
@@ -1531,7 +1607,7 @@
           <span class="paper-desc"> PODS 2025 </span>
           <div class="paper-author"> 
             Sepehr Assadi, <a href="https://student.cs.uwaterloo.ca/~v46shah/">Vihan Shah</a> </div>
-            <div class="paper-info"><a href="https://arxiv.org/abs/2504.10748">[arXiv]</a></div>
+            <div class="paper-info"><a href="https://arxiv.org/abs/2504.10748">[arXiv]</a>, <a href="https://dl.acm.org/doi/10.1145/3725228">[Conference version]</a></div>
        </li>
 
         <li>
@@ -1539,7 +1615,7 @@
           <span class="paper-desc"> STOC 2025 </span>, <span class="paper-desc">JACM 2026</span>, <span class="paper-desc">HALG 2026</span>  
           <div class="paper-author"> 
             Sepehr Assadi, <a href="http://behnezhad.com/">Soheil Behnezhad</a>, <a href="https://www.dcs.warwick.ac.uk/~u1671158/">Sayan Bhattacharya</a>, <a href="https://www.martincosta.co.uk/home">Martin Costa</a>, <a href="https://sites.google.com/site/soloshay/">Shay Solomon</a>, <a href="https://zhangty12.github.io/">Tianyi Zhang</a>  </div>
-         <div class="paper-info"><a href="https://arxiv.org/abs/2410.05240">[arXiv]</a>, <a href="papers/stoc25-1.pdf">[Conference version]</a>, <a href="https://dl.acm.org/doi/10.1145/3806392">[JACM version]</a>, <a href="https://www.youtube.com/watch?v=jtz0T1EEK8w">[talk: Martin @ TCS+] </a> <a href="https://www.youtube.com/watch?v=3e6L0Bb7PZk">[talk: Martin @ STOC]</a>, <a href="https://simons.berkeley.edu/media/28058/download?inline">[Simons Institute polynomial times magazine]</a>
+         <div class="paper-info"><a href="https://arxiv.org/abs/2410.05240">[arXiv]</a>, <a href="papers/stoc25-1.pdf">[Conference version]</a>, <a href="https://dl.acm.org/doi/10.1145/3806392">[JACM]</a>, <a href="https://www.youtube.com/watch?v=jtz0T1EEK8w">[talk: Martin @ TCS+] </a> <a href="https://www.youtube.com/watch?v=3e6L0Bb7PZk">[talk: Martin @ STOC]</a>, <a href="https://simons.berkeley.edu/media/28058/download?inline">[Simons Institute polynomial times magazine]</a>
          </div>
          <br/>
         <span class="award" style="font-weight:bold;">Best Paper Award at STOC'25 </span><br/>
@@ -1573,7 +1649,7 @@
           <div class="paper-author"> 
             Sepehr Assadi, <a href="http://behnezhad.com/">Soheil Behnezhad</a>, <a href="https://people.cs.bris.ac.uk/~konrad/">Christian Konrad</a>, <a href="https://kheerannaidu.com/">Kheeran K. Naidu</a>, <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a>
           </div>
-         <div class="paper-info"><a href="https://www.arxiv.org/abs/2407.21005">[arXiv]</a>, <a href="https://dl.acm.org/doi/10.1145/3820493">[JACM version]</a>
+         <div class="paper-info"><a href="https://www.arxiv.org/abs/2407.21005">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978322.25">[Conference version]</a>, <a href="https://dl.acm.org/doi/10.1145/3820493">[JACM]</a>
         <br/>
        <span class="award">Invited to <span style="font-weight: bold;"> TALG special issue</span> for SODA'25 papers </span> (declined in favor of JACM)
       
@@ -1588,7 +1664,7 @@
           <div class="paper-author"> 
             Sepehr Assadi
           </div>
-         <div class="paper-info"><a href="https://arxiv.org/abs/2405.13371">[arXiv]</a>, <a href="https://www.youtube.com/live/_mp5hQx_Jcs?t=5s">[talk: Sepehr @ Simons Institute]</a></div>
+         <div class="paper-info"><a href="https://arxiv.org/abs/2405.13371">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978322.165">[Conference version]</a>, <a href="https://www.youtube.com/live/_mp5hQx_Jcs?t=5s">[talk: Sepehr @ Simons Institute]</a></div>
         </li>
 
         <li>
@@ -1597,7 +1673,7 @@
           <div class="paper-author"> 
             Sepehr Assadi, <a href="https://wp.nyu.edu/tandonschoolofengineering-aaronbernstein/">Aaron Bernstein</a>, <a href="https://zlangley.com/">Zach Langley</a>, <a href="https://cs.uwaterloo.ca/~lapchi/">Lap Chi Lau</a>, <a href="https://dblp.org/pid/29/2550-4.html">Robert Wang</a>
           </div>
-          <div class="paper-info"><a href="https://arxiv.org/pdf/2410.16094">[arXiv]</a><!--, <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CCC.2024.7">[Conference paper]</div>-->
+          <div class="paper-info"><a href="https://arxiv.org/pdf/2410.16094">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978322.113">[Conference version]</a><!--, <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CCC.2024.7">[Conference paper]</div>-->
         </li>
 
         <li>
@@ -1606,7 +1682,7 @@
           <div class="paper-author"> 
             Sepehr Assadi, <a href="https://sanjeevkhanna.org/">Sanjeev Khanna</a>, <a href="https://sites.google.com/view/peterkiss/home">Peter Kiss</a>
           </div>
-          <div class="paper-info"><a href="https://arxiv.org/abs/2406.13573">[arXiv]</a>, <a href="https://www.youtube.com/watch?v=odoSDya-zoI">[talk: Sepehr @ Simons Institute]</a></div>
+          <div class="paper-info"><a href="https://arxiv.org/abs/2406.13573">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611978322.96">[Conference version]</a>, <a href="https://www.youtube.com/watch?v=odoSDya-zoI">[talk: Sepehr @ Simons Institute]</a></div>
         </li>
 
         <li>
@@ -1616,7 +1692,7 @@
             Sepehr Assadi, <a href="https://student.cs.uwaterloo.ca/~hyazdany/">Helia Yazdanyar</a>
           </div>
          <div class="paper-info"><a href="https://arxiv.org/abs/2502.17629">[arXiv]</a>, 
-          <a href="https://epubs.siam.org/doi/epdf/10.1137/1.9781611978315.1">[Conference paper]</a></div>
+          <a href="https://epubs.siam.org/doi/epdf/10.1137/1.9781611978315.1">[Conference version]</a></div>
             <div class="award" style="font-weight:bold;">Best Paper Award at SOSA'25</div>
             <span class="award">Invited to <span style="font-weight: bold;"> TheoretiCS</span> journal for SOSA'25 papers</span>
         </li>
@@ -1632,7 +1708,7 @@
           <div class="paper-author"> 
             Sepehr Assadi, <a href="https://sites.google.com/view/prantarg/home?authuser=0">Prantar Ghosh</a>, <a href="https://brunoloff.wordpress.com/">Bruno Loff</a>, <a href="https://parthmittal.github.io/">Parth Mittal</a>, <a href="https://sagnikm.github.io/">Sagnik Mukhopadhyay</a>
           </div>
-          <div class="paper-info"><a href="https://arxiv.org/abs/2405.14835">[arXiv]</a>, <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CCC.2024.7">[Conference paper]</a></div>
+          <div class="paper-info"><a href="https://arxiv.org/abs/2405.14835">[arXiv]</a>, <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CCC.2024.7">[Conference version]</a></div>
         </li>
 
          <li>
@@ -1641,7 +1717,7 @@
           <div class="paper-author"> 
             Sepehr Assadi, <a href="https://sites.google.com/view/chen-wang/home">Chen Wang</a>
           </div>
-          <!--<div class="paper-info"><a href="https://arxiv.org/pdf/2312.13178.pdf">[arXiv]</a></div>-->
+          <div class="paper-info"><a href="https://arxiv.org/abs/2309.03145">[arXiv]</a>, <a href="https://proceedings.mlr.press/v247/assadi24a.html">[Conference version]</a></div>
         </li>
 
 
@@ -1651,7 +1727,7 @@
           <div class="paper-author"> 
             Sepehr Assadi, <a href="https://people.cs.bris.ac.uk/~konrad/">Christian Konrad</a>, <a href="https://kheerannaidu.com/">Kheeran K. Naidu</a>, <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a>
           </div>
-          <div class="paper-info"><a href="https://arxiv.org/pdf/2312.13178.pdf">[arXiv]</a>
+          <div class="paper-info"><a href="https://arxiv.org/pdf/2312.13178.pdf">[arXiv]</a>, <a href="https://dl.acm.org/doi/10.1145/3618260.3649763">[Conference version]</a>
           <a href="https://www.youtube.com/watch?v=9C3i6vow_Ik">[talk: Janani @ TTIC]</a>
         </div>
 
@@ -1666,7 +1742,7 @@
             <a href="https://www.cs.princeton.edu/people/profile/gkol">Gillat Kol</a>, 
             <a href="https://sites.google.com/view/zhijunz/">Zhijun Zhang</a> 
           </div>
-          <div class="paper-info"><a href="https://arxiv.org/abs/2312.04674">[arXiv]</a></div>
+          <div class="paper-info"><a href="https://arxiv.org/abs/2312.04674">[arXiv]</a>, <a href="https://dl.acm.org/doi/10.1145/3618260.3649755">[Conference version]</a></div>
         </li>
 
         <li>
@@ -1675,7 +1751,7 @@
           <div class="paper-author"> 
             Sepehr Assadi 
           </div>
-          <div class="paper-info"><a href="https://arxiv.org/abs/2307.02968">[arXiv]</a></div>
+          <div class="paper-info"><a href="https://arxiv.org/abs/2307.02968">[arXiv]</a>, <a href="https://epubs.siam.org/doi/10.1137/1.9781611977936.31">[Conference version]</a></div>
          <div class="award">Invited to <span style="font-weight: bold;"> TheoretiCS</span> journal for SOSA'24 papers</div>
         </li>
 
@@ -1690,7 +1766,7 @@
             <a href="https://student.cs.uwaterloo.ca/~v46shah/">Vihan Shah</a>,
             <a href="https://sites.google.com/view/chen-wang/home">Chen Wang</a> 
           </div>
-          <div class="paper-info"><a href="https://openreview.net/pdf?id=k4ZCORSFEd">[Conference paper]</a></div>
+          <div class="paper-info"><a href="https://openreview.net/pdf?id=k4ZCORSFEd">[Conference version]</a></div>
         </li>
 
         <li>
@@ -1700,7 +1776,7 @@
             Sepehr Assadi, 
             <a href="https://cs.uwaterloo.ca/~jsundare/">Janani Sundaresan</a> 
           </div>
-          <div class="paper-info"><a href="https://arxiv.org/abs/2310.05728">[arXiv]</a></div>
+          <div class="paper-info"><a href="https://arxiv.org/abs/2310.05728">[arXiv]</a>, <a href="https://ieeexplore.ieee.org/document/10353146/">[Conference version]</a></div>
           <div class="award">University of Waterloo Faculty of Mathematics <b>Graduate Research Excellence Award</b></div>
         </li>
 
@@ -1714,7 +1790,7 @@
             <a href="https://sites.rutgers.edu/jie-gao/">Jie Gao</a>, 
             <a href="https://sites.google.com/view/chen-wang/home">Chen Wang</a> 
           </div>
-          <div class="paper-info"><a href="https://arxiv.org/abs/2306.00668">[arXiv]</a></div>
+          <div class="paper-info"><a href="https://arxiv.org/abs/2306.00668">[arXiv]</a>, <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.APPROX/RANDOM.2023.58">[Conference version]</a></div>
         </li>
 
         <li>
@@ -1725,7 +1801,7 @@
               <a href="https://theory.epfl.ch/kapralov/">Michael Kapralov</a>, 
               <a href="https://www.cs.princeton.edu/~hy2/">Huacheng Yu</a> 
             </div>
-            <div class="paper-info"><a href="https://arxiv.org/abs/2209.14775">[arXiv]</a></div>
+            <div class="paper-info"><a href="https://arxiv.org/abs/2209.14775">[arXiv]</a>, <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.APPROX/RANDOM.2023.57">[Conference version]</a></div>
         </li>
 
         <li>
@@ -1739,7 +1815,7 @@
             </div>
             <div class="paper-info">
               <a href="https://arxiv.org/abs/2205.14312v2">[arXiv]</a>,
-              <a href="https://dl.acm.org/doi/abs/10.1145/3580507.3597662">[Conference paper]</a>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3580507.3597662">[Conference version]</a>
             </div>
         </li>
 
@@ -1754,7 +1830,7 @@
             </div>
             <div class="paper-info">
               <a href="https://arxiv.org/abs/2212.10641">[arXiv]</a>,
-              <a href="https://dl.acm.org/doi/abs/10.1145/3584372.3588681">[Conference paper]</a>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3584372.3588681">[Conference version]</a>
             </div>
         </li>
 
@@ -1769,7 +1845,7 @@
             </div>
             <div class="paper-info">
               <a href="https://arxiv.org/abs/2305.11053">[arXiv]</a>,
-              <a href="https://dl.acm.org/doi/abs/10.1145/3564246.3585192">[Conference paper]</a>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3564246.3585192">[Conference version]</a>
                <a href="https://www.youtube.com/watch?v=rOBQLXr4N9U">[talk: Janani @ DIMACS]</a>
             </div>
         </li>
@@ -1785,7 +1861,7 @@
             </div>
             <div class="paper-info">
               <a href="https://arxiv.org/abs/2207.09354">[arXiv]</a>, 
-              <a href="https://dl.acm.org/doi/abs/10.1145/3564246.3585110">[Conference paper]</a>, 
+              <a href="https://dl.acm.org/doi/abs/10.1145/3564246.3585110">[Conference version]</a>, 
               <a href="https://www.birs.ca/events/2022/5-day-workshops/22w5124/videos/watch/202207280908-Assadi.html">[talk: Sepehr @ FODSI summer school]</a>, 
               <a href="https://www.youtube.com/watch?v=YOhRxbbQnoA">[talk: Sanjeev @ Princeton]</a>, 
               <a href="https://www.youtube.com/watch?v=ePuSjP1akYw">[talk: Huan @ STOC]</a>
@@ -1802,7 +1878,7 @@
             </div>
              <div class="paper-info">
               <a href="https://arxiv.org/abs/2301.07007">[arXiv]</a>,
-              <a href="https://drops.dagstuhl.de/opus/volltexte/2023/17510/">[Conference paper]</a>
+              <a href="https://drops.dagstuhl.de/opus/volltexte/2023/17510/">[Conference version]</a>
             </div>
         </li>
 
@@ -1811,12 +1887,12 @@
           <span class="paper-desc"> SODA 2023 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="https://people.cs.rutgers.edu/~farach/">Martin Farach-Colton</a>, 
+            <a href="https://engineering.nyu.edu/faculty/martin-farach-colton">Martin Farach-Colton</a>, 
             <a href="https://sites.google.com/site/williamkuszmaul"> William Kuszmaul </a>
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2207.10556">[arXiv]</a>, 
-            <a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611977554.ch20">[Conference paper]</a>,
+            <a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611977554.ch20">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=y-lyPBH2SRk">[talk: Sepehr @ DIMACS]</a>
           </div>
           <div class="award"> Invited to <span style="font-weight:bold;"> TALG special issue</span> for SODA'23 papers </div>
@@ -1831,7 +1907,7 @@
             </div>
             <div class="paper-info">
               <a href="https://arxiv.org/abs/2211.04685">[arXiv]</a>,
-              <a href="https://epubs.siam.org/doi/10.1137/1.9781611977585.ch20">[Conference paper]</a>
+              <a href="https://epubs.siam.org/doi/10.1137/1.9781611977585.ch20">[Conference version]</a>
             </div>
         </li>
 
@@ -1846,7 +1922,7 @@
             </div>
             <div class="paper-info">
               <a href="https://arxiv.org/abs/2303.06288">[arXiv]</a>,
-              <a href="https://drops.dagstuhl.de/opus/volltexte/2023/17761/pdf/LIPIcs-ICDT-2023-19.pdf">[Conference paper]</a>
+              <a href="https://drops.dagstuhl.de/opus/volltexte/2023/17761/pdf/LIPIcs-ICDT-2023-19.pdf">[Conference version]</a>
             </div>
         </li>
 
@@ -1863,7 +1939,7 @@
             <a href="https://sites.google.com/view/chen-wang/home">Chen Wang</a> 
           </div>
           <div class="paper-info">
-            <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/d5e9cf50dc182447a916bc56d4d42942-Paper-Conference.pdf">[Conference paper]</a>
+            <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/d5e9cf50dc182447a916bc56d4d42942-Paper-Conference.pdf">[Conference version]</a>
           </div>   
         </li>
 
@@ -1879,8 +1955,8 @@
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2209.09049">[arXiv]</a>,
-            <a href="https://www.computer.org/csdl/proceedings-article/focs/2022/551900b193/1JtvUzzL30s">[Conference paper]</a>
-            <a href="https://epubs.siam.org/eprint/TR7KWQDHJARVNA8YJIMY/full">[Journal paper]</a>
+            <a href="https://www.computer.org/csdl/proceedings-article/focs/2022/551900b193/1JtvUzzL30s">[Conference version]</a>
+            <a href="https://epubs.siam.org/eprint/TR7KWQDHJARVNA8YJIMY/full">[SICOMP]</a>
           </div>
           <div class="award"> Invited to <span style="font-weight: bold;"> SICOMP special issue</span> for FOCS'22 papers </div> 
         </li>
@@ -1911,7 +1987,7 @@
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2206.07554">[arXiv]</a>, 
-            <a href="https://proceedings.mlr.press/v178/assadi22a.html">[Conference paper]</a>
+            <a href="https://proceedings.mlr.press/v178/assadi22a.html">[Conference version]</a>
           </div>
         </li>
 
@@ -1925,7 +2001,7 @@
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2206.07554">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2022/16352/pdf/LIPIcs-ICALP-2022-11.pdf">[Conference paper]</a>
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2022/16352/pdf/LIPIcs-ICALP-2022-11.pdf">[Conference version]</a>
           </div>
         </li>
 
@@ -1939,7 +2015,7 @@
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2109.14891">[arXiv]</a>,
-            <a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[Conference paper]</a>, 
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[Conference version]</a>, 
             <a href="https://www.youtube.com/watch?v=bq-upL_Vk88">[talk: Glenn @ STOC]</a>,
             <a href="https://ptreview.sublinear.info/2021/10/">[Property testing review]</a>
           </div>
@@ -1957,8 +2033,8 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/pdf/2203.10984v1.pdf">[arXiv]</a>, 
-            <a href="https://arxiv.org/abs/2203.10984">[Journal paper]</a>, 
-            <a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[Conference paper]</a>, 
+            <a href="https://theoretics.episciences.org/12189">[TheoretiCS]</a>, 
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3519935.3520016">[Conference version]</a>, 
             <a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=e1bc0670-ce8e-44ec-b8f7-af12008a234a">[talk: Sepehr @ NUS]</a>, 
             <a href="https://www.youtube.com/watch?v=y0Q_IyAhbKI">[talk: Parth @ STOC]</a>
           </div>
@@ -1972,7 +2048,7 @@
             Sepehr Assadi, 
             <a href="https://people.cs.rutgers.edu/~dd903/">Dong Deng</a></div>
           <div class="paper-info">
-            <a href="https://dl.acm.org/doi/abs/10.1145/3514221.3517908">[Conference paper]</a>
+            <a href="https://dl.acm.org/doi/abs/10.1145/3514221.3517908">[Conference version]</a>
           </div>
         </li>
 
@@ -1986,7 +2062,7 @@
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2201.12710">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2022/15605/pdf/LIPIcs-ITCS-2022-9.pdf">[Conference paper]</a>,
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2022/15605/pdf/LIPIcs-ITCS-2022-9.pdf">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=zxKP4fh6qNU&list=PLgKuh-lKre11M2GCKkTySipbMIxXqKzkE&index=46">[talk: Vihan @ ITCS]</a>
           </div>
         </li>
@@ -2001,7 +2077,7 @@
          </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2109.14528">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2022/15606/pdf/LIPIcs-ITCS-2022-10.pdf">[Conference paper]</a>, 
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2022/15606/pdf/LIPIcs-ITCS-2022-10.pdf">[Conference version]</a>, 
             <a href="https://www.youtube.com/watch?v=ituGSR7hMcM&list=PLgKuh-lKre11M2GCKkTySipbMIxXqKzkE&index=12">[talk: Chen @ ITCS]</a>,
             <a href="https://ptreview.sublinear.info/2021/10/">[Property testing review]</a>
           </div>
@@ -2013,7 +2089,7 @@
             <div class="paper-author"> Sepehr Assadi </div>
             <div class="paper-info">
               <a href="https://arxiv.org/abs/2108.07187">[arXiv]</a>, 
-              <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611977073.32">[Conference paper]</a>, 
+              <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611977073.32">[Conference version]</a>, 
               <a href="presentations/two-pass-matching-lower-bound.pdf">[Slides]</a>
             </div>
         </li>
@@ -2023,14 +2099,14 @@
           <span class="paper-desc"> SODA 2022 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="https://icme.stanford.edu/person/arun-jambulapati">Arun Jambulapati</a>, 
+            <a href="https://jmblpati.github.io/">Arun Jambulapati</a>, 
             <a href="https://web.stanford.edu/~yujiajin/">Yujia Jin</a>, 
             <a href="https://web.stanford.edu/~sidford/">Aaron Sidford</a>, 
             <a href="https://kjtian.github.io/">Kevin Tian</a> 
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2011.03495">[arXiv]</a>,
-            <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611977073.29">[Conference paper]</a>
+            <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611977073.29">[Conference version]</a>
            </div>
         </li>
 
@@ -2047,7 +2123,7 @@
             <a href="https://aditidudeja.github.io/">Aditi Dudeja</a> 
           </div>
           <div class="paper-info">
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2021/14808/pdf/LIPIcs-DISC-2021-6.pdf">[Conference paper]</a>
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2021/14808/pdf/LIPIcs-DISC-2021-6.pdf">[Conference version]</a>
             <a href="https://www.youtube.com/watch?v=DWWnADw-jZ8">[talk: Aditi @ DISC]</a>
           </div>
         </li>
@@ -2058,11 +2134,11 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="https://www.cs.dartmouth.edu/~deepc/">Deeparnab Chakrabarty</a>, 
-            <a href="https://cis.upenn.edu/~sanjeev/">Sanjeev Khanna</a>
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2007.06098">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2021/14588/pdf/LIPIcs-ESA-2021-7.pdf">[Conference paper]</a>
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2021/14588/pdf/LIPIcs-ESA-2021-7.pdf">[Conference version]</a>
           </div>
         </li>
 
@@ -2075,7 +2151,7 @@
           </div>
           <div class="paper-info">
             <a href="https://arxiv.org/abs/2105.06889">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2021/14589/pdf/LIPIcs-ESA-2021-8.pdf">[Conference paper]</a>
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2021/14589/pdf/LIPIcs-ESA-2021-8.pdf">[Conference version]</a>
           </div>
         </li>
 
@@ -2103,7 +2179,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/2102.07011">[arXiv]</a>, 
-            <a href="http://dagstuhl.sunsite.rwth-aachen.de/volltexte/2021/14088/pdf/LIPIcs-ICALP-2021-19.pdf">[Conference paper]</a>, 
+            <a href="http://dagstuhl.sunsite.rwth-aachen.de/volltexte/2021/14088/pdf/LIPIcs-ICALP-2021-19.pdf">[Conference version]</a>, 
             <a href="https://www.youtube.com/watch?v=S180rJ5UuL4">[talk: Soheil @ STOC]</a>, 
             <a href="https://www.youtube.com/watch?v=VZXw3-ecXJ4">[talk: Soheil @ ICALP]</a>
           </div>
@@ -2114,11 +2190,11 @@
           <span class="paper-desc"> STOC 2021 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="https://nvishvajeet.github.io/">Vishvajeet N.</a> 
+            <a href="https://vishvajeetn.org/">Vishvajeet N.</a> 
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/2104.04908">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/10.1145/3406325.3451110">[Conference paper]</a>, 
+            <a href="https://dl.acm.org/doi/10.1145/3406325.3451110">[Conference version]</a>, 
             <a href="https://www.youtube.com/watch?v=jtP5EMOFxqI">[talk: Vishvajeet @ STOC]</a>,
             <a href="https://ptreview.sublinear.info/2021/05/news-for-april-2021/">[Property testing review]</a>
           </div>
@@ -2135,7 +2211,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/2010.01420">[arXiv]</a>, 
-            <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976465.40">[Conference paper]</a>, 
+            <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976465.40">[Conference version]</a>, 
             <a href="https://www.youtube.com/watch?v=cmJkAB50--s">[talk: Sahil @ SODA]</a>
           </div>
         </li>
@@ -2148,7 +2224,7 @@
             <a href="https://aditidudeja.github.io/">Aditi Dudeja</a> 
           </div>
           <div class="paper-info"> 
-           <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976472.19">[Conference paper]</a>
+           <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976472.19">[Conference version]</a>
           </div>
         </li>
 
@@ -2161,7 +2237,7 @@
             <a href="https://www.cs.princeton.edu/~ret/">Robert E. Tarjan</a> 
           </div>
           <div class="paper-info"> 
-            <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976472.18">[Conference paper]</a>
+            <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976472.18">[Conference version]</a>
           </div>
         </li>
 
@@ -2178,7 +2254,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/2009.01161">[arXiv]</a>, 
-            <a href="http://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a342/962100a342.pdf">[Conference paper]</a>,
+            <a href="http://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a342/962100a342.pdf">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=QvSepVoaRCU">[talk: Sepehr @ FOCS]</a>
           </div>
         </li>
@@ -2189,12 +2265,12 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="https://www.cs.princeton.edu/people/profile/gkol">Gillat Kol</a>, 
-            <a href="https://www.cs.princeton.edu/~rrsaxena/">Raghuvansh Saxena</a>, 
+            <a href="https://main.tifr.res.in/raghuvansh.saxena/">Raghuvansh Saxena</a>, 
             <a href="https://www.cs.princeton.edu/~hy2/">Huacheng Yu</a> 
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/2009.03038">[arXiv]</a>, 
-            <a href="http://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a354/962100a354.pdf">[Conference paper]</a>,
+            <a href="http://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a354/962100a354.pdf">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=QgrkmzMKhZM">[talk: Huacheng @ FOCS]</a>
           </div>
         </li>
@@ -2209,7 +2285,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/2008.04148">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2020/13079/pdf/LIPIcs-DISC-2020-1.pdf">[Conference paper]</a>,
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2020/13079/pdf/LIPIcs-DISC-2020-1.pdf">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=8OTUEM9yVQc">[talk: Zach @ DISC]</a>
           </div>
           <div class="award" style="font-weight:bold;">Best Paper Award at DISC'20</div>
@@ -2224,7 +2300,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/pdf/2006.10456.pdf">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2020/12609/pdf/LIPIcs-APPROX6.pdf">[Conference paper]</a>,
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2020/12609/pdf/LIPIcs-APPROX6.pdf">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=kkHnQyFSwLM">[talk: Sepehr @ RANDOM]</a>
             <a href="https://ptreview.sublinear.info/?p=1352">[Property testing review]</a>
           </div>
@@ -2240,7 +2316,7 @@
           <a href="https://www.cs.tau.ac.il/~roshman">Rotem Oshman</a> 
         </div>
           <div class="paper-info"> 
-            <a href="https://dl.acm.org/doi/10.1145/3382734.3405732">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/3382734.3405732">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=Do9w6GTUsgE">[talk: Sepehr @ PODC]</a>
           </div>
           <div class="award"> Invited to <span style="font-weight:bold;">Distributed Computing special issue</span> for PODC'20 papers </div>
@@ -2255,7 +2331,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/2004.04666">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/abs/10.1145/3357713.3384341">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/abs/10.1145/3357713.3384341">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=PQ3VdKn6WVA&list=PLn0nrSd4xjjadfcMd5xvmJ_GNSLDi1ATn&index=40">[talk: Chen @ STOC]</a>
           </div>
         </li>
@@ -2267,12 +2343,12 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="#">Hrishikesh Khandeparkar</a>, 
-            <a href="https://www.cs.princeton.edu/~rrsaxena/">Raghuvansh Saxena</a>, 
+            <a href="https://main.tifr.res.in/raghuvansh.saxena/">Raghuvansh Saxena</a>, 
             <a href="https://www.cs.princeton.edu/~smattw/">Matt Weinberg</a>
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/2011.07414">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/abs/10.1145/3357713.3384267">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/abs/10.1145/3357713.3384267">[Conference version]</a>, <a href="https://epubs.siam.org/doi/10.1137/20M1370021">[SICOMP]</a>,
             <a href="https://www.youtube.com/watch?v=VWmQSQzXBGI&list=PLn0nrSd4xjjadfcMd5xvmJ_GNSLDi1ATn&index=74">[talk: Raghuvansh @ STOC]</a>
           </div>
           <div class="award"> Invited to <span style="font-weight:bold;">SICOMP special issue</span> for STOC'20 papers </div>
@@ -2292,7 +2368,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1811.06444">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/pdf/10.5555/3454287.3454382">[Conference paper]</a>
+            <a href="https://dl.acm.org/doi/pdf/10.5555/3454287.3454382">[Conference version]</a>
           </div>
         </li>
 
@@ -2306,7 +2382,7 @@
             </div>
             <div class="paper-info"> 
               <a href="https://arxiv.org/pdf/1911.02716.pdf">[arXiv]</a>, 
-              <a href="https://ieeexplore.ieee.org/abstract/document/8948592">[Conference paper]</a>,
+              <a href="https://ieeexplore.ieee.org/abstract/document/8948592">[Conference version]</a>, <a href="https://epubs.siam.org/doi/10.1137/20M1316068">[SICOMP]</a>,
               <a href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3eb2117e-c81d-4361-95a9-ab0d013e115a">[talk: Sahil @ Northwestern]</a>
               <a href="https://www.sigecom.org/exchanges/volume_18/1/ASSADI.pdf">[research note @ Sigecom Exchanges]</a>
             </div>    
@@ -2321,12 +2397,12 @@
           <span class="paper-desc"> PODC 2019 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cs.columbia.edu/~xiaoruisun/">Xiaorui Sun</a>, 
+            <a href="https://cs.uic.edu/~xiaorui/">Xiaorui Sun</a>, 
             <a href="http://www.cs.columbia.edu/~omri/">Omri Weinstein</a> 
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1805.02974">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/pdf/10.1145/3293611.3331596">[Conference paper]</a>
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3293611.3331596">[Conference version]</a>
           </div>
         </li>
 
@@ -2340,7 +2416,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1906.01993">[arXiv]</a>, 
-            <a href="http://proceedings.mlr.press/v97/assadi19a/assadi19a.pdf">[Conference paper]</a>
+            <a href="http://proceedings.mlr.press/v97/assadi19a/assadi19a.pdf">[Conference version]</a>
           </div>
         </li>
 
@@ -2353,7 +2429,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/pdf/2006.07628.pdf">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2019/10593/pdf/LIPIcs-ICALP-2019-17.pdf">[Conference paper]</a>,
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2019/10593/pdf/LIPIcs-ICALP-2019-17.pdf">[Conference version]</a>,
             <a href="https://ptreview.sublinear.info/2020/07/news-for-june-2020/">[Property testing review]</a>
           </div>
         </li>
@@ -2364,11 +2440,11 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="https://nkkarpov.github.io">Nikolai Karpov</a>, 
-            <a href="http://homes.sice.indiana.edu/qzhangcs/">Qin Zhang</a>
+            <a href="https://homes.luddy.indiana.edu/qzhangcs/">Qin Zhang</a>
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1903.05617">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/10.1145/3294052.3319697">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/3294052.3319697">[Conference version]</a>,
             <a href="https://av.tib.eu/media/42834">[talk: Nikolai @ PODS]</a>
           </div>
         </li>
@@ -2379,11 +2455,11 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="https://sites.google.com/view/chenyu94">Yu Chen</a>, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>.
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>.
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1904.04720">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/10.1145/3313276.3316361">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/3313276.3316361">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=U4Q02SLsjx0">[talk: Sepehr @ Princeton]</a>
           </div>
         </li>
@@ -2394,11 +2470,11 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="https://theory.epfl.ch/kapralov/">Michael Kapralov</a>, 
-            <a href="http:/www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1811.07780">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2018/10099/pdf/LIPIcs-ITCS-2019-6.pdf">[Conference paper]</a>,
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2018/10099/pdf/LIPIcs-ITCS-2019-6.pdf">[Conference version]</a>,
             <a href="https://www.youtube.com/watch?v=hO7vWYAXZ1U">[talk: Sepehr @ TCS+]</a>
           </div>
           <div class="award">Invited talk at <span style="font-weight:bold"> TCS+,</span> 2019 </div>
@@ -2410,15 +2486,15 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="https://www.cis.upenn.edu/~chenyu2/">Yu Chen</a>, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>.
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>.
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1807.08886">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/abs/10.5555/3310435.3310483">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/abs/10.5555/3310435.3310483">[Conference version]</a>,
             <a href="https://youtu.be/VU7Y_8ZcNu0">[talk: Sepehr @ Simons Institute]</a>,
             <a href="https://www.youtube.com/watch?v=CyXKINjcKik">[talk: Sepehr @ HALG]</a>,
             <a href="courses/cs671-f20/lec3.pdf">[Streamlined lecture notes]</a>,
-            <a href="sublinear_vertex-coloring-slides.pdf">[Slides]</a>,
+            <a href="presentations/sublinear_vertex-coloring-slides.pdf">[Slides]</a>,
             <a href="https://ptreview.sublinear.info/?p=1016">[Property testing review]</a>
           </div>
           <div class="award">
@@ -2440,7 +2516,7 @@
             </div>
             <div class="paper-info"> 
               <a href="https://arxiv.org/pdf/1711.03076.pdf">[arXiv]</a>, 
-              <a href="https://epubs.siam.org/doi/10.1137/1.9781611975482.98">[Conference paper]</a>,
+              <a href="https://epubs.siam.org/doi/10.1137/1.9781611975482.98">[Conference version]</a>,
               <a href="presentations/coreset-edcs_matching-vc_2019-slides.pdf">[Slides]</a>
             </div>
         </li>
@@ -2451,12 +2527,12 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="https://onak.pl">Krzysztof Onak</a>, 
-            <a href="https://cs.njit.edu/node/192/">Baruch Schieber</a>, 
+            <a href="https://sbarnjit.github.io/">Baruch Schieber</a>, 
             <a href="https://sites.google.com/site/soloshay/home">Shay Solomon</a>
           </div>
           <div class="paper-info"> 
               <a href="https://arxiv.org/abs/1806.10051">[arXiv]</a>, 
-              <a href="https://epubs.siam.org/doi/10.1137/1.9781611975482.116">[Conference paper]</a>
+              <a href="https://epubs.siam.org/doi/10.1137/1.9781611975482.116">[Conference version]</a>
           </div>
         </li>
 
@@ -2466,11 +2542,11 @@
           <div class="paper-author"> 
             <a href="http://www.seas.upenn.edu/~aarpit/">Arpit Agarwal</a>, 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>  
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>  
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1810.13351">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/abs/10.5555/3310435.3310456">[Conference paper]</a>
+            <a href="https://dl.acm.org/doi/abs/10.5555/3310435.3310456">[Conference version]</a>
           </div> 
         </li>
 
@@ -2483,7 +2559,7 @@
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1811.02009">[arXiv]</a>, 
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2018/10037/pdf/OASIcs-SOSA-2019-11.pdf">[Conference paper]</a>,
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2018/10037/pdf/OASIcs-SOSA-2019-11.pdf">[Conference version]</a>,
             <a href="presentations/matching-sparsifier_2019-slides.pdf">[Slides]</a>
           </div> 
         </li>
@@ -2513,12 +2589,12 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="https://onak.pl">Krzysztof Onak</a>, 
-            <a href="https://cs.njit.edu/node/192/">Baruch Schieber</a>, 
+            <a href="https://sbarnjit.github.io/">Baruch Schieber</a>, 
             <a href="https://sites.google.com/site/soloshay/home">Shay Solomon</a>
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1802.09709">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/10.1145/3188745.3188922">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/3188745.3188922">[Conference version]</a>,
             <a href="presentations/dynamic_MIS-stoc18-slides.pdf">[Slides]</a>
           </div>
         </li>
@@ -2528,11 +2604,11 @@
           <span class="paper-desc"> SODA 2018 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a> 
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a> 
           </div>
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1801.02793">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/10.5555/3174304.3175460">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/10.5555/3174304.3175460">[Conference version]</a>,
             <a href="presentations/round-complexity_coverage-soda18-slides.pdf">[Slides]</a>
           </div>
         </li>
@@ -2547,11 +2623,11 @@
           <span class="paper-desc"> SPAA 2017 </span> and <span class="paper-desc"> HALG 2018 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a> 
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a> 
           </div> 
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1705.08242">[arXiv]</a>,
-            <a href="https://dl.acm.org/doi/10.1145/3087556.3087581">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/3087556.3087581">[Conference version]</a>,
             <a href="presentations/randomized-coreset_matching-vc-slides.pdf">[Slides]</a>
           </div>
           <div class="award">
@@ -2568,10 +2644,10 @@
             <a href="http://www.seas.upenn.edu/~aarpit/">Arpit Agarwal</a>, 
             <a href="http://shivani-agarwal.net">Shivani Agarwal</a>, 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>  
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>  
           </div>
           <div class="paper-info"> 
-            <a href="http://proceedings.mlr.press/v65/agarwal17c/agarwal17c.pdf">[Conference paper]</a>
+            <a href="http://proceedings.mlr.press/v65/agarwal17c/agarwal17c.pdf">[Conference version]</a>
           </div>
         </li>
     
@@ -2582,8 +2658,8 @@
           <div class="paper-author"> Sepehr Assadi</div>  
           <div class="paper-info"> 
             <a href="https://arxiv.org/abs/1705.01644">[arXiv]</a>, 
-            <a href="https://dl.acm.org/doi/pdf/10.1145/3381521">[Journal paper]</a>,
-            <a href="https://dl.acm.org/doi/10.1145/3381521">[Conference paper]</a>,
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3381521">[TEAC]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/3381521">[Conference version]</a>,
             <a href="https://youtu.be/gArrHh9AF90">[talk: Sepehr @ EC]</a>,
             <a href="presentations/combinatorial-auctions_round-slides.pdf">[Slides]</a>
           </div>
@@ -2595,12 +2671,12 @@
             <span class="paper-desc"> EC 2017 </span>    
             <div class="paper-author"> 
               Sepehr Assadi, 
-              <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>,  
-              <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>
+              <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>,  
+              <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>
             </div>
             <div class="paper-info"> 
               <a href="https://arxiv.org/abs/1705.02280">[arXiv]</a>, 
-              <a href="https://dl.acm.org/doi/10.1145/3033274.3085146">[Conference paper]</a>,
+              <a href="https://dl.acm.org/doi/10.1145/3033274.3085146">[Conference version]</a>,
               <a href="https://www.youtube.com/watch?v=YRa3fYQMCx0">[talk: Sepehr @ EC]</a>,
               <a href="presentations/stochastic-matching_beating-half-slides.pdf">[Slides]</a>
             </div>
@@ -2612,7 +2688,7 @@
           <div class="paper-author"> Sepehr Assadi 
           <div class="paper-info"> 
               <a href="https://arxiv.org/pdf/1703.01847.pdf">[arXiv]</a>, 
-              <a href="https://dl.acm.org/doi/10.1145/3034786.3056116">[Conference paper]</a>,
+              <a href="https://dl.acm.org/doi/10.1145/3034786.3056116">[Conference version]</a>,
               <a href="presentations/multipass-streaming-setcover-slides.pdf">[Slides]</a>
           </div>  
           <div class="award" style="font-weight: bold;"> Best Student Paper Award at PODS'17</div> 
@@ -2623,12 +2699,12 @@
           <span class="paper-desc"> SODA 2017 </span> and <span class="paper-desc"> HALG 2017 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>,  
-            <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a> 
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>,  
+            <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a> 
           </div>
           <div class="paper-info"> 
               <a href="https://arxiv.org/abs/1701.04364">[arXiv]</a>, 
-              <a href="https://dl.acm.org/doi/10.5555/3039686.3039799">[Conference paper]</a>,
+              <a href="https://dl.acm.org/doi/10.5555/3039686.3039799">[Conference version]</a>,
               <a href="presentations/matching-size-soda17-slides.pdf">[Slides]</a>
           </div> 
           <div class="award"> 
@@ -2647,13 +2723,13 @@
           <div class="paper-journal"> Full version in <span class="paper-desc"> SICOMP 2021</span></div>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>,  
-            <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>,  
+            <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>
           </div>
           <div class="paper-info"> 
-              <a href="http://arxiv.org/abs/1603.05715">[arXiv]</a>, 
-              <a href="https://epubs.siam.org/doi/pdf/10.1137/16M1095482?casa_token=g5tqZIQaBowAAAAA:O6PSqDpq8uraITv5WHacIRtMMpsvnsnY3L-R3mDDtOt9rfLP5R-Bbu7B-ujg2V28iGqF3kGwqnGR">[Journal paper]</a>,
-              <a href="https://dl.acm.org/doi/10.1145/2897518.2897576">[Conference paper]</a>,
+              <a href="https://arxiv.org/abs/1603.05715">[arXiv]</a>, 
+              <a href="https://epubs.siam.org/doi/pdf/10.1137/16M1095482?casa_token=g5tqZIQaBowAAAAA:O6PSqDpq8uraITv5WHacIRtMMpsvnsnY3L-R3mDDtOt9rfLP5R-Bbu7B-ujg2V28iGqF3kGwqnGR">[SICOMP]</a>,
+              <a href="https://dl.acm.org/doi/10.1145/2897518.2897576">[Conference version]</a>,
               <a href="presentations/single-pass_set-cover_2016-slides.pdf">[Slides]</a>
           </div> 
           <div class="award"> 
@@ -2666,12 +2742,12 @@
           <div class="paper-journal"> Full version in <span class="paper-desc"> TEAC 2019</span></div>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>, 
-            <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>, 
+            <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>
           </div>
           <div class="paper-info"> 
-            <a href="https://dl.acm.org/doi/pdf/10.1145/3355903">[Journal paper]</a>,
-            <a href="https://dl.acm.org/doi/10.1145/2940716.2940769">[Conference paper]</a>
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3355903">[TEAC]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/2940716.2940769">[Conference version]</a>
           </div>
           <div class="award"> 
             Invited to <span style="font-weight:bold;">TEAC special issue</span> for EC'16 papers 
@@ -2683,13 +2759,13 @@
           <span class="paper-desc"> ICDT 2016 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>, 
-            <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>,  
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>, 
+            <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>,  
             <a href="http://www.cis.upenn.edu/~val">Val Tannen</a>
           </div>
           <div class="paper-info"> 
-            <a href="http://arxiv.org/abs/1512.06143">[arXiv]</a>,
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2016/5787/pdf/17.pdf">[Conference paper]</a>
+            <a href="https://arxiv.org/abs/1512.06143">[arXiv]</a>,
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2016/5787/pdf/17.pdf">[Conference version]</a>
           </div>
         </li>
    
@@ -2698,13 +2774,13 @@
           </span> <span class="paper-desc"> SODA 2016 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>, 
-            <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>,  
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>, 
+            <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>,  
             <a href="http://www.grigory.us">Grigory Yaroslavtsev</a> 
           </div>
           <div class="paper-info"> 
-            <a href="http://arxiv.org/abs/1512.06143">[arXiv]</a> <span style="color:gray">(preliminary version)</span>,
-            <a href="https://sanjeevkhanna.org/papers/matchings_streaming_soda2016.pdf">[Conference paper]</a>,
+            <a href="https://arxiv.org/abs/1512.06143">[arXiv]</a> <span style="color:gray">(preliminary version)</span>,
+            <a href="https://sanjeevkhanna.org/papers/matchings_streaming_soda2016.pdf">[Conference version]</a>,
             <a href="presentations/dynamic_simultaneous_matching-slides.pdf">[Slides]</a>
           </div>
         </li>
@@ -2718,13 +2794,13 @@
           <span class="paper-desc"> FSTTCS 2015 </span>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>,  
-            <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>,  
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>,  
+            <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>,  
             <a href="http://www.cis.upenn.edu/~val">Val Tannen</a> 
           </div>
           <div class="paper-info"> 
-            <a href="http://arxiv.org/abs/1510.03252">[arXiv]</a>,
-            <a href="https://drops.dagstuhl.de/opus/volltexte/2015/5636/pdf/21.pdf">[Conference paper]</a>
+            <a href="https://arxiv.org/abs/1510.03252">[arXiv]</a>,
+            <a href="https://drops.dagstuhl.de/opus/volltexte/2015/5636/pdf/21.pdf">[Conference version]</a>
           </div>
         </li>
         
@@ -2734,14 +2810,14 @@
           <div class="paper-journal"> Full version in <span class="paper-desc">TEAC 2017</span></div>
           <div class="paper-author"> 
             Sepehr Assadi, 
-            <a href="http://www.cis.upenn.edu/~sanjeev">Sanjeev Khanna</a>,  
-            <a href="http://www.cis.upenn.edu/~yangli2">Yang Li</a>,  
+            <a href="https://sanjeevkhanna.org">Sanjeev Khanna</a>,  
+            <a href="https://scholar.google.ca/citations?user=SYzvybYAAAAJ&hl=en">Yang Li</a>,  
             <a href="https://sites.google.com/site/quaerereverum9/">Rakesh Vohra</a>
           </div>
           <div class="paper-info"> 
-            <a href="http://arxiv.org/abs/1510.00086">[arXiv]</a>,
-            <a href="https://dl.acm.org/doi/10.1145/3084358">[Journal paper]</a>,
-            <a href="https://link.springer.com/chapter/10.1007/978-3-662-48995-6_5">[Conference paper]</a>
+            <a href="https://arxiv.org/abs/1510.00086">[arXiv]</a>,
+            <a href="https://dl.acm.org/doi/10.1145/3084358">[TEAC]</a>,
+            <a href="https://link.springer.com/chapter/10.1007/978-3-662-48995-6_5">[Conference version]</a>
           </div>
           <div class="award">
             <span style="font-weight: bold;"> Best Paper Award at WINE'15</span><br/>
@@ -2758,8 +2834,8 @@
             <a href="https://shahin-jabbari.github.io/">Shahin Jabbari</a>
           </div>
           <div class="paper-info"> 
-            <a href="http://arxiv.org/abs/1508.03593">[arXiv]</a>,
-            <a href="https://ojs.aaai.org/index.php/HCOMP/article/view/13236">[Conference paper]</a>
+            <a href="https://arxiv.org/abs/1508.03593">[arXiv]</a>,
+            <a href="https://ojs.aaai.org/index.php/HCOMP/article/view/13236">[Conference version]</a>
           </div>
         </li>
 
@@ -2779,8 +2855,8 @@
             <a href="http://sharif.edu/~zarrabi/">Hamid Zarrabi-Zadeh</a> 
           </div>
           <div class="paper-info"> 
-            <a href="https://www.sciencedirect.com/science/article/pii/S0304397517304863">[Journal paper]</a>,
-            <a href="https://cccg.ca/proceedings/2013/papers/paper_78.pdf">[Conference paper]</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0304397517304863">[TCS]</a>,
+            <a href="https://cccg.ca/proceedings/2013/papers/paper_78.pdf">[Conference version]</a>
           </div>
         </li>
             
@@ -2796,12 +2872,12 @@
           <div class="paper-author"> 
             Sepehr Assadi, 
             <a href="http://www-scf.usc.edu/~emamjome/">Ehsan Emamjomeh-Zadeh</a>, 
-            <a href="http://people.epfl.ch/ashkan.norouzifard">Ashkan Norouzi-Fard</a>, <a href="http://www.cc.gatech.edu/~syazdanb/">Sadra Yazdanbod</a>, 
+            <a href="https://scholar.google.com/citations?user=-KdNGwgAAAAJ">Ashkan Norouzi-Fard</a>, <a href="http://www.cc.gatech.edu/~syazdanb/">Sadra Yazdanbod</a>, 
             <a href="http://sharif.edu/~zarrabi/">Hamid Zarrabi-Zadeh</a> 
           </div>
           <div class="paper-info"> 
-            <a href="https://link.springer.com/article/10.1007/s00453-014-9927-z">[Journal paper]</a>,
-            <a href="https://link.springer.com/chapter/10.1007/978-3-642-35261-4_41">[Conference paper]</a>
+            <a href="https://link.springer.com/article/10.1007/s00453-014-9927-z">[Algorithmica]</a>,
+            <a href="https://link.springer.com/chapter/10.1007/978-3-642-35261-4_41">[Conference version]</a>
           </div>
           <div class="award"> 
             Invited to <span style="font-weight:bold;">Algorithmica special issue</span> for ISAAC'12 papers 
@@ -2953,7 +3029,7 @@
             Opinions on Ph.D. advising </a> by C. Wang </li>
             <li> <a target="_blank" href="https://people.cs.umass.edu/~yannis/phd-slides.pdf">
             PhD Rants and Raves (Be afraid. Be very afraid.)</a> by Y. Smaragdakis</li>
-            <li> <a target="_blank" href="https://people.cs.umass.edu/~wallach/how_to_be_a_successful_phd_student.pdf">
+            <li> <a target="_blank" href="https://www.cs.jhu.edu/~mdredze/publications/HowtoBeaSuccessfulPhDStudent.pdf">
             How to Be a Successful PhD Student (in Computer Science (in NLP/ML))</a> by M. Dredze and H. M. Wallach </li>
             <li> <a target="_blank" href="https://terrytao.wordpress.com/career-advice/does-one-have-to-be-a-genius-to-do-maths/">
             Does one have to be a genius to do maths?</a> by T. Tao </li>

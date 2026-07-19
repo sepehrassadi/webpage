@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CS 860: Space Bounded Computation (Winter 2026) </title>
 
 
@@ -117,6 +118,19 @@ a:active {
 .bibs td:nth-child(2){
   width:83%;
 }
+
+
+    /* ===== Responsive layout for phones / small tablets ===== */
+    @media (max-width: 768px) {
+      body { font-size: 16px; }
+      h1 { font-size: 26px !important; line-height: 1.2; }
+      div[style*="width:1200px"], div[style*="width: 1200px"] {
+        width: auto !important; padding-left: 10px !important; padding-right: 10px !important;
+      }
+      .big-table { width: auto !important; }
+      table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      img { max-width: 100%; height: auto; }
+    }
 
 </style>
 </head>
@@ -654,7 +668,7 @@ students with different learning needs.</li>
 
 <p>
   In addition, academic dishonesty and plagiarism is considered a serious offense in this course. I expect that any assignment or exam you submit in this course will 
-  be your own product and follows the collaboration and external resources policies specified in the <a href="course-outline-f25">course outline</a>.   
+  be your own product and follows the collaboration and external resources policies specified in the course outline.   
   If an assignment is too hard, start earlier, ask for help, or simply do not answer the question --- academic dishonesty is never the right answer.
   If you have any concerns or questions about these policies, please discuss them with me.  
 </p>

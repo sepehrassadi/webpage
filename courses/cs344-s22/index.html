@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CS344: Design and Analysis of Computer Algorithms (Spring 2022) </title>
 
 <style>
@@ -57,6 +58,19 @@ a:active {
 .cal tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+    /* ===== Responsive layout for phones / small tablets ===== */
+    @media (max-width: 768px) {
+      body { font-size: 16px; }
+      h1 { font-size: 26px !important; line-height: 1.2; }
+      div[style*="width:1200px"], div[style*="width: 1200px"] {
+        width: auto !important; padding-left: 10px !important; padding-right: 10px !important;
+      }
+      .big-table { width: auto !important; }
+      table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      img { max-width: 100%; height: auto; }
+    }
+
 </style>
 
     </head>

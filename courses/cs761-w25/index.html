@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CS 761: Randomized Algorithms (Winter 2025) </title>
 
 
@@ -118,6 +119,19 @@ a:active {
   width:83%;
 }
 
+
+    /* ===== Responsive layout for phones / small tablets ===== */
+    @media (max-width: 768px) {
+      body { font-size: 16px; }
+      h1 { font-size: 26px !important; line-height: 1.2; }
+      div[style*="width:1200px"], div[style*="width: 1200px"] {
+        width: auto !important; padding-left: 10px !important; padding-right: 10px !important;
+      }
+      .big-table { width: auto !important; }
+      table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      img { max-width: 100%; height: auto; }
+    }
+
 </style>
 </head>
     
@@ -174,7 +188,7 @@ a:active {
 
     <tr>
       <td><span class="top">Course outline</span></td>
-      <td>The course outline is available <a href="course-outline-w25.pdf">here</a>. 
+      <td>The course outline is available here. 
           This page contains the highlights of course outline that can be updated as the term progresses. </td>
     </tr>
 
@@ -299,7 +313,7 @@ The final grade for the course will be based on the following weights:
   but I strongly encourage it -- this is a fast-moving course, so if you miss a lecture you may find it more difficult to keep up.
 </p>
 
-The <a href="course-outline-w25.pdf">course outline</a> contains more details on the grading scheme of this course and collaboration policies and groups
+The course outline contains more details on the grading scheme of this course and collaboration policies and groups
 for the assignments. 
 
 <h3 class="header" id="course-calendar"> Course Calendar</h3>
@@ -488,7 +502,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> 17 </td>
     <td> Tuesday <br/> March 18</td>
     <td> Graph Algorithms: Negative-Weight Shortest Path</td>
-    <td class="ref"> <a href="BNW22">BNW22</a></td>
+    <td class="ref"> <a href="#BNW22">BNW22</a></td>
     <td> <span class="event"> </td>
 </tr>
 <tr>
@@ -648,7 +662,7 @@ The schedule below the <span style="color:red"> red line</span> is <span style="
     <td> W14 </td>
     <td> 
       David Woodruff, 
-      <a href="Sketching as a Tool for Numerical Linear Algebra">Sketching as a Tool for Numerical Linear Algebra</a>. 
+      <a href="https://arxiv.org/abs/1411.4357">Sketching as a Tool for Numerical Linear Algebra</a>. 
       Foundations and Trends in Theoretical Computer Science, 2014. 
     </td>
   </tr>
@@ -1182,7 +1196,7 @@ students with different learning needs.</li>
 
 <p>
   In addition, academic dishonesty and plagiarism is considered a serious offense in this course. I expect that any assignment or exam you submit in this course will 
-  be your own product and follows the collaboration and external resources policies specified in the <a href="">course outline</a>.   
+  be your own product and follows the collaboration and external resources policies specified in the course outline.   
   If an assignment is too hard, start earlier, ask for help, or simply do not answer the question --- academic dishonesty is never the right answer.
   If you have any concerns or questions about these policies, please discuss them with me.  
 </p>
