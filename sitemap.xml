@@ -65,8 +65,4 @@
     <loc>https://sepehr.assadi.info/courses/cs671-f20/</loc>
     <priority>0.5</priority>
   </url>
-  <url>
-    <loc>https://sepehr.assadi.info/space-bounded-computation-reading-group/</loc>
-    <priority>0.4</priority>
-  </url>
 </urlset>
