@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sepehr.assadi.info/sitemap.xml
+Sitemap: https://sepehr.assadi.info/sitemap-index.xml
