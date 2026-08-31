@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Policy — Sepehr Assadi</title>
+  <link rel="shortcut icon" href="../favicon.ico" />
+
+  <meta name="description" content="AI policy of Sepehr Assadi, Associate Professor of Computer Science at the University of Waterloo.">
+  <meta name="author" content="Sepehr Assadi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sepehr.assadi.info/files/ai-policy.html">
+
+  <style>
+    /* Main Parts */ 
+    body {
+      font-family:times;
+      color: #454544;
+      font-size:16px;
+    }
+
+    h1{
+      font-size:60px;
+      font-weight: normal;
+    }
+    h2{
+      font-weight: normal;
+    }
+
+    p {
+      line-height: 1.6em;
+    }
+
+    .make-margin {
+      margin-top:2%;
+      margin-left:5%;
+      margin-right:15%;
+    }
+
+    .make-margin a {
+     text-decoration: none;
+      border-bottom: 1px dashed;
+      color: #4169E1; 
+    }
+
+    .make-margin a:hover{
+      font-weight:bold; 
+      cursor: url(), pointer;
+    }
+
+    .make-margin ol li {
+      margin: 10px 0;
+      line-height: 1.6em;
+    }
+
+    /* Footnotes */
+    .make-margin sup a {
+      border-bottom: none;
+    }
+
+    /* Keep footnote markers from stretching their line's height:
+       take the sup out of normal baseline alignment and give it zero
+       line-height, then raise it manually. */
+    sup.fnref {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+      top: -0.5em;
+    }
+    .footnotes {
+      font-size: 0.875em;
+      color: dimgray;
+    }
+
+    /* Paragraph gaps inside policy items (formerly the br separators):
+       a line break plus 5pt of extra space. Tune the height here. */
+    .li-break {
+      height: 5pt;
+    }
+
+    /* Displayed quote */
+    blockquote.quote {
+      text-align: center;
+      font-style: italic;
+      margin: 15px 10%;
+      line-height: 1.6em;
+    }
+
+    /* Navigation bar */
+    .topnav {
+      background-color: #454544;
+      overflow: hidden;
+      text-align:center;
+      display:block;
+      width:100%;
+      font-family: sans-serif;
+    }
+
+    .topmenu{
+        position: relative;
+        margin-left: 5%;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Titles and sections */ 
+
+    .section {
+      font-weight: bold;
+      font-size: 45px;
+      margin-top:3%;
+    }
+
+    /* ===== Responsive layout for phones / small tablets ===== */
+    @media (max-width: 768px) {
+      body { font-size: 17px; }
+
+      /* Reclaim the wide right margin on small screens */
+      .make-margin { margin-left: 5%; margin-right: 5%; }
+
+      /* Scale down the oversized display type */
+      h1 { font-size: 40px; line-height: 1.15; }
+      h2 { font-size: 19px; }
+      .section { font-size: 30px; margin-top: 8%; }
+
+      /* Navigation: let items wrap and center rather than float in one row */
+      .topmenu { margin-left: 0; }
+      .topnav a { float: none; display: inline-block; padding: 10px 12px; font-size: 15px; }
+
+      /* Safety net: nothing should overflow the viewport width */
+      img, table { max-width: 100%; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <div class="topmenu">
+      <a href="../index.html#about-me">About Me</a>
+      <a href="../index.html#teaching">Teaching</a>
+      <a href="../index.html#mentoring">Mentoring</a>
+      <a href="../index.html#activities">Professional Activities</a>
+      <a href="../index.html#publications">Publications</a>
+      <a href="../index.html#talks">Talks</a>
+      <a href="../index.html#links">Links</a>
+      <a href="bio.html">Bio</a>
+      <a href="ai-policy.html">AI Policy</a>
+      <a href="sepehr-assadi.pdf">CV (May, 2026)</a>
+    </div>
+  </div>
+
+  <div class="make-margin">
+
+    <div class="section" id="ai-policy"> AI Policy </div>
+
+     <p><b style="color:red;">Version 0 (preliminary): August 30, 2026</b></p>
+
+      <p>The following is a <b>concrete set of policies</b> and <b>less concrete guidelines</b> I would like myself and my research group to adhere to, based on our current understanding of the role of AI in theoretical computer science (TCS). It is worth emphasizing what this document is <b>not</b>: it is not about my personal opinion<sup class="fnref" id="fnref1"><a href="#fn1">1</a></sup> on what AI can do for TCS, what it means for the future of TCS, any excitement or fear about AI, whether we should use AI to the fullest extent or entirely shun it, or any ethical argument about "right" or "wrong".</p>
+
+
+      <p>This document will be updated regularly based on discussions in the group and what has worked for us and what did not. I do not think anyone has all the answers (I certainly do not have any of them), so we are all learning here. 
+        Given this, I reserve the right to scrap this whole page at some point and instead say: "No AI policy, go crazy!". Until that time comes however, we will be using this AI policy or its subsequent updated versions. 
+      </p>
+ 
+      <p> One last comment before we start: if you are currently my student, I am happy to pay for your subscription to use top AI models and I encourage you to be curious and keep an open mind about AI and examine different ways of incorporating it as a tool in your research and learning.<sup class="fnref" id="fnref2"><a href="#fn2">2</a></sup> I found this important to say because the rest of this policy may sound like it is putting too many restrictions on how to use AI in your research, and 
+      I want to make sure the takeaway is <b>not</b> that AI is "bad".<sup class="fnref" id="fnref3"><a href="#fn3">3</a></sup> The goal of this policy is to keep us within the standards of TCS research while making sure you get the most out of your training and/or graduate school as part of our group. 
+      </p>
+
+      <p><b style="color:blue">AI Disclosure:</b> All texts on this page are my own, but I have used Claude for preparing the webpage and polishing the writing.</p> 
+      <h3> Specific Policies </h3>
+      <ol> 
+        <li> <b>Documenting AI use:</b> Document all AI use for each of your projects meticulously and separately. This means keeping track of all prompts you use in your research and their responses, all data you share with AI, and detailed (AI-generated) summary logs with token counts and number of hours if you are using a harness.<sup class="fnref" id="fnref4"><a href="#fn4">4</a></sup><div class="li-break"></div>
+
+        Many of our TCS conferences require <b>AI disclosures</b> currently, but there is still no well-established standard for what these disclosures should include. 
+        The AI documentation we collect internally is meant to be considerably more expansive than the one-paragraph or half-page disclosure itself.
+        </li>
+
+        <li> <b>Writing:</b> All final write-ups---our papers together, your own separate papers, thesis, or technical reports---must be written by humans from scratch with no AI copy/pasting. 
+        We should be able to do such writings after internalizing any AI answers we used in the project and 
+        with no further access to the AI outputs.<sup class="fnref" id="fnref5"><a href="#fn5">5</a></sup>
+
+        <div class="li-break"></div>
+        I understand this policy is among the more controversial ones so while we are here I am just going to ask you for something even more controversial. Do not use AI as a shortcut for writing those pesky details or calculations that we all know how to do. Experience has made me a firm believer that nine times out of ten you will indeed only “waste” your time writing something obvious—but on the tenth, you will hit a roadblock you would otherwise have missed, and working through it will teach you enough to be worth all ten tries.<sup class="fnref" id="fnref6"><a href="#fn6">6</a></sup> Therefore, delegating this part to AI is going to rob you of an excellent learning opportunity.  
+        
+        <div class="li-break"></div>
+        Finally, please do not give AI direct access to the files or folders used for the final write-up of any paper you write, not even for polishing minor things (ask for a PDF of comments to polish and implement them yourself instead). 
+        </li>
+
+        <li> <b>Exercises and practice:</b> Until very recently, we could use simple open problems as exercises---for learning a new topic, learning how to do research, or simply for practice---and most of the time, we could also publish the solutions. It is entirely possible that already now or in the near future, the second step, namely, publishing the results, is no longer possible (because these questions can be solved in a very short span of time with the help of AI or some AI pipeline has already claimed them).<sup class="fnref" id="fnref7"><a href="#fn7">7</a></sup> This does not mean you cannot still practice---after all, the main goal was never publishing but learning and practicing, and AI cannot replace your understanding. 
+        <div class="li-break"></div>
+
+        In summary, never use AI for a practice problem or exercise no matter how tempting it is (we will be clear in our discussions when we are practicing). </li>
+
+        <li><b>Privacy:</b> Please turn off any data sharing settings on the AI tools you are using for research (e.g., in ChatGPT, turn off “Improve the model for everyone”). Even after having done so, please never share any document or half-baked ideas of someone else with your AI tool unless you have explicit permission from them. </li>
+       
+        <li><b>Sharing/claiming AI-generated ideas:</b> If you would like to include an AI-generated idea in a paper or even present it in our meetings, keep the following in mind: you should first acknowledge this part was AI generated but then be able to present all the ideas entirely from your own notes and in your own language in a way that if all AI chat/content was deleted, you could still reproduce the whole argument. Until you reach that level of understanding about a result, we will be treating the AI-generated idea as an unverified manuscript and even a possible hallucination (this is regardless of the fact that the AI might be able to generate ten ways of Lean-verifying this statement). 
+
+
+        <div class="li-break"></div>
+        Despite the high bar of fully understanding the result first, you are still required to disclose if an idea was generated by or with the help of an AI, regardless of the fact that in hindsight, you understand it well enough that 
+        you could have certainly proved it yourself also. </li>
+
+        <li><b>No AI back-and-forth between us:</b> A reminder that if all you do is to prompt some AI between our meetings and report the answer to me, I can do that well on my own. Therefore, 
+          I ask you to entirely refrain from playing mediator between me and some AI and in return I promise to not do the same to you; this means, unless you specifically ask me to run something for you on AI, any comments on your drafts or emails you receive from me are entirely my own.<sup class="fnref" id="fnref8"><a href="#fn8">8</a></sup> </li>
+
+        <li><b>Standard practices in TCS:</b> We will be following the policies set by our TCS community, primarily communicated through our conferences like STOC/FOCS/SODA.<sup class="fnref" id="fnref9"><a href="#fn9">9</a></sup> You can check the call for papers for recent iterations of these conferences for this information (e.g., the current practice that all listed authors on a paper must be human and take full responsibility for all content). I would also like us all to follow the <a href="https://leidendeclaration.ai">Leiden Declaration on Artificial Intelligence and Mathematics</a>, in all policies 
+          that do not go against existing TCS guidelines.<sup class="fnref" id="fnref10"><a href="#fn10">10</a></sup> 
+
+        </li>
+      </ol>
+
+      <h3> More General Guidelines </h3>
+
+      <p> More generally, I would like to ask you to consider the following in your interaction with AI: </p>
+      <ol>
+        <li> Our main goal is doing research for the sake of TCS: <b>understanding</b> something new and contributing to the general understanding of our research community, and, at the risk of sounding too full of ourselves, 
+          the understanding of humanity as a whole. Keep that in mind in all your interactions with AI. This also means that you should not reduce your job, or let others reduce it for you, to being merely a problem solver who jumps from one question to the next (especially to publish more and more papers). 
+        </li>
+
+
+        <li>The following <a href="https://arxiv.org/pdf/2608.16753">quote by Tao</a> seems like a clear yardstick for whether or not a result is ready for publication:
+          <blockquote class="quote">
+            "if the authors cannot convincingly demonstrate that they are able to give a clear, expert-level talk on their results, one that is correct and properly attributed, then the result should not be published."
+          </blockquote>
+        </li>
+        <li> A general principle to keep in mind about using AI is to use it to do better work, not more work: for instance, use AI to solve a much harder problem, to further polish the presentation of your work, to find more connections to the existing literature, to explore alternative ways of presenting your result, to write a blog post about an interesting research idea (yours or someone else’s), or to run experiments to see your work in action---instead of using it to pick even more low-hanging fruits and publish them. </li>
+        <li> Try to build a general discipline about when to use AI and when not to. It is tempting to use AI to move past a hurdle in research, or to just run it to solve 10 problems while you sleep, or 
+          to finalize the last annoying part of an argument that you think you should know how to do but do not remember exactly how just at the moment. In summary, do not use AI for cutting corners and watch out for becoming too dependent on AI. </li> 
+
+         <li> If you are using AI as part of your problem solving (or honestly in general), only use it on problems that you cared about even a priori, whose relevance and importance you can communicate without having to rely on the AI, and whose solutions you have the tools to fully verify yourself. </li>
+          
+        <li> Remember that if all we do is rely on some AI to do our work for us, then we ourselves are really not needed.</li>
+        <li> Finally, a comment which is not directly related to AI but has become more relevant because of it: try to make a distinction between real academic discourse and what you see online, 
+        and stick to the standard channels of scientific communication (e.g., you can publish a result on arXiv but not on Twitter, no matter how cool it sounds).  
+        While in the past our TCS academic community has been left to its own devices for the most part, we are now seeing more and more interaction with the public, hobbyists, and corporations. We do not have a monopoly on doing research or solving problems and these interactions can lead to highly positive outcomes. But at the same time, remember that not everyone shares the same values we take for granted in the academic community, and account for the different motivations of people who now participate in these activities. </li>
+      </ol>
+
+       <h3> Resources and references </h3> 
+       <p> In preparing this document, I consulted the following resources: </p>
+       <ol>
+        <li> <a href="https://math.mit.edu/~etingof/aiuse.pdf">Use of AI in mathematical research: A guide for young mathematicians</a>, by Pavel Etingof; </li>
+        <li> <a href="https://arxiv.org/pdf/2608.16753">Mathematics in the age of AI</a>, by Terence Tao; </li>
+        <li> <a href="https://leidendeclaration.ai">Leiden Declaration on Artificial Intelligence and Mathematics</a>; </li>
+        <li> <a href="https://www.jstor.org/stable/jj.14962448">Mathematica: A Secret World of Intuition and Curiosity</a>, by David Bessis, translated by Kevin Frey; </li>
+        <li> <a href="https://proofsandprompts.com">Proofs and Prompts blog</a> and specifically the posts by <a href="https://proofsandprompts.com/2026/08/25/the-reverse-centaur-problem-llms-and-the-choices-ahead/">Mark Wildon</a>,
+        <a href="https://proofsandprompts.com/2026/08/18/on-protecting-mathematics-from-llm-companies-monopoly/">Tian Lan</a>, and <a href="https://proofsandprompts.com/2026/08/07/writing-mathematics-in-the-age-of-ai/">Martin Hairer</a>;</li>
+        <li> <a href="https://eytanadar.medium.com/ai-native-phd-students-f9f6eebc1f91">AI-Native PhD Students</a>, by Eytan Adar; </li>
+        <li> <a href="https://marcelgoh.ca/2026/07/05/ai-vegetarian.html">Can a junior mathematician remain an AI-vegetarian?</a>, by Marcel Goh. </li>
+      </ol>
+
+
+        <hr>
+       <h4> Footnotes </h4>
+       <ol class="footnotes">
+        
+          <li id="fn1"> I generally do not see the point of sharing my opinion publicly because no one cares (*) and because there is already too much opinion online about everything (**). Of course, both (*) and (**) are opinions (and not just about myself) and the irony is not lost on me; you see, there is good reason for me to not share opinions. <a href="#fnref1">&#8617;</a> </li>
+          <li id="fn2"> At some point soon, we should also add a part to this page about all the interesting ways of using AI you found. <a href="#fnref2">&#8617;</a> </li>
+          <li id="fn3"> Although I do understand the argument of those who would rather shun it entirely; if you belong to this camp, I respect your decision and promise not to ask you to use AI in your and our joint research, as long as we are both clear about the implications. <a href="#fnref3">&#8617;</a> </li>
+          <li id="fn4"> If this sounds like too much work, just look at how lab-based fields keep their lab notebooks. <a href="#fnref4">&#8617;</a> </li>
+          <li id="fn5"> I understand this is going to get very tricky in cases when we collaborate externally and we may need to be more flexible in those cases. It is best to discuss these views at the beginning of the collaboration and revisit them throughout to make sure all parties have a consistent view of AI policy in place. <a href="#fnref5">&#8617;</a> </li>
+          <li id="fn6"> For me, most of the time, if I feel something is true or even trivial but "annoying" to write, it is because I have not found the right way to express it and there is a gap in my understanding. <a href="#fnref6">&#8617;</a> </li>
+          <li id="fn7"> Although I also believe (or at least strongly hope) that our community will come up with a solution to how to navigate these types of results very soon, given the many encouraging discussions happening. <a href="#fnref7">&#8617;</a> </li>
+          <li id="fn8"> I would say that if I ended up finding way too many typos or silly mistakes in something you send me, I may have to send it back to you and ask you to run it by some AI on your own to catch the typos and mistakes before I read it again. <a href="#fnref8">&#8617;</a> </li>
+          <li id="fn9"> Until better sources emerge, e.g., EATCS or SIGACT publishing a community guide. <a href="#fnref9">&#8617;</a> </li>
+          <li id="fn10"> To my knowledge, currently there are no policies with conflicting views between the two. <a href="#fnref10">&#8617;</a> </li>
+       </ol>
+
+  </div>
+
+         <div style="margin-bottom: 30px;"></div>
+
+  <p style="color:dimgray; font-size:14px; text-align: center;">Created by Sepehr Assadi -- Last Major Update: August 2026 </p>
+
+</body>
+</html>
