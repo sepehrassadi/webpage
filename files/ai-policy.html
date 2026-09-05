@@ -168,37 +168,38 @@
 
     <div class="section" id="ai-policy"> AI Policy </div>
 
-     <p><b style="color:red;">Version 0 (preliminary): August 30, 2026</b></p>
+     <p><b style="color:red;">Version 0 (preliminary): September 5, 2026</b></p>
 
       <p>The following is a <b>concrete set of policies</b> and <b>less concrete guidelines</b> for my research group based on our current understanding of the role of AI in theoretical computer science (TCS). It is worth emphasizing what this page is <b>not</b>: it is not about my personal opinion<sup class="fnref" id="fnref1"><a href="#fn1">1</a></sup> on what AI can do for TCS, what it means for the future of TCS, any excitement or fear about AI, whether we should use AI to the fullest extent or entirely shun it, or any ethical argument about "right" or "wrong".</p>
 
 
-      <p>This document will be updated regularly based on discussions in the group and what has worked for us and what did not. I do not think anyone has all the answers (I certainly do not have any of them), so we are all learning here. 
-        Given this, I reserve the right to scrap this whole page at some point and instead say: "No AI policy, go crazy!". Until that time comes however, we will be using this AI policy or its subsequent updated versions. 
+      <p>This document will be updated regularly based on discussions in the group and what has worked for us and what did not. I do not think anyone has all the answers (I certainly do not have any of them), so we are all learning here. Given this, I reserve the right to scrap this whole page at some point and instead say: "No AI policy, go crazy!". Until that time comes however, we will be using this AI policy or its subsequent updated versions. 
       </p>
  
-      <p> One last comment before we start: if you are currently my student, I am happy to pay for your subscription to use top AI models and I encourage you to be curious and keep an open mind about AI and examine different ways of incorporating it as a tool in your research and learning.<sup class="fnref" id="fnref2"><a href="#fn2">2</a></sup> I found this important to say because the rest of this policy may sound like it is putting too many restrictions on how to use AI in your research, and 
-      I want to make sure the takeaway is <b>not</b> that AI is "bad".<sup class="fnref" id="fnref3"><a href="#fn3">3</a></sup> The goal of this policy is to keep us within the standards of TCS research while making sure you get the most out of your training and/or graduate school as part of our group. 
+      <p> One last comment before we start: if you are currently my student, I am happy to pay for your subscription to use top AI models and I encourage you to be curious and keep an open mind about AI and examine different ways of incorporating it as a tool in your research and learning. I found this important to say because the rest of this policy may sound like it is putting too many restrictions on how to use AI in your research, and 
+      I want to make sure the takeaway is <b>not</b> that AI is "bad".<sup class="fnref" id="fnref2"><a href="#fn2">2</a></sup> The goal of this policy is to keep us within the standards of TCS research while making sure you get the most out of your training and/or graduate school as part of our group. 
       </p>
 
       <p><b style="color:blue">AI Disclosure:</b> All texts on this page are my own, but I have used Claude for preparing the webpage and polishing the writing.</p> 
       <h3> Specific Policies </h3>
       <ol> 
-        <li> <b>Documenting AI use:</b> Document all AI use for each of your projects meticulously and separately. This means keeping track of all prompts you use in your research and their responses, all data you share with AI, and detailed (AI-generated) summary logs with token counts and number of hours if you are using a harness.<sup class="fnref" id="fnref4"><a href="#fn4">4</a></sup><div class="li-break"></div>
+        <li> <b>Documenting AI use:</b> Document all AI use for each of your projects meticulously and separately. This means keeping track of all prompts you use in your research and their responses, all data you share with AI, and detailed (AI-generated) summary logs with token counts and number of hours if you are using a harness.<sup class="fnref" id="fnref3"><a href="#fn3">3</a></sup> We can discuss how to implement each of these steps in more detail.<sup class="fnref" id="fnref4"><a href="#fn4">4</a></sup> <div class="li-break"></div> 
 
-        Many of our TCS conferences require <b>AI disclosures</b> currently, but there is still no well-established standard for what these disclosures should include. 
-        The AI documentation we collect internally is meant to be considerably more expansive than the one-paragraph or half-page disclosure itself.
+        Many of our TCS conferences require <b>AI disclosures</b> currently, but there is still no well-established standard for what these disclosures should include. For reference, here is an example AI disclosure from the <a href="https://focs.computer.org/2026/call-for-papers-2/">FOCS 2026 call for papers</a>: 
+        <blockquote class="quote">
+          "AI Disclosure: We used [Tool Name] to assist with [Brief Description of Use]. The tool materially affected [Sections X and Y]. More details can be found in [Section Z]. The authors verified the correctness and originality of all content including references."
+        </blockquote>
+        
+        The AI documentation we collect internally is meant to be <b>considerably more expansive</b> than the one-paragraph or half-page disclosure itself.
         </li>
 
         <li> <b>Writing:</b> All final write-ups---our papers together, your own separate papers, thesis, or technical reports---must be written by humans from scratch with no AI copy/pasting. 
         We should be able to do such writings after internalizing any AI answers we used in the project and 
-        with no further access to the AI outputs.<sup class="fnref" id="fnref5"><a href="#fn5">5</a></sup>
+        with no further access to the AI outputs.<sup class="fnref" id="fnref5"><a href="#fn5">5</a></sup> Receiving proofreading and light editorial feedback from AI is certainly fine and encouraged (to the extent you do not lose your own voice in the writing). But please do not give AI <i>write-access</i> to the files or folders used for the final write-up of any paper you write (ask for a PDF of feedback and comments to polish and implement them yourself instead, so you can verify the suggestions and learn from them for the future). 
 
         <div class="li-break"></div>
         I understand this policy is among the more controversial ones so while we are here I am just going to ask you for something even more controversial. Do not use AI as a shortcut for writing those pesky details or calculations that we all know how to do. Experience has made me a firm believer that nine times out of ten you will indeed only “waste” your time writing something obvious—but on the tenth, you will hit a roadblock you would otherwise have missed, and working through it will teach you enough to be worth all ten tries.<sup class="fnref" id="fnref6"><a href="#fn6">6</a></sup> Therefore, delegating this part to AI is going to rob you of an excellent learning opportunity.  
         
-        <div class="li-break"></div>
-        Finally, while receiving proofreading and light editorial feedback from AI is certainly fine and even encouraged (to the extent you do not lose your own voice in the writing), please do not give AI direct access to the files or folders used for the final write-up of any paper you write (ask for a PDF of feedback and comments to polish and implement them yourself instead). 
         </li>
 
         <li> <b>Exercises and practice:</b> Until very recently, we could use simple open problems as exercises---for learning a new topic, learning how to do research, or simply for practice---and most of the time, we could also publish the solutions. It is entirely possible that already now or in the near future, the second step, namely, publishing the results, is no longer possible (because these questions can be solved in a very short span of time with the help of AI or some AI pipeline has already claimed them).<sup class="fnref" id="fnref7"><a href="#fn7">7</a></sup> This does not mean you cannot still practice---after all, the main goal was never publishing but learning and practicing, and AI cannot replace your understanding. 
@@ -267,9 +268,9 @@
        <ol class="footnotes">
         
           <li id="fn1"> I generally do not see the point of sharing my opinion publicly because no one cares (*) and because there is already too much opinion online about everything (**). Of course, both (*) and (**) are opinions (and not just about myself) and the irony is not lost on me; you see, there is good reason for me to not share opinions. <a href="#fnref1">&#8617;</a> </li>
-          <li id="fn2"> At some point soon, we should also add a part to this page about all the interesting ways of using AI you found. <a href="#fnref2">&#8617;</a> </li>
-          <li id="fn3"> Although I do understand the argument of those who would rather shun it entirely; if you belong to this camp, I respect your decision and promise not to ask you to use AI in your and our joint research, as long as we are both clear about the implications. <a href="#fnref3">&#8617;</a> </li>
-          <li id="fn4"> If this sounds like too much work, just look at how lab-based fields keep their lab notebooks. <a href="#fnref4">&#8617;</a> </li>
+          <li id="fn2"> Although I do understand the argument of those who would rather shun it entirely; if you belong to this camp, I respect your decision and promise not to ask you to use AI in your and our joint research, as long as we are both clear about the implications. <a href="#fnref2">&#8617;</a> </li>
+          <li id="fn3"> If this sounds like too much work, just look at how lab-based fields keep their lab notebooks. <a href="#fnref3">&#8617;</a> </li>
+          <li id="fn4"> As a simple example, do not have a single chat session for all your projects and personal questions and ask everything there, nor ask each question in some random chat that you will not be able to recover later. Create a proper project and folder for your interactions and keep those chats focused on the related project only. <a href="#fnref4">&#8617;</a> </li>
           <li id="fn5"> I understand this is going to get very tricky in cases when we collaborate externally and we may need to be more flexible in those cases. It is best to discuss these views at the beginning of the collaboration and revisit them throughout to make sure all parties have a consistent view of AI policy in place. <a href="#fnref5">&#8617;</a> </li>
           <li id="fn6"> For me, most of the time, if I feel something is true or even trivial but "annoying" to write, it is because I have not found the right way to express it and there is a gap in my understanding. <a href="#fnref6">&#8617;</a> </li>
           <li id="fn7"> Although I also believe (or at least strongly hope) that our community will come up with a solution to how to navigate these types of results very soon, given the many encouraging discussions happening. <a href="#fnref7">&#8617;</a> </li>
