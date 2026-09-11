@@ -6,6 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://sepehr.assadi.info/files/bio.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sepehr.assadi.info/files/ai-policy.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://sepehr.assadi.info/courses/cs860-w26/</loc>
     <priority>0.7</priority>
   </url>
