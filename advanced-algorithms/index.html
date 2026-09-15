@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventures in Advanced Algorithms &mdash; Sepehr Assadi</title>
+  <meta name="author" content="Sepehr Assadi">
+  <meta name="description" content="Adventures in Advanced Algorithms: A Guide for Curious Students &mdash; an open educational resource on modern algorithmic techniques by Sepehr Assadi, University of Waterloo.">
+  <script>(function(){try{var t=localStorage.getItem('aaa-theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light';}document.documentElement.classList.add(t);}catch(e){}})();</script>
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: times;
+      color: #454544;
+      font-size: 16px;
+    }
+
+    h1 { font-size: 50px; font-weight: normal; margin-bottom: 0; }
+    h2 { font-weight: normal; margin-top: 6px; margin-bottom: 6px; }
+    p  { line-height: 1.6em; }
+
+    .make-margin a {
+      text-decoration: none;
+      border-bottom: 1px dashed;
+      color: #4169E1;
+    }
+    .make-margin a:hover { font-weight: bold; cursor: url(), pointer; }
+
+    .make-margin {
+      margin-top: 2%;
+      margin-left: 5%;
+      margin-right: 15%;
+    }
+
+    /* Centred title block (title, subtitle, byline) */
+    .titleblock { text-align: center; }
+
+    /* Navigation bar */
+    .topnav {
+      background-color: #454544;
+      overflow: hidden;
+      text-align: center;
+      display: block;
+      width: 100%;
+      font-family: sans-serif;
+    }
+    .topmenu { position: relative; margin-left: 5%; }
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .topnav a:hover { background-color: #ddd; color: black; }
+
+    /* Rounded callout (used once, at the top) */
+    .news {
+      background-color: #F0F0F0;
+      padding: 20px;
+      border-radius: 25px;
+      color: black;
+      font-size: 16px;
+    }
+    .news .news-title {
+      font-weight: bold;
+      color: red;
+      display: table;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      font-size: 18px;
+      border-bottom: 1px solid;
+    }
+    .news p { margin: 0; }
+
+    /* Sharp-cornered callout (used once, at the end) */
+    .selected-paper {
+      background-color: #F0F0F0;
+      line-height: 1.6em;
+      border: 1px solid #c8d9cd;
+      border-radius: 4px;
+      box-shadow: 0 2px 7px rgba(45, 80, 55, 0.08);
+      padding: 1rem 1.15rem;
+      margin: 1.25rem 0 1.75rem;
+    }
+
+    /* Section titles */
+    .section {
+      font-weight: bold;
+      font-size: 45px;
+      margin-top: 3%;
+    }
+
+    /* ---- Contents ---- */
+    .part { margin-top: 26px; }
+    .part-title {
+      font-size: 23px;
+      font-weight: bold;
+      color: #454544;
+      border-bottom: 1px solid #cfcfcf;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+      overflow: hidden;          /* contain the right-floated badge */
+    }
+    .part-title .pnum {
+      color: gray;
+      font-size: 17px;
+      font-weight: bold;
+      margin-right: .6em;
+      letter-spacing: .04em;
+    }
+    .part-intro { color: dimgray; font-size: 15px; margin: 4px 0 8px; }
+    /* "coming up soon" on a part heading: right-aligned, level with the title */
+    .part-title .pdf.soon { float: right; margin-top: 4px; margin-left: 12px; }
+
+    table.chapters { width: 100%; border-collapse: collapse; }
+    table.chapters td {
+      padding: 7px 8px;
+      vertical-align: baseline;
+      border-bottom: 1px solid #eee;
+    }
+    table.chapters tr:last-child td { border-bottom: none; }
+    td.ch-num { width: 2.6em; text-align: right; color: gray; font-weight: bold; white-space: nowrap; }
+    td.ch-link { width: 9em; text-align: right; white-space: nowrap; }
+    .ch-hint { display: block; font-size: 14px; color: dimgray; margin-top: 2px; }
+
+    /* PDF badges (unchanged from the previous page) */
+    .pdf {
+      display: inline-block;
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: .72rem;
+      letter-spacing: .06em;
+      color: #2b6fa7;
+      border: 1px solid #c3d5e6;
+      background: #f0f5fa;
+      border-radius: 3px;
+      padding: 2px 7px;
+      vertical-align: 1px;
+    }
+    /* keep the badges out of the dashed-underline link style */
+    .make-margin a.pdf { border-bottom: 1px solid #c3d5e6; color: #2b6fa7; }
+    .make-margin a.pdf:hover {
+      background: #2b6fa7; color: #fff; border-color: #1c527d;
+      font-weight: normal; text-decoration: none;
+    }
+    .pdf.soon { color: #6a6a6a; border-color: #e0e0e0; background: #f6f6f6; cursor: default; }
+
+    /* Citation block (kept deliberately plain) */
+    .cite-plain { margin: .3em 0 1em; padding-left: 14px; border-left: 3px solid #cfcfcf; }
+    .bibwrap { position: relative; margin: .2em 0 .5em; }
+    pre#bibtex {
+      background: #f7f8fa;
+      padding: 12px 14px;
+      margin: 0;
+      overflow-x: auto;
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #333;
+    }
+    .copybtn {
+      position: absolute; top: 8px; right: 8px;
+      font-family: sans-serif; font-size: 12px;
+      color: #454544; background: #fff;
+      border: 1px solid #cfcfcf; border-radius: 4px;
+      padding: 3px 11px; cursor: pointer;
+    }
+    .copybtn:hover { background: #454544; color: #fff; }
+
+    .toc-line { margin: 10px 0 4px; }
+
+    /* ---- Dark-mode toggle (sits at the right end of the nav bar) ---- */
+    .theme-toggle {
+      float: right;
+      margin-right: 5%;
+      background: transparent;
+      border: 0;
+      color: #f2f2f2;
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1;
+      padding: 14px 16px;
+      cursor: pointer;
+    }
+    .theme-toggle:hover { background-color: #ddd; color: black; }
+    .theme-toggle::before { content: "☾"; }             /* moon: switch to dark */
+    html.dark .theme-toggle::before { content: "☀"; }   /* sun:  switch to light */
+
+    /* ---- Dark mode: warm near-black, tuned for the Times serif ---- */
+    html.dark { color-scheme: dark; background: #1b1b19; }
+    html.dark body {
+      background: #1b1b19;
+      color: #dedbd4;
+      -webkit-font-smoothing: antialiased;
+    }
+    html.dark .make-margin a { color: #7fa8f0; }
+
+    html.dark .topnav { background-color: #2b2b28; }
+    html.dark .topnav a, html.dark .theme-toggle { color: #e6e3dc; }
+    html.dark .topnav a:hover,
+    html.dark .theme-toggle:hover { background-color: #dedbd4; color: #1b1b19; }
+
+    html.dark .news { background-color: #262622; color: #dedbd4; }
+    html.dark .news .news-title { color: #ff8577; }
+
+    html.dark .selected-paper {
+      background-color: #232320;
+      border-color: #3d4a41;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, .35);
+    }
+
+    html.dark .part-title { color: #dedbd4; border-bottom-color: #3a3a35; }
+    html.dark .part-title .pnum { color: #918f88; }
+    html.dark .part-intro, html.dark .ch-hint { color: #9d9b93; }
+    html.dark table.chapters td { border-bottom-color: #2c2c28; }
+    html.dark td.ch-num { color: #918f88; }
+
+    html.dark .pdf { color: #86bce8; border-color: #31506b; background: #14202a; }
+    html.dark .make-margin a.pdf { color: #86bce8; border-color: #31506b; }
+    html.dark .make-margin a.pdf:hover { background: #86bce8; color: #14202a; border-color: #86bce8; }
+    html.dark .pdf.soon { color: #8d8b84; border-color: #3a3a35; background: #232320; }
+
+    html.dark .cite-plain { border-left-color: #3a3a35; }
+    html.dark pre#bibtex { background: #1f1f1c; color: #cdcbc4; }
+    html.dark .copybtn { background: #2b2b28; border-color: #3a3a35; color: #dedbd4; }
+    html.dark .copybtn:hover { background: #dedbd4; color: #1b1b19; }
+
+    /* ===== Responsive layout for phones / small tablets ===== */
+    @media (max-width: 768px) {
+      body { font-size: 17px; }
+      .make-margin { margin-left: 5%; margin-right: 5%; }
+      h1 { font-size: 40px; line-height: 1.15; }
+      h2 { font-size: 19px; }
+      .section { font-size: 30px; margin-top: 8%; }
+      .topmenu { margin-left: 0; }
+      .topnav a { float: none; display: inline-block; padding: 10px 12px; font-size: 15px; }
+      .theme-toggle { float: none; display: inline-block; margin-right: 0; padding: 10px 12px; font-size: 15px; }
+      .part-title { font-size: 20px; }
+      td.ch-link { width: 7.5em; }
+      table.chapters td { padding: 6px 4px; }
+      .ch-hint { font-size: 14px; }
+      img, table { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topnav">
+    <div class="topmenu">
+      <a href="#about">About</a>
+      <a href="#contents">Contents</a>
+      <a href="#cite">Citing</a>
+    <!--  <a href="https://sepehr.assadi.info/courses/cs466(6)-f25/">CS 466/666</a>-->
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);h.classList.toggle('light',!d);try{localStorage.setItem('aaa-theme',d?'dark':'light');}catch(e){}"></button>
+    </div>
+  </div>
+
+  <div class="make-margin">
+
+    <div class="titleblock">
+      <h1> Adventures in Advanced Algorithms</h1>
+      <h2>  A Guide for Curious Students </h2>
+      <p>By <a href="https://sepehr.assadi.info">Sepehr Assadi</a></p>
+    </div>
+
+
+
+    <div class="section" id="about"> About </div>
+
+    <p> <em>Adventures in Advanced Algorithms</em> grew out of the development of open educational resources (OER) for the course <a href="https://sepehr.assadi.info/courses/cs466(6)-f25/">Advanced Algorithms (CS 466/666)</a> taught at the School of Computer Science, University of Waterloo. The goal of these notes is to present a series of modern algorithmic techniques in a mathematically rigorous manner to advanced undergraduate and beginning graduate students, and anyone curious about algorithm design beyond the standard introductory curriculum.</p>
+
+    <p> The emphasis is not on cataloging problems, but on enhancing how we <em>think</em> about problems
+    algorithmically, and on showcasing some of the key algorithmic and analytical techniques that have
+    emerged throughout theoretical computer science (TCS) in the last half-century&mdash;advances that
+    introductory courses, still largely centered on 1960s&ndash;70s material, tend to leave out. The notes
+    assume familiarity with basic algorithm design and analysis and with discrete probability, and build
+    toward more advanced techniques and proof methods. Each chapter is sized to be covered in roughly one
+    lecture, and the material is intended to be read largely in the order presented, although after
+    Part&nbsp;I the remaining parts can, for the most part, be read in any order. </p>
+
+    <p> <b>Disclaimer:</b> The choice of topics in this book is inherently biased—by the personal taste
+    of the author, and by what could realistically be covered in his courses. The book does not attempt to provide a comprehensive survey of all techniques in algorithm design, 
+    nor does it in any way claim to cover the most “important” or “fundamental” topics; rather, the topics were chosen simply to introduce the reader to some advanced ideas
+     in TCS and algorithm design. </p>
+
+    <p> This book is released as an open educational resource: freely available for instructors and students to use, adapt, and improve. See <a href="#cite">here</a> for the copyright
+    information and how to cite this book.</p>
+
+    <div class="news">
+      <div class="news-title"> Work in Progress: </div>
+      <p> This book is actively being prepared. Chapters are added and revised regularly, and a good number of
+      them are still under construction&mdash;those are marked below and do not have a PDF yet. A single
+      PDF of the complete book will be available soon; for now, the
+      <a href="table-of-contents.pdf">table of contents</a> and the available individual chapters can be downloaded
+      below. Comments, corrections, and suggestions are most welcome&mdash;<a href="mailto:sepehr@assadi.info?subject=Adventures%20in%20Advanced%20Algorithms">please email me</a>. </p>
+    </div>
+
+    <div class="section" id="contents"> Contents </div>
+
+    <p class="toc-line"> The full outline of the book, including chapters that are not yet released, is available in
+    the table of contents: &nbsp;<a class="pdf" href="table-of-contents.pdf">TABLE OF CONTENTS (PDF)</a> </p>
+
+    <p> Individual chapters are available below. Chapters still under construction are marked
+    <span class="pdf soon">coming up soon</span> and will be posted as they are finished. </p>
+
+      <div class="part">
+        <div class="part-title"><span class="pnum">Part I</span>Background and Motivating Examples</div>
+        <div class="part-intro">Probabilistic tools and a few simple and motivating algorithms.</div>
+        <table class="chapters">
+          <tr><td class="ch-num">1</td><td class="ch-title">Motivating Example<span class="ch-hint">A sublinear-time randomized (Δ+1) coloring&mdash;randomization as a warm-up.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-01.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">2</td><td class="ch-title">Probabilistic Analysis I: Concentration Inequalities<span class="ch-hint">Balls-and-bins, concentration inequalities (Markov, Chebyshev, Chernoff), and boosting success probability.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-02.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">3</td><td class="ch-title">Probabilistic Analysis II: Random Graph Theory<span class="ch-hint">Power of two choices; components and edge counts in random graphs.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-03.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">4</td><td class="ch-title">Streaming Algorithms I: Distinct Elements<span class="ch-hint">Estimating the number of distinct elements in a stream.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-04.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">5</td><td class="ch-title">Streaming Algorithms II: Frequency Moments<span class="ch-hint">The Morris counter and the AMS sketch (first and second frequency moments).</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-05.pdf">PDF</a></td></tr>
+        </table>
+      </div>
+
+      <div class="part">
+        <div class="part-title"><span class="pnum">Part II</span>Linear and Semidefinite Programming</div>
+        <div class="part-intro">Combinatorial optimization through continuous relaxations&mdash;linear and semidefinite programs, and how to round them.</div>
+        <table class="chapters">
+          <tr><td class="ch-num">6</td><td class="ch-title">Linear Programming I: Basics and Applications<span class="ch-hint">What linear programs are, and how to model problems with them.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-06.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">7</td><td class="ch-title">Linear Programming II: LP Duality<span class="ch-hint">Weak and strong duality, and what they let you prove.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-07.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">8</td><td class="ch-title">Linear Programming III: Approximation Algorithms and Integrality Gaps<span class="ch-hint">Rounding and dual fitting for set cover; integrality gaps.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-08.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">9</td><td class="ch-title">Linear Programming IV: A Primal-Dual Algorithm for Bipartite Matching<span class="ch-hint">A primal-dual (1−ε)-approximation for matching.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-09.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">10</td><td class="ch-title">Linear Programming V: Center of Gravity Algorithm<span class="ch-hint">Solving linear programs with the center-of-gravity method.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-10.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">11</td><td class="ch-title">Semidefinite Programming I: Maximum Cut<span class="ch-hint">The SDP relaxation and rounding for Max-Cut.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-11.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">12</td><td class="ch-title">Semidefinite Programming II: Vertex Coloring<span class="ch-hint">Coloring 3-colorable graphs via SDPs and random separators.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-12.pdf">PDF</a></td></tr>
+        </table>
+      </div>
+
+      <div class="part">
+        <div class="part-title"><span class="pnum">Part III</span>Multiplicative Weight Update Technique</div>
+        <div class="part-intro">A versatile algorithmic technique and some of its many uses.</div>
+        <table class="chapters">
+          <tr><td class="ch-num">13</td><td class="ch-title">Multiplicative Weight Update I: Learning from Experts<span class="ch-hint">The experts problem, weighted majority, and the MWU method.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-13.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">14</td><td class="ch-title">Multiplicative Weight Update II: Approximating Linear Programs<span class="ch-hint">Approximating the matching LP with MWU.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-14.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">15</td><td class="ch-title">Multiplicative Weight Update III: Width Reduction Techniques<span class="ch-hint">Making MWU faster by controlling its width.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-15.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">16</td><td class="ch-title">Multiplicative Weight Update IV: Undirected Maximum Flow<span class="ch-hint">Approximate maximum flow via MWU and electrical flows.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-16.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">17</td><td class="ch-title">Multiplicative Weight Update V: Adaptive Sparsification<span class="ch-hint"></span></td><td class="ch-link"><span class="pdf soon">coming up soon</span></td></tr>
+        </table>
+      </div>
+
+      <div class="part">
+        <div class="part-title"><span class="pnum">Part IV</span>Graph Algorithms</div>
+        <div class="part-intro">A sample of some modern graph algorithms: spanning trees, shortest paths, and more.</div>
+        <table class="chapters">
+          <tr><td class="ch-num">18</td><td class="ch-title">Minimum Spanning Trees I: A Fast Deterministic Algorithm<span class="ch-hint">Classical MST algorithms and Fredman–Tarjan algorithm.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-18.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">19</td><td class="ch-title">Minimum Spanning Trees II: A Linear-Time Randomized Algorithm<span class="ch-hint">The Karger–Klein–Tarjan expected-linear-time MST.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-19.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">20</td><td class="ch-title">Shortest Paths I: Spanners and Probabilistic Tree Embeddings<span class="ch-hint">Graph spanners, low-diameter decompositions, and tree embeddings.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-20.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">21</td><td class="ch-title">Shortest Paths II: Negative-Weights in Nearly-Linear Time<span class="ch-hint">Single-source shortest paths with negative weights in nearly-linear time.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-21.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">22</td><td class="ch-title">Edge Coloring: A Near-Linear Time Algorithm<span class="ch-hint"></span></td><td class="ch-link"><span class="pdf soon">coming up soon</span></td></tr>
+        </table>
+      </div>
+
+      <div class="part">
+        <div class="part-title"><span class="pnum">Part V</span>More Advanced Probabilistic Techniques</div>
+        <div class="part-intro">A more in-depth study of probabilistic tools: the Lov&aacute;sz Local Lemma, sharper concentration inequalities, polynomial methods, and random walks.</div>
+        <table class="chapters">
+          <tr><td class="ch-num">23</td><td class="ch-title">Probabilistic Method and Lov&aacute;sz Local Lemma<span class="ch-hint">The probabilistic method and the Lovász Local Lemma.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-23.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">24</td><td class="ch-title">Algorithmic Lov&aacute;sz Local Lemma and Entropy Compression<span class="ch-hint">The Moser–Tardos algorithm and entropy compression.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-24.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">25</td><td class="ch-title">Strong(er) Concentration Bounds I: Martingales and Azuma&rsquo;s Inequality<span class="ch-hint">Martingales and the Azuma–Hoeffding inequality.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-25.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">26</td><td class="ch-title">Strong(er) Concentration Bounds II: Talagrand&rsquo;s Inequality<span class="ch-hint">Talagrand’s inequality and its applications.</span></td><td class="ch-link"><a class="pdf" href="chapters/chapter-26.pdf">PDF</a></td></tr>
+          <tr><td class="ch-num">27</td><td class="ch-title">Strong(er) Concentration Bounds III: Gaussian Variables<span class="ch-hint"><!--Concentration for Gaussian random variables.--></span></td><td class="ch-link"><span class="pdf soon">coming up soon</span></td></tr>
+          <tr><td class="ch-num">28</td><td class="ch-title">Polynomial Methods: Schwartz&ndash;Zippel Lemma<span class="ch-hint"><!--Fingerprinting, polynomial identity testing, and matchings via Schwartz–Zippel.--></span></td><td class="ch-link"><span class="pdf soon">coming up soon</span></td></tr>
+          <tr><td class="ch-num">29</td><td class="ch-title">Random Walks I: Markov Chains<span class="ch-hint"><!--Markov chains and their stationary distributions.--></span></td><td class="ch-link"><span class="pdf soon">coming up soon</span></td></tr>
+          <tr><td class="ch-num">30</td><td class="ch-title">Random Walks II: Graphs and Hitting Times<span class="ch-hint"><!--Random walks on graphs, hitting and cover times.--></span></td><td class="ch-link"><span class="pdf soon">coming up soon</span></td></tr>
+          <tr><td class="ch-num">31</td><td class="ch-title">Random Walks III: Mixing Time and Couplings<span class="ch-hint"><!--Mixing times and the coupling method.--></span></td><td class="ch-link"><span class="pdf soon">coming up soon</span></td></tr>
+        </table>
+      </div>
+
+      <div class="part">
+        <div class="part-title"><span class="pdf soon">coming up soon</span><span class="pnum">Part VI</span>Modern Models of Computation</div>
+        <!--<div class="part-intro">Algorithms for modern computational models &mdash; graph streaming, online algorithms, and distributed computation.</div>-->
+      </div>
+
+    <div class="section" id="cite"> Citing </div>
+
+    <p> If you use or adapt this book, please cite it as: </p>
+
+    <p class="cite-plain"> Sepehr Assadi. <em>Adventures in Advanced Algorithms: A Guide for Curious
+    Students.</em> 2026. Open educational resource,
+    <a href="https://sepehr.assadi.info/advanced-algorithms/">sepehr.assadi.info/advanced-algorithms</a>. </p>
+
+    <div class="bibwrap">
+      <button class="copybtn" type="button" onclick="var b=this;navigator.clipboard.writeText(document.getElementById('bibtex').innerText).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy';},1400);}).catch(function(){});">Copy</button>
+<pre id="bibtex">@book{assadi2026adventures,
+  author = {Sepehr Assadi},
+  title  = {Adventures in Advanced Algorithms: A Guide for Curious Students},
+  year   = {2026},
+  note   = {Open educational resource. Licensed under CC BY-NC-SA 4.0},
+  url    = {https://sepehr.assadi.info/advanced-algorithms/}
+}</pre>
+    </div>
+
+    <div class="selected-paper">
+      &copy; 2026 Sepehr Assadi. All rights reserved. Released as an open educational resource under a
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons
+      Attribution&ndash;NonCommercial&ndash;ShareAlike 4.0 International</a> license
+      (CC&nbsp;BY-NC-SA&nbsp;4.0): you may share and adapt this material for
+      <strong>non-commercial</strong> purposes, with attribution, provided that any adaptations are
+      distributed under these same terms. Created and maintained by
+      <a href="https://sepehr.assadi.info">Sepehr Assadi</a>, School of Computer Science, University of
+      Waterloo.
+    </div>
+
+  </div>
+
+</body>
+</html>
