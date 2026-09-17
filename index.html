@@ -50,6 +50,7 @@
     ]
   }
   </script>
+  <script>(function(){try{var t=localStorage.getItem('aaa-theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light';}document.documentElement.classList.add(t);}catch(e){}})();</script>
   <style>
     /* General tools */
 
@@ -335,6 +336,73 @@
       line-height: 1.8em;
     }
 
+    /* ---- Dark-mode toggle (sits at the right end of the nav bar) ---- */
+    .theme-toggle {
+      float: right;
+      margin-right: 5%;
+      background: transparent;
+      border: 0;
+      color: #f2f2f2;
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1;
+      padding: 14px 16px;
+      cursor: pointer;
+    }
+    .theme-toggle:hover { background-color: #ddd; color: black; }
+    .theme-toggle::before { content: "\263E"; }             /* moon: switch to dark */
+    html.dark .theme-toggle::before { content: "\2600"; }   /* sun:  switch to light */
+
+    /* ---- Dark mode: warm near-black, tuned for the Times serif ---- */
+    html.dark { color-scheme: dark; background: #1b1b19; }
+    html.dark body {
+      background: #1b1b19;
+      color: #dedbd4;
+      -webkit-font-smoothing: antialiased;
+    }
+    html.dark .make-margin a { color: #7fa8f0; }
+
+    html.dark .topnav { background-color: #2b2b28; }
+    html.dark .topnav a, html.dark .theme-toggle { color: #e6e3dc; }
+    html.dark .topnav a:hover,
+    html.dark .theme-toggle:hover { background-color: #dedbd4; color: #1b1b19; }
+
+    html.dark .news { background-color: #262622; color: #dedbd4; }
+    html.dark .news .news-title { color: #ff8577; }
+
+    html.dark .dropdown { color: #7ec98f; }
+    html.dark .dropdown-content { background-color: #262622; box-shadow: 0 8px 16px 0 rgba(0,0,0,.45); }
+    html.dark .dropdown:hover .dropdown-content { color: #dedbd4; }
+
+    html.dark .bullet-table .comment,
+    html.dark .small-list .comment { color: #9d9b93; }
+
+    html.dark .award,
+    html.dark .award a,
+    html.dark .award a:hover,
+    html.dark .all-papers .award { color: #7ec98f !important; }
+
+    html.dark .selected-paper {
+      background-color: #232320;
+      border-color: #3d4a41;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, .35);
+    }
+    html.dark .selected-paper .title,
+    html.dark .all-papers .paper-title { color: #ff8577; }
+    html.dark .selected-paper .conf,
+    html.dark .selected-paper .journal,
+    html.dark .all-papers .paper-desc { color: #dedbd4; }
+    html.dark .selected-paper .summary a, html.dark .selected-paper .summary a:hover,
+    html.dark .selected-paper .author a, html.dark .selected-paper .author a:hover,
+    html.dark .all-papers .paper-author a, html.dark .all-papers .paper-author a:hover { color: #cdcbc4; }
+
+    html.dark .paper-year { color: #918f88; opacity: 0.75; }
+
+    /* Inline colours in the markup, remapped for the dark background */
+    html.dark [style*="color:black"], html.dark [style*="color: black"] { color: #dedbd4 !important; }
+    html.dark [style*="color:red"],   html.dark [style*="color: red"]   { color: #ff8577 !important; }
+    html.dark [style*="gray"] { color: #9d9b93 !important; }
+
     /* ===== Responsive layout for phones / small tablets ===== */
     @media (max-width: 768px) {
       body { font-size: 17px; }
@@ -355,6 +423,7 @@
       /* Navigation: let items wrap and center rather than float in one row */
       .topmenu { margin-left: 0; }
       .topnav a { float: none; display: inline-block; padding: 10px 12px; font-size: 15px; }
+      .theme-toggle { float: none; display: inline-block; margin-right: 0; padding: 10px 12px; font-size: 15px; }
 
       /* Contact table: tighten spacing so the value column has room */
       .bullet-table td { padding: 2px 5px; }
@@ -407,6 +476,7 @@
       <a href="files/bio.html">Bio</a>
       <a href="files/ai-policy.html">AI Policy</a>
       <a href="files/sepehr-assadi.pdf">CV (May, 2026)</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode" onclick="var h=document.documentElement,d=!h.classList.contains('dark');h.classList.toggle('dark',d);h.classList.toggle('light',!d);try{localStorage.setItem('aaa-theme',d?'dark':'light');}catch(e){}"></button>
     </div>
   </div>
 
